@@ -1,7 +1,6 @@
 {
   "name": "kromac",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
   "main": "lib/index.js",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -28,6 +27,10 @@
     "react-scripts": "^4.0.3",
     "web-vitals": "^1.1.2"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Naramatsu/kromac.git"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -35,6 +38,18 @@
     "eject": "react-scripts eject",
     "audit": "npm audit fix --forceÍ"
   },
+  "keywords": [
+    "React",
+    "UI",
+    "Framework",
+    "kromac"
+  ],
+  "author": "Jonathan Narvaez Martinez",
+  "license": "Jc NM",
+  "bugs": {
+    "url": "https://github.com/Naramatsu/kromac/issues"
+  },
+  "homepage": "https://github.com/Naramatsu/kromac#readme",
   "eslintConfig": {
     "extends": [
       "react-app",

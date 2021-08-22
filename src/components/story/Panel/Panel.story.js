@@ -6,8 +6,8 @@ import panelTransparentProps from "./storyProps/panelTransparentProps";
 const Preview = lazy(() => import("../../Preview"));
 const Panel = lazy(() => import("./Panel"));
 
-const PanelToShow = buttonType => {
-  switch (buttonType) {
+const PanelToShow = panelType => {
+  switch (panelType) {
     case "neon":
       return panelNeonProps;
     case "transparent":
@@ -22,7 +22,7 @@ const PanelHistory = ({ location: { state = "classic" } }) => {
   return (
     <div>
       <Preview
-        title="Button"
+        title="Panel"
         subTitle={panelProps.subTitle}
         description={panelProps.description}
         importType={panelProps.importType}

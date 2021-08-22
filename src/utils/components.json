@@ -9,6 +9,15 @@
     ]
   },
   {
+    "component": "skeleton",
+    "subComponents": [
+      {
+        "component": "skeleton dark",
+        "type": "dark"
+      }
+    ]
+  },
+  {
     "component": "spinner",
     "subComponents": [
       {
