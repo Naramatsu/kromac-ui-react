@@ -1,0 +1,88 @@
+$textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
+.kromac-panel {
+  background: #fff;
+  width: 100%;
+  min-height: 350px;
+  padding: 1em;
+  position: relative;
+  border-radius: .5em;
+
+  &.shadows {
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, .5);
+  }
+  .content {
+    position: relative;
+    z-index: 100;
+  }
+
+  &.transparent {
+    backdrop-filter: blur(20px);
+    border: solid 2px #0a0a0a;
+    background: transparent;
+
+    .content {
+      color: #fff;
+      text-shadow: $textShadow;
+    }
+  }
+
+  &.neon {
+    position: relative;
+    border: none;
+
+    .content {
+      color: #fff;
+    }
+
+    span {
+      height: auto;
+      width: auto;
+      content: '';
+      display: block;
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      right: 4px;
+      bottom: 4px;
+      background: #212f3c;
+      transition: all 1s ease;
+      border-radius: .5em;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        45deg,
+        #fb0094,
+        #00f,
+        #0f0,
+        #ff0,
+        #f00,
+        #0f0,
+        #ff0,
+        #f00
+      );
+      transition: all 1s ease;
+      background-size: 400%;
+      animation: animate 20s linear infinite;
+      border-radius: .5em;
+    }
+    
+    @keyframes animate {
+      0% {
+        background-position: 0 0;
+      }
+      50% {
+        background-position: 300% 0;
+      }
+      100% {
+        background-position: 0 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "component": "button",
+    "subComponents": [
+      {
+        "component": "button neon",
+        "type": "neon"
+      }
+    ]
+  },
+  {
+    "component": "spinner",
+    "subComponents": [
+      {
+        "component": "spinner waves",
+        "type": "waves"
+      },
+      {
+        "component": "spinner svg",
+        "type": "svg"
+      },
+      {
+        "component": "spinner rainbow",
+        "type": "rainbow"
+      }
+    ]
+  },
+  {
+    "component": "panel",
+    "subComponents": [
+      {
+        "component": "panel neon",
+        "type": "neon"
+      },
+      {
+        "component": "panel transparent",
+        "type": "transparent"
+      }
+    ]
+  },
+  {
+    "component": "card",
+    "subComponents": [
+      {
+        "component": "card horizontal",
+        "type": "horizontal"
+      },
+      {
+        "component": "card image",
+        "type": "image"
+      },
+      {
+        "component": "card info",
+        "type": "info"
+      },
+      {
+        "component": "card polygon",
+        "type": "polygon"
+      },
+      {
+        "component": "card reveal",
+        "type": "reveal"
+      },
+      {
+        "component": "card user",
+        "type": "user"
+      },
+      {
+        "component": "card percentage",
+        "type": "percentage"
+      }
+    ]
+  }
+]

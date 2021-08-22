@@ -1,0 +1,28 @@
+$marginTop: 15px;
+$marginBottom: 15px;
+
+.preview {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 15px;
+
+  .component-title {
+    label {
+      font-size: .5em;
+      margin-left: 1em;
+    }
+  }
+
+  .label-import,
+  .component-implementation {
+    margin-top: $marginTop;
+    margin-bottom: $marginBottom;
+  }
+
+  .component-preview,
+  .component-props {
+    padding-top: 15px;
+    margin-bottom: $marginBottom;
+  }
+}
