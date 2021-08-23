@@ -1,1 +1,1 @@
-export { default } from "./BoxImplementation"
+export { default } from "./BoxImplementation";

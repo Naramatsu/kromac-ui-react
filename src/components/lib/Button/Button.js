@@ -3,19 +3,15 @@ import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import "./style.scss";
 
-const Button = props => {
-  const { color = "primary", buttonType = "", className = "" } = props;
-  return (
-    <div>
-      <button
-        className={`kromac-btn ${color} ${buttonType} waves-effect waves-light`}
-      >
-        <span />
-        <p className={`${className}`}>Button here</p>
-      </button>
-    </div>
-  );
-};
+const Button = ({ color = "primary", buttonType = "", className = "" }) =>
+  <div>
+    <button
+      className={`kromac-btn ${color} ${buttonType} waves-effect waves-light`}
+    >
+      <span />
+      <p className={`${className}`}>Button here</p>
+    </button>
+  </div>;
 
 Button.propTypes = exact({
   buttonType: PropTypes.oneOf(["classic", "neon"]),

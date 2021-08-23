@@ -44,14 +44,17 @@ $textShadow-bg-white: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 
       .card-title {
         text-shadow: $textShadow-bg-white;
+
         h4 {
           color: #fff;
         }
+
         label {
           color: #3498db;
           font-size: .75em;
         }
       }
+
       .card-text {
         display: none;
       }

@@ -1,7 +1,6 @@
-import React from 'react'
+import React from "react";
 
 const BoxImplementation = ({ componentText }) => {
-
   const handleCopy = e => {
     e.preventDefault();
   };
@@ -18,7 +17,8 @@ const BoxImplementation = ({ componentText }) => {
         spellCheck="false"
         value={componentText}
       />
-    </div>)
-}
+    </div>
+  );
+};
 
-export default BoxImplementation
+export default BoxImplementation;

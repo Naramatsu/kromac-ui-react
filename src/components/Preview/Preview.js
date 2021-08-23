@@ -13,6 +13,7 @@ const Preview = props => {
     propsDescription,
     notes = ""
   } = props;
+  const isNotes = notes && notes.trim();
 
   return (
     <div className="preview">
@@ -63,10 +64,11 @@ const Preview = props => {
             </Table>
           </div>
         </div>
-        <div className="component-props">
-          <h3>Notes</h3>
-          {parseToHtml(notes)}
-        </div>
+        {isNotes &&
+          <div className="component-props">
+            <h3>Notes</h3>
+            {parseToHtml(notes)}
+          </div>}
       </div>
     </div>
   );

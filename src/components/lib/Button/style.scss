@@ -233,7 +233,7 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
       );
       transition: all 1s ease;
       background-size: 400%;
-      animation: animate 20s linear infinite;
+      animation: btn-neon-animate 20s linear infinite;
     }
 
     &.primary,
@@ -252,7 +252,7 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
   }
 }
 
-@keyframes animate {
+@keyframes btn-neon-animate {
   0% {
     background-position: 0 0;
   }
