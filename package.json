@@ -27,10 +27,6 @@
     "react-scripts": "^4.0.3",
     "web-vitals": "^1.1.2"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Naramatsu/kromac.git"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -45,11 +41,6 @@
     "kromac"
   ],
   "author": "Jonathan Narvaez Martinez",
-  "license": "Jc NM",
-  "bugs": {
-    "url": "https://github.com/Naramatsu/kromac/issues"
-  },
-  "homepage": "https://github.com/Naramatsu/kromac#readme",
   "eslintConfig": {
     "extends": [
       "react-app",

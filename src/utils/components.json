@@ -18,6 +18,15 @@
     ]
   },
   {
+    "component": "toggle",
+    "subComponents": [
+      {
+        "component": "toggle power",
+        "type": "power"
+      }
+    ]
+  },
+  {
     "component": "spinner",
     "subComponents": [
       {

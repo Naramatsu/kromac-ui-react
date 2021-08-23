@@ -1,7 +1,7 @@
 import React, { lazy } from "react";
 import { Col, Row } from "react-bootstrap";
 
-const SkeletonComponent = lazy(() => import("../../lib/Skeleton"));
+const ToggleComponent = lazy(() => import("../../lib/Toggle"));
 const BoxImplementation = lazy(() =>
   import("../../BoxImplementation/BoxImplementation")
 );
@@ -18,9 +18,9 @@ const Wrapper = ({ children, componentText }) =>
     </Row>
   </div>;
 
-const Skeleton = props =>
+const Toggle = props =>
   <Wrapper {...props}>
-    <SkeletonComponent {...props.skeletonProps} />
+    <ToggleComponent {...props.toggleProps} />
   </Wrapper>;
 
-export default Skeleton;
+export default Toggle;
