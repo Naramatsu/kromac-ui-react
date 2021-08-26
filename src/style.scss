@@ -108,6 +108,45 @@ button.glass {
   }
 }
 
+.kromac-title {
+  text-align: center;
+  color: #fff;
+  padding: 1em;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.kromac-input-search {
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  top: 119px;
+  padding-top: 20px;
+  margin-bottom: 20px;
+
+  label {
+    position: absolute;
+    top: 0;
+    color: #fff;
+  }
+}
+
+.kromac-menu {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .kromac-components {
+    display: none;
+  }
+  .kromac-menu {
+    display: block;
+  }
+}
+
 .kromac-scroll {
   &::-webkit-scrollbar {
     height: 6px;
