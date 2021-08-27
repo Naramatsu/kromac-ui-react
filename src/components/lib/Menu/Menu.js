@@ -82,6 +82,7 @@ const Menu = props => {
             <input
               type="text"
               name="filter"
+              autocomplete="off"
               placeholder="Find component"
               value={componentsFiltered}
               onChange={handleChangeFilter}

@@ -1,10 +1,13 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useEffect } from "react";
 import panelClassicProps from "./storyProps/panelClassicProps";
 import panelNeonProps from "./storyProps/panelNeonProps";
 import panelTransparentProps from "./storyProps/panelTransparentProps";
+import { getComponentsRelated } from "../../../utils/utils";
 
 const Preview = lazy(() => import("../../Preview"));
 const Panel = lazy(() => import("./Panel"));
+
+const panelComponents = getComponentsRelated("panel");
 
 const PanelToShow = panelType => {
   switch (panelType) {
@@ -18,6 +21,12 @@ const PanelToShow = panelType => {
 };
 
 const PanelHistory = ({ location: { state = "classic" } }) => {
+  useEffect(
+    () => {
+      window.scrollTo(0, 0);
+    },
+    [state]
+  );
   const panelProps = PanelToShow(state);
   return (
     <div>
@@ -28,6 +37,7 @@ const PanelHistory = ({ location: { state = "classic" } }) => {
         importType={panelProps.importType}
         propsDescription={panelProps.propsDescription}
         notes={panelProps.notes}
+        componentsRealated={panelComponents}
       >
         <Suspense fallback={<div>Cargando card...</div>}>
           <Panel

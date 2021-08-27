@@ -1,4 +1,5 @@
 import { Chip } from "react-materialize";
+import data from "./components.json";
 
 export const determinateColor = color => {
   switch (color) {
@@ -90,4 +91,8 @@ export const styleCentered = isCentered => {
         transform: "translate(-50%, -50%)"
       }
     : {};
+};
+
+export const getComponentsRelated = component => {
+  return data.find(c => c.component === component).subComponents;
 };

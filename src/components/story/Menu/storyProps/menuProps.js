@@ -29,7 +29,7 @@ const propsDescription = [
     type: "string",
     values: [],
     description:
-      "If you have an image, you can add, but be carefull, if you want a better experience, it mus be rectangular"
+      "If you have an image, you can add, but be carefull, if you want a better experience, it must be rectangular"
   },
   {
     name: "tabs",

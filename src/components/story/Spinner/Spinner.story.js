@@ -1,11 +1,14 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useEffect } from "react";
 import spinnerLighterProps from "./storyProps/spinnerLighterProps";
 import spinnerWavesProps from "./storyProps/spinnerWavesProps";
 import spinnerSvgProps from "./storyProps/spinnerSvgProps";
 import spinnerRainbowProps from "./storyProps/spinnerRainbowProps";
+import { getComponentsRelated } from "../../../utils/utils";
 
 const Preview = lazy(() => import("../../Preview"));
 const Spinner = lazy(() => import("./Spinner"));
+
+const spinnerComponents = getComponentsRelated("spinner");
 
 const spinnerToShow = spinnerType => {
   switch (spinnerType) {
@@ -21,6 +24,12 @@ const spinnerToShow = spinnerType => {
 };
 
 const SpinnerHistory = ({ location: { state = "lighter" } }) => {
+  useEffect(
+    () => {
+      window.scrollTo(0, 0);
+    },
+    [state]
+  );
   const spinnerProps = spinnerToShow(state);
   return (
     <div>
@@ -31,6 +40,7 @@ const SpinnerHistory = ({ location: { state = "lighter" } }) => {
         importType={spinnerProps.importType}
         propsDescription={spinnerProps.propsDescription}
         notes={spinnerProps.notes}
+        componentsRealated={spinnerComponents}
       >
         <Suspense fallback={<div>Cargando card...</div>}>
           <Spinner

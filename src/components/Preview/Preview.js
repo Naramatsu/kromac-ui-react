@@ -3,6 +3,7 @@ import { Table } from "react-bootstrap";
 import parseToHtml from "html-react-parser";
 import { addChip } from "../../utils/utils";
 import "./style.scss";
+import { Link } from "react-router-dom";
 
 const Preview = props => {
   const {
@@ -11,7 +12,8 @@ const Preview = props => {
     description,
     importType,
     propsDescription,
-    notes = ""
+    notes = "",
+    componentsRealated
   } = props;
   const isNotes = notes && notes.trim();
 
@@ -68,6 +70,24 @@ const Preview = props => {
           <div className="component-props">
             <h3>Notes</h3>
             {parseToHtml(notes)}
+          </div>}
+        {componentsRealated &&
+          <div className="component-props components-related">
+             <h3>Components Related</h3>
+            <ul>
+              {componentsRealated.map((link, index) =>
+                <li key={index}>
+                  <Link
+                    to={{
+                      pathname: `/${title.toLowerCase()}`,
+                      state: link.type
+                    }}
+                  >
+                    {link.component}
+                  </Link>
+                </li>
+              )}
+            </ul>
           </div>}
       </div>
     </div>

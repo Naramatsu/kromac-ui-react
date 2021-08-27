@@ -25,4 +25,14 @@ $marginBottom: 15px;
     padding-top: 15px;
     margin-bottom: $marginBottom;
   }
+
+  .components-related {
+    display: none;
+  }
+  
+  @media (max-width: 767px) {
+    .components-related {
+      display: block;
+    }
+  }
 }

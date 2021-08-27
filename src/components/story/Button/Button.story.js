@@ -1,9 +1,12 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useEffect } from "react";
 import buttonClassicProps from "./storyProps/buttonClassicProps";
 import buttonNeonProps from "./storyProps/buttonNeonProps";
+import { getComponentsRelated } from "../../../utils/utils";
 
 const Preview = lazy(() => import("../../Preview"));
 const Button = lazy(() => import("./Button"));
+
+const buttonComponents = getComponentsRelated("button");
 
 const buttonToShow = buttonType => {
   switch (buttonType) {
@@ -15,7 +18,13 @@ const buttonToShow = buttonType => {
 };
 
 const ButtonHistory = ({ location: { state = "classic" } }) => {
-  const buttonProps = buttonToShow(state)
+  useEffect(
+    () => {
+      window.scrollTo(0, 0);
+    },
+    [state]
+  );
+  const buttonProps = buttonToShow(state);
   return (
     <div>
       <Preview
@@ -25,6 +34,7 @@ const ButtonHistory = ({ location: { state = "classic" } }) => {
         importType={buttonProps.importType}
         propsDescription={buttonProps.propsDescription}
         notes={buttonProps.notes}
+        componentsRealated={buttonComponents}
       >
         <Suspense fallback={<div>Cargando card...</div>}>
           <Button

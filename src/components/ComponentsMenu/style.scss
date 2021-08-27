@@ -19,10 +19,12 @@ $txt-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 
       input,
       input:focus,
+      input:target,
       input:active {
         border: none;
         background: #fff;
         width: 80%;
+        outline: none;
         box-shadow: 0px 0px 15px -5px;
         border-radius: .25em;
         padding: 5px 10px;

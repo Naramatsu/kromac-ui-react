@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import "./style.scss";
 import data from "./utils/components.json";
 
-const MenuKromac = lazy(() => import("./components/Menu"));
+const KromacMenu = lazy(() => import("./components/lib/Menu"));
 const LandingPage = lazy(() => import("./components/LandingPage"));
 const Card = lazy(() => import("./components/story/Card/Card.story"));
 const Button = lazy(() => import("./components/story/Button/Button.story"));
@@ -15,9 +15,13 @@ const Skeleton = lazy(() =>
   import("./components/story/Skeleton/Skeleton.story")
 );
 
+const tabs = data.map(c => c.component).sort();
+
 const App = () =>
   <div className="App">
-    <MenuKromac appName="Kromac UI" tabs={data} />
+    <div className="h-menu-kromac">
+      <KromacMenu appName="Kromac UI" tabs={tabs} searchComponents />
+    </div>
     <Switch>
       <Route path="/" exact strict component={LandingPage} />
       <Route path="/card" component={Card} />

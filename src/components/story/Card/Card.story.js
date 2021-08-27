@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useEffect } from "react";
 import cardClassicProps from "./storyProps/cardClassicProps";
 import cardImageProps from "./storyProps/cardImageProps";
 import cardRevealProps from "./storyProps/cardRevealProps";
@@ -7,9 +7,12 @@ import cardHorizontalProps from "./storyProps/cardHorizontalProps";
 import cardPolygonProps from "./storyProps/cardPolygonProps";
 import cardUserProps from "./storyProps/cardUserProps";
 import cardPercentageProps from "./storyProps/cardPercentageProps";
+import { getComponentsRelated } from "../../../utils/utils";
 
 const Preview = lazy(() => import("../../Preview"));
 const Card = lazy(() => import("./Card"));
+
+const cardComponents = getComponentsRelated("card");
 
 const cardToShow = cardType => {
   switch (cardType) {
@@ -33,6 +36,12 @@ const cardToShow = cardType => {
 };
 
 const CardStory = ({ location: { state = "classic" } }) => {
+  useEffect(
+    () => {
+      window.scrollTo(0, 0);
+    },
+    [state]
+  );
   const cardProps = cardToShow(state);
   return (
     <div>
@@ -43,6 +52,7 @@ const CardStory = ({ location: { state = "classic" } }) => {
         importType={cardProps.importType}
         propsDescription={cardProps.propsDescription}
         notes={cardProps.notes}
+        componentsRealated={cardComponents}
       >
         <Suspense fallback={<div>Cargando card...</div>}>
           <Card

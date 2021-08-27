@@ -1,9 +1,12 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useEffect } from "react";
 import skeletonLightProps from "./storyProps/skeletonLightProps";
 import skeletonDarkProps from "./storyProps/skeletonDarkProps";
+import { getComponentsRelated } from "../../../utils/utils";
 
 const Preview = lazy(() => import("../../Preview"));
 const Skeleton = lazy(() => import("./Skeleton"));
+
+const skeletonComponents = getComponentsRelated("skeleton");
 
 const SkeletonToShow = skeletonType => {
   switch (skeletonType) {
@@ -15,6 +18,12 @@ const SkeletonToShow = skeletonType => {
 };
 
 const SkeletonHistory = ({ location: { state = "light" } }) => {
+  useEffect(
+    () => {
+      window.scrollTo(0, 0);
+    },
+    [state]
+  );
   const skeletonProps = SkeletonToShow(state);
   return (
     <div>
@@ -25,6 +34,7 @@ const SkeletonHistory = ({ location: { state = "light" } }) => {
         importType={skeletonProps.importType}
         propsDescription={skeletonProps.propsDescription}
         notes={skeletonProps.notes}
+        componentsRealated={skeletonComponents}
       >
         <Suspense fallback={<div>Cargando card...</div>}>
           <Skeleton
