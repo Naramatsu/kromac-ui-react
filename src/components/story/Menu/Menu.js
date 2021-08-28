@@ -11,6 +11,12 @@ const Wrapper = ({ children, componentText }) =>
     <Row>
       <Col sm={12} md={6} lg={4} xl={3}>
         {children}
+        <div className="box">
+          <label className="text-bg-light">
+            This is a clear example of how this component would look and work
+          </label>
+          <img src="arrow.png" alt="arrow" />
+        </div>
       </Col>
       <Col sm={12} md={12} lg={8} xl={6}>
         <BoxImplementation componentText={componentText} />

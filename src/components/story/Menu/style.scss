@@ -1,5 +1,39 @@
 #menuPreview {
   .kromac-hamburger-menu {
-    top: 90px;
+    display: flex;
+  }
+}
+
+.box {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+
+  label {
+    width: 100px;
+    position: absolute;
+    right: 90px;
+    top: -160px;
+    border: solid 1px #212f3d;
+    backdrop-filter: blur(20px);
+    padding: .25em;
+    border-radius: .25em;
+  }
+
+  img {
+    position: absolute;
+    transform: rotate(172deg);
+    width: 100px;
+    height: 70px;
+    right: 55px;
+    top: -120px;
+  }
+}
+
+@media (max-width: 767px) {
+  #menuPreview {
+    .kromac-hamburger-menu {
+      display: none;
+    }
   }
 }
