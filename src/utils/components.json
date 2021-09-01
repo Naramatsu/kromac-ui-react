@@ -57,7 +57,24 @@
     ]
   },
   {
+    "component": "banner",
+    "subComponents": [
+      {
+        "component": "banner image",
+        "type": "image"
+      },
+      {
+        "component": "banner text",
+        "type": "text"
+      }
+    ]
+  },
+  {
     "component": "menu",
+    "subComponents": []
+  },
+  {
+    "component": "textAnimation",
     "subComponents": []
   },
   {

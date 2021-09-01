@@ -11,6 +11,10 @@ const Panel = lazy(() => import("./components/story/Panel/Panel.story"));
 const Spinner = lazy(() => import("./components/story/Spinner/Spinner.story"));
 const Toggle = lazy(() => import("./components/story/Toggle/Toggle.story"));
 const Menu = lazy(() => import("./components/story/Menu/Menu.story"));
+const Banner = lazy(() => import("./components/story/Banner/Banner.story"));
+const TextAnimation = lazy(() =>
+  import("./components/story/TextAnimation/TextAnimation.story")
+);
 const Skeleton = lazy(() =>
   import("./components/story/Skeleton/Skeleton.story")
 );
@@ -31,6 +35,8 @@ const App = () =>
       <Route path="/skeleton" component={Skeleton} />
       <Route path="/toggle" component={Toggle} />
       <Route path="/menu" component={Menu} />
+      <Route path="/textAnimation" component={TextAnimation} />
+      <Route path="/banner" component={Banner} />
     </Switch>
   </div>;
 

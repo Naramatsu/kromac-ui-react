@@ -16,7 +16,7 @@ const Main = () =>
           className="d-none d-md-block"
           style={{
             position: "fixed",
-            padding: 0,
+            padding: 0
           }}
         >
           <Suspense fallback={<div>Cargando...</div>}>

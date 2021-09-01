@@ -96,3 +96,7 @@ export const styleCentered = isCentered => {
 export const getComponentsRelated = component => {
   return data.find(c => c.component === component).subComponents;
 };
+
+export const sortByLength = words => {
+  return words.sort((a, b) => b.length - a.length);
+};
