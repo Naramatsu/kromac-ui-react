@@ -7,6 +7,7 @@ const images = () => {
   const data = [];
   for (let i = 0; i < 10; i++) {
     data.push("https://i.ytimg.com/vi/DG3rk0aGlpA/maxresdefault.jpg");
+    // data.push("https://images.pexels.com/photos/719396/pexels-photo-719396.jpeg");
   }
   return data;
 };
@@ -69,24 +70,14 @@ const Gallery = props => {
   const {
     // images =[],
     /*
-      Ajiustar imagen para que siempre se centre. eso implica quitar el scale(2), buscar forma de hacerlo, se puede modificando
-      kromac-col  active agregando: 
-      transform: scale(1) translate(-50%, -50%);
-      top: 50%;
-      left: 50%;
-      pero no se ve la imagen grande 
+     idea: eliminar las rows y hacer una sola, poner el rotate en la imagen y en el div de la col, para que se haga rombo
+     buscar la forma de pasar todas las clases y estilos de los Rows a los Cols
     */
     color = "#fff",
     imageFitPosition = "top"
   } = props;
 
   const styleColor = determinateColor(color);
-  const bgColor =
-    color !== "transparent"
-      ? {
-          background: `linear-gradient(45deg, ${color}, #0000004D)`
-        }
-      : {};
 
   const isViewStyleKromacCol = isViewImage ? "active" : "";
 
@@ -137,7 +128,6 @@ const Gallery = props => {
               >
                 <div
                   className={`kromac-gallery ${styleColor} ${isViewStyleKromacCol}`}
-                  style={{ ...bgColor }}
                 >
                   <button
                     style={isViewButtonClose}
