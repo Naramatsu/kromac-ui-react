@@ -7,7 +7,7 @@ import "./style.scss";
 const CardPolygon = props => {
   const {
     image,
-    name = "",
+    name,
     color = "#fff",
     imageFitPosition = "top",
     shape = "hexagon",

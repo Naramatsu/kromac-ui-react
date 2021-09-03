@@ -70,11 +70,13 @@
 }
 
 @media (max-width: 767px) {
-  .kromac-banner-caption {
-    height: auto !important;
-  }
+  .kromac-banner-text {
+    .kromac-banner-caption {
+      height: auto !important;
+    }
 
-  .kromac-banner-image {
-    display: none;
+    .kromac-banner-image {
+      display: none;
+    }
   }
 }
