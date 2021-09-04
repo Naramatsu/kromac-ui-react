@@ -9,6 +9,10 @@
 .kromac-gallery-polygon {
   max-height: calc(var(--totalRows) * 170px);
 
+  .kromac-row {
+    max-height: calc(var(--totalRows) * 170px);
+  }
+
   .bdblur {
     width: 0;
     height: 100%;
@@ -108,15 +112,12 @@
         top: 0;
         padding-bottom: 1em;
 
-        &.active {
+        &.active,
+        &.last {
           top: 50%;
         }
         .close {
           top: 50px;
-        }
-        
-        &.last {
-          top: 0;
         }
       }
     }
