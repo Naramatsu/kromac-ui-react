@@ -8,12 +8,12 @@ const images = () => {
     "https://i.ytimg.com/vi/DG3rk0aGlpA/maxresdefault.jpg",
     "https://images.pexels.com/photos/719396/pexels-photo-719396.jpeg",
     "https://img.apksum.com/93/com.mda.black.wallpapers.hd.dark.background/5.0/icon.png",
-    "https://i.pinimg.com/originals/54/b4/38/54b438c99e19dc7450afcdc80955810c.jpg"
+    "https://i.pinimg.com/originals/54/b4/38/54b438c99e19dc7450afcdc80955810c.jpg",
+    "https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__480.jpg",
+    "https://cdn.wallpapersafari.com/3/74/iVxWUY.jpg",
+    "https://www.wallpapertip.com/wmimgs/5-53557_wallpaper-hd-1080p-mikael-gustafsson.jpg",
+    "https://greatloveart.com/wp-content/uploads/2021/01/cool-iPhone-wallpapers-backgrounds-22.jpg"
   ];
-  // for (let i = 0; i < 13; i++) {
-  //   data.push("https://i.ytimg.com/vi/DG3rk0aGlpA/maxresdefault.jpg");
-  //   // data.push("https://images.pexels.com/photos/719396/pexels-photo-719396.jpeg");
-  // }
   return data;
 };
 
@@ -81,6 +81,7 @@ const maker = images => {
 
 const Gallery = props => {
   const [isViewImage, setIsViewImage] = useState(false);
+  const [itemActicve, setItemActicve] = useState({});
   const {
     // images =[],
     /*
@@ -88,39 +89,50 @@ const Gallery = props => {
      buscar la forma de pasar todas las clases y estilos de los Rows a los Cols
     */
     color = "#fff",
-    imageFitPosition = "top"
+    imageFitPosition = "center"
   } = props;
 
   const styleColor = determinateColor(color);
 
-  const isViewStyleKromacCol = isViewImage ? "active" : "";
+  const isViewStyleKromacCol = (row, item) => {
+    if (itemActicve && itemActicve.row === row && itemActicve.item === item) {
+      return "active";
+    }
+    return "";
+  };
 
-  const isViewButtonClose = isViewImage
-    ? {
-        display: "flex"
-      }
-    : {};
+  const isViewButtonClose =
+    itemActicve !== {}
+      ? {
+          display: "flex"
+        }
+      : {};
+
+  const isActive = isViewImage ? "active" : "";
 
   const data = maker(images());
 
-  const handleViewImage = e => {
-    e.preventDefault();
+  const handleViewImage = ({ row, item }) => {
+    // console.log({ index, index1 });
+    setItemActicve({ row, item });
+    // e.preventDefault();
     setIsViewImage(true);
   };
 
   const close = e => {
     e.preventDefault();
+    setItemActicve({});
     setIsViewImage(false);
   };
 
   return (
     <div className="kromac-gallery">
       <div
-        className={`kromac-gallery-polygon container`}
+        className={`kromac-gallery-polygon `}
         style={{ "--totalRows": data.length }}
       >
-        <Row>
-          <span className={`bdblur ${isViewStyleKromacCol}`} />
+        <Row className="kromac-row">
+          <span className={`bdblur ${isActive}`} />
           {data.map((imgs, index) =>
             imgs.map((image, index1) =>
               <Col
@@ -131,14 +143,17 @@ const Gallery = props => {
                 className={`kromac-col ${markAsLastImageImgPar(
                   index,
                   index1
-                )} ${isViewStyleKromacCol} ${markTypeRow(
+                )} ${isViewStyleKromacCol(index, index1)} ${markTypeRow(
                   index,
                   index1
                 )} ${markAsOnlyImageRowImpar(imgs.length)}`}
                 style={{ "--rowNumber": index }}
               >
                 <div
-                  className={`kromac-gallery ${styleColor} ${isViewStyleKromacCol}`}
+                  className={`kromac-gallery ${styleColor} ${isViewStyleKromacCol(
+                    index,
+                    index1
+                  )}`}
                 >
                   <button
                     style={isViewButtonClose}
@@ -149,9 +164,11 @@ const Gallery = props => {
                   </button>
                   <div
                     className="kromac-gallery-image"
-                    onClick={handleViewImage}
+                    onClick={() =>
+                      handleViewImage({ row: index, item: index1 })}
                   >
                     <img
+                      id={index1 + index}
                       src={image}
                       alt="Card"
                       style={{ objectPosition: imageFitPosition }}
