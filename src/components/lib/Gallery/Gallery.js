@@ -4,20 +4,34 @@ import { determinateColor } from "../../../utils/utils";
 import "./style.scss";
 
 const images = () => {
-  const data = [];
-  for (let i = 0; i < 10; i++) {
-    data.push("https://i.ytimg.com/vi/DG3rk0aGlpA/maxresdefault.jpg");
-    // data.push("https://images.pexels.com/photos/719396/pexels-photo-719396.jpeg");
-  }
+  const data = [
+    "https://i.ytimg.com/vi/DG3rk0aGlpA/maxresdefault.jpg",
+    "https://images.pexels.com/photos/719396/pexels-photo-719396.jpeg",
+    "https://img.apksum.com/93/com.mda.black.wallpapers.hd.dark.background/5.0/icon.png",
+    "https://i.pinimg.com/originals/54/b4/38/54b438c99e19dc7450afcdc80955810c.jpg"
+  ];
+  // for (let i = 0; i < 13; i++) {
+  //   data.push("https://i.ytimg.com/vi/DG3rk0aGlpA/maxresdefault.jpg");
+  //   // data.push("https://images.pexels.com/photos/719396/pexels-photo-719396.jpeg");
+  // }
   return data;
 };
 
-const markTypeRow = index => {
+const markTypeRow = (index, key) => {
   if (index % 2 === 0) {
     return "par";
   }
+  if (key === 0) {
+    return "impar offset-md-2";
+  }
   return "impar";
 };
+// const markTypeRow = index => {
+//   if (index % 2 === 0) {
+//     return "par";
+//   }
+//   return "impar offset-md-2";
+// };
 
 const markAsLastImageImgPar = (index, key) => {
   if (index % 2 === 0) {
@@ -102,19 +116,13 @@ const Gallery = props => {
   return (
     <div className="kromac-gallery">
       <div
-        className={`kromac-gallery-polygon`}
+        className={`kromac-gallery-polygon container`}
         style={{ "--totalRows": data.length }}
       >
-        <span className={`bdblur ${isViewStyleKromacCol}`} />
-        {data.map((imgs, index) =>
-          <Row
-            key={index}
-            style={{ "--rowNumber": index }}
-            className={`${markTypeRow(index)} ${markAsOnlyImageRowImpar(
-              imgs.length
-            )}`}
-          >
-            {imgs.map((image, index1) =>
+        <Row>
+          <span className={`bdblur ${isViewStyleKromacCol}`} />
+          {data.map((imgs, index) =>
+            imgs.map((image, index1) =>
               <Col
                 sm={12}
                 md={4}
@@ -123,8 +131,11 @@ const Gallery = props => {
                 className={`kromac-col ${markAsLastImageImgPar(
                   index,
                   index1
-                )} ${isViewStyleKromacCol}`}
-                style={{ "--rowNumber": index + 1 }}
+                )} ${isViewStyleKromacCol} ${markTypeRow(
+                  index,
+                  index1
+                )} ${markAsOnlyImageRowImpar(imgs.length)}`}
+                style={{ "--rowNumber": index }}
               >
                 <div
                   className={`kromac-gallery ${styleColor} ${isViewStyleKromacCol}`}
@@ -148,9 +159,9 @@ const Gallery = props => {
                   </div>
                 </div>
               </Col>
-            )}
-          </Row>
-        )}
+            )
+          )}
+        </Row>
       </div>
     </div>
   );
