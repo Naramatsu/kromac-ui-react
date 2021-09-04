@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Col, Row } from "react-bootstrap";
-import { determinateColor } from "../../../utils/utils";
 import "./style.scss";
 
 const images = () => {
@@ -26,12 +25,6 @@ const markTypeRow = (index, key) => {
   }
   return "impar";
 };
-// const markTypeRow = index => {
-//   if (index % 2 === 0) {
-//     return "par";
-//   }
-//   return "impar offset-md-2";
-// };
 
 const markAsLastImageImgPar = (index, key) => {
   if (index % 2 === 0) {
@@ -84,15 +77,8 @@ const Gallery = props => {
   const [itemActicve, setItemActicve] = useState({});
   const {
     // images =[],
-    /*
-     idea: eliminar las rows y hacer una sola, poner el rotate en la imagen y en el div de la col, para que se haga rombo
-     buscar la forma de pasar todas las clases y estilos de los Rows a los Cols
-    */
-    color = "#fff",
     imageFitPosition = "center"
   } = props;
-
-  const styleColor = determinateColor(color);
 
   const isViewStyleKromacCol = (row, item) => {
     if (itemActicve && itemActicve.row === row && itemActicve.item === item) {
@@ -113,9 +99,7 @@ const Gallery = props => {
   const data = maker(images());
 
   const handleViewImage = ({ row, item }) => {
-    // console.log({ index, index1 });
     setItemActicve({ row, item });
-    // e.preventDefault();
     setIsViewImage(true);
   };
 
@@ -128,7 +112,7 @@ const Gallery = props => {
   return (
     <div className="kromac-gallery">
       <div
-        className={`kromac-gallery-polygon `}
+        className={`kromac-gallery-polygon container`}
         style={{ "--totalRows": data.length }}
       >
         <Row className="kromac-row">
@@ -150,7 +134,7 @@ const Gallery = props => {
                 style={{ "--rowNumber": index }}
               >
                 <div
-                  className={`kromac-gallery ${styleColor} ${isViewStyleKromacCol(
+                  className={`kromac-gallery ${isViewStyleKromacCol(
                     index,
                     index1
                   )}`}

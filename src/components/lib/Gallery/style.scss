@@ -1,5 +1,3 @@
-$textShadow-bg-white: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
-
 .kromac-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -9,7 +7,7 @@ $textShadow-bg-white: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 }
 
 .kromac-gallery-polygon {
-  height: calc(var(--totalRows) * 200px);
+  max-height: calc(var(--totalRows) * 170px);
 
   .bdblur {
     width: 0;
