@@ -86,9 +86,12 @@
         .brillo {
           width: 0;
         }
-
+        &:hover > .kromac-gallery-image img {
+          transform: scale(1);
+        }
         .kromac-gallery-image {
           img {
+            transform: scale(1);
             object-fit: contain;
           }
         }
@@ -113,18 +116,6 @@
       font-size: 3em;
     }
 
-    .brillo {
-      position: absolute;
-      top: 0;
-      left: -20px;
-      height: 100%;
-      width: 20px;
-      background: rgba(255, 255, 255, .2);
-      filter: blur(3px);
-      transform: skewX(10deg);
-      z-index: -1;
-    }
-
     .kromac-gallery {
       margin: 1px;
       width: 300px;
@@ -133,6 +124,11 @@
       &:hover > .brillo {
         z-index: 1;
         animation: brillo 1s ease-out;
+      }
+
+      &:hover > .kromac-gallery-image img {
+        transition: all 1s ease;
+        transform: scale(1.2);
       }
 
       .kromac-gallery-image {
@@ -146,6 +142,7 @@
           height: 100%;
           object-fit: cover;
           cursor: pointer;
+          transition: all 1s ease;
         }
       }
     }
@@ -181,14 +178,5 @@
         }
       }
     }
-  }
-}
-
-@keyframes brillo {
-  from {
-    left: 0;
-  }
-  to {
-    left: 100%;
   }
 }

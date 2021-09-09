@@ -23,6 +23,11 @@
     background: var(--bgColor);
     z-index: 10000;
 
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+
     img {
       width: 100%;
       height: auto;

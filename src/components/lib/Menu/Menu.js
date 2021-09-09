@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
@@ -27,6 +27,13 @@ const Menu = props => {
   const [hambuergerIsActive, setHambuergerIsActive] = useState("");
   const [componentsFiltered, setComponentsFiltered] = useState("");
   const [components, setComponents] = useState(tabs.sort());
+
+  useEffect(
+    () => {
+      setHambuergerIsActive("");
+    },
+    [pathname]
+  );
 
   const styleMenu = {
     "--bgColor": bgColor,
@@ -71,11 +78,13 @@ const Menu = props => {
         <ion-icon name="close-outline" class="close" />
       </div>
       <div className="kromac-title text-bg-light">
-        {imgLogo && <img src={imgLogo} alt="logo" />}
-        {appName &&
-          <h1>
-            {appName}
-          </h1>}
+        <Link to="/">
+          {imgLogo && <img src={imgLogo} alt="logo" />}
+          {appName &&
+            <h1>
+              {appName}
+            </h1>}
+        </Link>
         {searchComponents &&
           <div className="kromac-input-search">
             <label className="text-bg-light">Find Component</label>

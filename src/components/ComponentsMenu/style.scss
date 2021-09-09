@@ -9,6 +9,12 @@ $txt-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 
   .kromac-title {
     background: $bg-kromac;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      text-shadow: $txt-shadow;
+    }
   }
 
   .kromac-components-list {

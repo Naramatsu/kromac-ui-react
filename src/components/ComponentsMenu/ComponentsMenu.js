@@ -38,8 +38,12 @@ const ComponentsMenu = () => {
   return (
     <div className="kromac-components kromac-scroll">
       <div className="kromac-title">
-        <h1>Kromac UI</h1>
-        <p>v1.0.0</p>
+        <Route>
+          <Link to="/" name="home" onClick={handleClick}>
+            <h1>Kromac UI</h1>
+            <p>v1.0.0</p>
+          </Link>
+        </Route>
       </div>
       <div className="kromac-components-list">
         <div className="kromac-input-search">
@@ -55,11 +59,6 @@ const ComponentsMenu = () => {
         </div>
         <ul>
           <Route>
-            <li style={{ textTransform: "capitalize" }}>
-              <Link to="/" name="home" onClick={handleClick}>
-                Home
-              </Link>
-            </li>
             {kromacComponents &&
               kromacComponents.map((link, index) =>
                 <li key={index} style={{ textTransform: "capitalize" }}>

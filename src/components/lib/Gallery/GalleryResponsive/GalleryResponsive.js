@@ -107,6 +107,7 @@ const GalleryResponsive = props => {
           style={{ ...rowColGenerator(image) }}
         >
           <div className="kromac-box-container">
+            <div className="brillo" />
             <button onClick={close} className="close">
               <ion-icon name="close-circle-outline" />
             </button>
