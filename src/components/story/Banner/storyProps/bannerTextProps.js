@@ -1,7 +1,7 @@
 const subTitle = "Banner text";
 const importType = `import Banner from "kromac/lib/Banner";`;
 
-const notes = `when the screen is <div class="chip">767px</div> the title will center and move to top`;
+const notes = `when the screen is <div class="chip">767px</div> the title will centered and move to top`;
 
 const bannerProps = {
   bannerType: "text",
@@ -53,7 +53,7 @@ const propsDescription = [
   {
     name: "order",
     type: "string",
-    values: ["default right"],
+    values: ["default left"],
     description: "side to appear the title"
   },
   {

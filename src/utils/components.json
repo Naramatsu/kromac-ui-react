@@ -18,6 +18,15 @@
     ]
   },
   {
+    "component": "gallery",
+    "subComponents": [
+      {
+        "component": "gallery polygon",
+        "type": "polygon"
+      }
+    ]
+  },
+  {
     "component": "toggle",
     "subComponents": [
       {

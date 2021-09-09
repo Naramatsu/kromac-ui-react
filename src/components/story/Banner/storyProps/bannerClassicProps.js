@@ -48,7 +48,7 @@ const propsDescription = [
   {
     name: "background",
     type: "string",
-    values: [],
+    values: ["default #000"],
     description: "background color of the banner"
   },
   {

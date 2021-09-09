@@ -7,13 +7,9 @@
 }
 
 .kromac-gallery-polygon {
-  max-height: calc(var(--totalRows) * 170px);
+  max-height: calc(var(--totalRows) * 175px);
 
-  .kromac-row {
-    max-height: calc(var(--totalRows) * 170px);
-  }
-
-  .bdblur {
+  .bgblur {
     width: 0;
     height: 100%;
     height: 100%;
@@ -35,6 +31,43 @@
     padding: 15px;
     pointer-events: none;
 
+    &.rhombus {
+      top: calc(var(--rowNumber) * -150px);
+
+      .kromac-gallery {
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      }
+    }
+
+    &.hexagon {
+      top: calc(var(--rowNumber) * -100px);
+
+      .kromac-gallery {
+        clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+      }
+    }
+
+    &.rabbet {
+      top: calc(var(--rowNumber) * -77px);
+
+      .kromac-gallery {
+        clip-path: polygon(
+          0% 15%,
+          15% 15%,
+          15% 0%,
+          85% 0%,
+          85% 15%,
+          100% 15%,
+          100% 85%,
+          85% 85%,
+          85% 100%,
+          15% 100%,
+          15% 85%,
+          0% 85%
+        );
+      }
+    }
+
     &.active {
       z-index: 1001;
       position: fixed;
@@ -50,11 +83,19 @@
         z-index: 1001;
         position: initial;
 
+        .brillo {
+          width: 0;
+        }
+
         .kromac-gallery-image {
           img {
             object-fit: contain;
           }
         }
+      }
+
+      .close {
+        display: flex;
       }
     }
 
@@ -72,11 +113,27 @@
       font-size: 3em;
     }
 
+    .brillo {
+      position: absolute;
+      top: 0;
+      left: -20px;
+      height: 100%;
+      width: 20px;
+      background: rgba(255, 255, 255, .2);
+      filter: blur(3px);
+      transform: skewX(10deg);
+      z-index: -1;
+    }
+
     .kromac-gallery {
       margin: 1px;
       width: 300px;
       height: 300px;
-      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+
+      &:hover > .brillo {
+        z-index: 1;
+        animation: brillo 1s ease-out;
+      }
 
       .kromac-gallery-image {
         position: absolute;
@@ -99,7 +156,9 @@
   .kromac-gallery-polygon {
     .kromac-row {
       .kromac-col {
-        padding: 0;
+        &.rhombus {
+          padding: 0;
+        }
       }
     }
   }
@@ -107,6 +166,7 @@
 
 @media (max-width: 767px) {
   .kromac-gallery-polygon {
+    max-height: fit-content;
     .kromac-row {
       .kromac-col {
         top: 0;
@@ -121,5 +181,14 @@
         }
       }
     }
+  }
+}
+
+@keyframes brillo {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
   }
 }

@@ -12,7 +12,7 @@ const Wrapper = ({ children, componentText }) =>
       <Col sm={12}>
         {children}
       </Col>
-      <Col sm={12} md={6}>
+      <Col md={12} lg={6}>
         <BoxImplementation componentText={componentText} />
       </Col>
     </Row>

@@ -11,6 +11,7 @@
       color: transparent;
       width: auto;
       position: absolute;
+      font-family: monospace;
 
       &::after {
         background: var(--bg);
@@ -32,7 +33,7 @@
         color: var(--fontColor);
         overflow: hidden;
         z-index: 100;
-        animation: textAnimation var(--timer) infinite linear;
+        animation: textAnimation var(--timer) infinite steps(var(--steps));
       }
 
       &:nth-child(1)::before {

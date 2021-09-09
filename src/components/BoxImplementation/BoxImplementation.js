@@ -11,7 +11,7 @@ const BoxImplementation = ({ componentText }) => {
       <span className="yellow" />
       <span className="green" />
       <textarea
-        className="kromac-scroll"
+        className="kromac-scroll-bg-dark"
         onKeyPress={handleCopy}
         onChange={handleCopy}
         spellCheck="false"

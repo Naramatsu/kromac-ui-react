@@ -34,7 +34,11 @@ const TextAnimation = props => {
     <div className="kromac-text-animation">
       <div style={styleTimmers}>
         {wordsSorted.map((w, index) =>
-          <h2 key={index} data-text={w} style={{ fontSize }}>
+          <h2
+            key={index}
+            data-text={w}
+            style={{ fontSize, "--steps": w.length }}
+          >
             {w}
           </h2>
         )}

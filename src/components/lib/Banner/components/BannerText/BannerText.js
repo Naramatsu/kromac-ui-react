@@ -16,8 +16,8 @@ const BannerText = props => {
   } = props;
 
   const bannerHeight = height !== "auto";
-  const orderCaption = order === "left" ? "last" : "first";
-  const orderImage = order === "left" ? "first" : "last";
+  const orderCaption = order === "right" ? "last" : "first";
+  const orderImage = order === "right" ? "first" : "last";
   const style = {
     backgroundImage: `url(${image})`,
     color,
