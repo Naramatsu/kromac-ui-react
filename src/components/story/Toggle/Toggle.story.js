@@ -36,7 +36,7 @@ const ToggleHistory = ({ location: { state = "switch" } }) => {
         notes={toggleProps.notes}
         componentsRealated={toggleComponents}
       >
-        <Suspense fallback={<div>Cargando card...</div>}>
+        <Suspense fallback={<div>Loading Toggle component...</div>}>
           <Toggle
             toggleProps={toggleProps.toggleProp}
             componentText={toggleProps.componentText}

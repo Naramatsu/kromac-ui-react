@@ -13,6 +13,7 @@ const Toggle = lazy(() => import("./components/story/Toggle/Toggle.story"));
 const Menu = lazy(() => import("./components/story/Menu/Menu.story"));
 const Banner = lazy(() => import("./components/story/Banner/Banner.story"));
 const Gallery = lazy(() => import("./components/story/Gallery/Gallery.story"));
+const Slider = lazy(() => import("./components/story/Slider/Slider.story"));
 const TextAnimation = lazy(() =>
   import("./components/story/TextAnimation/TextAnimation.story")
 );
@@ -39,6 +40,7 @@ const App = () =>
       <Route path="/textAnimation" component={TextAnimation} />
       <Route path="/banner" component={Banner} />
       <Route path="/gallery" component={Gallery} />
+      <Route path="/slider" component={Slider} />
     </Switch>
   </div>;
 

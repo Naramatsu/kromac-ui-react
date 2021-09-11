@@ -39,7 +39,7 @@ const BannerHistory = ({ location: { state = "classic" } }) => {
         notes={bannerProps.notes}
         componentsRealated={bannerComponents}
       >
-        <Suspense fallback={<div>Cargando card...</div>}>
+        <Suspense fallback={<div>Loading Banner component...</div>}>
           <Banner
             bannersProps={bannerProps.bannerProps}
             componentText={bannerProps.componentText}

@@ -15,7 +15,7 @@ const MenuHistory = () =>
       propsDescription={menuProps.propsDescription}
       notes={menuProps.notes}
     >
-      <Suspense fallback={<div>Cargando card...</div>}>
+      <Suspense fallback={<div>Loading Menu component...</div>}>
         <Menu
           menusProps={menuProps.menuProps}
           componentText={menuProps.componentText}

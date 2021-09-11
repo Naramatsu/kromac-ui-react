@@ -21,7 +21,8 @@ const Menu = props => {
     searchComponents = false,
     bgColor = "#283747",
     hamburgerActiveColor = "#C0392B",
-    hamburgerColor = "#283747"
+    hamburgerColor = "#283747",
+    homeUrl = "/"
   } = props;
 
   const [hambuergerIsActive, setHambuergerIsActive] = useState("");
@@ -78,7 +79,7 @@ const Menu = props => {
         <ion-icon name="close-outline" class="close" />
       </div>
       <div className="kromac-title text-bg-light">
-        <Link to="/">
+        <Link to={homeUrl}>
           {imgLogo && <img src={imgLogo} alt="logo" />}
           {appName &&
             <h1>
@@ -123,6 +124,7 @@ Menu.propTypes = exact({
   bgColor: PropTypes.string,
   hamburgerActiveColor: PropTypes.string,
   hamburgerColor: PropTypes.string,
+  homeUrl: PropTypes.string,
   history: PropTypes.object,
   location: PropTypes.object,
   match: PropTypes.object,

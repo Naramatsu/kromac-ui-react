@@ -42,7 +42,7 @@ const SpinnerHistory = ({ location: { state = "lighter" } }) => {
         notes={spinnerProps.notes}
         componentsRealated={spinnerComponents}
       >
-        <Suspense fallback={<div>Cargando card...</div>}>
+        <Suspense fallback={<div>Loading Spinner component...</div>}>
           <Spinner
             spinnersProps={spinnerProps.spinnerProps}
             componentText={spinnerProps.componentText}

@@ -26,7 +26,7 @@ const TextAnimationHistory = ({ location }) => {
         notes={textAnimationProps.notes}
         componentsRealated={textAnimationComponents}
       >
-        <Suspense fallback={<div>Cargando card...</div>}>
+        <Suspense fallback={<div>Loading TextAnimation component...</div>}>
           <TextAnimation
             textAnimationProps={textAnimationProps.textAnimationProp}
             componentText={textAnimationProps.componentText}

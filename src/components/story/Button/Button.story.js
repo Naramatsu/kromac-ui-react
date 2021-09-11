@@ -36,7 +36,7 @@ const ButtonHistory = ({ location: { state = "classic" } }) => {
         notes={buttonProps.notes}
         componentsRealated={buttonComponents}
       >
-        <Suspense fallback={<div>Cargando card...</div>}>
+        <Suspense fallback={<div>Loading Button component...</div>}>
           <Button
             buttonsProps={buttonProps.buttonProps}
             componentText={buttonProps.componentText}

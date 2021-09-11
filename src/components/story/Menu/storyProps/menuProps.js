@@ -63,6 +63,13 @@ const propsDescription = [
     values: ["default #C0392B"],
     description:
       "background color of the float hamburgermenu button when this is active"
+  },
+  {
+    name: "homeUrl",
+    type: "string",
+    values: ["default /"],
+    description:
+      "Link to redirect to home page"
   }
 ];
 

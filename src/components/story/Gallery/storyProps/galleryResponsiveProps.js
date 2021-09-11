@@ -11,30 +11,30 @@ const galleryProps = {
   images: [
     {
       img: "https://images.pexels.com/photos/719396/pexels-photo-719396.jpeg",
+      row: 2,
+    },
+    {
+      img: "https://i.ytimg.com/vi/DG3rk0aGlpA/maxresdefault.jpg",
+      col: 2
+    },
+    { img: "http://www.solofondos.com/wp-content/uploads/2016/03/outrun-vaporwave-hd-wallpaper-preview.jpg" },
+    { img: "https://img.apksum.com/93/com.mda.black.wallpapers.hd.dark.background/5.0/icon.png" },
+    {
+      img: "https://i.pinimg.com/originals/54/b4/38/54b438c99e19dc7450afcdc80955810c.jpg",
+      col: 2
+    },
+    {
+      img: "https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__480.jpg",
+      col: 2
+    },
+    { img: "https://cdn.wallpapersafari.com/3/74/iVxWUY.jpg" },
+    {
+      img: "https://www.wallpapertip.com/wmimgs/5-53557_wallpaper-hd-1080p-mikael-gustafsson.jpg",
       row: 2
     },
+    { img: "https://greatloveart.com/wp-content/uploads/2021/01/cool-iPhone-wallpapers-backgrounds-22.jpg" },
     {
-      img: "https://i.ytimg.com/vi/DG3rk0aGlpA/maxresdefault.jpg",
-      col: 2
-    },
-    { img: "https://i.ytimg.com/vi/DG3rk0aGlpA/maxresdefault.jpg" },
-    { img: "https://i.ytimg.com/vi/DG3rk0aGlpA/maxresdefault.jpg" },
-    {
-      img: "https://i.ytimg.com/vi/DG3rk0aGlpA/maxresdefault.jpg",
-      col: 2
-    },
-    {
-      img: "https://i.ytimg.com/vi/DG3rk0aGlpA/maxresdefault.jpg",
-      col: 2
-    },
-    { img: "https://i.ytimg.com/vi/DG3rk0aGlpA/maxresdefault.jpg" },
-    {
-      img: "https://i.ytimg.com/vi/DG3rk0aGlpA/maxresdefault.jpg",
-      row: 2
-    },
-    { img: "https://i.ytimg.com/vi/DG3rk0aGlpA/maxresdefault.jpg" },
-    {
-      img: "https://i.ytimg.com/vi/DG3rk0aGlpA/maxresdefault.jpg",
+      img: "https://www.xtrafondos.com/descargar.php?id=3183&resolucion=2560x1440",
       col: 2
     }
   ]
@@ -51,24 +51,24 @@ const componentText = `<div>
         img: "https://i.ytimg.com/vi/DG3rk0aGlpA/maxresdefault.jpg",
         col: 2
       },
-      { img: "https://i.ytimg.com/vi/DG3rk0aGlpA/maxresdefault.jpg" },
-      { img: "https://i.ytimg.com/vi/DG3rk0aGlpA/maxresdefault.jpg" },
+      { img: "http://www.solofondos.com/wp-content/uploads/2016/03/outrun-vaporwave-hd-wallpaper-preview.jpg" },
+      { img: "https://img.apksum.com/93/com.mda.black.wallpapers.hd.dark.background/5.0/icon.png" },
       {
-        img: "https://i.ytimg.com/vi/DG3rk0aGlpA/maxresdefault.jpg",
+        img: "https://i.pinimg.com/originals/54/b4/38/54b438c99e19dc7450afcdc80955810c.jpg",
         col: 2
       },
       {
-        img: "https://i.ytimg.com/vi/DG3rk0aGlpA/maxresdefault.jpg",
+        img: "https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__480.jpg",
         col: 2
       },
-      { img: "https://i.ytimg.com/vi/DG3rk0aGlpA/maxresdefault.jpg" },
+      { img: "https://cdn.wallpapersafari.com/3/74/iVxWUY.jpg" },
       {
-        img: "https://i.ytimg.com/vi/DG3rk0aGlpA/maxresdefault.jpg",
+        img: "https://www.wallpapertip.com/wmimgs/5-53557_wallpaper-hd-1080p-mikael-gustafsson.jpg",
         row: 2
       },
-      { img: "https://i.ytimg.com/vi/DG3rk0aGlpA/maxresdefault.jpg" },
+      { img: "https://greatloveart.com/wp-content/uploads/2021/01/cool-iPhone-wallpapers-backgrounds-22.jpg" },
       {
-        img: "https://i.ytimg.com/vi/DG3rk0aGlpA/maxresdefault.jpg",
+        img: "https://www.xtrafondos.com/descargar.php?id=3183&resolucion=2560x1440",
         col: 2
       }
     ]

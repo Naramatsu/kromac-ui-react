@@ -39,7 +39,7 @@ const PanelHistory = ({ location: { state = "classic" } }) => {
         notes={panelProps.notes}
         componentsRealated={panelComponents}
       >
-        <Suspense fallback={<div>Cargando card...</div>}>
+        <Suspense fallback={<div>Loading Panel component...</div>}>
           <Panel
             panelProps={panelProps.panelProp}
             componentText={panelProps.componentText}

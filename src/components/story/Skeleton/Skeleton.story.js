@@ -36,7 +36,7 @@ const SkeletonHistory = ({ location: { state = "light" } }) => {
         notes={skeletonProps.notes}
         componentsRealated={skeletonComponents}
       >
-        <Suspense fallback={<div>Cargando card...</div>}>
+        <Suspense fallback={<div>Loading Skeleton component...</div>}>
           <Skeleton
             skeletonProps={skeletonProps.skeletonProp}
             componentText={skeletonProps.componentText}

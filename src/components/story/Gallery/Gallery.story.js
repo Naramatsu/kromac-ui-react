@@ -36,7 +36,7 @@ const GalleryHistory = ({ location: { state = "responsive" } }) => {
         notes={galleryProps.notes}
         componentsRealated={galleryComponents}
       >
-        <Suspense fallback={<div>Cargando card...</div>}>
+        <Suspense fallback={<div>Loading Gallery component...</div>}>
           <Gallery
             gallerysProps={galleryProps.galleryProps}
             componentText={galleryProps.componentText}

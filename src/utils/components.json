@@ -83,6 +83,10 @@
     "subComponents": []
   },
   {
+    "component": "slider",
+    "subComponents": []
+  },
+  {
     "component": "textAnimation",
     "subComponents": []
   },
