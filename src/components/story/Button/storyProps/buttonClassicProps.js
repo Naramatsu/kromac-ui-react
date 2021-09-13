@@ -41,6 +41,24 @@ const propsDescription = [
     description: "this prop only affect the button text"
   },
   {
+    name: "loading",
+    type: "bool",
+    values: ["default false"],
+    description: "this prop show an spinner into the button"
+  },
+  {
+    name: "disabled",
+    type: "bool",
+    values: [`default false`],
+    description: "this prop disabled the button"
+  },
+  {
+    name: "onClick",
+    type: "function",
+    values: [],
+    description: ""
+  },
+  {
     name: "children",
     type: "any",
     values: [],

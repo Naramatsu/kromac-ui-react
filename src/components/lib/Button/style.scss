@@ -7,12 +7,39 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
   background: transparent;
   padding: 1em 3em;
   position: relative;
-  transition: all 1s ease;
   backdrop-filter: blur(20px);
   margin: .5em;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
   min-width: 150px;
   max-height: 75px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+
+  &.disabled,
+  &.disabled:hover {
+    cursor: not-allowed;
+  }
+
+  .button-content {
+    &.spinner {
+      display: contents;
+      p {
+        margin-left: 25px;
+      }
+      .kromac-spinner {
+        transform: scale(.15);
+        position: absolute;
+        left: -60px;
+        span {
+          width: auto;
+          height: auto;
+        }
+      }
+    }
+  }
 
   p {
     margin: 0;
@@ -21,21 +48,21 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
     z-index: 100;
   }
 
-  span {
+  .kromac-span-button {
     content: '';
     width: 100%;
     height: 50%;
     position: absolute;
     top: 50%;
     left: 0;
-    transition: all 1s ease;
+    transition: background 1s ease;
   }
 
   &:hover {
     border: solid 1px #fff;
-    transition: all 1s ease;
+    transition: background 1s ease;
 
-    span {
+    .kromac-span-button {
       content: '';
       width: 100%;
       height: 50%;
@@ -43,7 +70,7 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
       top: 50%;
       left: 0;
       background: rgba(0, 0, 0, .5);
-      transition: all 1s ease;
+      transition: background 1s ease;
     }
   }
 
@@ -54,14 +81,14 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
       text-shadow: 1px 1px 2px #2e86c1, 0 0 .25em #2e86c1, 0 0 0.2em #2e86c1;
     }
 
-    span {
+    .kromac-span-button {
       background: #2e86c1;
     }
 
     &:hover {
       background: #2e86c1;
 
-      span {
+      .kromac-span-button {
         background: rgba(0, 0, 0, .5);
       }
     }
@@ -74,13 +101,13 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
       text-shadow: 1px 1px 2px #28b463, 0 0 .25em #28b463, 0 0 0.2em #28b463;
     }
 
-    span {
+    .kromac-span-button {
       background: #28b463;
     }
 
     &:hover {
       background: #28b463;
-      span {
+      .kromac-span-button {
         background: rgba(0, 0, 0, .5);
       }
     }
@@ -93,13 +120,13 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
       text-shadow: 1px 1px 2px #f1c40f, 0 0 .25em #f1c40f, 0 0 0.2em #f1c40f;
     }
 
-    span {
+    .kromac-span-button {
       background: #f1c40f;
     }
 
     &:hover {
       background: #f1c40f;
-      span {
+      .kromac-span-button {
         background: rgba(0, 0, 0, .5);
       }
     }
@@ -112,13 +139,13 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
       text-shadow: 1px 1px 2px #cb4335, 0 0 .25em #cb4335, 0 0 0.2em #cb4335;
     }
 
-    span {
+    .kromac-span-button {
       background: #cb4335;
     }
 
     &:hover {
       background: #cb4335;
-      span {
+      .kromac-span-button {
         background: rgba(0, 0, 0, .5);
       }
     }
@@ -131,13 +158,13 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
       text-shadow: 1px 1px 2px #d68910, 0 0 .25em #d68910, 0 0 0.2em #d68910;
     }
 
-    span {
+    .kromac-span-button {
       background: #d68910;
     }
 
     &:hover {
       background: #d68910;
-      span {
+      .kromac-span-button {
         background: rgba(0, 0, 0, .5);
       }
     }
@@ -151,13 +178,13 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
       text-shadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
     }
 
-    span {
+    .kromac-span-button {
       background: #d5dbdb;
     }
 
     &:hover {
       background: #d5dbdb;
-      span {
+      .kromac-span-button {
         background: rgba(0, 0, 0, .5);
       }
     }
@@ -170,13 +197,13 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
       text-shadow: 1px 1px 2px #212f3d, 0 0 .25em #212f3d, 0 0 0.2em #212f3d;
     }
 
-    span {
+    .kromac-span-button {
       background: #212f3d;
     }
 
     &:hover {
       background: #212f3d;
-      span {
+      .kromac-span-button {
         background: rgba(255, 255, 255, .5);
       }
     }
@@ -190,7 +217,7 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
       text-shadow: 1px 1px 2px #212f3d, 0 0 .25em #212f3d, 0 0 0.2em #212f3d;
     }
 
-    span {
+    .kromac-span-button {
       display: none;
     }
   }
@@ -199,11 +226,11 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
     position: relative;
     border: none;
 
-     p {
+    p {
       text-shadow: none !important;
     }
 
-    span {
+    .kromac-span-button {
       height: auto;
       width: auto;
       content: '';
@@ -214,7 +241,7 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
       right: 4px;
       bottom: 4px;
       background: #212f3c;
-      transition: all 1s ease;
+      transition: background-position 1s ease;
     }
 
     &::before {
@@ -248,7 +275,7 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
     &.info,
     &.dark {
       &:hover {
-        span {
+        .kromac-span-button {
           background: #212f3c;
         }
       }

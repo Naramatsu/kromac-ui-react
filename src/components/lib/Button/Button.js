@@ -1,17 +1,41 @@
-import React from "react";
+import React, { lazy } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import "./style.scss";
 
-const Button = ({ color = "primary", buttonType = "", className = "" }) =>
-  <div>
-    <button
-      className={`kromac-btn ${color} ${buttonType} waves-effect waves-light`}
-    >
-      <span />
-      <p className={`${className}`}>Button here</p>
-    </button>
-  </div>;
+const Spinner = lazy(() => import("../Spinner"));
+
+const Button = ({
+  color = "primary",
+  buttonType = "classic",
+  className = "",
+  loading = false,
+  disabled = false,
+  onClick,
+  children
+}) => {
+  const spinnerClass = loading ? "spinner" : "";
+  const disabledClass = disabled ? "disabled" : "";
+  const bgSpinner = buttonType === "classic" ? "#fff" : "#212f3c";
+
+  return (
+    <div>
+      <button
+        disabled={disabled}
+        onClick={onClick}
+        className={`kromac-btn ${color} ${buttonType} ${disabledClass}`}
+      >
+        <span className="kromac-span-button" />
+        <div className={`button-content ${spinnerClass}`}>
+          {loading && <Spinner bgColorInside={bgSpinner} />}
+          <p className={`${className}`}>
+            {children}
+          </p>
+        </div>
+      </button>
+    </div>
+  );
+};
 
 Button.propTypes = exact({
   buttonType: PropTypes.oneOf(["classic", "neon"]),
@@ -26,6 +50,9 @@ Button.propTypes = exact({
     "transparent"
   ]),
   className: PropTypes.string,
+  loading: PropTypes.bool,
+  disabled: PropTypes.bool,
+  onClick: PropTypes.func,
   children: PropTypes.any
 });
 

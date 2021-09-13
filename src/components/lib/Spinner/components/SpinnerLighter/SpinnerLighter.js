@@ -5,7 +5,12 @@ import { styleCentered } from "../../../../../utils/utils";
 import "./style.scss";
 
 const SpinnerLighter = props => {
-  const { size = "sm", isCentered = false, shadows = true } = props;
+  const {
+    size = "sm",
+    isCentered = false,
+    shadows = true,
+    bgColorInside = "#fff"
+  } = props;
   const isShadows = shadows ? "shadows" : "";
 
   return (
@@ -14,7 +19,7 @@ const SpinnerLighter = props => {
       style={styleCentered(isCentered)}
     >
       <div className="loader">
-        <span />
+        <span style={{ background: bgColorInside }} />
       </div>
     </div>
   );
@@ -24,6 +29,7 @@ SpinnerLighter.propTypes = exact({
   spinnerType: PropTypes.string,
   size: PropTypes.oneOf(["sm", "md", "lg"]),
   isCentered: PropTypes.bool,
+  bgColorInside: PropTypes.string,
   shadows: PropTypes.bool
 });
 

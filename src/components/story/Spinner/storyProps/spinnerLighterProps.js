@@ -27,6 +27,12 @@ const propsDescription = [
     description: "this prop place the spinner in the middle of the screen"
   },
   {
+    name: "bgColorInside",
+    type: "string",
+    values: ["default #fff"],
+    description: "this prop you set the background inside"
+  },
+  {
     name: "shadows",
     type: "bool",
     values: ["default true"],
