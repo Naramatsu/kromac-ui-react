@@ -1,8 +1,10 @@
-import React from "react";
+import React, { lazy } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
-import { Row, Col } from "react-bootstrap";
 import "./style.scss";
+
+const Row = lazy(() => import("react-bootstrap/Row"));
+const Col = lazy(() => import("react-bootstrap/Col"));
 
 const BannerClassic = props => {
   const {
@@ -34,7 +36,7 @@ const BannerClassic = props => {
     "--heightImg": height,
     "--widthImg": bannerHeight ? "auto" : "100%"
   };
-  
+
   return (
     <div className="kromac-banner-container" style={styleContainer}>
       <div className={`kromac-banner-classic ${overlayClass}`} style={style}>

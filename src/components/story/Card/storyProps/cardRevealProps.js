@@ -12,7 +12,7 @@ const notes = `For better view please wrap the card into a bootstrap
 
 const cardProps = {
   cardType: "reveal",
-  image: "https://images3.alphacoders.com/112/1121877.jpg",
+  image: "https://cdn.pixabay.com/photo/2018/05/10/22/56/bird-3389053_1280.jpg",
   title: "Card Title",
   text: `Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy

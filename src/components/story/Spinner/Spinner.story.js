@@ -3,7 +3,10 @@ import spinnerLighterProps from "./storyProps/spinnerLighterProps";
 import spinnerWavesProps from "./storyProps/spinnerWavesProps";
 import spinnerSvgProps from "./storyProps/spinnerSvgProps";
 import spinnerRainbowProps from "./storyProps/spinnerRainbowProps";
-import { getComponentsRelated } from "../../../utils/utils";
+import {
+  changeDocumentTitle,
+  getComponentsRelated
+} from "../../../utils/utils";
 
 const Preview = lazy(() => import("../../Preview"));
 const Spinner = lazy(() => import("./Spinner"));
@@ -26,6 +29,7 @@ const spinnerToShow = spinnerType => {
 const SpinnerHistory = ({ location: { state = "lighter" } }) => {
   useEffect(
     () => {
+      document.title = changeDocumentTitle({ component: "Spinner", state });
       window.scrollTo(0, 0);
     },
     [state]

@@ -2,7 +2,10 @@ import React, { lazy, Suspense, useEffect } from "react";
 import bannerClassicProps from "./storyProps/bannerClassicProps";
 import bannerImageProps from "./storyProps/bannerImageProps";
 import bannerTextProps from "./storyProps/bannerTextProps";
-import { getComponentsRelated } from "../../../utils/utils";
+import {
+  changeDocumentTitle,
+  getComponentsRelated
+} from "../../../utils/utils";
 
 const Preview = lazy(() => import("../../Preview"));
 const Banner = lazy(() => import("./Banner"));
@@ -23,6 +26,7 @@ const bannerToShow = bannerType => {
 const BannerHistory = ({ location: { state = "classic" } }) => {
   useEffect(
     () => {
+      document.title = changeDocumentTitle({ component: "Banner", state });
       window.scrollTo(0, 0);
     },
     [state]

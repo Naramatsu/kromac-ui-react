@@ -1,8 +1,9 @@
 import React, { lazy } from "react";
-import { Col, Row } from "react-bootstrap";
 
+const Row = lazy(() => import("react-bootstrap/Row"));
+const Col = lazy(() => import("react-bootstrap/Col"));
 const SpinnerComponent = lazy(() => import("../../lib/Spinner"));
-const BoxImplementation = lazy(() => import("../../BoxImplementation/BoxImplementation"));
+const BoxImplementation = lazy(() => import("../../BoxImplementation"));
 
 const Wrapper = ({ children, componentText }) =>
   <div>

@@ -1,6 +1,12 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom";
-import Main from "./Main";
+
+const Main = lazy(() => import("./Main"));
 console.log("OS pc => ", window.navigator.appVersion.toLowerCase());
 
-ReactDOM.render(<Main />, document.getElementById("root"));
+ReactDOM.render(
+  <Suspense fallback={<div>Loading Kromac UI...</div>}>
+    <Main />
+  </Suspense>,
+  document.getElementById("root")
+);

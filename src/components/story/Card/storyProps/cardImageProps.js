@@ -12,7 +12,7 @@ const notes = `For better view please wrap the card into a bootstrap
 
 const cardProps = {
   cardType: "image",
-  image: "https://images3.alphacoders.com/112/1121877.jpg",
+  image: "https://cdn.pixabay.com/photo/2018/09/23/18/30/drop-3698073_1280.jpg",
   title: "Card Title",
 };
 

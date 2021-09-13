@@ -1,8 +1,9 @@
 import React, { lazy } from "react";
-import { Col, Row } from "react-bootstrap";
 
+const Row = lazy(() => import("react-bootstrap/Row"));
+const Col = lazy(() => import("react-bootstrap/Col"));
 const PanelComponent = lazy(() => import("../../lib/Panel"));
-const BoxImplementation = lazy(() => import("../../BoxImplementation/BoxImplementation"));
+const BoxImplementation = lazy(() => import("../../BoxImplementation"));
 
 const Wrapper = ({ children, componentText, panelProps }) =>
   <div>
@@ -11,8 +12,9 @@ const Wrapper = ({ children, componentText, panelProps }) =>
         sm={12}
         style={{
           margin: ".75em 0",
+          padding: "1em",
           background: panelProps.transparent
-            ? "url(https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__480.jpg)"
+            ? "url(https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg)"
             : ""
         }}
       >

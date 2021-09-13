@@ -1,7 +1,10 @@
 import React, { lazy, Suspense, useEffect } from "react";
 import toggleSwitchProps from "./storyProps/toggleSwitchProps";
 import togglePowerProps from "./storyProps/togglePowerProps";
-import { getComponentsRelated } from "../../../utils/utils";
+import {
+  changeDocumentTitle,
+  getComponentsRelated
+} from "../../../utils/utils";
 
 const Preview = lazy(() => import("../../Preview"));
 const Toggle = lazy(() => import("./Toggle"));
@@ -20,6 +23,7 @@ const ToggleToShow = toggleType => {
 const ToggleHistory = ({ location: { state = "switch" } }) => {
   useEffect(
     () => {
+      document.title = changeDocumentTitle({ component: "Toggle", state });
       window.scrollTo(0, 0);
     },
     [state]

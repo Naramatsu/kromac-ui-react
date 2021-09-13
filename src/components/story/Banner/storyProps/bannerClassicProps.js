@@ -12,7 +12,7 @@ const notes = `
 `;
 
 const bannerProps = {
-  image: "https://images.alphacoders.com/473/473210.png",
+  image: "https://cdn.pixabay.com/photo/2018/04/22/23/18/skeleton-3342754_1280.png",
   height: "300px",
   overlay: true
 };

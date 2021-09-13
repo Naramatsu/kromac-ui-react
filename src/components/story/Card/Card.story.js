@@ -7,7 +7,10 @@ import cardHorizontalProps from "./storyProps/cardHorizontalProps";
 import cardPolygonProps from "./storyProps/cardPolygonProps";
 import cardUserProps from "./storyProps/cardUserProps";
 import cardPercentageProps from "./storyProps/cardPercentageProps";
-import { getComponentsRelated } from "../../../utils/utils";
+import {
+  changeDocumentTitle,
+  getComponentsRelated
+} from "../../../utils/utils";
 
 const Preview = lazy(() => import("../../Preview"));
 const Card = lazy(() => import("./Card"));
@@ -38,6 +41,7 @@ const cardToShow = cardType => {
 const CardStory = ({ location: { state = "classic" } }) => {
   useEffect(
     () => {
+      document.title = changeDocumentTitle({ component: "Card", state });
       window.scrollTo(0, 0);
     },
     [state]
@@ -54,7 +58,7 @@ const CardStory = ({ location: { state = "classic" } }) => {
         notes={cardProps.notes}
         componentsRealated={cardComponents}
       >
-        <Suspense fallback={<div>Cargando card...</div>}>
+        <Suspense fallback={<div>Loading card...</div>}>
           <Card
             cardProps={cardProps.cardProps}
             componentText={cardProps.componentText}

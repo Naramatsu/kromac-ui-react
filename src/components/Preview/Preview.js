@@ -1,9 +1,10 @@
-import React from "react";
-import { Table } from "react-bootstrap";
+import React, { lazy } from "react";
 import parseToHtml from "html-react-parser";
+import { Link } from "react-router-dom";
 import { addChip } from "../../utils/utils";
 import "./style.scss";
-import { Link } from "react-router-dom";
+
+const Table = lazy(() => import("react-bootstrap/Table"));
 
 const Preview = props => {
   const {
@@ -73,7 +74,7 @@ const Preview = props => {
           </div>}
         {componentsRealated &&
           <div className="component-props components-related">
-             <h3>Components Related</h3>
+            <h3>Components Related</h3>
             <ul>
               {componentsRealated.map((link, index) =>
                 <li key={index}>

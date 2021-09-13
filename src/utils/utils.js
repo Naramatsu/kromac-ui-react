@@ -218,7 +218,9 @@ export const rowColMaker = images => {
         }
       }
     }
-    rows.push(imgs);
+    if (imgs.length > 0) {
+      rows.push(imgs);
+    }
   }
   return rows;
 };
@@ -233,4 +235,8 @@ export const inactivateIonIcon = (number, indicator, long) => {
       return { pointerEvents: "none", color: "#ccc" };
     }
   }
+};
+
+export const changeDocumentTitle = ({ component, state }) => {
+  return `Kromac UI: ${component} ${state}`;
 };

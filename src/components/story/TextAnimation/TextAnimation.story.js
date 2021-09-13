@@ -1,6 +1,9 @@
 import React, { lazy, Suspense, useEffect } from "react";
 import textAnimationProps from "./storyProps/textAnimationProps";
-import { getComponentsRelated } from "../../../utils/utils";
+import {
+  changeDocumentTitle,
+  getComponentsRelated
+} from "../../../utils/utils";
 
 const Preview = lazy(() => import("../../Preview"));
 const TextAnimation = lazy(() => import("./TextAnimation"));
@@ -10,6 +13,10 @@ const textAnimationComponents = getComponentsRelated("textAnimation");
 const TextAnimationHistory = ({ location }) => {
   useEffect(
     () => {
+      document.title = changeDocumentTitle({
+        component: "TextAnimation",
+        state: ""
+      });
       window.scrollTo(0, 0);
     },
     [location]

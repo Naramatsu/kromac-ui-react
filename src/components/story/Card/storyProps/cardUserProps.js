@@ -12,7 +12,7 @@ const notes = `For better view please wrap the card into a bootstrap
 
 const cardProps = {
   cardType: "user",
-  image: "https://images3.alphacoders.com/112/1121877.jpg",
+  image: "https://cdn.pixabay.com/photo/2016/07/15/16/49/man-1519665_1280.jpg",
   name: "Card name",
   profession: "Card profession",
   redes: [
@@ -21,6 +21,7 @@ const cardProps = {
     { name: "linkedin", url: "#" },
     { name: "twitter", url: "#" }
   ],
+  color: "#154360",
   text: `Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy
         text ever since the 1500s, when an unknown printer took a galley
@@ -41,6 +42,7 @@ const componentText = `<div>
         name="Card name"
         profession: "Card profession"
         image="image.png"
+        color="#154360"
         redes={[
           { name: "facebook", url: "#" },
           { name: "instagram", url: "#" },

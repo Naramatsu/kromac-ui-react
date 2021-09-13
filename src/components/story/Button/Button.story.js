@@ -1,7 +1,10 @@
 import React, { lazy, Suspense, useEffect } from "react";
 import buttonClassicProps from "./storyProps/buttonClassicProps";
 import buttonNeonProps from "./storyProps/buttonNeonProps";
-import { getComponentsRelated } from "../../../utils/utils";
+import {
+  changeDocumentTitle,
+  getComponentsRelated
+} from "../../../utils/utils";
 
 const Preview = lazy(() => import("../../Preview"));
 const Button = lazy(() => import("./Button"));
@@ -20,6 +23,7 @@ const buttonToShow = buttonType => {
 const ButtonHistory = ({ location: { state = "classic" } }) => {
   useEffect(
     () => {
+      document.title = changeDocumentTitle({ component: "Button", state });
       window.scrollTo(0, 0);
     },
     [state]

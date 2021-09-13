@@ -1,8 +1,10 @@
-import React from "react";
+import React, { lazy } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
-import { Row, Col } from "react-bootstrap";
 import "./style.scss";
+
+const Row = lazy(() => import("react-bootstrap/Row"));
+const Col = lazy(() => import("react-bootstrap/Col"));
 
 const BannerText = props => {
   const {
@@ -12,6 +14,7 @@ const BannerText = props => {
     height = "500px",
     order,
     attachment,
+    bgPosition = "center",
     textAlign = "center"
   } = props;
 
@@ -24,6 +27,7 @@ const BannerText = props => {
     height,
     backgroundAttachment: attachment,
     textAlign,
+    backgroundPosition: bgPosition,
     "--heightImg": height,
     "--widthImg": bannerHeight ? "auto" : "100%"
   };
@@ -63,7 +67,8 @@ BannerText.propTypes = exact({
   height: PropTypes.string,
   order: PropTypes.string,
   attachment: PropTypes.string,
-  textAlign: PropTypes.string
+  textAlign: PropTypes.string,
+  bgPosition: PropTypes.string
 });
 
 export default BannerText;

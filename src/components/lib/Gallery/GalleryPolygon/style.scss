@@ -7,7 +7,8 @@
 }
 
 .kromac-gallery-polygon {
-  max-height: calc(var(--totalRows) * 175px);
+  max-height: calc((var(--totalRows) / 2) * 450px);
+  margin-bottom: 1em;
 
   .bgblur {
     width: 0;

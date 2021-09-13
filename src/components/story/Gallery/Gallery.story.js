@@ -1,7 +1,10 @@
 import React, { lazy, Suspense, useEffect } from "react";
 import galleryResponsiveProps from "./storyProps/galleryResponsiveProps";
 import galleryPolygonProps from "./storyProps/galleryPolygonProps";
-import { getComponentsRelated } from "../../../utils/utils";
+import {
+  changeDocumentTitle,
+  getComponentsRelated
+} from "../../../utils/utils";
 
 const Preview = lazy(() => import("../../Preview"));
 const Gallery = lazy(() => import("./Gallery"));
@@ -20,6 +23,7 @@ const galleryToShow = galleryType => {
 const GalleryHistory = ({ location: { state = "responsive" } }) => {
   useEffect(
     () => {
+      document.title = changeDocumentTitle({ component: "Gallery", state });
       window.scrollTo(0, 0);
     },
     [state]

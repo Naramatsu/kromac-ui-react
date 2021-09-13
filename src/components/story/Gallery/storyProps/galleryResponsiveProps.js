@@ -10,31 +10,48 @@ And when the  screen going from <b>550px</b> or <b>lower</b> the numbers of the 
 const galleryProps = {
   images: [
     {
-      img: "https://images.pexels.com/photos/719396/pexels-photo-719396.jpeg",
-      row: 2,
-    },
-    {
-      img: "https://i.ytimg.com/vi/DG3rk0aGlpA/maxresdefault.jpg",
-      col: 2
-    },
-    { img: "http://www.solofondos.com/wp-content/uploads/2016/03/outrun-vaporwave-hd-wallpaper-preview.jpg" },
-    { img: "https://img.apksum.com/93/com.mda.black.wallpapers.hd.dark.background/5.0/icon.png" },
-    {
-      img: "https://i.pinimg.com/originals/54/b4/38/54b438c99e19dc7450afcdc80955810c.jpg",
-      col: 2
-    },
-    {
-      img: "https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__480.jpg",
-      col: 2
-    },
-    { img: "https://cdn.wallpapersafari.com/3/74/iVxWUY.jpg" },
-    {
-      img: "https://www.wallpapertip.com/wmimgs/5-53557_wallpaper-hd-1080p-mikael-gustafsson.jpg",
+      img:
+        "https://cdn.pixabay.com/photo/2019/04/06/06/44/astronaut-4106766_1280.jpg",
       row: 2
     },
-    { img: "https://greatloveart.com/wp-content/uploads/2021/01/cool-iPhone-wallpapers-backgrounds-22.jpg" },
     {
-      img: "https://www.xtrafondos.com/descargar.php?id=3183&resolucion=2560x1440",
+      img:
+        "https://images.pexels.com/photos/3075993/pexels-photo-3075993.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      col: 2
+    },
+    {
+      img:
+        "https://cdn.pixabay.com/photo/2016/11/19/11/37/automobile-1838782_1280.jpg"
+    },
+    {
+      img: "https://cdn.pixabay.com/photo/2015/06/24/13/32/dog-820014_1280.jpg"
+    },
+    {
+      img:
+        "https://cdn.pixabay.com/photo/2018/09/23/18/30/drop-3698073_1280.jpg",
+      col: 2
+    },
+    {
+      img:
+        "https://cdn.pixabay.com/photo/2020/08/14/17/13/light-bulbs-5488573_1280.jpg",
+      col: 2
+    },
+    {
+      img:
+        "https://cdn.pixabay.com/photo/2018/05/10/22/56/bird-3389053_1280.jpg"
+    },
+    {
+      img:
+        "https://cdn.pixabay.com/photo/2016/08/17/01/39/mystery-1599527_1280.jpg",
+      row: 2
+    },
+    {
+      img:
+        "https://images.pexels.com/photos/5821029/pexels-photo-5821029.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    },
+    {
+      img:
+        "https://cdn.pixabay.com/photo/2020/05/17/20/34/concept-5183469_1280.jpg",
       col: 2
     }
   ]
@@ -42,36 +59,36 @@ const galleryProps = {
 
 const componentText = `<div>
   <Gallery
-    images="[
+    images={[
       {
-        img: "https://images.pexels.com/photos/719396/pexels-photo-719396.jpe",
+        img: "image.png",
         row: 2
       },
       {
-        img: "https://i.ytimg.com/vi/DG3rk0aGlpA/maxresdefault.jpg",
+        img: "image.png",
         col: 2
       },
-      { img: "http://www.solofondos.com/wp-content/uploads/2016/03/outrun-vaporwave-hd-wallpaper-preview.jpg" },
-      { img: "https://img.apksum.com/93/com.mda.black.wallpapers.hd.dark.background/5.0/icon.png" },
+      { img: "image.png" },
+      { img: "image.png" },
       {
-        img: "https://i.pinimg.com/originals/54/b4/38/54b438c99e19dc7450afcdc80955810c.jpg",
+        img: "image.png",
         col: 2
       },
       {
-        img: "https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__480.jpg",
+        img: "image.png",
         col: 2
       },
-      { img: "https://cdn.wallpapersafari.com/3/74/iVxWUY.jpg" },
+      { img: "image.png" },
       {
-        img: "https://www.wallpapertip.com/wmimgs/5-53557_wallpaper-hd-1080p-mikael-gustafsson.jpg",
+        img: "image.png",
         row: 2
       },
-      { img: "https://greatloveart.com/wp-content/uploads/2021/01/cool-iPhone-wallpapers-backgrounds-22.jpg" },
+      { img: "image.png" },
       {
-        img: "https://www.xtrafondos.com/descargar.php?id=3183&resolucion=2560x1440",
+        img: "image.png",
         col: 2
       }
-    ]
+    ]}
   />
 </div>`;
 

@@ -3,7 +3,7 @@ const importType = `import Banner from "kromac/lib/Banner";`;
 
 const bannerProps = {
   bannerType: "image",
-  image: "https://images3.alphacoders.com/112/1121877.jpg",
+  image: "https://cdn.pixabay.com/photo/2018/07/05/22/16/panorama-3519309_1280.jpg",
   height: "300px",
 };
 

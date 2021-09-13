@@ -1,7 +1,7 @@
 import React, { lazy } from "react";
 import { Route, Switch } from "react-router-dom";
-import "./style.scss";
 import data from "./utils/components.json";
+import "./style.scss";
 
 const KromacMenu = lazy(() => import("./components/lib/Menu"));
 const LandingPage = lazy(() => import("./components/LandingPage"));

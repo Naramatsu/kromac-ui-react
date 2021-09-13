@@ -1,5 +1,7 @@
-import React from "react";
-import { Container } from "react-bootstrap";
+import React, { lazy } from "react";
+
+const Container = lazy(() => import("react-bootstrap/Container"));
+
 const LandingPage = () =>
   <Container fluid className="kromac-scroll">
     <p className="text-bg-dark">Components Preview</p>

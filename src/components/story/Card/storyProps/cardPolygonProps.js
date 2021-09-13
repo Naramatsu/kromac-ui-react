@@ -11,7 +11,7 @@ const notes = `For better view please wrap the card into a bootstrap
 
 const cardProps = {
   cardType: "polygon",
-  image: "https://images3.alphacoders.com/112/1121877.jpg",
+  image: "https://cdn.pixabay.com/photo/2016/07/15/16/50/man-1519667_1280.jpg",
   name: "Card Title",
   color:"red",
   shape: "hexagon",
@@ -27,7 +27,7 @@ const componentText = `<div>
         cardType="polygon"
         image="image.png"
         name="Card title"
-        color="red
+        color="red"
         shape="hexagon"
       >
         <p>Card text here...!</p>

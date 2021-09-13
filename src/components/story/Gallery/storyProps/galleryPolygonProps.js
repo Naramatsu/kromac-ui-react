@@ -8,14 +8,14 @@ And when the screen is <b>sm</b> or <b>lower</b> the numbers of the columns is <
 
 const galleryProps = {
   images: [
-    "https://i.ytimg.com/vi/DG3rk0aGlpA/maxresdefault.jpg",
-    "https://images.pexels.com/photos/719396/pexels-photo-719396.jpeg",
-    "https://img.apksum.com/93/com.mda.black.wallpapers.hd.dark.background/5.0/icon.png",
-    "https://i.pinimg.com/originals/54/b4/38/54b438c99e19dc7450afcdc80955810c.jpg",
-    "https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__480.jpg",
-    "https://cdn.wallpapersafari.com/3/74/iVxWUY.jpg",
-    "https://www.wallpapertip.com/wmimgs/5-53557_wallpaper-hd-1080p-mikael-gustafsson.jpg",
-    "https://greatloveart.com/wp-content/uploads/2021/01/cool-iPhone-wallpapers-backgrounds-22.jpg"
+    "https://cdn.pixabay.com/photo/2019/01/13/13/43/honey-bee-3930374_1280.jpg",
+    "https://cdn.pixabay.com/photo/2015/06/24/13/32/dog-820014_1280.jpg",
+    "https://images.pexels.com/photos/3075993/pexels-photo-3075993.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    "https://cdn.pixabay.com/photo/2016/07/15/16/50/man-1519667_1280.jpg",
+    "https://cdn.pixabay.com/photo/2018/09/23/18/30/drop-3698073_1280.jpg",
+    "https://cdn.pixabay.com/photo/2016/08/17/01/39/mystery-1599527_1280.jpg",
+    "https://cdn.pixabay.com/photo/2016/07/15/16/49/man-1519665_1280.jpg",
+    "https://cdn.pixabay.com/photo/2019/04/06/06/44/astronaut-4106766_1280.jpg"
   ],
   galleryType: "polygon"
 };
@@ -23,7 +23,16 @@ const galleryProps = {
 const componentText = `<div>
   <Gallery
     galleryType="polygon"
-    images="[strings]
+    images={[
+      "image.png",
+      "image.png",
+      "image.png",
+      "image.png",
+      "image.png",
+      "image.png",
+      "image.png",
+      "image.png"
+    ]}
   />
 </div>`;
 

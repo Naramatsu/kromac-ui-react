@@ -2,7 +2,10 @@ import React, { lazy, Suspense, useEffect } from "react";
 import panelClassicProps from "./storyProps/panelClassicProps";
 import panelNeonProps from "./storyProps/panelNeonProps";
 import panelTransparentProps from "./storyProps/panelTransparentProps";
-import { getComponentsRelated } from "../../../utils/utils";
+import {
+  changeDocumentTitle,
+  getComponentsRelated
+} from "../../../utils/utils";
 
 const Preview = lazy(() => import("../../Preview"));
 const Panel = lazy(() => import("./Panel"));
@@ -23,6 +26,7 @@ const PanelToShow = panelType => {
 const PanelHistory = ({ location: { state = "classic" } }) => {
   useEffect(
     () => {
+      document.title = changeDocumentTitle({ component: "Panel", state });
       window.scrollTo(0, 0);
     },
     [state]

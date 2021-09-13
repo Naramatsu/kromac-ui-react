@@ -5,8 +5,9 @@ const notes = `when the screen is <div class="chip">767px</div> the title will c
 
 const bannerProps = {
   bannerType: "text",
-  image: "https://images3.alphacoders.com/112/1121877.jpg",
-  height: "300px",
+  image:
+    "https://images.pexels.com/photos/3075993/pexels-photo-3075993.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+  height: "500px",
   title: "Some title here"
 };
 
@@ -15,7 +16,7 @@ const componentText = `<div>
     bannerType="text"
     title= "Some title here"
     image="image.png"
-    height="300px"
+    height="500px"
   />
 </div>`;
 
@@ -67,6 +68,12 @@ const propsDescription = [
     type: "string",
     values: ["default center"],
     description: "text align"
+  },
+  {
+    name: "bgPosition",
+    type: "string",
+    values: ["default center"],
+    description: "background align"
   }
 ];
 

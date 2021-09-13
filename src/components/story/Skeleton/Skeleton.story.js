@@ -1,7 +1,10 @@
 import React, { lazy, Suspense, useEffect } from "react";
 import skeletonLightProps from "./storyProps/skeletonLightProps";
 import skeletonDarkProps from "./storyProps/skeletonDarkProps";
-import { getComponentsRelated } from "../../../utils/utils";
+import {
+  changeDocumentTitle,
+  getComponentsRelated
+} from "../../../utils/utils";
 
 const Preview = lazy(() => import("../../Preview"));
 const Skeleton = lazy(() => import("./Skeleton"));
@@ -20,6 +23,7 @@ const SkeletonToShow = skeletonType => {
 const SkeletonHistory = ({ location: { state = "light" } }) => {
   useEffect(
     () => {
+      document.title = changeDocumentTitle({ component: "Skeleton", state });
       window.scrollTo(0, 0);
     },
     [state]
