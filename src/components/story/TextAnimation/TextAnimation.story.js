@@ -7,6 +7,7 @@ import {
 
 const Preview = lazy(() => import("../../Preview"));
 const TextAnimation = lazy(() => import("./TextAnimation"));
+const Spinner = lazy(() => import("../../lib/Spinner"));
 
 const textAnimationComponents = getComponentsRelated("textAnimation");
 
@@ -33,7 +34,14 @@ const TextAnimationHistory = ({ location }) => {
         notes={textAnimationProps.notes}
         componentsRealated={textAnimationComponents}
       >
-        <Suspense fallback={<div>Loading TextAnimation component...</div>}>
+        <Suspense
+          fallback={
+            <div className="center">
+              <h4>Loading implementation</h4>
+              <Spinner />
+            </div>
+          }
+        >
           <TextAnimation
             textAnimationProps={textAnimationProps.textAnimationProp}
             componentText={textAnimationProps.componentText}

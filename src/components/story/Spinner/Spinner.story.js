@@ -10,6 +10,7 @@ import {
 
 const Preview = lazy(() => import("../../Preview"));
 const Spinner = lazy(() => import("./Spinner"));
+const SpinnerLoader = lazy(() => import("../../lib/Spinner"));
 
 const spinnerComponents = getComponentsRelated("spinner");
 
@@ -46,7 +47,14 @@ const SpinnerHistory = ({ location: { state = "lighter" } }) => {
         notes={spinnerProps.notes}
         componentsRealated={spinnerComponents}
       >
-        <Suspense fallback={<div>Loading Spinner component...</div>}>
+        <Suspense
+          fallback={
+            <div className="center">
+              <h4>Loading implementation</h4>
+              <SpinnerLoader />
+            </div>
+          }
+        >
           <Spinner
             spinnersProps={spinnerProps.spinnerProps}
             componentText={spinnerProps.componentText}

@@ -8,6 +8,7 @@ import {
 
 const Preview = lazy(() => import("../../Preview"));
 const Gallery = lazy(() => import("./Gallery"));
+const Spinner = lazy(() => import("../../lib/Spinner"));
 
 const galleryComponents = getComponentsRelated("gallery");
 
@@ -40,7 +41,14 @@ const GalleryHistory = ({ location: { state = "responsive" } }) => {
         notes={galleryProps.notes}
         componentsRealated={galleryComponents}
       >
-        <Suspense fallback={<div>Loading Gallery component...</div>}>
+        <Suspense
+          fallback={
+            <div className="center">
+              <h4>Loading implementation</h4>
+              <Spinner />
+            </div>
+          }
+        >
           <Gallery
             gallerysProps={galleryProps.galleryProps}
             componentText={galleryProps.componentText}

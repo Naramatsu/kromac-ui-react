@@ -9,6 +9,7 @@ import {
 
 const Preview = lazy(() => import("../../Preview"));
 const Panel = lazy(() => import("./Panel"));
+const Spinner = lazy(() => import("../../lib/Spinner"));
 
 const panelComponents = getComponentsRelated("panel");
 
@@ -43,7 +44,14 @@ const PanelHistory = ({ location: { state = "classic" } }) => {
         notes={panelProps.notes}
         componentsRealated={panelComponents}
       >
-        <Suspense fallback={<div>Loading Panel component...</div>}>
+        <Suspense
+          fallback={
+            <div className="center">
+              <h4>Loading implementation</h4>
+              <Spinner />
+            </div>
+          }
+        >
           <Panel
             panelProps={panelProps.panelProp}
             componentText={panelProps.componentText}

@@ -5,6 +5,7 @@ import "./style.scss";
 
 const Preview = lazy(() => import("../../Preview"));
 const Menu = lazy(() => import("./Menu"));
+const Spinner = lazy(() => import("../../lib/Spinner"));
 
 const MenuHistory = ({ location }) => {
   useEffect(
@@ -24,7 +25,14 @@ const MenuHistory = ({ location }) => {
         propsDescription={menuProps.propsDescription}
         notes={menuProps.notes}
       >
-        <Suspense fallback={<div>Loading Menu component...</div>}>
+        <Suspense
+          fallback={
+            <div className="center">
+              <h4>Loading implementation</h4>
+              <Spinner />
+            </div>
+          }
+        >
           <Menu
             menusProps={menuProps.menuProps}
             componentText={menuProps.componentText}

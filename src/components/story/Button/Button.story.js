@@ -8,6 +8,7 @@ import {
 
 const Preview = lazy(() => import("../../Preview"));
 const Button = lazy(() => import("./Button"));
+const Spinner = lazy(() => import("../../lib/Spinner"));
 
 const buttonComponents = getComponentsRelated("button");
 
@@ -40,7 +41,14 @@ const ButtonHistory = ({ location: { state = "classic" } }) => {
         notes={buttonProps.notes}
         componentsRealated={buttonComponents}
       >
-        <Suspense fallback={<div>Loading Button component...</div>}>
+        <Suspense
+          fallback={
+            <div className="center">
+              <h4>Loading implementation</h4>
+              <Spinner />
+            </div>
+          }
+        >
           <Button
             buttonsProps={buttonProps.buttonProps}
             componentText={buttonProps.componentText}

@@ -14,6 +14,7 @@ import {
 
 const Preview = lazy(() => import("../../Preview"));
 const Card = lazy(() => import("./Card"));
+const Spinner = lazy(() => import("../../lib/Spinner"));
 
 const cardComponents = getComponentsRelated("card");
 
@@ -58,7 +59,14 @@ const CardStory = ({ location: { state = "classic" } }) => {
         notes={cardProps.notes}
         componentsRealated={cardComponents}
       >
-        <Suspense fallback={<div>Loading card...</div>}>
+        <Suspense
+          fallback={
+            <div className="center">
+              <h4>Loading implementation</h4>
+              <Spinner />
+            </div>
+          }
+        >
           <Card
             cardProps={cardProps.cardProps}
             componentText={cardProps.componentText}

@@ -9,6 +9,7 @@ import {
 
 const Preview = lazy(() => import("../../Preview"));
 const Banner = lazy(() => import("./Banner"));
+const Spinner = lazy(() => import("../../lib/Spinner"));
 
 const bannerComponents = getComponentsRelated("banner");
 
@@ -43,7 +44,14 @@ const BannerHistory = ({ location: { state = "classic" } }) => {
         notes={bannerProps.notes}
         componentsRealated={bannerComponents}
       >
-        <Suspense fallback={<div>Loading Banner component...</div>}>
+        <Suspense
+          fallback={
+            <div className="center">
+              <h4>Loading implementation</h4>
+              <Spinner />
+            </div>
+          }
+        >
           <Banner
             bannersProps={bannerProps.bannerProps}
             componentText={bannerProps.componentText}

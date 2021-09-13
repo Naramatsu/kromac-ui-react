@@ -8,6 +8,7 @@ import {
 
 const Preview = lazy(() => import("../../Preview"));
 const Toggle = lazy(() => import("./Toggle"));
+const Spinner = lazy(() => import("../../lib/Spinner"));
 
 const toggleComponents = getComponentsRelated("toggle");
 
@@ -40,7 +41,14 @@ const ToggleHistory = ({ location: { state = "switch" } }) => {
         notes={toggleProps.notes}
         componentsRealated={toggleComponents}
       >
-        <Suspense fallback={<div>Loading Toggle component...</div>}>
+        <Suspense
+          fallback={
+            <div className="center">
+              <h4>Loading implementation</h4>
+              <Spinner />
+            </div>
+          }
+        >
           <Toggle
             toggleProps={toggleProps.toggleProp}
             componentText={toggleProps.componentText}

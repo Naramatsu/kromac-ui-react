@@ -8,6 +8,7 @@ import {
 
 const Preview = lazy(() => import("../../Preview"));
 const Skeleton = lazy(() => import("./Skeleton"));
+const Spinner = lazy(() => import("../../lib/Spinner"));
 
 const skeletonComponents = getComponentsRelated("skeleton");
 
@@ -40,7 +41,14 @@ const SkeletonHistory = ({ location: { state = "light" } }) => {
         notes={skeletonProps.notes}
         componentsRealated={skeletonComponents}
       >
-        <Suspense fallback={<div>Loading Skeleton component...</div>}>
+        <Suspense
+          fallback={
+            <div className="center">
+              <h4>Loading implementation</h4>
+              <Spinner />
+            </div>
+          }
+        >
           <Skeleton
             skeletonProps={skeletonProps.skeletonProp}
             componentText={skeletonProps.componentText}
