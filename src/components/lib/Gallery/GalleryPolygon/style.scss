@@ -87,9 +87,11 @@
         .brillo {
           width: 0;
         }
+
         &:hover > .kromac-gallery-image img {
           transform: scale(1);
         }
+
         .kromac-gallery-image {
           img {
             transform: scale(1);

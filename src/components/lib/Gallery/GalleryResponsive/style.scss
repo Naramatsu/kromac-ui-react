@@ -83,6 +83,10 @@
         width: 0;
       }
 
+      p {
+        display: none;
+      }
+
       .kromac-box-container {
         &:hover > img {
           transform: scale(1);
