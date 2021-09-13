@@ -10,7 +10,7 @@ const BannerText = props => {
   const {
     title,
     image,
-    color,
+    bgTextColor = "#fff",
     height = "500px",
     order,
     attachment,
@@ -23,7 +23,6 @@ const BannerText = props => {
   const orderImage = order === "right" ? "first" : "last";
   const style = {
     backgroundImage: `url(${image})`,
-    color,
     height,
     backgroundAttachment: attachment,
     textAlign,
@@ -38,7 +37,7 @@ const BannerText = props => {
         <Row>
           <Col lg={6} md={6} sm={{ order: orderCaption }}>
             <div className="kromac-banner-caption">
-              <div>
+              <div style={{ background: bgTextColor }}>
                 <h1>
                   {title}
                 </h1>

@@ -40,10 +40,10 @@ const propsDescription = [
     description: "banner image"
   },
   {
-    name: "color",
+    name: "bgTextColor",
     type: "string",
     values: [],
-    description: "font color"
+    description: `background text color (please do not send #000 or "black")`
   },
   {
     name: "height",

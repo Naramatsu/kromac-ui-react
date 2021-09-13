@@ -1,11 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, lazy, useEffect } from "react";
+import PropTypes from "prop-types";
+import exact from "prop-types-exact";
 import { inactivateIonIcon } from "../../../utils/utils";
 import "./style.scss";
 
+const Skeleton = lazy(() => import("../Skeleton"));
+const Spinner = lazy(() => import("../Spinner"));
+
+const adder = count => {
+  return count++;
+};
+
 const Slider = props => {
   const [counter, setCounter] = useState(0);
+  const [isImgLoading, setIsImgLoading] = useState(true);
 
-  const { images = [], height = "500px", showPreview = false } = props;
+  const {
+    images = [],
+    height = "500px",
+    showPreview = false,
+    autoPlay = false,
+    timer = 5
+  } = props;
   const actualHeight = height === "auto" ? "500px" : height;
   const style = { height: actualHeight, "--left": counter };
   const nroItems = images.length - 1;
@@ -33,6 +49,29 @@ const Slider = props => {
   const handleClick = key => {
     setCounter(key);
   };
+
+  useEffect(
+    () => {
+      if (counter === 0) {
+        setCounter(adder(counter));
+      }
+      if (counter > nroItems) {
+        setCounter(0);
+      }
+      const handlerTimeout = setTimeout(() => {
+        if (autoPlay) {
+          setCounter(counter + 1);
+        } else {
+          setCounter(0);
+        }
+      }, timer * 1000);
+
+      return () => {
+        clearTimeout(handlerTimeout);
+      };
+    },
+    [counter, nroItems, timer, autoPlay]
+  );
 
   return (
     <div>
@@ -62,17 +101,30 @@ const Slider = props => {
             {images.map((image, index) =>
               <div
                 key={index}
-                className={`kromac-slide-preview`}
+                className={`kromac-slide-preview center`}
                 onClick={() => handleClick(index)}
               >
-                <img src={image} alt="slider" />
+                {isImgLoading &&
+                  <div style={{ transform: "scale(.2)" }}>
+                    <Spinner />
+                  </div>}
+                <img
+                  src={image}
+                  alt="slider"
+                  onLoad={() => setIsImgLoading(false)}
+                />
               </div>
             )}
           </div>}
         <div className="kromac-slider-container" style={style}>
           {images.map((image, index) =>
-            <div key={index} className={`kromac-slide`}>
-              <img src={image} alt="slider" />
+            <div key={index} className={`kromac-slide center`}>
+              {isImgLoading && <Skeleton width="100%" height="100%" />}
+              <img
+                src={image}
+                alt="slider"
+                onLoad={() => setIsImgLoading(false)}
+              />
             </div>
           )}
         </div>
@@ -80,5 +132,13 @@ const Slider = props => {
     </div>
   );
 };
+
+Slider.propTypes = exact({
+  images: PropTypes.arrayOf(PropTypes.string),
+  height: PropTypes.string,
+  showPreview: PropTypes.bool,
+  autoPlay: PropTypes.bool,
+  timer: PropTypes.number
+});
 
 export default Slider;

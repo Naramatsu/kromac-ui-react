@@ -49,6 +49,18 @@ const propsDescription = [
     type: "bool",
     values: [`default false`],
     description: "set to true will show a little preview below of each images"
+  },
+  {
+    name: "autoPlay",
+    type: "bool",
+    values: [`default false`],
+    description: "set to true will play to slide automatically"
+  },
+  {
+    name: "timer",
+    type: "number",
+    values: [`default 5`],
+    description: "timer in seconds auto slide"
   }
 ];
 
