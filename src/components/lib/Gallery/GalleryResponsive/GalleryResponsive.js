@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, lazy } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import {
@@ -9,9 +9,12 @@ import {
 } from "../../../../utils/utils";
 import "./style.scss";
 
+const Skeleton = lazy(() => import("../../Skeleton"));
+
 const GalleryResponsive = props => {
   const [isViewImage, setIsViewImage] = useState(false);
   const [itemActive, setItemActive] = useState({});
+  const [isImgLoading, setIsImgLoading] = useState(true);
   const { images = [], gridGap = "0" } = props;
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
@@ -54,10 +57,14 @@ const GalleryResponsive = props => {
             <button onClick={close} className="close">
               <ion-icon name="close-circle-outline" />
             </button>
+            {isImgLoading
+              ? <Skeleton width="100%" height="100%" />
+              : <p>Rendering image please wait</p>}
             <img
               src={image.img}
               alt={`pick-${index}`}
               onClick={() => handleViewImage({ item: index })}
+              onLoad={() => setIsImgLoading(false)}
             />
           </div>
         </div>

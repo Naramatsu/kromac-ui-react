@@ -122,6 +122,15 @@
       width: 300px;
       height: 300px;
 
+      p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: -1;
+      }
+
       &:hover > .brillo {
         z-index: 1;
         animation: brillo 1s ease-out;

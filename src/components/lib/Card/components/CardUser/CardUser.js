@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState, lazy } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import { determinateColor, determinateIcon } from "../../../../../utils/utils";
 import "./style.scss";
+
+const Skeleton = lazy(() => import("../../../Skeleton"));
 
 const CardUser = props => {
   const {
@@ -17,6 +19,7 @@ const CardUser = props => {
     children
   } = props;
 
+  const [isImgLoading, setIsImgLoading] = useState(true);
   const styleColor = determinateColor(color);
   const borderStyle =
     color === "transparent" || border ? { border: "solid 2px #fff" } : {};
@@ -34,10 +37,12 @@ const CardUser = props => {
         style={{ ...borderStyle, ...bgColor }}
       >
         <div className="kromac-card-image">
+          {isImgLoading && <Skeleton width="100%" height="100%" />}
           <img
             src={image}
             alt="Card"
             style={{ objectPosition: imageFitPosition }}
+            onLoad={() => setIsImgLoading(false)}
           />
         </div>
         <div className={`kromac-card-caption`}>

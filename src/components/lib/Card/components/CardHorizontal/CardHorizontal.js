@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, lazy } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import { determinateColor, initialSizeProps } from "../../../../../utils/utils";
 import "./style.scss";
+
+const Skeleton = lazy(() => import("../../../Skeleton"));
 
 const CardHorizontal = props => {
   const {
@@ -16,11 +18,12 @@ const CardHorizontal = props => {
   } = props;
 
   const [styleSize, setStyleSize] = useState(initialSizeProps);
+  const [isImgLoading, setIsImgLoading] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(false);
   const [kromacContainerStyle, setKromacContainerStyle] = useState(
     initialSizeProps
   );
 
-  const [isExpanded, setIsExpanded] = useState(false);
   const showTitle = title || reveal;
   const styleColor = determinateColor(color);
   const isClassExpanded = reveal ? "expanded" : "";
@@ -65,10 +68,12 @@ const CardHorizontal = props => {
     >
       <div className={`kromac-card horizontal ${isClassExpanded}`}>
         <div className={`kromac-card-image ${imageSide}`}>
+          {isImgLoading && <Skeleton width="100%" height="100%" />}
           <img
             src={image}
             alt="Card"
             style={{ objectPosition: imageFitPosition }}
+            onLoad={() => setIsImgLoading(false)}
           />
           {showTitle &&
             <div className={`card-title`}>
@@ -85,7 +90,10 @@ const CardHorizontal = props => {
           className={`kromac-card-caption ${imageSide} ${isClassExpanded} ${styleColor}`}
           style={{ ...styleSize }}
         >
-          <div className="card-text kromac-scroll" style={{ ...backgroundCaption }}>
+          <div
+            className="card-text kromac-scroll"
+            style={{ ...backgroundCaption }}
+          >
             {children}
           </div>
         </div>

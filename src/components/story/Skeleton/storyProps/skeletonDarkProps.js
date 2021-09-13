@@ -11,13 +11,13 @@ const propsDescription = [
   {
     name: "height",
     type: "string",
-    values: ["default 100%"],
+    values: ["default 32px"],
     description: "skeleton height in px, em or whatever you want"
   },
   {
     name: "width",
     type: "string",
-    values: [`default 250px`],
+    values: [`default 100%`],
     description: "skeleton width in px, em or whatever you want"
   },
   {

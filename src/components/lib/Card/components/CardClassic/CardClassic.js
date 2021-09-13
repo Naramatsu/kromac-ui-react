@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, lazy } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import {
@@ -7,6 +7,8 @@ import {
   initialSizeProps
 } from "../../../../../utils/utils";
 import "./style.scss";
+
+const Skeleton = lazy(() => import("../../../Skeleton"));
 
 const CardClassic = props => {
   const {
@@ -23,6 +25,7 @@ const CardClassic = props => {
 
   const [styleSize, setStyleSize] = useState(initialSizeProps);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isImgLoading, setIsImgLoading] = useState(true);
   const styleColor = determinateColor(color);
   const showTitle = title || expanded;
 
@@ -51,10 +54,12 @@ const CardClassic = props => {
     <div className={`kromac-container ${className}`}>
       <div className="kromac-card" style={{ ...borderstyle }}>
         <div className="kromac-card-image">
+          {isImgLoading && <Skeleton width="100%" height="100%" />}
           <img
             src={image}
             alt="Card"
             style={{ ...borderRadiusImg, objectPosition: imageFitPosition }}
+            onLoad={() => setIsImgLoading(false)}
           />
         </div>
         <div className={`kromac-card-caption ${styleColor}`}>

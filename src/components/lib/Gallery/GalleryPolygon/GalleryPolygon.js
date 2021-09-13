@@ -11,10 +11,12 @@ import "./style.scss";
 
 const Row = lazy(() => import("react-bootstrap/Row"));
 const Col = lazy(() => import("react-bootstrap/Col"));
+const Skeleton = lazy(() => import("../../Skeleton"));
 
 const GalleryPolygon = props => {
   const [isViewImage, setIsViewImage] = useState(false);
   const [itemActive, setItemActive] = useState({});
+  const [isImgLoading, setIsImgLoading] = useState(true);
   const {
     images = [],
     imageFitPosition = "center",
@@ -83,10 +85,14 @@ const GalleryPolygon = props => {
                     className="kromac-gallery-image"
                     onClick={() => handleViewImage({ row: row, item: col })}
                   >
+                    {isImgLoading
+                      ? <Skeleton width="100%" height="100%" />
+                      : <p>Rendering image please wait</p>}
                     <img
                       src={image}
                       alt="GalleryPolygon"
                       style={{ objectPosition: imageFitPosition }}
+                      onLoad={() => setIsImgLoading(false)}
                     />
                   </div>
                 </div>

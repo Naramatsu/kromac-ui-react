@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState, lazy } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import { determinateColor } from "../../../../../utils/utils";
 import "./style.scss";
+
+const Skeleton = lazy(() => import("../../../Skeleton"));
 
 const CardPolygon = props => {
   const {
@@ -13,7 +15,7 @@ const CardPolygon = props => {
     shape = "hexagon",
     children
   } = props;
-
+  const [isImgLoading, setIsImgLoading] = useState(true);
   const styleColor = determinateColor(color);
   const bgColor =
     color !== "transparent"
@@ -29,10 +31,12 @@ const CardPolygon = props => {
         style={{ ...bgColor }}
       >
         <div className="kromac-card-image">
+          {isImgLoading && <Skeleton width="100%" height="100%" />}
           <img
             src={image}
             alt="Card"
             style={{ objectPosition: imageFitPosition }}
+            onLoad={() => setIsImgLoading(false)}
           />
         </div>
         <div className={`kromac-card-caption`} style={bgColor}>
