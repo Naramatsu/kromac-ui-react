@@ -38,9 +38,9 @@
       display: flex;
       align-items: center;
       transform: var(--transform);
-      padding-left: var(--paddingLeft);
+      padding-left: calc(var(--paddingLeft) + 1em);
       z-index: -1;
-      padding-right: 1em;
+      padding-right: 2em;
       color: #fff;
       border-radius: 0 75px 75px 0;
       transition: 2s transform ease;
