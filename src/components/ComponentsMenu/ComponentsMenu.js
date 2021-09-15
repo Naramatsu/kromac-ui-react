@@ -44,8 +44,6 @@ const ComponentsMenu = () => {
             <p>v1.0.0</p>
           </Link>
         </Route>
-      </div>
-      <div className="kromac-components-list">
         <div className="kromac-input-search">
           <label className="text-bg-light">Find Component</label>
           <input
@@ -57,6 +55,8 @@ const ComponentsMenu = () => {
             onChange={handleChangeFilter}
           />
         </div>
+      </div>
+      <div className="kromac-components-list">
         <ul>
           <Route>
             {kromacComponents &&

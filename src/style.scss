@@ -115,22 +115,21 @@ button.glass {
   position: sticky;
   top: 0;
   z-index: 100;
-}
 
-.kromac-input-search {
-  display: flex;
-  align-content: center;
-  justify-content: space-around;
-  align-items: center;
-  position: sticky;
-  top: 112px;
-  padding-top: 20px;
-  margin-bottom: 20px;
+  .kromac-input-search {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 119px;
+    padding-top: 20px;
 
-  label {
-    position: absolute;
-    top: 0;
-    color: #fff;
+    label {
+      position: absolute;
+      top: 0;
+      color: #fff;
+    }
   }
 }
 

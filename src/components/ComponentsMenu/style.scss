@@ -15,14 +15,7 @@ $txt-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
       color: #fff;
       text-shadow: $txt-shadow;
     }
-  }
-
-  .kromac-components-list {
-    position: relative;
-
     .kromac-input-search {
-      background: $bg-kromac;
-
       input,
       input:focus,
       input:target,
@@ -37,6 +30,10 @@ $txt-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
         height: 24px;
       }
     }
+  }
+
+  .kromac-components-list {
+    position: relative;
 
     ul {
       margin: 0;
