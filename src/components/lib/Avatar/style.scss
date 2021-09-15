@@ -1,0 +1,53 @@
+.kromac-avatar-container {
+  position: relative;
+  margin-bottom: 1em;
+
+  .kromac-avatar {
+    position: absolute;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    .kromac-avatar-section {
+      position: relative;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+      .kromac-skeleton {
+        z-index: 1;
+      }
+
+      img {
+        position: absolute;
+        width: auto;
+        height: 100%;
+      }
+    }
+
+    &:hover > .kromac-avatar-name {
+      transform: var(--transformHover);
+      transition: 2s transform ease;
+    }
+
+    .kromac-avatar-name {
+      display: flex;
+      align-items: center;
+      transform: var(--transform);
+      padding-left: var(--paddingLeft);
+      z-index: -1;
+      padding-right: 1em;
+      color: #fff;
+      border-radius: 0 75px 75px 0;
+      transition: 2s transform ease;
+
+      h3 {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
