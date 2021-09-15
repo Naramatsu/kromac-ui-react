@@ -1,0 +1,38 @@
+.kromac-toast {
+  width: 350px;
+  position: fixed;
+
+  .kromac-toast-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 2s all ease;
+    overflow: hidden;
+    white-space: nowrap;
+
+    p {
+      margin: 0;
+      width: 100%;
+      padding-left: 5px;
+    }
+
+    span {
+      cursor: pointer;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5em;
+    }
+
+    &.transparent {
+      backdrop-filter: blur(20px);
+
+      span {
+        background: rgba(0, 0, 0, .5);
+        border-radius: 50%;
+        color: #fff;
+      }
+    }
+  }
+}

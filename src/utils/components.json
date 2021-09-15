@@ -87,6 +87,10 @@
     "subComponents": []
   },
   {
+    "component": "toast",
+    "subComponents": []
+  },
+  {
     "component": "slider",
     "subComponents": []
   },

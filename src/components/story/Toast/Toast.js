@@ -1,25 +1,28 @@
 import React, { lazy } from "react";
+import "./style.scss";
 
 const Row = lazy(() => import("react-bootstrap/Row"));
 const Col = lazy(() => import("react-bootstrap/Col"));
-const ButtonComponent = lazy(() => import("../../lib/Button"));
+const ToastComponent = lazy(() => import("../../lib/Toast"));
 const BoxImplementation = lazy(() => import("../../BoxImplementation"));
 
 const Wrapper = ({ children, componentText }) =>
   <div>
     <Row>
       <Col sm={12}>
-        {children}
+        <div className="kromac-toast-styory">
+          {children}
+        </div>
       </Col>
-      <Col sm={12} lg={6}>
+      <Col sm={12} md={6}>
         <BoxImplementation componentText={componentText} />
       </Col>
     </Row>
   </div>;
 
-const Button = props =>
+const Toast = props =>
   <Wrapper {...props}>
-    <ButtonComponent {...props.buttonsProps}>Button Here</ButtonComponent>
+    <ToastComponent {...props.toastProps} />
   </Wrapper>;
 
-export default Button;
+export default Toast;

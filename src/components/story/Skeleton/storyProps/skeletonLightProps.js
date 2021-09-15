@@ -1,10 +1,10 @@
 const subTitle = "Skeleton light";
 const importType = `import Skeleton from "kromac/lib/Panel";`;
 
-const skeletonProp = {};
+const skeletonProp = { width: "250px" };
 
 const componentText = `<div>
-  <Skeleton />
+  <Skeleton width="250px" />
 </div>`;
 
 const propsDescription = [
