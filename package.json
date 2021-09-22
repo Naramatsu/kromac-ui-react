@@ -1,8 +1,10 @@
 {
   "name": "kromac",
   "version": "1.0.0",
-  "main": "lib/index.js",
+  "main": "src/components/lib/index.js",
+  "license": "ISC",
   "dependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.14.9",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.15",
@@ -10,6 +12,7 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "animate.css": "^4.1.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "bootstrap": "^4.6.0",
     "classnames": "^2.3.1",
     "enzyme": "^3.11.0",
@@ -30,6 +33,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build-webpack": "webpack",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "audit": "npm audit fix --forceÍ"
@@ -43,7 +47,14 @@
   "publishConfig": {
     "@naramatsu:registry": "https://npm.pkg.github.com"
   },
-  "author": "Jonathan Narvaez Martinez",
+  "author": {
+    "name": "Jonathan Narvaez Martinez",
+    "email": "jonccy_19@hotmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Naramatsu/kromac.git"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -64,6 +75,7 @@
   },
   "devDependencies": {
     "enzyme-adapter-react-16": "1.15.6",
-    "jest": "^26.6.0"
+    "jest": "^26.6.0",
+    "webpack": "^4.46.0"
   }
 }
