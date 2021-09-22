@@ -40,6 +40,9 @@
     "Framework",
     "kromac"
   ],
+  "publishConfig": {
+    "@naramatsu:registry": "https://npm.pkg.github.com"
+  },
   "author": "Jonathan Narvaez Martinez",
   "eslintConfig": {
     "extends": [
