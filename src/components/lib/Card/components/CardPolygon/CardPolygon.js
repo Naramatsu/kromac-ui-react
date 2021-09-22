@@ -25,7 +25,7 @@ const CardPolygon = props => {
       : {};
 
   return (
-    <div className={`kromac-container card-hexagon`}>
+    <div className="kromac-container card-hexagon">
       <div
         className={`kromac-card ${shape} ${styleColor}`}
         style={{ ...bgColor }}
@@ -39,7 +39,7 @@ const CardPolygon = props => {
             onLoad={() => setIsImgLoading(false)}
           />
         </div>
-        <div className={`kromac-card-caption`} style={bgColor}>
+        <div className="kromac-card-caption" style={bgColor}>
           <div className="text-bg-light">
             <h4>
               {name}

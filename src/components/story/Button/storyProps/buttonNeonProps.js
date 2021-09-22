@@ -5,11 +5,25 @@ const buttonProps = {
   buttonType: `neon`
 };
 
-const componentText = `<div>
-  <Button buttonType="neon">
-    Button Here
-  </Button>
-</div>`;
+const componentText = (
+  <div className="implementation kromac-scroll-bg-dark">
+    <p>
+      <span className="var">&lt;div&gt;</span>
+      <br />
+      <span className="react tab">&lt;Button </span>
+      <span className="component">
+        buttonType
+      </span>=<span className="string">"neon"</span>
+      <span className="react">&gt;</span>
+      <br />
+      <span className="text tab2">Button Here</span>
+      <br />
+      <span className="react tab">&lt;/Button&gt;</span>
+      <br />
+      <span className="var">&lt;/div&gt;</span>
+    </p>
+  </div>
+);
 
 const propsDescription = [
   {

@@ -5,9 +5,21 @@ const spinnerProps = {
   spinnerType: "waves"
 };
 
-const componentText = `<div>
-  <Spinner spinnerType="waves" />
-</div>`;
+const componentText = (
+  <div className="implementation kromac-scroll-bg-dark">
+    <p>
+      <span className="var">&lt;div&gt;</span>
+      <br />
+      <span className="react tab">&lt;Spinner </span>
+      <span className="var">
+        spinnerType
+      </span>=<span className="string">"waves"</span>
+      <span className="react"> /&gt;</span>
+      <br />
+      <span className="var">&lt;/div&gt;</span>
+    </p>
+  </div>
+);
 
 const propsDescription = [
   {

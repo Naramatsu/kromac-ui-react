@@ -11,14 +11,35 @@ const bannerProps = {
   title: "Some title here"
 };
 
-const componentText = `<div>
-  <Banner
-    bannerType="text"
-    title= "Some title here"
-    image="image.png"
-    height="500px"
-  />
-</div>`;
+const componentText = (
+  <div className="implementation kromac-scroll-bg-dark">
+    <p>
+      <span className="var">&lt;div&gt;</span>
+      <br />
+      <span className="react tab">&lt;Banner</span>
+      <br />
+      <span className="component tab2">
+        bannerType
+      </span>=<span className="string">"text"</span>
+      <br />
+      <span className="component tab2">
+        image
+      </span>=<span className="string">"image.png"</span>
+      <br />
+      <span className="component tab2">
+        title
+      </span>=<span className="string">"Some title here"</span>
+      <br />
+      <span className="component tab2">
+        height
+      </span>=<span className="string">"500px"</span>
+      <br />
+      <span className="react tab">/&gt;</span>
+      <br />
+      <span className="var">&lt;/div&gt;</span>
+    </p>
+  </div>
+);
 
 const propsDescription = [
   {

@@ -2,9 +2,38 @@
   position: relative;
   margin-bottom: 1em;
 
-  .kromac-avatar {
+  &:hover > .kromac-tooltip {
+    top: -30px;
+    opacity: 1;
+  }
+
+  .kromac-tooltip {
+    font-size: .75em;
+    background: #000;
+    color: #fff;
+    padding: .5em;
     position: absolute;
-    display: flex;
+    z-index: 10;
+    left: calc(var(--size) / 2 - 15px);
+    opacity: 0;
+    top: 0;
+    transition: 1s ease all;
+
+    &::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-top: solid 5px #000;
+      border-left: solid 5px transparent;
+      border-right: solid 5px transparent;
+      position: absolute;
+      bottom: -10px;
+      left: 7px;
+    }
+  }
+
+  .kromac-avatar {
+    display: inline-flex;
     align-content: center;
     justify-content: center;
     align-items: center;
@@ -26,6 +55,7 @@
         position: absolute;
         width: auto;
         height: 100%;
+        object-fit: cover;
       }
     }
 

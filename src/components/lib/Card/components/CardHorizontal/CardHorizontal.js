@@ -76,8 +76,11 @@ const CardHorizontal = props => {
             onLoad={() => setIsImgLoading(false)}
           />
           {showTitle &&
-            <div className={`card-title`}>
-              <h4 style={titleSize}>
+            <div className="card-title">
+              <h4
+                style={titleSize}
+                className="animate__animated animate__zoomIn"
+              >
                 {title}
               </h4>
               {reveal &&
@@ -91,7 +94,7 @@ const CardHorizontal = props => {
           style={{ ...styleSize }}
         >
           <div
-            className="card-text kromac-scroll"
+            className="card-text kromac-scroll animate__animated animate__zoomIn"
             style={{ ...backgroundCaption }}
           >
             {children}

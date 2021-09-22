@@ -3,11 +3,21 @@ const importType = `import Panel from "kromac/lib/Panel";`;
 
 const panelProp = {};
 
-const componentText = `<div>
-  <Panel>
-    html code here...
-  </Panel>
-</div>`;
+const componentText = (
+  <div className="implementation kromac-scroll-bg-dark">
+    <p>
+      <span className="var">&lt;div&gt;</span>
+      <br />
+      <span className="react tab">&lt;Panel&gt;</span>
+      <br />
+      <span className="comment tab2">{`// html code here...`}</span>
+      <br />
+      <span className="react tab">&lt;/Panel&gt;</span>
+      <br />
+      <span className="var">&lt;/div&gt;</span>
+    </p>
+  </div>
+);
 
 const propsDescription = [
   {

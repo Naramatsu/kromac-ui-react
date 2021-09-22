@@ -12,25 +12,57 @@ const notes = `
 `;
 
 const bannerProps = {
-  image: "https://cdn.pixabay.com/photo/2018/04/22/23/18/skeleton-3342754_1280.png",
+  image:
+    "https://cdn.pixabay.com/photo/2018/04/22/23/18/skeleton-3342754_1280.png",
   height: "300px",
   overlay: true
 };
 
-const componentText = `<div>
-  <Banner
-    image="image.png"
-    height="300px"
-    overlay
-  >
-    <h1 className="text-bg-light">
-      Title Here
-    </h1>
-    <p className="text-bg-light">
-      Some text here
+const componentText = (
+  <div className="implementation kromac-scroll-bg-dark">
+    <p>
+      <span className="var">&lt;div&gt;</span>
+      <br />
+      <span className="react tab">&lt;Banner</span>
+      <br />
+      <span className="component tab2">
+        image
+      </span>=<span className="string">"image.png"</span>
+      <br />
+      <span className="component tab2">
+        height
+      </span>=<span className="string">"300px"</span>
+      <br />
+      <span className="component tab2">overlay</span>
+      <br />
+      <span className="react tab">&gt;</span>
+      <br />
+      <span className="var tab2">&lt;h1 </span>
+      <span className="component">
+        className
+      </span>=<span className="string">"text-bg-light"</span>
+      <span className="var">&gt;</span>
+      <br />
+      <span className="text tab3">Title Here</span>
+      <br />
+      <span className="var tab2">&lt;/h1&gt;</span>
+      <br />
+      <span className="var tab2">&lt;p </span>
+      <span className="component">
+        className
+      </span>=<span className="string">"text-bg-light"</span>
+      <span className="var">&gt;</span>
+      <br />
+      <span className="text tab3">Some text here</span>
+      <br />
+      <span className="var tab2">&lt;/p&gt;</span>
+      <br />
+      <span className="react tab">&lt;/Banner&gt;</span>
+      <br />
+      <span className="var">&lt;/div&gt;</span>
     </p>
-  </Banner>
-</div>`;
+  </div>
+);
 
 const propsDescription = [
   {

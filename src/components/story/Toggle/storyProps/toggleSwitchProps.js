@@ -3,9 +3,17 @@ const importType = `import Toggle from "kromac/lib/Panel";`;
 
 const toggleProp = {};
 
-const componentText = `<div>
-  <Toggle />
-</div>`;
+const componentText = (
+  <div className="implementation kromac-scroll-bg-dark">
+    <p>
+      <span className="var">&lt;div&gt;</span>
+      <br />
+      <span className="react tab">&lt;Toggle /&gt;</span>
+      <br />
+      <span className="var">&lt;/div&gt;</span>
+    </p>
+  </div>
+);
 
 const propsDescription = [
   {

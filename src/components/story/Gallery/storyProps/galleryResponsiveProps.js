@@ -57,40 +57,88 @@ const galleryProps = {
   ]
 };
 
-const componentText = `<div>
-  <Gallery
-    images={[
-      {
-        img: "image.png",
-        row: 2
-      },
-      {
-        img: "image.png",
-        col: 2
-      },
-      { img: "image.png" },
-      { img: "image.png" },
-      {
-        img: "image.png",
-        col: 2
-      },
-      {
-        img: "image.png",
-        col: 2
-      },
-      { img: "image.png" },
-      {
-        img: "image.png",
-        row: 2
-      },
-      { img: "image.png" },
-      {
-        img: "image.png",
-        col: 2
-      }
-    ]}
-  />
-</div>`;
+const componentText = (
+  <div className="implementation kromac-scroll-bg-dark">
+    <p>
+      <span className="var">&lt;div&gt;</span>
+      <br />
+      <span className="react tab">&lt;Gallery</span>
+      <br />
+      <span className="component tab2">images</span>=<span>{`{[`}</span>
+      <br />
+      <span className="tab3">{`{ `}</span>
+      <br />
+      <span className="var tab4">img: </span>
+      <span className="string">"image.png"</span>,<br />
+      <span className="var tab4">row: </span>
+      <span className="text">2</span>
+      <br />
+      <span className="tab3">{` }`}</span>,<br />
+      <span className="tab3">{`{ `}</span>
+      <br />
+      <span className="var tab4">img: </span>
+      <span className="string">"image.png"</span>,<br />
+      <span className="var tab4">col: </span>
+      <span className="text">2</span>
+      <br />
+      <span className="tab3">{` }`}</span>,<br />
+      <span className="tab3">{`{ `}</span>
+      <span className="var">img: </span>
+      <span className="string">"image.png"</span>
+      <span className="">{` }`}</span>,<br />
+      <span className="tab3">{`{ `}</span>
+      <span className="var">img: </span>
+      <span className="string">"image.png"</span>
+      <span className="">{` }`}</span>,<br />
+      <span className="tab3">{`{ `}</span>
+      <br />
+      <span className="var tab4">img: </span>
+      <span className="string">"image.png"</span>,<br />
+      <span className="var tab4">col: </span>
+      <span className="text">2</span>
+      <br />
+      <span className="tab3">{` }`}</span>,<br />
+      <span className="tab3">{`{ `}</span>
+      <br />
+      <span className="var tab4">img: </span>
+      <span className="string">"image.png"</span>,<br />
+      <span className="var tab4">col: </span>
+      <span className="text">2</span>
+      <br />
+      <span className="tab3">{` }`}</span>,<br />
+      <span className="tab3">{`{ `}</span>
+      <span className="var">img: </span>
+      <span className="string">"image.png"</span>
+      <span className="">{` }`}</span>,<br />
+      <span className="tab3">{`{ `}</span>
+      <br />
+      <span className="var tab4">img: </span>
+      <span className="string">"image.png"</span>,<br />
+      <span className="var tab4">row: </span>
+      <span className="text">2</span>
+      <br />
+      <span className="tab3">{` }`}</span>
+      <br />
+      <span className="tab3">{`{ `}</span>
+      <span className="var">img: </span>
+      <span className="string">"image.png"</span>
+      <span className="">{` }`}</span>,<br />
+      <span className="tab3">{`{ `}</span>
+      <br />
+      <span className="var tab4">img: </span>
+      <span className="string">"image.png"</span>,<br />
+      <span className="var tab4">col: </span>
+      <span className="text">2</span>
+      <br />
+      <span className="tab3">{` }`}</span>,<br />
+      <span className="tab2">{`]}`}</span>
+      <br />
+      <span className="react tab">/&gt;</span>
+      <br />
+      <span className="var">&lt;/div&gt;</span>
+    </p>
+  </div>
+);
 
 const propsDescription = [
   {

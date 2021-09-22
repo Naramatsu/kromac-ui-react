@@ -34,10 +34,10 @@ const Percentage = props => {
                 <circle cx="70" cy="70" r="70" style={percentageStyles} />
               </svg>
             </div>
-            <h2 className="text-bg-light">
+            <h2 className="text-bg-light animate__animated animate__zoomIn">
               {progress}%
             </h2>
-            <div className="card-title text-bg-light">
+            <div className="card-title text-bg-light animate__animated animate__zoomIn">
               <h6>
                 {title}
               </h6>

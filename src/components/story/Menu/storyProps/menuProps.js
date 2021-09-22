@@ -10,12 +10,29 @@ const menuProps = {
   tabs: ["home", "menu"]
 };
 
-const componentText = `<div>
-  <Menu 
-    appName = "Some title",
-    tabs = ["home","menu"]
-  />
-</div>`;
+const componentText = (
+  <div className="implementation kromac-scroll-bg-dark">
+    <p>
+      <span className="var">&lt;div&gt;</span>
+      <br />
+      <span className="react tab">&lt;Menu</span>
+      <br />
+      <span className="component tab2">
+        appName
+      </span>=<span className="string">"Some title"</span>
+      <br />
+      <span className="component tab2">tabs</span>=<span>{`{[`}</span>
+      <span className="string">
+        "home"
+      </span>,<span className="string">"menu"</span>
+      <span>{`]}`}</span>
+      <br />
+      <span className="react tab">/&gt;</span>
+      <br />
+      <span className="var">&lt;/div&gt;</span>
+    </p>
+  </div>
+);
 
 const propsDescription = [
   {
@@ -68,8 +85,7 @@ const propsDescription = [
     name: "homeUrl",
     type: "string",
     values: ["default /"],
-    description:
-      "Link to redirect to home page"
+    description: "Link to redirect to home page"
   }
 ];
 

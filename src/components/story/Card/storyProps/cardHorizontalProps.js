@@ -25,19 +25,55 @@ const cardProps = {
         Lorem Ipsum.`
 };
 
-const componentText = `<div>
-  <Row>
-    <Col lg={6} md={12} sm={12}>
-      <Card
-        cardType="horizontal"
-        image="image.png"
-        title="Card title"
-      >
-        <p>Card text here...!</p>
-      </Card>
-    </Col>
-  </Row>
-</div>`;
+const componentText = (
+  <div className="implementation kromac-scroll-bg-dark">
+    <p>
+      <span className="var">&lt;div&gt;</span>
+      <br />
+      <span className="react tab">&lt;Row&gt;</span>
+      <br />
+      <span className="react tab2">&lt;Col </span>
+      <span className="component">lg</span>=<span>{`{`}</span>
+      <span className="text">6</span>
+      <span>{`} `}</span>
+      <span className="component">md</span>=<span>{`{`}</span>
+      <span className="text">12</span>
+      <span>{`} `}</span>
+      <span className="component">sm</span>=<span>{`{`}</span>
+      <span className="text">12</span>
+      <span>{`}`}</span>
+      <span className="react">&gt;</span>
+      <br />
+      <span className="react tab3">&lt;Card</span>
+      <br />
+      <span className="component tab4">
+        cardType
+      </span>=<span className="string">"horizontal"</span>
+      <br />
+      <span className="component tab4">
+        image
+      </span>=<span className="string">"image.png"</span>
+      <br />
+      <span className="component tab4">
+        title
+      </span>=<span className="string">"Card title"</span>
+      <br />
+      <span className="react tab3">&gt;</span>
+      <br />
+      <span className="var tab4">&lt;p&gt;</span>
+      <span className="text">Card text here...!</span>
+      <span className="var">&lt;/p&gt;</span>
+      <br />
+      <span className="react tab3">&lt;/Card&gt;</span>
+      <br />
+      <span className="react tab2">&lt;/Col&gt;</span>
+      <br />
+      <span className="react tab">&lt;/Row&gt;</span>
+      <br />
+      <span className="var">&lt;/div&gt;</span>
+    </p>
+  </div>
+);
 
 const propsDescription = [
   {

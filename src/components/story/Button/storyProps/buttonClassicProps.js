@@ -5,11 +5,25 @@ const buttonProps = {
   color: `primary`
 };
 
-const componentText = `<div>
-  <Button color="primary">
-    Button Here
-  </Button>
-</div>`;
+const componentText = (
+  <div className="implementation kromac-scroll-bg-dark">
+    <p>
+      <span className="var">&lt;div&gt;</span>
+      <br />
+      <span className="react tab">&lt;Button </span>
+      <span className="component">
+        color
+      </span>=<span className="string">"primary"</span>
+      <span className="react">&gt;</span>
+      <br />
+      <span className="text tab2">Button Here</span>
+      <br />
+      <span className="react tab">&lt;/Button&gt;</span>
+      <br />
+      <span className="var">&lt;/div&gt;</span>
+    </p>
+  </div>
+);
 
 const propsDescription = [
   {

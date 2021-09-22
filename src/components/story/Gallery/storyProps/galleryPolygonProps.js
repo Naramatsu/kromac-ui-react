@@ -20,21 +20,35 @@ const galleryProps = {
   galleryType: "polygon"
 };
 
-const componentText = `<div>
-  <Gallery
-    galleryType="polygon"
-    images={[
-      "image.png",
-      "image.png",
-      "image.png",
-      "image.png",
-      "image.png",
-      "image.png",
-      "image.png",
-      "image.png"
-    ]}
-  />
-</div>`;
+const componentText = (
+  <div className="implementation kromac-scroll-bg-dark">
+    <p>
+      <span className="var">&lt;div&gt;</span>
+      <br />
+      <span className="react tab">&lt;Gallery</span>
+      <br />
+      <span className="component tab2">
+        galleryType
+      </span>=<span className="string">"polygon"</span>
+      <br />
+      <span className="component tab2">images</span>=<span>{`{[`}</span>
+      <br />
+      <span className="string tab3">"image.png"</span>,<br />
+      <span className="string tab3">"image.png"</span>,<br />
+      <span className="string tab3">"image.png"</span>,<br />
+      <span className="string tab3">"image.png"</span>,<br />
+      <span className="string tab3">"image.png"</span>,<br />
+      <span className="string tab3">"image.png"</span>,<br />
+      <span className="string tab3">"image.png"</span>
+      <br />
+      <span className="tab2">{`]}`}</span>
+      <br />
+      <span className="react tab">/&gt;</span>
+      <br />
+      <span className="var">&lt;/div&gt;</span>
+    </p>
+  </div>
+);
 
 const propsDescription = [
   {

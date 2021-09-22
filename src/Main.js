@@ -6,6 +6,7 @@ const Row = lazy(() => import("react-bootstrap/Row"));
 const Col = lazy(() => import("react-bootstrap/Col"));
 const App = lazy(() => import("./App"));
 const ComponentsMenu = lazy(() => import("./components/ComponentsMenu"));
+const Footer = lazy(() => import("./components/Footer"));
 
 const Main = () =>
   <Router>
@@ -33,6 +34,7 @@ const Main = () =>
               </Suspense>
             </Route>
           </Switch>
+          <Footer />
         </Col>
       </Row>
     </Container>

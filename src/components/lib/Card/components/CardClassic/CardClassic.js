@@ -65,7 +65,7 @@ const CardClassic = props => {
         <div className={`kromac-card-caption ${styleColor}`}>
           {showTitle &&
             <div className="card-title">
-              <h4>
+              <h4 className="animate__animated animate__zoomIn">
                 {title}
               </h4>
               {expanded &&
@@ -73,7 +73,10 @@ const CardClassic = props => {
                   {isExpanded ? "show less" : "show more"}
                 </label>}
             </div>}
-          <div className={`card-text ${size}`} style={{ ...styleSize }}>
+          <div
+            className={`card-text ${size} animate__animated animate__zoomIn`}
+            style={{ ...styleSize }}
+          >
             {children}
           </div>
         </div>

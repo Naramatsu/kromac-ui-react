@@ -3,12 +3,27 @@ const importType = `import Skeleton from "kromac/lib/Panel";`;
 
 const skeletonProp = { className: "dark", width: "250px" };
 
-const componentText = `<div>
-  <Skeleton 
-    className="dark"
-    width="250px"
-  />
-</div>`;
+const componentText = (
+  <div className="implementation kromac-scroll-bg-dark">
+    <p>
+      <span className="var">&lt;div&gt;</span>
+      <br />
+      <span className="react tab">&lt;Skeleton </span>
+      <br />
+      <span className="var tab2">
+        className
+      </span>=<span className="string">"dark"</span>
+      <br />
+      <span className="var tab2">
+        width
+      </span>=<span className="string">"250px"</span>
+      <br />
+      <span className="react tab">/&gt;</span>
+      <br />
+      <span className="var">&lt;/div&gt;</span>
+    </p>
+  </div>
+);
 
 const propsDescription = [
   {

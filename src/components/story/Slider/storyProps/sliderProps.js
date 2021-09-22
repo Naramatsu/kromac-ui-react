@@ -15,21 +15,34 @@ const sliderProp = {
   showPreview: true
 };
 
-const componentText = `<div>
-  <Slider
-    images={[
-      "image.png",
-      "image.png",
-      "image.png",
-      "image.png",
-      "image.png",
-      "image.png",
-      "image.png",
-      "image.png"
-    ]}
-    showPreview
-  />
-</div>`;
+const componentText = (
+  <div className="implementation kromac-scroll-bg-dark">
+    <p>
+      <span className="var">&lt;div&gt;</span>
+      <br />
+      <span className="react tab">&lt;Slider</span>
+      <br />
+      <span className="component tab2">images</span>=<span>{`{[`}</span>
+      <br />
+      <span className="string tab3">"image.png"</span>,<br />
+      <span className="string tab3">"image.png"</span>,<br />
+      <span className="string tab3">"image.png"</span>,<br />
+      <span className="string tab3">"image.png"</span>,<br />
+      <span className="string tab3">"image.png"</span>,<br />
+      <span className="string tab3">"image.png"</span>,<br />
+      <span className="string tab3">"image.png"</span>,<br />
+      <span className="string tab3">"image.png"</span>
+      <br />
+      <span className="tab2">{`]}`}</span>
+      <br />
+      <span className="tab2 var">showPreview</span>
+      <br />
+      <span className="react tab">/&gt;</span>
+      <br />
+      <span className="var">&lt;/div&gt;</span>
+    </p>
+  </div>
+);
 
 const propsDescription = [
   {

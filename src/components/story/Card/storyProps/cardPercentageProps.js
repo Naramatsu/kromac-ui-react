@@ -18,19 +18,60 @@ const cardProps = {
   progress: 85
 };
 
-const componentText = `<div>
-  <Row>
-    <Col xl={3} lg={4} md={6} sm={12}>
-      <Card
-        cardType="percentage"
-        title="Card title"
-        cardColor="red"
-        progressColor="#01E735"
-        progress={85}
-      />
-    </Col>
-  </Row>
-</div>`;
+const componentText = (
+  <div className="implementation kromac-scroll-bg-dark">
+    <p>
+      <span className="var">&lt;div&gt;</span>
+      <br />
+      <span className="react tab">&lt;Row&gt;</span>
+      <br />
+      <span className="react tab2">&lt;Col </span>
+      <span className="component">xl</span>=<span>{`{`}</span>
+      <span className="text">3</span>
+      <span>{`} `}</span>
+      <span className="component">lg</span>=<span>{`{`}</span>
+      <span className="text">4</span>
+      <span>{`} `}</span>
+      <span className="component">md</span>=<span>{`{`}</span>
+      <span className="text">6</span>
+      <span>{`} `}</span>
+      <span className="component">sm</span>=<span>{`{`}</span>
+      <span className="text">12</span>
+      <span>{`}`}</span>
+      <span className="react">&gt;</span>
+      <br />
+      <span className="react tab3">&lt;Card</span>
+      <br />
+      <span className="component tab4">
+        cardType
+      </span>=<span className="string">"percentage"</span>
+      <br />
+      <span className="component tab4">
+        title
+      </span>=<span className="string">"Card title"</span>
+      <br />
+      <span className="component tab4">
+        cardColor
+      </span>=<span className="string">"red"</span>
+      <br />
+      <span className="component tab4">
+        progressColor
+      </span>=<span className="string">"#01E735"</span>
+      <br />
+      <span className="component tab4">progress</span>=<span>{`{`}</span>
+      <span className="text">85</span>
+      <span>{`}`}</span>
+      <br />
+      <span className="react tab3">/&gt;</span>
+      <br />
+      <span className="react tab2">&lt;/Col&gt;</span>
+      <br />
+      <span className="react tab">&lt;/Row&gt;</span>
+      <br />
+      <span className="var">&lt;/div&gt;</span>
+    </p>
+  </div>
+);
 
 const propsDescription = [
   {

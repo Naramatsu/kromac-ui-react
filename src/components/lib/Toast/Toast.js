@@ -16,12 +16,10 @@ const Toast = props => {
 
   const [isvisible, setIsVisible] = useState(visible);
   const style = {
-    width: isvisible ? "100%" : "0",
-    padding: isvisible ? "1em" : "0",
-    boxShadow: isvisible ? "0px 0px 15px 5px rgba(0,0,0,.5)" : "none"
+    opacity: isvisible ? "1" : "0"
   };
   const positionStyle = {
-    [positionY]: "10px",
+    [positionY]: isvisible ? "10px" : "-50px",
     [positionX]: "10px"
   };
 

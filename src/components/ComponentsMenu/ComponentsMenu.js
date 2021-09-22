@@ -34,6 +34,13 @@ const ComponentsMenu = () => {
   };
 
   const showSubComponents = subComponents && subComponents.length > 0;
+  const activeSubComponent = ({ showSubComponents, subComponents, link }) => {
+    return showSubComponents &&
+    showSubComponents &&
+    subComponents[0].component === link
+      ? "active"
+      : "";
+  };
 
   return (
     <div className="kromac-components kromac-scroll">
@@ -65,10 +72,16 @@ const ComponentsMenu = () => {
                   <Link to={link} onClick={handleClick} name={link}>
                     {link}
                   </Link>
-                  {showSubComponents &&
-                    subComponents[0].component === link &&
-                    <ul>
-                      {subComponents.map(c =>
+                  <ul
+                    className={`sub-components ${activeSubComponent({
+                      showSubComponents,
+                      subComponents,
+                      link
+                    })}`}
+                  >
+                    {showSubComponents &&
+                      subComponents[0].component === link &&
+                      subComponents.map(c =>
                         c.subComponents.map((sc, index) =>
                           <li key={index}>
                             <Link
@@ -84,7 +97,7 @@ const ComponentsMenu = () => {
                           </li>
                         )
                       )}
-                    </ul>}
+                  </ul>
                 </li>
               )}
           </Route>

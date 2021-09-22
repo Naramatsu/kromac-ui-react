@@ -20,7 +20,10 @@ const Avatar = props => {
     borderColor = "#000",
     bgColor = bgDefault,
     isStatic = false,
-    size = "150px"
+    size = "150px",
+    imageFit,
+    imagePosition = "top",
+    tooltip
   } = props;
 
   const fontHeight = size.replace("px", "") * 1;
@@ -44,22 +47,38 @@ const Avatar = props => {
 
   const sectionStyles = {
     width: size,
-    height: size
+    height: size,
+    minWidth: size,
+    minHeight: size
   };
 
   const h3Styles = {
     fontSize: fontHeight <= 50 ? "1em" : "1.5em"
   };
 
+  const imageStyle = {
+    width: imageFit ? "100%" : "auto",
+    objectPosition: imagePosition
+  };
+
   return (
     <div className="kromac-avatar-container" style={{ height: size }}>
+      {tooltip &&
+        <span className="kromac-tooltip" style={{ "--size": size }}>
+          {tooltip}
+        </span>}
       <div className="kromac-avatar" style={{ ...avatarStyles }}>
         <div
           className="kromac-avatar-section"
           style={{ ...style, ...sectionStyles }}
         >
           {isImgLoading && <Skeleton width="100%" height="100%" />}
-          <img src={image} alt="avatar" onLoad={() => setIsImgLoading(false)} />
+          <img
+            src={image}
+            alt="avatar"
+            style={imageStyle}
+            onLoad={() => setIsImgLoading(false)}
+          />
         </div>
         {name &&
           <div
@@ -81,7 +100,10 @@ Avatar.propTypes = exact({
   borderColor: PropTypes.string,
   bgColor: PropTypes.string,
   isStatic: PropTypes.bool,
-  size: PropTypes.string
+  size: PropTypes.string,
+  imageFit: PropTypes.bool,
+  imagePosition: PropTypes.string,
+  tooltip: PropTypes.string
 });
 
 export default Avatar;

@@ -1,0 +1,18 @@
+.kromac-footer-container {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  transform: translateY(1.5em);
+  border-top: solid 1px #566573;
+
+  .kromac-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

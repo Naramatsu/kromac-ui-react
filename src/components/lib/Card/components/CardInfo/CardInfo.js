@@ -19,19 +19,21 @@ const CardInfo = props => {
   const bg = bgStyleByProps(color);
 
   return (
-    <div className={`kromac-container card-info`}>
+    <div className="kromac-container card-info">
       <div
         className={`kromac-card ${color} ${shape}`}
         style={{ ...borderstyle, ...bg }}
       >
         <span />
-        <div className={`kromac-card-caption`}>
+        <div className="kromac-card-caption">
           <div className="card-title text-bg-light">
-            <h4>
+            <h4 className="animate__animated animate__zoomIn">
               {title}
             </h4>
           </div>
-          <div className={`card-text ${size} text-bg-light`}>
+          <div
+            className={`card-text ${size} text-bg-light animate__animated animate__zoomIn`}
+          >
             {children}
             {expanded && <button className="glass">Show more</button>}
           </div>

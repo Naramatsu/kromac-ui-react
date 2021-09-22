@@ -74,6 +74,61 @@ button.glass {
   position: relative;
   border-radius: .5em;
 
+  code {
+    .implementation {
+      overflow: auto;
+      height: 100%;
+    }
+
+    span {
+      position: inherit;
+    }
+
+    .var {
+      color: #2874a6;
+    }
+
+    .react {
+      color: #52be80;
+    }
+
+    .comment {
+      color: green;
+    }
+
+    .component {
+      color: #3498db;
+    }
+
+    .string {
+      color: orange;
+    }
+
+    .text {
+      color: #fff;
+    }
+
+    .tab {
+      padding-left: 1em;
+    }
+
+    .tab2 {
+      padding-left: 2em;
+    }
+
+    .tab3 {
+      padding-left: 3em;
+    }
+
+    .tab4 {
+      padding-left: 4em;
+    }
+
+    .tab5 {
+      padding-left: 5em;
+    }
+  }
+
   span {
     position: absolute;
     top: -14px;
@@ -133,7 +188,8 @@ button.glass {
   }
 }
 
-.h-menu-kromac {
+.h-menu-kromac,
+.kromac-title-landingpage {
   display: none;
 }
 
@@ -142,7 +198,8 @@ button.glass {
     display: none;
   }
 
-  .h-menu-kromac {
+  .h-menu-kromac,
+  .kromac-title-landingpage {
     display: block;
   }
 }

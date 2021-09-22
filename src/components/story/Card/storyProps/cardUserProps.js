@@ -34,25 +34,86 @@ const cardProps = {
         Lorem Ipsum.`
 };
 
-const componentText = `<div>
-  <Row>
-    <Col xl={3} lg={4} md={6} sm={12}>
-      <Card
-        cardType="user"
-        name="Card name"
-        profession: "Card profession"
-        image="image.png"
-        color="#154360"
-        redes={[
-          { name: "facebook", url: "#" },
-          { name: "instagram", url: "#" },
-          { name: "linkedin", url: "#" },
-          { name: "twitter", url: "#" }
-        ]}
-      />
-    </Col>
-  </Row>
-</div>`;
+const componentText = (
+  <div className="implementation kromac-scroll-bg-dark">
+    <p>
+      <span className="var">&lt;div&gt;</span>
+      <br />
+      <span className="react tab">&lt;Row&gt;</span>
+      <br />
+      <span className="react tab2">&lt;Col </span>
+      <span className="component">xl</span>=<span>{`{`}</span>
+      <span className="text">3</span>
+      <span>{`} `}</span>
+      <span className="component">lg</span>=<span>{`{`}</span>
+      <span className="text">4</span>
+      <span>{`} `}</span>
+      <span className="component">md</span>=<span>{`{`}</span>
+      <span className="text">6</span>
+      <span>{`} `}</span>
+      <span className="component">sm</span>=<span>{`{`}</span>
+      <span className="text">12</span>
+      <span>{`}`}</span>
+      <span className="react">&gt;</span>
+      <br />
+      <span className="react tab3">&lt;Card</span>
+      <br />
+      <span className="component tab4">
+        cardType
+      </span>=<span className="string">"user"</span>
+      <br />
+      <span className="component tab4">
+        image
+      </span>=<span className="string">"image.png"</span>
+      <br />
+      <span className="component tab4">
+        name
+      </span>=<span className="string">"Card name"</span>
+      <br />
+      <span className="component tab4">
+        profession
+      </span>=<span className="string">"Card profession"</span>
+      <br />
+      <span className="component tab4">
+        color
+      </span>=<span className="string">"#154360"</span>
+      <br />
+      <span className="component tab4">redes</span>=<span>{`{`}</span>
+      <span className="import">[</span>
+      <br />
+      <span className="tab5">{`{ `}</span>
+      <span className="var">name: </span>
+      <span className="string">"facebook"</span>,<span className="var"> url: </span>
+      <span className="string">"#"</span>
+      <span>{` }`}</span>,<br />
+      <span className="tab5">{`{ `}</span>
+      <span className="var">name: </span>
+      <span className="string">"instagram"</span>,<span className="var"> url: </span>
+      <span className="string">"#"</span>
+      <span>{` }`}</span>,<br />
+      <span className="tab5">{`{ `}</span>
+      <span className="var">name: </span>
+      <span className="string">"linkedin"</span>,<span className="var"> url: </span>
+      <span className="string">"#"</span>
+      <span>{` }`}</span>,<br />
+      <span className="tab5">{`{ `}</span>
+      <span className="var">name: </span>
+      <span className="string">"twitter"</span>,<span className="var"> url: </span>
+      <span className="string">"#"</span>
+      <span>{` }`}</span>,<br />
+      <span className="import tab4">]</span>
+      <span>{`}`}</span>
+      <br />
+      <span className="react tab3">/&gt;</span>
+      <br />
+      <span className="react tab2">&lt;/Col&gt;</span>
+      <br />
+      <span className="react tab">&lt;/Row&gt;</span>
+      <br />
+      <span className="var">&lt;/div&gt;</span>
+    </p>
+  </div>
+);
 
 const propsDescription = [
   {

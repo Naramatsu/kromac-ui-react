@@ -46,6 +46,24 @@ $txt-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
         border-right: 0;
         margin-bottom: 2px;
 
+        .sub-components {
+          opacity: 0;
+          max-height: 0;
+          transition: 1s all ease;
+          padding: 0;
+
+          &.active {
+            opacity: 1;
+            max-height: 500px;
+          }
+
+          li {
+            &:nth-last-child(1) {
+              border: none;
+            }
+          }
+        }
+
         a {
           color: #fff;
           text-shadow: $txt-shadow;
