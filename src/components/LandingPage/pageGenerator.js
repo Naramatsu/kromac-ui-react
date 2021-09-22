@@ -51,14 +51,14 @@ export const componentText = (
 export const introduction = (
   <p style={{ marginTop: "3em" }}>
     {kromac} es un framework de estilos <b>100% responsivo</b> que busca
-    facilitar el desarrollo e implementacion de componentes con estilos modernos
+    facilitar el desarrollo e implementación de componentes con estilos modernos
     a páginas y/o aplicativos web.
   </p>
 );
 
 export const resumen = [
   {
-    title: "Enfoque",
+    title: "Objetivo",
     description: (
       <p>
         {kromac} tiene como objetivo brindar estilos llamativos, modernos por
@@ -68,7 +68,7 @@ export const resumen = [
     )
   },
   {
-    title: "Ventajas",
+    title: "Ventaja",
     description: (
       <p>
         Una de las principales ventajas que tiene implementar {kromac}
@@ -78,10 +78,9 @@ export const resumen = [
     )
   },
   {
-    title: "Que ofrecemos?",
+    title: "Resultados",
     description: (
       <div>
-        <p>Como resultado ofrecemos:</p>
         <ul>
           <li>
             * Componentes:
@@ -101,7 +100,7 @@ export const resumen = [
     )
   },
   {
-    title: "A futuro",
+    title: "Visión",
     description: (
       <p>
         A futuro esperamos poder implementar {kromac} a varios frameworks y/o
@@ -114,15 +113,15 @@ export const resumen = [
 
 export const requirements = [
   {
-    product: "Version de node: ",
+    product: "Versión de node: ",
     version: "^14"
   },
   {
-    product: "Version de React: ",
+    product: "Versión de React: ",
     version: "^17"
   },
   {
-    product: "Version de react-router-dom: ",
+    product: "Versión de react-router-dom: ",
     version: "^5"
   }
 ];
@@ -134,7 +133,7 @@ export const resources = [
     title: "Document",
     description: (
       <label>
-        =&gt; Recurso en donde puedes encontrar clases, componentes y conceptos.
+        =&gt; Archivo donde puedes encontrar clases, componentes y conceptos.
       </label>
     )
   },
@@ -143,8 +142,8 @@ export const resources = [
     title: "Github",
     description: (
       <label>
-        =&gt; Recurso en donde puedes encontrar el repo de github de React{" "}
-        {kromac}.
+        =&gt; Repositorio en el cual puedes encontrar el código en React del
+        framwework.
       </label>
     )
   },
@@ -153,7 +152,7 @@ export const resources = [
     title: "Foro",
     description: (
       <label>
-        =&gt; En este espacio nos ayudas, agregando los bug, errores o
+        =&gt; En este espacio nos ayudas agregando los bugs, errores o
         sugerencias que encuentres.
       </label>
     )
@@ -212,6 +211,26 @@ export const technogloies = [
     image:
       "https://camo.githubusercontent.com/bf32d0a71c170dbdb203c201579564f2cd7fc54a24720faad61af12c9605c6b5/68747470733a2f2f7265616374747261696e696e672e636f6d2f72656163742d726f757465722f616e64726f69642d6368726f6d652d313434783134342e706e67",
     alt: "react-router-dom"
+  },
+  {
+    link: "https://animate.style/",
+    image:
+      "https://scotch-res.cloudinary.com/image/upload/w_1050,q_auto:good,f_auto/media/8630/XHRQu3mBQGmVGlD4C6tL_animatecss.gif",
+    alt: "animate style"
+  },
+  {
+    link:
+      "https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react",
+    image:
+      "https://neurekaspublicidad.com/wp-content/uploads/2019/11/font-awesome-1.png",
+    alt: "fontawesome"
+  }
+];
+
+export const technogloiesNoImage = [
+  {
+    link: "https://www.npmjs.com/package/classnames",
+    name: "classnames"
   }
 ];
 
@@ -227,7 +246,26 @@ export const developerTeam = [
   }
 ];
 
+export const sponsores = [
+  // {
+  //   link: "https://github.com/Naramatsu",
+  //   image: "jcnm.jpeg",
+  //   name: "Ing. Jonathan C. Narvaez M.",
+  //   imageFit: true,
+  //   borderColor: "#fff",
+  //   size: "50px"
+  // },
+];
+
+export const btnSponsorList = [
+  // {
+  //   link: "https://github.com/Naramatsu",
+  //   color: "danger",
+  //   text: "Patreon"
+  // }
+];
+
 /*
-  unete al equipo                       => pending
-  colaborar                             => pending
+  colaborar                     => pending
+  Join us                       => pending
  */

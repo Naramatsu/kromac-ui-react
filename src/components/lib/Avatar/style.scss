@@ -13,11 +13,13 @@
     color: #fff;
     padding: .5em;
     position: absolute;
-    z-index: 10;
+    z-index: 100;
     left: calc(var(--size) / 2 - 15px);
     opacity: 0;
     top: 0;
+    width: max-content;
     transition: 1s ease all;
+    pointer-events: none;
 
     &::before {
       content: '';

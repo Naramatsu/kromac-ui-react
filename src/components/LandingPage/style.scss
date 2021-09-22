@@ -10,9 +10,33 @@
         border: none;
       }
 
+      .kromac-text-animation {
+        height: 2em;
+        margin-bottom: 1em;
+      }
+
       .dev-team {
         position: relative;
         display: flex;
+        flex-wrap: wrap;
+
+        a {
+          margin: .25em;
+        }
+      }
+
+      .btn-sponsor {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 1em 0;
+
+        div .kromac-btn {
+          margin: 0 .5em;
+
+          &:nth-child(1) {
+            margin-left: 0;
+          }
+        }
       }
 
       .kromac-subsection {

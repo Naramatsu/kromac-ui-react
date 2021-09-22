@@ -5,10 +5,10 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
 .kromac-btn:hover,
 .kromac-btn:focus {
   background: transparent;
-  padding: 1em 3em;
+  padding: 0;
   position: relative;
   backdrop-filter: blur(20px);
-  margin: .5em;
+  margin: .5em 0;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
   min-width: 150px;
   max-height: 75px;
@@ -24,15 +24,20 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
   }
 
   .button-content {
+    padding: 1em 3em;
+
     &.spinner {
       display: contents;
+
       p {
         margin-left: 25px;
       }
+
       .kromac-spinner {
         transform: scale(.15);
         position: absolute;
         left: -60px;
+
         span {
           width: auto;
           height: auto;
@@ -46,6 +51,10 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
     color: #fff;
     position: relative;
     z-index: 100;
+
+    a {
+      color: #fff;
+    }
   }
 
   .kromac-span-button {
