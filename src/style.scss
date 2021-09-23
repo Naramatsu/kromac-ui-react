@@ -1,240 +1,44 @@
-$textShadow-bg-white: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
-$textShadow-bg-black: 1px 1px 2px black, 0 0 0.25em white, 0 0 0.2em black;
+// lib components
+@import './components/lib/Avatar/Avatar.scss';
+@import './components/lib/Banner/components/BannerClassic/BannerClassic.scss';
+@import './components/lib/Banner/components/BannerImg/BannerImg.scss';
+@import './components/lib/Banner/components/BannerText/BannerText.scss';
+@import './components/lib/Button/Button.scss';
+@import './components/lib/Card/components/CardClassic/CardClassic.scss';
+@import './components/lib/Card/components/CardHorizontal/CardHorizontal.scss';
+@import './components/lib/Card/components/CardImage/CardImage.scss';
+@import './components/lib/Card/components/CardInfo/CardInfo.scss';
+@import './components/lib/Card/components/CardPolygon/CardPolygon.scss';
+@import './components/lib/Card/components/CardReveal/CardReveal.scss';
+@import './components/lib/Card/components/CardUser/CardUser.scss';
+@import './components/lib/Card/components/Percentage/Percentage.scss';
+@import './components/lib/Card/Card.scss';
+@import './components/lib/Gallery/GalleryPolygon/GalleryPolygon.scss';
+@import './components/lib/Gallery/GalleryResponsive/GalleryResponsive.scss';
+@import './components/lib/Gallery/Gallery.scss';
+@import './components/lib/Menu/Menu.scss';
+@import './components/lib/Panel/Panel.scss';
+@import './components/lib/Skeleton/Skeleton.scss';
+@import './components/lib/Slider/Slider.scss';
+@import './components/lib/Spinner/components/SpinnerLighter/SpinnerLighter.scss';
+@import './components/lib/Spinner/components/SpinnerRainbow/SpinnerRainbow.scss';
+@import './components/lib/Spinner/components/SpinnerSVG/SpinnerSVG.scss';
+@import './components/lib/Spinner/components/SpinnerWaves/SpinnerWaves.scss';
+@import './components/lib/Spinner/Spinner.scss';
+@import './components/lib/TextAnimation/TextAnimation.scss';
+@import './components/lib/Toast/Toast.scss';
+@import './components/lib/Toggle/Toggle.scss';
+@import './components/lib/Toggle/components/TogglePower/TogglePower.scss';
+@import './components/lib/Toggle/components/ToggleSwitch/ToggleSwitch.scss';
 
-.label-import {
-  color: #fff;
-  background: #566573;
-  padding: 2px 10px;
-  border-radius: .25em;
-}
+// story components
+@import './components/story/Menu/Menu.story.scss';
+@import './components/story/Toast/Toast.story.scss';
 
-.primary {
-  background: #2e86c1;
-  color: #fff;
-}
+// components
+@import './components/ComponentsMenu/ComponentsMenu.scss';
+@import './components/Footer/Footer.scss';
+@import './components/LandingPage/LandingPage.scss';
+@import './components/Preview/Preview.scss';
+@import './App.scss';
 
-.success {
-  background: #28b463;
-  color: #fff;
-}
-
-.warning {
-  background: #f1c40f;
-  color: #000;
-}
-
-.error {
-  background: #cb4335;
-  color: #fff;
-}
-
-.danger {
-  background: #d68910;
-  color: #fff;
-}
-
-.info {
-  background: #d5dbdb;
-  color: #000;
-}
-
-.night {
-  background: #212f3d;
-  color: #fff;
-}
-
-.text-bg-dark {
-  color: #fff;
-  text-shadow: $textShadow-bg-black !important;
-}
-
-.text-bg-light {
-  text-shadow: $textShadow-bg-white !important;
-  color: #fff;
-}
-
-button.glass {
-  border: solid 1px #fff;
-  padding: .5em 1em;
-  background: transparent;
-  backdrop-filter: blur(20px);
-  color: #fff;
-  text-shadow: $textShadow-bg-white;
-  font-weight: 300;
-  font-size: 13px;
-}
-
-.div-implementation {
-  background: #17202a;
-  color: #fff;
-  padding: 1em;
-  margin: .75em;
-  height: 350px;
-  border-top: solid 1.25em gray;
-  position: relative;
-  border-radius: .5em;
-
-  code {
-    .implementation {
-      overflow: auto;
-      height: 100%;
-    }
-
-    span {
-      position: inherit;
-    }
-
-    .var {
-      color: #2874a6;
-    }
-
-    .function {
-      color: #f7dc6f;
-    }
-
-    .react {
-      color: #52be80;
-    }
-
-    .comment {
-      color: green;
-    }
-
-    .component {
-      color: #3498db;
-    }
-
-    .string {
-      color: orange;
-    }
-
-    .text {
-      color: #fff;
-    }
-
-    .tab {
-      padding-left: 1em;
-    }
-
-    .tab2 {
-      padding-left: 2em;
-    }
-
-    .tab3 {
-      padding-left: 3em;
-    }
-
-    .tab4 {
-      padding-left: 4em;
-    }
-
-    .tab5 {
-      padding-left: 5em;
-    }
-  }
-
-  span {
-    position: absolute;
-    top: -14px;
-    left: 10px;
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-
-    &.yellow {
-      left: 25px;
-    }
-
-    &.green {
-      left: 40px;
-    }
-  }
-
-  textarea,
-  textarea:focus,
-  textarea:active {
-    width: 100%;
-    resize: none;
-    height: 100%;
-    border: none;
-    color: #fff;
-    outline: none;
-    font-family: monospace;
-  }
-
-  @media (max-width: 991px) {
-    margin: 0;
-  }
-}
-
-.kromac-title {
-  text-align: center;
-  color: #fff;
-  padding: 1em;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-
-  .kromac-input-search {
-    display: flex;
-    align-content: center;
-    justify-content: space-around;
-    align-items: center;
-    position: sticky;
-    top: 119px;
-    padding-top: 20px;
-
-    label {
-      position: absolute;
-      top: 0;
-      color: #fff;
-    }
-  }
-}
-
-.h-menu-kromac,
-.kromac-title-landingpage {
-  display: none;
-}
-
-@media (max-width: 767px) {
-  .kromac-components {
-    display: none;
-  }
-
-  .h-menu-kromac,
-  .kromac-title-landingpage {
-    display: block;
-  }
-}
-
-.kromac-scroll {
-  &::-webkit-scrollbar {
-    height: 6px;
-    width: 6px;
-  }
-  &:-webkit-scrollbar-track {
-    background-color: transparent;
-  }
-  &::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, .2);
-  }
-  &::-webkit-scrollbar-thumb:hover {
-    background: #888;
-  }
-}
-.kromac-scroll-bg-dark {
-  &::-webkit-scrollbar {
-    height: 6px;
-    width: 6px;
-  }
-  &:-webkit-scrollbar-track {
-    background-color: transparent;
-  }
-  &::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, .2);
-  }
-  &::-webkit-scrollbar-thumb:hover {
-    background: #888;
-  }
-}
