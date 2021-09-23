@@ -1,5 +1,5 @@
 import React, { lazy } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import data from "./utils/components.json";
 import "./style.scss";
 
@@ -45,6 +45,9 @@ const App = () =>
       <Route path="/slider" component={Slider} />
       <Route path="/avatar" component={Avatar} />
       <Route path="/toast" component={Toast} />
+      <Route path="/kromac">
+        <Redirect to="/" />
+      </Route>
     </Switch>
   </div>;
 
