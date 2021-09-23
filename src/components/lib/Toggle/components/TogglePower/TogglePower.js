@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
-import "./style.scss";
+import "./TogglePower.scss";
 
 const TogglePower = props => {
   const { checked, size = "md" } = props;

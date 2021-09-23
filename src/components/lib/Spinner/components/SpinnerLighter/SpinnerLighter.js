@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import { styleCentered } from "../../../../../utils/utils";
-import "./style.scss";
+import "./SpinnerLighter.scss";
 
 const SpinnerLighter = props => {
   const {

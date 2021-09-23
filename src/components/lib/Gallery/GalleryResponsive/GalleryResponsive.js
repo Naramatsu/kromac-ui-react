@@ -7,7 +7,7 @@ import {
   widthCalculator,
   rowColGenerator
 } from "../../../../utils/utils";
-import "./style.scss";
+import "./GalleryResponsive.scss";
 
 const Skeleton = lazy(() => import("../../Skeleton"));
 

@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.scss";
+import "./Footer.scss";
 
 const Footer = () =>
   <div className="kromac-footer-container">

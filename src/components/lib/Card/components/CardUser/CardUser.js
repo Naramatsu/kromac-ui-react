@@ -2,7 +2,7 @@ import React, { useState, lazy } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import { determinateColor, determinateIcon } from "../../../../../utils/utils";
-import "./style.scss";
+import "./CardUser.scss";
 
 const Skeleton = lazy(() => import("../../../Skeleton"));
 

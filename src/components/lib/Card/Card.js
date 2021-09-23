@@ -1,5 +1,5 @@
 import React, { lazy } from "react";
-import "./style.scss";
+import "./Card.scss";
 
 const CardImage = lazy(() => import("./components/CardImage"));
 const CardHorizontal = lazy(() => import("./components/CardHorizontal"));

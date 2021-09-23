@@ -6,7 +6,7 @@ import {
   determinateColor,
   initialSizeProps
 } from "../../../../../utils/utils";
-import "./style.scss";
+import "./CardClassic.scss";
 
 const Skeleton = lazy(() => import("../../../Skeleton"));
 

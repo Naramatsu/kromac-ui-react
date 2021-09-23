@@ -1,5 +1,5 @@
 import React, { lazy } from "react";
-import "./style.scss";
+import "./Gallery.scss";
 
 const GalleryResponsive = lazy(() => import("./GalleryResponsive"));
 const GalleryPolygon = lazy(() => import("./GalleryPolygon/GalleryPolygon"));

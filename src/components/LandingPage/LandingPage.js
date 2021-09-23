@@ -13,7 +13,7 @@ import {
   technogloies,
   technogloiesNoImage
 } from "./pageGenerator";
-import "./style.scss";
+import "./LandingPage.scss";
 
 const Row = lazy(() => import("react-bootstrap/Row"));
 const Col = lazy(() => import("react-bootstrap/Col"));

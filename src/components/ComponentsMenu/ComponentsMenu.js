@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Route, Link } from "react-router-dom";
 import data from "../../utils/components.json";
-import "./style.scss";
+import "./ComponentsMenu.scss";
 
 const ComponentsMenu = () => {
   const [kromacComponents, setComponents] = useState(

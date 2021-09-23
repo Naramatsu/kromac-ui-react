@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
-import "./style.scss";
+import "./Menu.scss";
 
 const setActiveTab = (pathname, tab) => {
   if (pathname.includes(tab)) {

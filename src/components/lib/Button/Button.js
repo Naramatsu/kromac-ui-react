@@ -1,7 +1,7 @@
 import React, { lazy } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
-import "./style.scss";
+import "./Button.scss";
 
 const Spinner = lazy(() => import("../Spinner"));
 

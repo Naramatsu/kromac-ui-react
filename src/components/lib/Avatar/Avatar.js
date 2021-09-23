@@ -1,7 +1,7 @@
 import React, { lazy, useState } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
-import "./style.scss";
+import "./Avatar.scss";
 
 const Skeleton = lazy(() => import("../Skeleton"));
 

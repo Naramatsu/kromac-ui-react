@@ -1,5 +1,5 @@
 import React, { lazy } from "react";
-import "./style.scss";
+import "./Toast.story.scss";
 
 const Row = lazy(() => import("react-bootstrap/Row"));
 const Col = lazy(() => import("react-bootstrap/Col"));

@@ -4,7 +4,7 @@ import exact from "prop-types-exact";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRocket } from "@fortawesome/free-solid-svg-icons";
 import { spanGenerator, styleCentered } from "../../../../../utils/utils";
-import "./style.scss";
+import "./SpinnerSVG.scss";
 
 const SpinnerSVG = props => {
   const {
