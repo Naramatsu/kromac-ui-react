@@ -1,0 +1,80 @@
+.kromac-banner-text {
+  position: relative;
+  background-size: cover;
+  margin-bottom: 3em;
+
+  .kromac-banner-caption,
+  .kromac-banner-image {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .kromac-banner-container {
+    height: 100%;
+
+    .row {
+      height: 100%;
+      margin-bottom: 0;
+      overflow: hidden;
+    }
+  }
+
+  .kromac-banner-image {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .kromac-banner-caption {
+    z-index: 1000;
+    padding: 1em;
+    width: auto;
+    position: relative;
+    mix-blend-mode: screen;
+    overflow: hidden;
+
+    div {
+      h1 {
+        font-size: 5em;
+        text-transform: uppercase;
+        font-weight: 800;
+        mix-blend-mode: screen;
+        color: #000;
+        display: contents;
+      }
+
+      p {
+        color: #010101;
+      }
+    }
+  }
+
+  &.normal {
+    .kromac-banner-container {
+      .kromac-banner-image {
+        img {
+          max-height: var(--heightImg);
+          width: var(--widthImg);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .kromac-banner-text {
+    .kromac-banner-caption {
+      height: auto !important;
+    }
+
+    .kromac-banner-image {
+      display: none;
+    }
+  }
+}

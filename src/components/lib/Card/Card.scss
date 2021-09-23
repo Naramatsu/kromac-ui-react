@@ -1,0 +1,21 @@
+.kromac-container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+
+  .kromac-card {
+    width: 100%;
+    max-width: 350px;
+
+    .kromac-card-image {
+      overflow: hidden;
+    }
+
+    .kromac-card-caption {
+      label {
+        font-size: 10px;
+      }
+    }
+  }
+}
