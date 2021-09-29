@@ -17,6 +17,8 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
   align-items: center;
   overflow: hidden;
   cursor: pointer;
+  min-height: 50px;
+  min-width: 165px;
 
   &.disabled,
   &.disabled:hover {

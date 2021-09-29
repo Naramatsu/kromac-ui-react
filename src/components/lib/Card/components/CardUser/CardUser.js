@@ -2,7 +2,8 @@ import React, { useState, lazy } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import { determinateColor, determinateIcon } from "../../../../../utils/utils";
-import "./CardUser.scss";
+// import "./CardUser.scss";
+import "../../../../../css/CardUser.css"
 
 const Skeleton = lazy(() => import("../../../Skeleton"));
 
@@ -26,8 +27,8 @@ const CardUser = props => {
   const bgColor =
     color !== "transparent"
       ? {
-          background: `linear-gradient(45deg, #000, ${color})`
-        }
+        background: `linear-gradient(45deg, #000, ${color})`
+      }
       : {};
 
   return (

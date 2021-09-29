@@ -1,5 +1,6 @@
 import React, { lazy } from "react";
-import "./Spinner.scss";
+// import "./Spinner.scss";
+import "../../../css/Spinner.css"
 
 const SpinnerRainbow = lazy(() => import("./components/SpinnerRainbow"));
 const SpinnerSVG = lazy(() => import("./components/SpinnerSVG"));

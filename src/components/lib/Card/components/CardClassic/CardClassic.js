@@ -6,7 +6,9 @@ import {
   determinateColor,
   initialSizeProps
 } from "../../../../../utils/utils";
-import "./CardClassic.scss";
+// import "./CardClassic.scss";
+import "../../../../../css/CardClassic.css"
+import "../../../../../css/Card.css"
 
 const Skeleton = lazy(() => import("../../../Skeleton"));
 
@@ -61,8 +63,6 @@ const CardClassic = props => {
             style={{ ...borderRadiusImg, objectPosition: imageFitPosition }}
             onLoad={() => setIsImgLoading(false)}
           />
-        </div>
-        <div className={`kromac-card-caption ${styleColor}`}>
           {showTitle &&
             <div className="card-title">
               <h4 className="animate__animated animate__zoomIn">
@@ -73,6 +73,8 @@ const CardClassic = props => {
                   {isExpanded ? "show less" : "show more"}
                 </label>}
             </div>}
+        </div>
+        <div className={`kromac-card-caption ${styleColor}`}>
           <div
             className={`card-text ${size} animate__animated animate__zoomIn`}
             style={{ ...styleSize }}

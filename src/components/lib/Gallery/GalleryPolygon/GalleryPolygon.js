@@ -7,7 +7,8 @@ import {
   markAsOnlyImageRowImpar,
   rowColMaker
 } from "../../../../utils/utils";
-import "./GalleryPolygon.scss";
+// import "./GalleryPolygon.scss";
+import "../../../../css/GalleryPolygon.css"
 
 const Row = lazy(() => import("react-bootstrap/Row"));
 const Col = lazy(() => import("react-bootstrap/Col"));

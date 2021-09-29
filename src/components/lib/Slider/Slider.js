@@ -2,7 +2,8 @@ import React, { useState, lazy, useEffect } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import { inactivateIonIcon } from "../../../utils/utils";
-import "./Slider.scss";
+// import "./Slider.scss";
+import "../../../css/Slider.css"
 
 const Skeleton = lazy(() => import("../Skeleton"));
 const Spinner = lazy(() => import("../Spinner"));

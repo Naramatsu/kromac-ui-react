@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
-import "./ToggleSwitch.scss";
+// import "./ToggleSwitch.scss";
+import "../../../../../css/ToggleSwitch.css"
 
 const ToggleSwitch = props => {
   const {

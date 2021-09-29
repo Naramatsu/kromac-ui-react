@@ -36,8 +36,8 @@ const ComponentsMenu = () => {
   const showSubComponents = subComponents && subComponents.length > 0;
   const activeSubComponent = ({ showSubComponents, subComponents, link }) => {
     return showSubComponents &&
-    showSubComponents &&
-    subComponents[0].component === link
+      showSubComponents &&
+      subComponents[0].component === link
       ? "active"
       : "";
   };

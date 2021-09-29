@@ -2,7 +2,8 @@ import React, { useState, lazy } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import { determinateColor } from "../../../../../utils/utils";
-import "./CardPolygon.scss";
+// import "./CardPolygon.scss";
+import "../../../../../css/CardPolygon.css"
 
 const Skeleton = lazy(() => import("../../../Skeleton"));
 
@@ -20,8 +21,8 @@ const CardPolygon = props => {
   const bgColor =
     color !== "transparent"
       ? {
-          background: `linear-gradient(45deg, ${color}, #0000004D)`
-        }
+        background: `linear-gradient(45deg, ${color}, #0000004D)`
+      }
       : {};
 
   return (

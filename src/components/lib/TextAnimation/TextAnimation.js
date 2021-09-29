@@ -2,7 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import { sortByLength } from "../../../utils/utils";
-import "./TextAnimation.scss";
+// import "./TextAnimation.scss";
+import "../../../css/TextAnimation.css"
 
 const bgDefault = `linear-gradient(
           94deg,

@@ -2,7 +2,8 @@ import React, { useState, lazy } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import { determinateColor, initialSizeProps } from "../../../../../utils/utils";
-import "./CardHorizontal.scss";
+// import "./CardHorizontal.scss";
+import "../../../../../css/CardHorizontal.css"
 
 const Skeleton = lazy(() => import("../../../Skeleton"));
 

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
-import "./Toast.scss";
+// import "./Toast.scss";
+import "../../../css/Toast.css"
 
 const Toast = props => {
   const {

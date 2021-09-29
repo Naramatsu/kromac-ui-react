@@ -1,7 +1,8 @@
 import React, { lazy } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
-import "./BannerText.scss";
+// import "./BannerText.scss";
+import "../../../../../css/BannerText.css"
 
 const Row = lazy(() => import("react-bootstrap/Row"));
 const Col = lazy(() => import("react-bootstrap/Col"));
