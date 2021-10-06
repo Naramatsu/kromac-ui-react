@@ -2,13 +2,12 @@ import React, { useState, lazy } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import {
-  borderStyle,
   determinateColor,
   initialSizeProps
 } from "../../../../../utils/utils";
 // import "./CardClassic.scss";
-import "../../../../../css/CardClassic.css"
 import "../../../../../css/Card.css"
+import "../../../../../css/CardClassic.css"
 
 const Skeleton = lazy(() => import("../../../Skeleton"));
 
@@ -18,7 +17,6 @@ const CardClassic = props => {
     title = "",
     size = "md",
     color = "#fff",
-    border = false,
     expanded = false,
     imageFitPosition = "center",
     children,
@@ -30,11 +28,6 @@ const CardClassic = props => {
   const [isImgLoading, setIsImgLoading] = useState(true);
   const styleColor = determinateColor(color);
   const showTitle = title || expanded;
-
-  const borderstyle = borderStyle(color, border);
-
-  const borderRadiusImg =
-    color === "transparent" ? { borderRadius: "1em 1em 0 0" } : {};
 
   const handleShowMore = e => {
     e.preventDefault();
@@ -54,13 +47,13 @@ const CardClassic = props => {
 
   return (
     <div className={`kromac-container ${className}`}>
-      <div className="kromac-card" style={{ ...borderstyle }}>
+      <div className="kromac-card">
         <div className="kromac-card-image">
           {isImgLoading && <Skeleton width="100%" height="100%" />}
           <img
             src={image}
             alt="Card"
-            style={{ ...borderRadiusImg, objectPosition: imageFitPosition }}
+            style={{ objectPosition: imageFitPosition }}
             onLoad={() => setIsImgLoading(false)}
           />
           {showTitle &&
@@ -93,7 +86,6 @@ CardClassic.propTypes = exact({
   title: PropTypes.string,
   size: PropTypes.oneOf(["sm", "md", "lg"]),
   color: PropTypes.oneOf(["#fff", "transparent"]),
-  border: PropTypes.bool,
   expanded: PropTypes.bool,
   imageFitPosition: PropTypes.string,
   className: PropTypes.string,
