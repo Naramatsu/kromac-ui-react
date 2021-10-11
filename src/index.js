@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom";
+import "./css/style.css";
 
 const Main = lazy(() => import("./Main"));
 // console.log("OS pc => ", window.navigator.appVersion.toLowerCase());

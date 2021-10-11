@@ -2,8 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import { bgStyleByProps, borderStyle } from "../../../../../utils/utils";
-// import "./Percentage.scss";
-import "../../../../../css/Percentage.css"
 
 const Percentage = props => {
   const {

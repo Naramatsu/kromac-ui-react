@@ -1,8 +1,6 @@
 import React, { lazy } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
-// import "./CardImage.scss";
-import "../../../../../css/CardImage.css"
 
 const CardClassic = lazy(() => import("../CardClassic"));
 

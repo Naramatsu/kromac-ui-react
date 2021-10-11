@@ -2,8 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import { styleCentered } from "../../../../../utils/utils";
-// import "./SpinnerLighter.scss";
-import "../../../../../css/SpinnerLighter.css"
 
 const SpinnerLighter = props => {
   const {

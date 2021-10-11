@@ -2,8 +2,6 @@ import React, { useState, lazy } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import { determinateColor } from "../../../../../utils/utils";
-// import "./CardPolygon.scss";
-import "../../../../../css/CardPolygon.css"
 
 const Skeleton = lazy(() => import("../../../Skeleton"));
 

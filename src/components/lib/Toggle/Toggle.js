@@ -1,6 +1,4 @@
 import React, { lazy } from "react";
-// import "./Toggle.scss";
-import "../../../css/Toggle.css"
 
 const ToggleSwitch = lazy(() => import("./components/ToggleSwitch"));
 const TogglePower = lazy(() => import("./components/TogglePower"));

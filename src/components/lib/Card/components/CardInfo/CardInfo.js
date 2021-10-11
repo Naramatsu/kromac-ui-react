@@ -2,8 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import { bgStyleByProps, borderStyle } from "../../../../../utils/utils";
-// import "./CardInfo.scss";
-import "../../../../../css/CardInfo.css"
 
 const CardInfo = props => {
   const {

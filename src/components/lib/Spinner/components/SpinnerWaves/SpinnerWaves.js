@@ -2,8 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import { spanGenerator, styleCentered } from "../../../../../utils/utils";
-// import "./SpinnerWaves.scss";
-import "../../../../../css/SpinnerWaves.css"
 
 const SpinnerWaves = props => {
   const { size = "sm", isCentered = false, shadows = true } = props;

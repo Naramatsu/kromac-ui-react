@@ -1,8 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
-// import "./Skeleton.scss";
-import "../../../css/Skeleton.css"
 
 const Skeleton = ({
   height = "32px",
