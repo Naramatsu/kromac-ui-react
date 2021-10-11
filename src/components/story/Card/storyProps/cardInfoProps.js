@@ -125,12 +125,6 @@ const propsDescription = [
     description: "Prop to add a border"
   },
   {
-    name: "expanded",
-    type: "bool",
-    values: [`default false`],
-    description: "Prop to expand the card to show all the text"
-  },
-  {
     name: "children",
     type: "any",
     values: [],

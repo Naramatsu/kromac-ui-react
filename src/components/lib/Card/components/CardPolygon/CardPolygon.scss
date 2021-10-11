@@ -103,7 +103,7 @@ $textShadow-bg-white: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
       );
     }
 
-    .circle {
+    &.circle {
       clip-path: circle(50% at 50% 50%);
     }
   }

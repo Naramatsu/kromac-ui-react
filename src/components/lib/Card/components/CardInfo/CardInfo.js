@@ -12,7 +12,6 @@ const CardInfo = props => {
     shape = "color",
     color = "transparent",
     border = false,
-    expanded = false,
     children
   } = props;
 
@@ -36,7 +35,6 @@ const CardInfo = props => {
             className={`card-text ${size} text-bg-light animate__animated animate__zoomIn`}
           >
             {children}
-            {expanded && <button className="glass">Show more</button>}
           </div>
         </div>
       </div>
@@ -51,7 +49,6 @@ CardInfo.propTypes = exact({
   shape: PropTypes.oneOf(["color", "transparent"]),
   color: PropTypes.string,
   border: PropTypes.bool,
-  expanded: PropTypes.bool,
   children: PropTypes.any
 });
 
