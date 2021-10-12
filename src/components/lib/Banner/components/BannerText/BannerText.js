@@ -1,9 +1,6 @@
-import React, { lazy } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
-
-const Row = lazy(() => import("react-bootstrap/Row"));
-const Col = lazy(() => import("react-bootstrap/Col"));
 
 const BannerText = props => {
   const {
@@ -33,8 +30,8 @@ const BannerText = props => {
   return (
     <div className={`kromac-banner-text`} style={style}>
       <div className="kromac-banner-container">
-        <Row>
-          <Col lg={6} md={6} sm={{ order: orderCaption }}>
+        <div className="kromac-banner-grid">
+          <div className={`order-caption-${orderCaption}`}>
             <div className="kromac-banner-caption">
               <div style={{ background: bgTextColor }}>
                 <h1>
@@ -42,16 +39,11 @@ const BannerText = props => {
                 </h1>
               </div>
             </div>
-          </Col>
-          <Col
-            lg={6}
-            md={6}
-            sm={{ order: orderImage }}
-            className="d-none d-md-block"
-          >
+          </div>
+          <div className={`order-image-${orderImage}`}>
             <div className={`kromac-banner-image`} />
-          </Col>
-        </Row>
+          </div>
+        </div>
       </div>
     </div>
   );

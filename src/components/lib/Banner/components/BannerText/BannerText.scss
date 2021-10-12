@@ -16,7 +16,7 @@
   .kromac-banner-container {
     height: 100%;
 
-    .row {
+    .kromac-banner-grid {
       height: 100%;
       margin-bottom: 0;
       overflow: hidden;
@@ -69,12 +69,10 @@
 
 @media (max-width: 767px) {
   .kromac-banner-text {
-    .kromac-banner-caption {
-      height: auto !important;
-    }
-
-    .kromac-banner-image {
-      display: none;
+    .kromac-banner-container {
+      .kromac-banner-grid {
+        grid-template-columns: 100%;
+      }
     }
   }
 }

@@ -1,6 +1,4 @@
 import React, { lazy } from "react";
-// import "./Gallery.scss";
-import "../../../css/Gallery.css"
 
 const GalleryResponsive = lazy(() => import("./GalleryResponsive"));
 const GalleryPolygon = lazy(() => import("./GalleryPolygon"));

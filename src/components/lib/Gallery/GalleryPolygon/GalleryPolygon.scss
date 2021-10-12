@@ -34,6 +34,7 @@
 
     &.rhombus {
       top: calc(var(--rowNumber) * -150px);
+      position: relative;
 
       .kromac-gallery {
         clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);

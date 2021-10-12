@@ -1,4 +1,5 @@
 import React, { lazy, useState } from "react";
+import { Row, Col } from "react-bootstrap";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import {
@@ -8,8 +9,6 @@ import {
   rowColMaker
 } from "../../../../utils/utils";
 
-const Row = lazy(() => import("react-bootstrap/Row"));
-const Col = lazy(() => import("react-bootstrap/Col"));
 const Skeleton = lazy(() => import("../../Skeleton"));
 
 const GalleryPolygon = props => {

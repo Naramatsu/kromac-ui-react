@@ -31,3 +31,4 @@ export { default as Toast } from "./Toast";
 export { default as Toggle } from "./Toggle";
 export { default as TogglePower } from "./Toggle/components/TogglePower";
 export { default as ToggleSwitch } from "./Toggle/components/ToggleSwitch";
+export { default as utils } from "../../utils/utils"
