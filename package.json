@@ -1,7 +1,7 @@
 {
   "name": "kromac",
   "version": "1.0.0",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "description": "Kromac UI React Framework",
   "license": "ISC",
   "dependencies": {
@@ -13,6 +13,7 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "animate.css": "^4.1.1",
+    "autoprefixer": "^9.8.6",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "bootstrap": "^4.6.0",
     "classnames": "^2.3.1",
@@ -22,6 +23,7 @@
     "materialize-css": "^1.0.0",
     "node-sass": "^6.0.1",
     "npm-sass": "^3.0.0",
+    "precss": "^4.0.0",
     "prop-types-exact": "^1.2.0",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.1",
@@ -81,8 +83,12 @@
     "@babel/preset-react": "^7.14.5",
     "babel-loader": "^8.2.2",
     "enzyme-adapter-react-16": "1.15.6",
+    "extract-css-chunks-webpack-plugin": "^4.9.0",
+    "file-loader": "^6.1.1",
     "gh-pages": "^3.2.3",
     "jest": "^26.6.0",
+    "mini-css-extract-plugin": "^0.11.3",
+    "svg-inline-loader": "^0.8.2",
     "webpack": "^4.46.0",
     "webpack-cli": "^4.8.0"
   }

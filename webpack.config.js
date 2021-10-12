@@ -1,12 +1,13 @@
 const path = require('path');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = {
   mode: 'production',
   entry: {
     "Avatar": "./src/components/lib/Avatar/Avatar.js",
+    "Banner": "./src/components/lib/Banner/Banner.js",
     "Button": "./src/components/lib/Button/Button.js",
     "Card": "./src/components/lib/Card/Card.js",
-    "CardClassic": "./src/components/lib/Card/components/CardClassic/CardClassic.js",
     "Gallery": "./src/components/lib/Gallery/Gallery.js",
     "Menu": "./src/components/lib/Menu/Menu.js",
     "Panel": "./src/components/lib/Panel/Panel.js",
@@ -19,7 +20,7 @@ module.exports = {
     "index": "./src/components/lib/index.js",
   },
   output: {
-    path: path.resolve('lib'),
+    path: path.resolve('dist'),
     filename: '[name].js',
     libraryTarget: 'commonjs2',
     publicPath: "/"
@@ -32,18 +33,25 @@ module.exports = {
         exclude: /(node_modules)/,
         use: 'babel-loader',
       },
-      // {
-      //   test: /\.scss$/,
-      //   use: [
-      //     'css-loader',
-      //     'sass-loader',
-      //   ]
-      // },
       {
-        test: /\.(css)$/,
+        test: /\.css$/,
         use: [
-          'style-loader',
-          'css-loader',
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true
+            }
+          }
+
+        ]
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          "file-loader"
         ]
       }
     ],
@@ -51,11 +59,10 @@ module.exports = {
   resolve: {
     alias: {
       'react': path.resolve(__dirname, './node_modules/react'),
-      'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
+      'react-dom': path.resolve(__dirname, './node_modules/react-dom')
     }
   },
   externals: {
-    // Don't bundle react or react-dom      
     react: {
       commonjs: "react",
       commonjs2: "react",
@@ -69,5 +76,10 @@ module.exports = {
       root: "ReactDOM"
     }
   },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+    })
+  ],
   performance: { hints: false }
 };
