@@ -1,7 +1,58 @@
 import React, { useState, lazy } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
-import { determinateColor, determinateIcon } from "../../../../../utils/utils";
+import { determinateColor } from "../../../../../utils/utils";
+
+const fb = "https://res.cloudinary.com/dxg9gszax/image/upload/v1634079073/kromac-ui/facebook_eoffyk.svg"
+const ig = "https://res.cloudinary.com/dxg9gszax/image/upload/v1634079072/kromac-ui/instagram_xtonqo.svg"
+const li = "https://res.cloudinary.com/dxg9gszax/image/upload/v1634079072/kromac-ui/linkedin_nqwh1p.svg"
+const tw = "https://res.cloudinary.com/dxg9gszax/image/upload/v1634079073/kromac-ui/twitter_og7mxx.svg"
+const tc = "https://res.cloudinary.com/dxg9gszax/image/upload/v1634079072/kromac-ui/twitch_gczehv.svg"
+const yt = "https://res.cloudinary.com/dxg9gszax/image/upload/v1634079073/kromac-ui/youtube_mgcxep.svg"
+
+
+const determinateIcon = red => {
+  switch (red) {
+    case "facebook":
+      return (
+        <i>
+          <img src={fb} alt="fb" />
+        </i>
+      );
+    case "instagram":
+      return (
+        <i>
+          <img src={ig} alt="ig" />
+        </i>
+      );
+    case "linkedin":
+      return (
+        <i>
+          <img src={li} alt="li" />
+        </i>
+      );
+    case "twitter":
+      return (
+        <i>
+          <img src={tw} alt="tw" />
+        </i>
+      );
+    case "twitch":
+      return (
+        <i>
+          <img src={tc} alt="tc" />
+        </i>
+      );
+    case "youtube":
+      return (
+        <i>
+          <img src={yt} alt="yt" />
+        </i>
+      );
+    default:
+      return;
+  }
+};
 
 const Skeleton = lazy(() => import("../../../Skeleton"));
 

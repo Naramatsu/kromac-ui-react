@@ -28,7 +28,7 @@ SpinnerLighter.propTypes = exact({
   spinnerType: PropTypes.string,
   size: PropTypes.oneOf(["sm", "md", "lg"]),
   isCentered: PropTypes.bool,
-  bgColorInside: PropTypes.string,
+  bgColorInside: PropTypes.oneOf(["#fff", "#000"]),
   shadows: PropTypes.bool
 });
 

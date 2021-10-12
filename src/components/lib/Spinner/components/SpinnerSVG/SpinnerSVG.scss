@@ -42,12 +42,15 @@
       animation: svgRotate 2s infinite linear;
       animation-delay: -1s;
 
-      svg {
+      img {
         position: absolute;
         top: 80px;
         left: 95px;
         color: var(--loaderColor);
         font-size: 50px;
+        width: 50px;
+        height: 50px;
+        filter: contrast(0);
       }
     }
   }

@@ -1,11 +1,5 @@
 import { Chip } from "react-materialize";
 import data from "./components.json";
-import fb from "./media/facebook.svg";
-import ig from "./media/instagram.svg";
-import li from "./media/linkedin.svg";
-import tc from "./media/twitch.svg";
-import tw from "./media/twitter.svg";
-import yt from "./media/youtube.svg";
 
 export const determinateColor = color => {
   switch (color) {
@@ -60,66 +54,14 @@ export const bgStyleByProps = cardColor => ({
   color: "#fff"
 });
 
-export const determinateIcon = red => {
-  switch (red) {
-    case "facebook":
-      return (
-        <i>
-          <img src={fb} alt="fb" />
-        </i>
-      );
-    case "instagram":
-      return (
-        <i>
-          <img src={ig} alt="ig" />
-        </i>
-      );
-    case "linkedin":
-      return (
-        <i>
-          <img src={li} alt="li" />
-        </i>
-      );
-    case "twitter":
-      return (
-        <i>
-          <img src={tw} alt="tw" />
-        </i>
-      );
-    case "twitch":
-      return (
-        <i>
-          <img src={tc} alt="tc" />
-        </i>
-      );
-    case "youtube":
-      return (
-        <i>
-          <img src={yt} alt="yt" />
-        </i>
-      );
-    default:
-      return;
-  }
-};
-
-export const spanGenerator = loops => {
-  const spans = [];
-  for (let i = 1; i <= loops; i++) {
-    var style = { "--i": i };
-    spans.push(<span key={i} style={style} />);
-  }
-  return spans;
-};
-
 export const styleCentered = isCentered => {
   return isCentered
     ? {
-        position: "fixed",
-        top: "50%",
-        left: "50%",
-        transform: "translate(-50%, -50%)"
-      }
+      position: "fixed",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)"
+    }
     : {};
 };
 
