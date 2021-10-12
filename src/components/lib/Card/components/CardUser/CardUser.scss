@@ -71,8 +71,6 @@ $textShadow-bg-white: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 
         li {
           margin: .5em;
-          border: solid 1px #fff;
-          border-radius: 50%;
 
           a,
           a:hover {
@@ -90,6 +88,13 @@ $textShadow-bg-white: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 
             &:hover {
               transform: rotate(360deg);
+            }
+
+            i {
+              img {
+                width: 25px;
+                height: 25px;
+              }
             }
           }
         }
@@ -114,7 +119,7 @@ $textShadow-bg-white: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
     overflow: hidden;
     color: #fff;
     text-shadow: $textShadow-bg-white;
-    transition: all  2s linear;
+    transition: all 2s linear;
 
     .kromac-card-image {
       border-radius: 50%;

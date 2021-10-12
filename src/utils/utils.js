@@ -1,5 +1,11 @@
 import { Chip } from "react-materialize";
 import data from "./components.json";
+import fb from "./media/facebook.svg";
+import ig from "./media/instagram.svg";
+import li from "./media/linkedin.svg";
+import tc from "./media/twitch.svg";
+import tw from "./media/twitter.svg";
+import yt from "./media/youtube.svg";
 
 export const determinateColor = color => {
   switch (color) {
@@ -57,17 +63,41 @@ export const bgStyleByProps = cardColor => ({
 export const determinateIcon = red => {
   switch (red) {
     case "facebook":
-      return <i className="fab fa-facebook-f" />;
+      return (
+        <i>
+          <img src={fb} alt="fb" />
+        </i>
+      );
     case "instagram":
-      return <i className="fab fa-instagram" />;
+      return (
+        <i>
+          <img src={ig} alt="ig" />
+        </i>
+      );
     case "linkedin":
-      return <i className="fab fa-linkedin-in" />;
+      return (
+        <i>
+          <img src={li} alt="li" />
+        </i>
+      );
     case "twitter":
-      return <i className="fab fa-twitter" />;
+      return (
+        <i>
+          <img src={tw} alt="tw" />
+        </i>
+      );
     case "twitch":
-      return <i className="fab fa-twitch" />;
+      return (
+        <i>
+          <img src={tc} alt="tc" />
+        </i>
+      );
     case "youtube":
-      return <i className="fab fa-youtube" />;
+      return (
+        <i>
+          <img src={yt} alt="yt" />
+        </i>
+      );
     default:
       return;
   }
