@@ -6,8 +6,7 @@ const ToggleSwitch = props => {
   const {
     checked,
     onColor = "#28B463",
-    offColor = "#CB4335",
-    size = "md"
+    offColor = "#CB4335"
   } = props;
 
   const handleChange = props.onChange ? props.onChange : () => ({});
@@ -18,7 +17,7 @@ const ToggleSwitch = props => {
 
   return (
     <div className="kromac-toggle toggle-switch">
-      <label className={`kromac-checkbox ${size}`} style={style}>
+      <label className="kromac-checkbox" style={style}>
         <input
           type="checkbox"
           name="btn"
@@ -35,7 +34,8 @@ ToggleSwitch.propTypes = exact({
   checked: PropTypes.bool,
   onColor: PropTypes.string,
   offColor: PropTypes.string,
-  size: PropTypes.string,
+  onChange: PropTypes.func,
+  ref: PropTypes.any,
   borderRadius: PropTypes.string
 });
 

@@ -41,12 +41,6 @@ const propsDescription = [
     description: "color when the toggle is not checked"
   },
   {
-    name: "size",
-    type: "string",
-    values: ["default md", "sm", "md", "lg"],
-    description: "toggle size"
-  },
-  {
     name: "onChange",
     type: "function",
     values: [],

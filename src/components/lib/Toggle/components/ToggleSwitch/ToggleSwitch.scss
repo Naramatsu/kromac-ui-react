@@ -63,13 +63,5 @@ $onColor: var(--chkOnColor);
         transition: .5s;
       }
     }
-
-    &.sm {
-      transform: scale(.5);
-    }
-
-    &.lg {
-      transform: scale(1.5);
-    }
   }
 }

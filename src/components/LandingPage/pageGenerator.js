@@ -237,7 +237,7 @@ export const technogloiesNoImage = [
 export const developerTeam = [
   {
     github: "https://github.com/Naramatsu",
-    image: "jcnm.jpeg",
+    image: "https://res.cloudinary.com/dxg9gszax/image/upload/v1634085770/kromac-ui%20team/jcnm_owzs5i.jpg",
     name: "Ing. Jonathan C. Narvaez M.",
     tooltip: "Frontend Developer",
     bgColor: "rgb(185 185 186)",
