@@ -4,7 +4,6 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
 .kromac-btn:active,
 .kromac-btn:hover,
 .kromac-btn:focus {
-  background: transparent;
   padding: 0;
   position: relative;
   backdrop-filter: blur(20px);
@@ -87,6 +86,7 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
 
   &.primary {
     border: solid 1px #2e86c1;
+    background-color: #2e86c1;
 
     p {
       text-shadow: 1px 1px 2px #2e86c1, 0 0 .25em #2e86c1, 0 0 0.2em #2e86c1;
@@ -107,6 +107,7 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
 
   &.success {
     border: solid 1px #28b463;
+    background-color: #28b463;
 
     p {
       text-shadow: 1px 1px 2px #28b463, 0 0 .25em #28b463, 0 0 0.2em #28b463;
@@ -126,6 +127,7 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
 
   &.warning {
     border: solid 1px #f1c40f;
+    background-color: #f1c40f;
 
     p {
       text-shadow: 1px 1px 2px #f1c40f, 0 0 .25em #f1c40f, 0 0 0.2em #f1c40f;
@@ -145,6 +147,7 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
 
   &.error {
     border: solid 1px #cb4335;
+    background-color: #cb4335;
 
     p {
       text-shadow: 1px 1px 2px #cb4335, 0 0 .25em #cb4335, 0 0 0.2em #cb4335;
@@ -164,6 +167,7 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
 
   &.danger {
     border: solid 1px #d68910;
+    background-color: #d68910;
 
     p {
       text-shadow: 1px 1px 2px #d68910, 0 0 .25em #d68910, 0 0 0.2em #d68910;
@@ -183,6 +187,7 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
 
   &.info {
     border: solid 1px #d5dbdb;
+    background-color: #d5dbdb;
 
     p {
       transition: all 1s ease;
@@ -203,6 +208,7 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
 
   &.dark {
     border: solid 1px #212f3d;
+    background-color: #212f3d;
 
     p {
       text-shadow: 1px 1px 2px #212f3d, 0 0 .25em #212f3d, 0 0 0.2em #212f3d;
@@ -222,6 +228,7 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
 
   &.transparent {
     border: solid 1px #fff;
+    background-color: transparent;
 
     p {
       color: #fff;

@@ -1,5 +1,6 @@
 import React, { lazy, useEffect } from "react";
 import { changeDocumentTitle } from "../../utils/utils";
+import { Row, Col } from "react-bootstrap";
 import {
   btnSponsorList,
   componentText,
@@ -15,8 +16,6 @@ import {
 } from "./pageGenerator";
 import "./LandingPage.scss";
 
-const Row = lazy(() => import("react-bootstrap/Row"));
-const Col = lazy(() => import("react-bootstrap/Col"));
 const TextAnimation = lazy(() => import("../lib/TextAnimation"));
 const BoxImplementation = lazy(() => import("../BoxImplementation"));
 const Card = lazy(() => import("../lib/Card"));

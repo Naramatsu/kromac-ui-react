@@ -55,13 +55,6 @@ const propsDescription = [
     description: "Toast background"
   },
   {
-    name: "icon",
-    type: "string",
-    values: [],
-    description:
-      "If you wanna a descriptive icon, pls use one of the follow => https://ionic.io/ionicons"
-  },
-  {
     name: "visible",
     type: "bool",
     values: [`default false`],

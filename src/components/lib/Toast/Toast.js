@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 
@@ -6,7 +6,6 @@ const Toast = props => {
   const {
     message,
     color = "night",
-    icon,
     visible = false,
     timeOut = 5000,
     positionY = "bottom",
@@ -17,34 +16,34 @@ const Toast = props => {
   const style = {
     opacity: isvisible ? "1" : "0"
   };
+  const isLeft = positionX === "left";
   const positionStyle = {
     [positionY]: isvisible ? "10px" : "-50px",
-    [positionX]: "10px"
+    [positionX]: isLeft ? "10px" : "40px"
   };
 
-  const onClose = () => {
-    setTimeout(() => setIsVisible(false), timeOut);
-  };
+  useEffect(() => {
+    setIsVisible(visible);
+    let timer = null;
+    if (visible)
+      timer = setTimeout(() => setIsVisible(false), timeOut)
+    return () => {
+      clearTimeout(timer)
+    }
+  }, [visible, timeOut])
 
-  const close = e => {
-    e.preventDefault();
+  const close = () => {
     setIsVisible(false);
   };
-
-  onClose();
 
   return (
     <div className="kromac-toast" style={positionStyle}>
       <div className={`kromac-toast-content ${color}`} style={style}>
-        {icon &&
-          <span>
-            <ion-icon name={icon} />
-          </span>}
         <p className="text-bg-light">
           {message}
         </p>
         <span onClick={close}>
-          <ion-icon name="close-circle-outline" />
+          <img src="https://res.cloudinary.com/dxg9gszax/image/upload/v1634081104/kromac-ui/closedark_udiuhh.svg" alt="close" />
         </span>
       </div>
     </div>
@@ -63,7 +62,6 @@ Toast.propTypes = exact({
     "info",
     "night"
   ]),
-  icon: PropTypes.string,
   visible: PropTypes.bool,
   timeOut: PropTypes.number,
   positionY: PropTypes.oneOf(["bottom", "top"]),
