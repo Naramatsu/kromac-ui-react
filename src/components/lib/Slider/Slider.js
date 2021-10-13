@@ -60,8 +60,6 @@ const Slider = props => {
       const handlerTimeout = setTimeout(() => {
         if (autoPlay) {
           setCounter(counter + 1);
-        } else {
-          setCounter(0);
         }
       }, timer * 1000);
 
@@ -77,21 +75,23 @@ const Slider = props => {
       <div className="kromac-slider">
         <div className="separators">
           <span onClick={handleChangeLeft}>
-            <ion-icon
-              name="caret-back-outline"
+            <img
+              src="https://res.cloudinary.com/dxg9gszax/image/upload/v1634082826/kromac-ui/arrow-left_pu25qv.svg"
               style={{
                 ...inactivateIonIcon(counter, "left", nroItems),
                 paddingRight: "5px"
               }}
+              alt="left"
             />
           </span>
           <span onClick={handleChangeRight}>
-            <ion-icon
-              name="caret-forward-outline"
+            <img
+              src="https://res.cloudinary.com/dxg9gszax/image/upload/v1634082826/kromac-ui/arrow-right_ksufka.svg"
               style={{
                 ...inactivateIonIcon(counter, "right", nroItems),
                 paddingLeft: "5px"
               }}
+              alt="right"
             />
           </span>
         </div>

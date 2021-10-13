@@ -27,8 +27,11 @@
       color: #fff;
       border-radius: 50%;
 
-      ion-icon {
+      img {
         pointer-events: all;
+        padding: 0 5px;
+        color: rgb(204, 204, 204);
+        filter: contrast(0);
       }
     }
   }

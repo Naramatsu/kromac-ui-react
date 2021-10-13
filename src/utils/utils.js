@@ -200,11 +200,11 @@ export const rowColMaker = images => {
 export const inactivateIonIcon = (number, indicator, long) => {
   if (indicator === "left") {
     if (number === 0) {
-      return { pointerEvents: "none", color: "#ccc" };
+      return { pointerEvents: "none", filter: "contrast(0.9)" };
     }
   } else {
     if (number === long) {
-      return { pointerEvents: "none", color: "#ccc" };
+      return { pointerEvents: "none", filter: "contrast(0.9)" };
     }
   }
 };
