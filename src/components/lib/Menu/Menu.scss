@@ -173,10 +173,10 @@
     align-items: center;
     z-index: 100;
 
-    ion-icon {
+    img {
       position: absolute;
-      color: #fff;
-      font-size: 34px;
+      width: 34px;
+      height: 34px;
       display: none;
 
       &.open {
@@ -187,9 +187,10 @@
     &.active {
       background: var(--hamburgerActiveColor);
 
-      ion-icon {
+      img {
         &.close {
           display: block;
+          mix-blend-mode: screen;
         }
         &.open {
           display: none;
