@@ -47,6 +47,7 @@ const ComponentsMenu = () => {
       <div className="kromac-title">
         <Route>
           <Link to="/" name="home" onClick={handleClick}>
+            <img src="https://res.cloudinary.com/dxg9gszax/image/upload/v1634697765/kromac-ui/kromac-logov2_cov1m7.png" alt="logo" />
             <h1>Kromac UI</h1>
             <p>v1.0.0</p>
           </Link>

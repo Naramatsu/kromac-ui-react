@@ -44,7 +44,7 @@ export const addChip = (type, index) => {
   );
 };
 
-export const borderStyle = (cardColor, border) =>
+export const borderStyle = (cardColor, border = false) =>
   cardColor === "transparent" || border
     ? { border: "solid 2px #fff", borderRadius: "1em" }
     : {};

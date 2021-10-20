@@ -1,4 +1,4 @@
-import React, { lazy, useState } from "react";
+import React, { useState } from "react";
 import { Row, Col } from "react-bootstrap";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
@@ -8,8 +8,7 @@ import {
   markAsOnlyImageRowImpar,
   rowColMaker
 } from "../../../../utils/utils";
-
-const Skeleton = lazy(() => import("../../Skeleton"));
+import Skeleton from "../../Skeleton";
 
 const GalleryPolygon = props => {
   const [isViewImage, setIsViewImage] = useState(false);

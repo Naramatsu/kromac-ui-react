@@ -1,6 +1,12 @@
 $textShadow-bg-white: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 $textShadow-bg-black: 1px 1px 2px black, 0 0 0.25em white, 0 0 0.2em black;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .label-import {
   color: #fff;
   background: #566573;

@@ -1,7 +1,8 @@
-import React, { useState, lazy } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import { determinateColor } from "../../../../../utils/utils";
+import Skeleton from "../../../Skeleton";
 
 const fb = "https://res.cloudinary.com/dxg9gszax/image/upload/v1634079073/kromac-ui/facebook_eoffyk.svg"
 const ig = "https://res.cloudinary.com/dxg9gszax/image/upload/v1634079072/kromac-ui/instagram_xtonqo.svg"
@@ -54,8 +55,6 @@ const determinateIcon = red => {
   }
 };
 
-const Skeleton = lazy(() => import("../../../Skeleton"));
-
 const CardUser = props => {
   const {
     image,
@@ -63,7 +62,6 @@ const CardUser = props => {
     profession = "",
     shape = "info",
     color = "#fff",
-    border = false,
     imageFitPosition = "top",
     redes = [],
     children
@@ -72,7 +70,7 @@ const CardUser = props => {
   const [isImgLoading, setIsImgLoading] = useState(true);
   const styleColor = determinateColor(color);
   const borderStyle =
-    color === "transparent" || border ? { border: "solid 2px #fff" } : {};
+    color === "transparent" ? { border: "solid 2px #fff" } : {};
   const bgColor =
     color !== "transparent"
       ? {
@@ -129,7 +127,6 @@ CardUser.propTypes = exact({
   profession: PropTypes.string,
   shape: PropTypes.oneOf(["info", "summary"]),
   color: PropTypes.string,
-  border: PropTypes.bool,
   imageFitPosition: PropTypes.string,
   redes: PropTypes.arrayOf(
     PropTypes.shape({

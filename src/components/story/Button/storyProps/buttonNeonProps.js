@@ -33,12 +33,6 @@ const propsDescription = [
     description: "Button type"
   },
   {
-    name: "className",
-    type: "string",
-    values: [`text-bg-dark`, `text-bg-light`],
-    description: "this prop only affect the button text"
-  },
-  {
     name: "loading",
     type: "bool",
     values: ["default false"],

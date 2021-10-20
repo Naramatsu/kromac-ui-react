@@ -119,12 +119,6 @@ const propsDescription = [
       "Card caption color, you can add any color en hex format or name"
   },
   {
-    name: "border",
-    type: "bool",
-    values: [`default false`],
-    description: "Prop to add a border"
-  },
-  {
     name: "children",
     type: "any",
     values: [],

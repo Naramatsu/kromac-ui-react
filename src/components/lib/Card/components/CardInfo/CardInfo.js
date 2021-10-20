@@ -9,11 +9,10 @@ const CardInfo = props => {
     size = "auto",
     shape = "color",
     color = "transparent",
-    border = false,
     children
   } = props;
 
-  const borderstyle = borderStyle(color, border);
+  const borderstyle = borderStyle(color);
   const bg = bgStyleByProps(color);
 
   return (
@@ -46,7 +45,6 @@ CardInfo.propTypes = exact({
   size: PropTypes.oneOf(["sm", "md", "lg", "auto"]),
   shape: PropTypes.oneOf(["color", "transparent"]),
   color: PropTypes.string,
-  border: PropTypes.bool,
   children: PropTypes.any
 });
 

@@ -1,7 +1,6 @@
-import React, { lazy } from "react";
-
-const GalleryResponsive = lazy(() => import("./GalleryResponsive"));
-const GalleryPolygon = lazy(() => import("./GalleryPolygon"));
+import React from "react";
+import GalleryResponsive from "./GalleryResponsive";
+import GalleryPolygon from "./GalleryPolygon";
 
 const Gallery = props => {
   const { galleryType } = props;

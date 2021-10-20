@@ -28,7 +28,7 @@ const tabs = data.map(c => c.component).sort();
 const App = () =>
   <div className="App">
     <div className="h-menu-kromac">
-      <KromacMenu appName="Kromac UI" tabs={tabs} searchComponents />
+      <KromacMenu appName="Kromac UI" tabs={tabs} searchComponents imgLogo="https://res.cloudinary.com/dxg9gszax/image/upload/v1634697765/kromac-ui/kromac-logov2_cov1m7.png" />
     </div>
     <Switch>
       <Route path="/" exact strict component={LandingPage} />

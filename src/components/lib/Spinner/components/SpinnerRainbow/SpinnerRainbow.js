@@ -16,18 +16,16 @@ const SpinnerRainbow = props => {
   const {
     size = "sm",
     bgColor = "#fff",
-    isCentered = false,
-    shadows = true
+    isCentered = false
   } = props;
 
-  const isShadows = shadows ? "shadows" : "";
   const style = {
     "--bgSpiner": bgColor
   };
 
   return (
     <div
-      className={`kromac-spinner spinner-rainbown ${size} ${isShadows}`}
+      className={`kromac-spinner spinner-rainbown ${size}`}
       style={{ ...style, ...styleCentered(isCentered) }}
     >
       <div className="loader">
@@ -41,8 +39,7 @@ SpinnerRainbow.propTypes = exact({
   spinnerType: PropTypes.string,
   size: PropTypes.oneOf(["sm", "md", "lg"]),
   bgColor: PropTypes.string,
-  isCentered: PropTypes.bool,
-  shadows: PropTypes.bool
+  isCentered: PropTypes.bool
 });
 
 export default SpinnerRainbow;

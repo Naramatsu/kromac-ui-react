@@ -1,9 +1,8 @@
-import React, { useState, lazy } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import { determinateColor } from "../../../../../utils/utils";
-
-const Skeleton = lazy(() => import("../../../Skeleton"));
+import Skeleton from "../../../Skeleton";
 
 const CardReveal = props => {
   const {

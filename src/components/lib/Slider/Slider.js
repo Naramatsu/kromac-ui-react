@@ -1,10 +1,9 @@
-import React, { useState, lazy, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import { inactivateIonIcon } from "../../../utils/utils";
-
-const Skeleton = lazy(() => import("../Skeleton"));
-const Spinner = lazy(() => import("../Spinner"));
+import Skeleton from "../Skeleton";
+import Spinner from "../Spinner";
 
 const adder = count => {
   return count++;

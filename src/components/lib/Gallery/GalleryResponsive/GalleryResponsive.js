@@ -1,4 +1,4 @@
-import React, { useState, useEffect, lazy } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import {
@@ -7,8 +7,7 @@ import {
   widthCalculator,
   rowColGenerator
 } from "../../../../utils/utils";
-
-const Skeleton = lazy(() => import("../../Skeleton"));
+import Skeleton from "../../Skeleton";
 
 const GalleryResponsive = props => {
   const [isViewImage, setIsViewImage] = useState(false);
