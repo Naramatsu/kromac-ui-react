@@ -37,7 +37,7 @@ $textShadow-bg-white: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
     .kromac-card-caption {
       transition: 1s;
       position: absolute;
-      bottom: 10px;
+      bottom: 40px;
       width: 100%;
       text-align: center;
       transform: translateY(100%);
@@ -145,7 +145,7 @@ $textShadow-bg-white: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 
       .card-title {
         position: absolute;
-        bottom: 0;
+        bottom: 50px;
         text-align: center;
         width: 100%;
 

@@ -70,6 +70,12 @@ const propsDescription = [
     description: "banner image"
   },
   {
+    name: "textAlign",
+    type: "string",
+    values: ["default center"],
+    description: "text align"
+  },
+  {
     name: "color",
     type: "string",
     values: ["default #fff"],

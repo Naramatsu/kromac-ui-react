@@ -34,6 +34,7 @@ const BannerImg = props => {
 BannerImg.propTypes = exact({
   bannerType: PropTypes.oneOf(["classic", "image", "text"]),
   image: PropTypes.string.isRequired,
+  textAlign: PropTypes.string,
   color: PropTypes.string,
   height: PropTypes.string,
   attachment: PropTypes.string,

@@ -2,6 +2,7 @@
   width: 350px;
   position: fixed;
   transition: all 2s ease;
+  z-index: 1000000 !important;
 
   .kromac-toast-content {
     display: flex;
