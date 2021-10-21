@@ -163,12 +163,6 @@ const propsDescription = [
     description: "you can add any color in hex format or name"
   },
   {
-    name: "border",
-    type: "bool",
-    values: [`default false`],
-    description: "Prop to add a border"
-  },
-  {
     name: "imageFitPosition",
     type: "string",
     values: [`default center`, "top", "center", "bottom"],

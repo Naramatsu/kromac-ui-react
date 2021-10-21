@@ -1,0 +1,11 @@
+.kromac-banner-grid {
+  display: grid;
+  grid-column: 2;
+  grid-template-columns: 50% 50%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.order-image-first {
+  grid-row-start: 1;
+}

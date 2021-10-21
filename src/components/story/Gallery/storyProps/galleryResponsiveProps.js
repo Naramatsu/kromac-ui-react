@@ -117,8 +117,7 @@ const componentText = (
       <span className="var tab4">row: </span>
       <span className="text">2</span>
       <br />
-      <span className="tab3">{` }`}</span>
-      <br />
+      <span className="tab3">{` }`}</span>,<br />
       <span className="tab3">{`{ `}</span>
       <span className="var">img: </span>
       <span className="string">"image.png"</span>
@@ -130,7 +129,7 @@ const componentText = (
       <span className="var tab4">col: </span>
       <span className="text">2</span>
       <br />
-      <span className="tab3">{` }`}</span>,<br />
+      <span className="tab3">{` }`}</span><br />
       <span className="tab2">{`]}`}</span>
       <br />
       <span className="react tab">/&gt;</span>

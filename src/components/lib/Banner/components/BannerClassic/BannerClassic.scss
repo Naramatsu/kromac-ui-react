@@ -1,0 +1,121 @@
+.kromac-banner-container {
+  margin-bottom: calc(var(--heightImg) / 2);
+}
+.kromac-banner-classic {
+  position: relative;
+
+  .kromac-banner-content,
+  .kromac-banner-caption,
+  .kromac-banner-image {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .kromac-banner-content {
+    .row {
+      width: 100%;
+      margin-bottom: 0;
+      overflow-x: hidden;
+    }
+  }
+
+  .kromac-banner-image {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .kromac-banner-caption {
+    z-index: 1000;
+    padding: 1em;
+    width: auto;
+    position: relative;
+  }
+
+  &.overlay {
+    margin: 75px 0;
+
+    .kromac-banner-content {
+      .kromac-banner-image {
+        img {
+          height: calc(150px + var(--heightImg));
+          width: auto;
+
+          &.bottom {
+            margin-bottom: 150px;
+            padding-top: 90px;
+          }
+        }
+      }
+    }
+  }
+
+  &.normal {
+    .kromac-banner-content {
+      .kromac-banner-image {
+        img {
+          max-height: var(--heightImg);
+          width: var(--widthImg);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 820px) {
+  .kromac-banner-classic.overlay {
+    .kromac-banner-content {
+      .kromac-banner-image {
+        img {
+          width: 100%;
+          width: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .kromac-banner-classic.normal {
+    height: auto !important;
+  }
+
+  .kromac-banner-classic.overlay {
+    height: auto !important;
+
+    .kromac-banner-content {
+      .kromac-banner-image {
+        img {
+          width: auto;
+          max-width: 100%;
+          height: 100%;
+          max-height: (var(--heightImg));
+          object-fit: cover;
+
+          &.bottom {
+            margin-bottom: 0;
+            padding-top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .kromac-banner-classic.overlay {
+    height: auto !important;
+
+    .kromac-banner-content {
+      .kromac-banner-grid {
+        grid-template-columns: 100%;
+      }
+    }
+  }
+}

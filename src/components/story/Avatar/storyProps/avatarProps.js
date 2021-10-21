@@ -14,7 +14,7 @@ const componentText = (
       <br />
       <span className="react tab">&lt;Avatar</span>
       <br />
-      <span className="component tab2">images</span>
+      <span className="component tab2">image</span>
       =
       <span className="string">"image.png"</span>
       <br />

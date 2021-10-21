@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Route, Link } from "react-router-dom";
 import data from "../../utils/components.json";
-import "./style.scss";
+import "./ComponentsMenu.scss";
 
 const ComponentsMenu = () => {
   const [kromacComponents, setComponents] = useState(
@@ -36,8 +36,8 @@ const ComponentsMenu = () => {
   const showSubComponents = subComponents && subComponents.length > 0;
   const activeSubComponent = ({ showSubComponents, subComponents, link }) => {
     return showSubComponents &&
-    showSubComponents &&
-    subComponents[0].component === link
+      showSubComponents &&
+      subComponents[0].component === link
       ? "active"
       : "";
   };
@@ -47,6 +47,7 @@ const ComponentsMenu = () => {
       <div className="kromac-title">
         <Route>
           <Link to="/" name="home" onClick={handleClick}>
+            <img src="https://res.cloudinary.com/dxg9gszax/image/upload/v1634697765/kromac-ui/kromac-logov2_cov1m7.png" alt="logo" />
             <h1>Kromac UI</h1>
             <p>v1.0.0</p>
           </Link>

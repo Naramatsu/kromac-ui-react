@@ -37,7 +37,7 @@ const propsDescription = [
   {
     name: "bgColorInside",
     type: "string",
-    values: ["default #fff"],
+    values: ["default #fff", "#000", "#fff"],
     description: "this prop you set the background inside"
   },
   {

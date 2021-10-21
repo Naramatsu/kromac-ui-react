@@ -1,7 +1,7 @@
 import React, { lazy } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import data from "./utils/components.json";
-import "./style.scss";
+import "./App.scss";
 
 const KromacMenu = lazy(() => import("./components/lib/Menu"));
 const LandingPage = lazy(() => import("./components/LandingPage"));
@@ -28,7 +28,7 @@ const tabs = data.map(c => c.component).sort();
 const App = () =>
   <div className="App">
     <div className="h-menu-kromac">
-      <KromacMenu appName="Kromac UI" tabs={tabs} searchComponents />
+      <KromacMenu appName="Kromac UI" tabs={tabs} searchComponents imgLogo="https://res.cloudinary.com/dxg9gszax/image/upload/v1634697765/kromac-ui/kromac-logov2_cov1m7.png" />
     </div>
     <Switch>
       <Route path="/" exact strict component={LandingPage} />
@@ -45,6 +45,9 @@ const App = () =>
       <Route path="/slider" component={Slider} />
       <Route path="/avatar" component={Avatar} />
       <Route path="/toast" component={Toast} />
+      <Route path="/kromac">
+        <Redirect to="/" />
+      </Route>
     </Switch>
   </div>;
 

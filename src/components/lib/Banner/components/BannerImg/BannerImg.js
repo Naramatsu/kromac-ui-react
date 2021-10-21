@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
-import "./style.scss";
 
 const BannerImg = props => {
   const {
@@ -35,6 +34,7 @@ const BannerImg = props => {
 BannerImg.propTypes = exact({
   bannerType: PropTypes.oneOf(["classic", "image", "text"]),
   image: PropTypes.string.isRequired,
+  textAlign: PropTypes.string,
   color: PropTypes.string,
   height: PropTypes.string,
   attachment: PropTypes.string,

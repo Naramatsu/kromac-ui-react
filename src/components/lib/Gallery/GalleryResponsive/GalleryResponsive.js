@@ -1,4 +1,4 @@
-import React, { useState, useEffect, lazy } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import {
@@ -7,9 +7,7 @@ import {
   widthCalculator,
   rowColGenerator
 } from "../../../../utils/utils";
-import "./style.scss";
-
-const Skeleton = lazy(() => import("../../Skeleton"));
+import Skeleton from "../../Skeleton";
 
 const GalleryResponsive = props => {
   const [isViewImage, setIsViewImage] = useState(false);
@@ -55,7 +53,7 @@ const GalleryResponsive = props => {
           <div className="kromac-box-container">
             <div className="brillo" />
             <button onClick={close} className="close">
-              <ion-icon name="close-circle-outline" />
+              <img src="https://res.cloudinary.com/dxg9gszax/image/upload/v1634081104/kromac-ui/closedark_udiuhh.svg" alt="close" />
             </button>
             {isImgLoading
               ? <Skeleton width="100%" height="100%" />

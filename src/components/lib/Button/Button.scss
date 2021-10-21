@@ -1,0 +1,314 @@
+$textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
+
+.kromac-btn,
+.kromac-btn:active,
+.kromac-btn:hover,
+.kromac-btn:focus {
+  padding: 0;
+  position: relative;
+  backdrop-filter: blur(20px);
+  margin: .5em 0;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+  min-width: 150px;
+  max-height: 75px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+  min-height: 50px;
+  min-width: 165px;
+
+  &.disabled,
+  &.disabled:hover {
+    cursor: not-allowed;
+  }
+
+  .button-content {
+    padding: 1em 3em;
+
+    &.spinner {
+      display: contents;
+
+      p {
+        margin-left: 25px;
+      }
+
+      .kromac-spinner {
+        transform: scale(.15);
+        position: absolute;
+        left: -70px;
+
+        span {
+          width: auto;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  p {
+    margin: 0;
+    color: #fff;
+    position: relative;
+    z-index: 100;
+
+    a {
+      color: #fff;
+    }
+  }
+
+  .kromac-span-button {
+    content: '';
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transition: background 1s ease;
+  }
+
+  &:hover {
+    border: solid 1px #fff;
+    transition: background 1s ease;
+
+    .kromac-span-button {
+      content: '';
+      width: 100%;
+      height: 50%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      background: rgba(0, 0, 0, .5);
+      transition: background 1s ease;
+    }
+  }
+
+  &.primary {
+    border: solid 1px #2e86c1;
+    background-color: #2e86c1;
+
+    p {
+      text-shadow: 1px 1px 2px #2e86c1, 0 0 .25em #2e86c1, 0 0 0.2em #2e86c1;
+    }
+
+    .kromac-span-button {
+      background: #2e86c1;
+    }
+
+    &:hover {
+      background: #2e86c1;
+
+      .kromac-span-button {
+        background: rgba(0, 0, 0, .5);
+      }
+    }
+  }
+
+  &.success {
+    border: solid 1px #28b463;
+    background-color: #28b463;
+
+    p {
+      text-shadow: 1px 1px 2px #28b463, 0 0 .25em #28b463, 0 0 0.2em #28b463;
+    }
+
+    .kromac-span-button {
+      background: #28b463;
+    }
+
+    &:hover {
+      background: #28b463;
+      .kromac-span-button {
+        background: rgba(0, 0, 0, .5);
+      }
+    }
+  }
+
+  &.warning {
+    border: solid 1px #f1c40f;
+    background-color: #f1c40f;
+
+    p {
+      text-shadow: 1px 1px 2px #f1c40f, 0 0 .25em #f1c40f, 0 0 0.2em #f1c40f;
+    }
+
+    .kromac-span-button {
+      background: #f1c40f;
+    }
+
+    &:hover {
+      background: #f1c40f;
+      .kromac-span-button {
+        background: rgba(0, 0, 0, .5);
+      }
+    }
+  }
+
+  &.error {
+    border: solid 1px #cb4335;
+    background-color: #cb4335;
+
+    p {
+      text-shadow: 1px 1px 2px #cb4335, 0 0 .25em #cb4335, 0 0 0.2em #cb4335;
+    }
+
+    .kromac-span-button {
+      background: #cb4335;
+    }
+
+    &:hover {
+      background: #cb4335;
+      .kromac-span-button {
+        background: rgba(0, 0, 0, .5);
+      }
+    }
+  }
+
+  &.danger {
+    border: solid 1px #d68910;
+    background-color: #d68910;
+
+    p {
+      text-shadow: 1px 1px 2px #d68910, 0 0 .25em #d68910, 0 0 0.2em #d68910;
+    }
+
+    .kromac-span-button {
+      background: #d68910;
+    }
+
+    &:hover {
+      background: #d68910;
+      .kromac-span-button {
+        background: rgba(0, 0, 0, .5);
+      }
+    }
+  }
+
+  &.info {
+    border: solid 1px #d5dbdb;
+    background-color: #d5dbdb;
+
+    p {
+      transition: all 1s ease;
+      text-shadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
+    }
+
+    .kromac-span-button {
+      background: #d5dbdb;
+    }
+
+    &:hover {
+      background: #d5dbdb;
+      .kromac-span-button {
+        background: rgba(0, 0, 0, .5);
+      }
+    }
+  }
+
+  &.dark {
+    border: solid 1px #212f3d;
+    background-color: #212f3d;
+
+    p {
+      text-shadow: 1px 1px 2px #212f3d, 0 0 .25em #212f3d, 0 0 0.2em #212f3d;
+    }
+
+    .kromac-span-button {
+      background: #212f3d;
+    }
+
+    &:hover {
+      background: #212f3d;
+      .kromac-span-button {
+        background: rgba(255, 255, 255, .5);
+      }
+    }
+  }
+
+  &.transparent {
+    border: solid 1px #fff;
+    background-color: transparent;
+
+    p {
+      color: #fff;
+      text-shadow: 1px 1px 2px #212f3d, 0 0 .25em #212f3d, 0 0 0.2em #212f3d;
+    }
+
+    .kromac-span-button {
+      display: none;
+    }
+  }
+
+  &.neon {
+    position: relative;
+    border: none;
+
+    p {
+      text-shadow: none !important;
+    }
+
+    .kromac-span-button {
+      height: auto;
+      width: auto;
+      content: '';
+      display: block;
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      right: 4px;
+      bottom: 4px;
+      background: #212f3c;
+      transition: background-position 1s ease;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        45deg,
+        #fb0094,
+        #00f,
+        #0f0,
+        #ff0,
+        #f00,
+        #0f0,
+        #ff0,
+        #f00
+      );
+      transition: all 1s ease;
+      background-size: 400%;
+      animation: btn-neon-animate 20s linear infinite;
+    }
+
+    &.primary,
+    &.success,
+    &.warning,
+    &.error,
+    &.danger,
+    &.info,
+    &.dark {
+      &:hover {
+        .kromac-span-button {
+          background: #212f3c;
+        }
+      }
+    }
+  }
+}
+
+@keyframes btn-neon-animate {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 300% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}

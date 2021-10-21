@@ -59,7 +59,7 @@ const componentText = (
       </span>=<span className="string">"image.png"</span>
       <br />
       <span className="component tab4">
-        name
+        title
       </span>=<span className="string">"Card title"</span>
       <br />
       <span className="react tab3">&gt;</span>

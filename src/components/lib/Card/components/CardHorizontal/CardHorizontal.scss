@@ -1,0 +1,131 @@
+$textShadow-bg-black: 1px 1px 2px black, 0 0 0.25em white, 0 0 0.2em black;
+
+.right {
+  float: none !important;
+}
+
+.left {
+  float: left !important;
+}
+
+.kromac-container.horizontal {
+  .kromac-card {
+    position: relative;
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.5);
+    margin: 10px 0;
+    max-width: 100%;
+
+    &.transparent.left {
+      backdrop-filter: blur(20px);
+    }
+
+    .kromac-card-image {
+      position: relative;
+      height: 300px;
+      width: 50%;
+      z-index: 10;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .card-title {
+        position: absolute;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        width: 100%;
+        padding: 7px 1em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        bottom: 0;
+        margin: 0;
+        z-index: 100;
+
+        h4 {
+          text-shadow: $textShadow-bg-black;
+          margin: 0;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          max-width: 65%;
+        }
+
+        label {
+          margin: 0;
+        }
+      }
+
+      &.right {
+        position: absolute;
+        right: 0;
+      }
+    }
+
+    .kromac-card-caption {
+      width: 50%;
+      position: relative;
+      background: #fff;
+      transition: all 2s ease-out;
+
+      .card-text {
+        padding: 1em;
+        overflow: auto;
+        height: 300px;
+        transition: max-height 2s ease-out;
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+
+      &.transparent {
+        backdrop-filter: blur(20px);
+        background: transparent;
+        text-shadow: 1px 1px 2px black, 0 0 0.25em white, 0 0 0.2em black;
+        color: #fff;
+      }
+
+      &.left {
+        transform: translateX(-100%);
+        display: contents;
+
+        &.expanded {
+          transform: translateX(-100%);
+          display: block;
+        }
+      }
+
+      &.right {
+        &.transparent {
+          transform: translateX(0%);
+        }
+
+        &.expanded {
+          transform: translateX(50%);
+        }
+      }
+    }
+
+    &.horizontal.expanded {
+      display: contents;
+
+      &.right {
+        display: block;
+        margin: 0;
+
+        .kromac-card-caption {
+          transform: translateX(100%);
+        }
+      }
+    }
+  }
+
+  &.expanded {
+    transition: all 2s ease-out;
+    margin: 10px 0;
+    position: inherit;
+  }
+}

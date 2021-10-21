@@ -1,14 +1,11 @@
-import React, { lazy } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
-import "./style.scss";
-
-const Spinner = lazy(() => import("../Spinner"));
+import Spinner from "../Spinner";
 
 const Button = ({
   color = "primary",
   buttonType = "classic",
-  className = "",
   loading = false,
   disabled = false,
   onClick,
@@ -28,7 +25,7 @@ const Button = ({
         <span className="kromac-span-button" />
         <div className={`button-content ${spinnerClass}`}>
           {loading && <Spinner bgColorInside={bgSpinner} />}
-          <p className={`${className}`}>
+          <p>
             {children}
           </p>
         </div>
@@ -49,7 +46,6 @@ Button.propTypes = exact({
     "dark",
     "transparent"
   ]),
-  className: PropTypes.string,
   loading: PropTypes.bool,
   disabled: PropTypes.bool,
   onClick: PropTypes.func,

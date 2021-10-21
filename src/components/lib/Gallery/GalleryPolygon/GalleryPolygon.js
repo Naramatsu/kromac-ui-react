@@ -1,4 +1,5 @@
-import React, { lazy, useState } from "react";
+import React, { useState } from "react";
+import { Row, Col } from "react-bootstrap";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import {
@@ -7,11 +8,7 @@ import {
   markAsOnlyImageRowImpar,
   rowColMaker
 } from "../../../../utils/utils";
-import "./style.scss";
-
-const Row = lazy(() => import("react-bootstrap/Row"));
-const Col = lazy(() => import("react-bootstrap/Col"));
-const Skeleton = lazy(() => import("../../Skeleton"));
+import Skeleton from "../../Skeleton";
 
 const GalleryPolygon = props => {
   const [isViewImage, setIsViewImage] = useState(false);
@@ -78,7 +75,7 @@ const GalleryPolygon = props => {
                   })}`}
                 >
                   <button onClick={close} className="close">
-                    <ion-icon name="close-circle-outline" />
+                    <img src="https://res.cloudinary.com/dxg9gszax/image/upload/v1634081104/kromac-ui/closedark_udiuhh.svg" alt="close" />
                   </button>
                   <div className="brillo" />
                   <div

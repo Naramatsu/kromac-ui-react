@@ -1,10 +1,6 @@
-import React, { lazy } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
-import "./style.scss";
-
-const Row = lazy(() => import("react-bootstrap/Row"));
-const Col = lazy(() => import("react-bootstrap/Col"));
 
 const BannerClassic = props => {
   const {
@@ -41,20 +37,20 @@ const BannerClassic = props => {
     <div className="kromac-banner-container" style={styleContainer}>
       <div className={`kromac-banner-classic ${overlayClass}`} style={style}>
         <div className="kromac-banner-content">
-          <Row>
-            <Col lg={6} md={6} sm={{ order: orderCaption }}>
+          <div className="kromac-banner-grid">
+            <div className={`order-caption-${orderCaption}`}>
               <div className="kromac-banner-caption">
                 <div>
                   {children}
                 </div>
               </div>
-            </Col>
-            <Col lg={6} md={6} sm={{ order: orderImage }}>
+            </div>
+            <div className={`order-image-${orderImage}`}>
               <div className={`kromac-banner-image`}>
                 <img src={image} alt="banner" className={`${imagePlace}`} />
               </div>
-            </Col>
-          </Row>
+            </div>
+          </div>
         </div>
       </div>
     </div>

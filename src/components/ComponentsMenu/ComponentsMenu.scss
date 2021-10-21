@@ -1,0 +1,80 @@
+$bg-kromac: linear-gradient(90deg, #17202a 0%, #fff 100%);
+
+$txt-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+
+.kromac-components {
+  height: 100vh;
+  overflow: auto;
+  background: $bg-kromac;
+
+  .kromac-title {
+    background: $bg-kromac;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      text-shadow: $txt-shadow;
+
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    .kromac-input-search {
+      input,
+      input:focus,
+      input:target,
+      input:active {
+        border: none;
+        background: #fff;
+        width: 80%;
+        outline: none;
+        box-shadow: 0px 0px 15px -5px;
+        border-radius: .25em;
+        padding: 5px 10px;
+        height: 24px;
+      }
+    }
+  }
+
+  .kromac-components-list {
+    position: relative;
+
+    ul {
+      margin: 0;
+      padding-top: 10px;
+
+      li {
+        padding: .5em;
+        border-bottom: solid 1px #fff;
+        border-left: 0;
+        border-right: 0;
+        margin-bottom: 2px;
+
+        .sub-components {
+          opacity: 0;
+          max-height: 0;
+          transition: 1s all ease;
+          padding: 0;
+
+          &.active {
+            opacity: 1;
+            max-height: 500px;
+          }
+
+          li {
+            &:nth-last-child(1) {
+              border: none;
+            }
+          }
+        }
+
+        a {
+          color: #fff;
+          text-shadow: $txt-shadow;
+        }
+      }
+    }
+  }
+}

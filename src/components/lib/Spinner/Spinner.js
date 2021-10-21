@@ -1,10 +1,8 @@
-import React, { lazy } from "react";
-import "./style.scss";
-
-const SpinnerRainbow = lazy(() => import("./components/SpinnerRainbow"));
-const SpinnerSVG = lazy(() => import("./components/SpinnerSVG"));
-const SpinnerLighter = lazy(() => import("./components/SpinnerLighter"));
-const SpinnerWaves = lazy(() => import("./components/SpinnerWaves"));
+import React from "react";
+import SpinnerRainbow from "./components/SpinnerRainbow";
+import SpinnerSVG from "./components/SpinnerSVG";
+import SpinnerLighter from "./components/SpinnerLighter";
+import SpinnerWaves from "./components/SpinnerWaves";
 
 const Spinner = props => {
   const { spinnerType } = props;

@@ -93,12 +93,6 @@ const propsDescription = [
     description: "Card title appear into the card"
   },
   {
-    name: "border",
-    type: "bool",
-    values: [`default false`],
-    description: "Prop to add a border"
-  },
-  {
     name: "imageFitPosition",
     type: "string",
     values: [`default center`, "top", "center", "bottom"],

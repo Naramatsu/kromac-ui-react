@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import { bgStyleByProps, borderStyle } from "../../../../../utils/utils";
-import "./style.scss";
 
 const CardInfo = props => {
   const {
@@ -10,12 +9,10 @@ const CardInfo = props => {
     size = "auto",
     shape = "color",
     color = "transparent",
-    border = false,
-    expanded = false,
     children
   } = props;
 
-  const borderstyle = borderStyle(color, border);
+  const borderstyle = borderStyle(color);
   const bg = bgStyleByProps(color);
 
   return (
@@ -35,7 +32,6 @@ const CardInfo = props => {
             className={`card-text ${size} text-bg-light animate__animated animate__zoomIn`}
           >
             {children}
-            {expanded && <button className="glass">Show more</button>}
           </div>
         </div>
       </div>
@@ -49,8 +45,6 @@ CardInfo.propTypes = exact({
   size: PropTypes.oneOf(["sm", "md", "lg", "auto"]),
   shape: PropTypes.oneOf(["color", "transparent"]),
   color: PropTypes.string,
-  border: PropTypes.bool,
-  expanded: PropTypes.bool,
   children: PropTypes.any
 });
 

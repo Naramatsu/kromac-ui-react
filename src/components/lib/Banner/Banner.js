@@ -1,8 +1,8 @@
-import React, { lazy } from "react";
+import React from "react";
 
-const BannerText = lazy(() => import("./components/BannerText"));
-const BannerImg = lazy(() => import("./components/BannerImg"));
-const BannerClassic = lazy(() => import("./components/BannerClassic"));
+import BannerText from "./components/BannerText";
+import BannerImg from "./components/BannerImg";
+import BannerClassic from "./components/BannerClassic";
 
 const Banner = props => {
   const { bannerType } = props;

@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import { bgStyleByProps, borderStyle } from "../../../../../utils/utils";
-import "./style.scss";
 
 const Percentage = props => {
   const {
@@ -10,10 +9,9 @@ const Percentage = props => {
     progress = 0,
     cardColor = "transparent",
     progressColor = "#D53DC4",
-    border = false
   } = props;
 
-  const borderstyle = borderStyle(cardColor, border);
+  const borderstyle = borderStyle(cardColor);
   const bgColor = bgStyleByProps(cardColor);
   const percentageStyles = {
     strokeDashoffset: `calc(440 - (440 * ${progress}) / 100)`,
@@ -55,7 +53,6 @@ Percentage.propTypes = exact({
   progress: PropTypes.number.isRequired,
   cardColor: PropTypes.string,
   progressColor: PropTypes.string,
-  border: PropTypes.bool,
   children: PropTypes.any
 });
 

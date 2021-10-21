@@ -44,7 +44,7 @@ export const addChip = (type, index) => {
   );
 };
 
-export const borderStyle = (cardColor, border) =>
+export const borderStyle = (cardColor, border = false) =>
   cardColor === "transparent" || border
     ? { border: "solid 2px #fff", borderRadius: "1em" }
     : {};
@@ -54,42 +54,14 @@ export const bgStyleByProps = cardColor => ({
   color: "#fff"
 });
 
-export const determinateIcon = red => {
-  switch (red) {
-    case "facebook":
-      return <i className="fab fa-facebook-f" />;
-    case "instagram":
-      return <i className="fab fa-instagram" />;
-    case "linkedin":
-      return <i className="fab fa-linkedin-in" />;
-    case "twitter":
-      return <i className="fab fa-twitter" />;
-    case "twitch":
-      return <i className="fab fa-twitch" />;
-    case "youtube":
-      return <i className="fab fa-youtube" />;
-    default:
-      return;
-  }
-};
-
-export const spanGenerator = loops => {
-  const spans = [];
-  for (let i = 1; i <= loops; i++) {
-    var style = { "--i": i };
-    spans.push(<span key={i} style={style} />);
-  }
-  return spans;
-};
-
 export const styleCentered = isCentered => {
   return isCentered
     ? {
-        position: "fixed",
-        top: "50%",
-        left: "50%",
-        transform: "translate(-50%, -50%)"
-      }
+      position: "fixed",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)"
+    }
     : {};
 };
 
@@ -228,11 +200,11 @@ export const rowColMaker = images => {
 export const inactivateIonIcon = (number, indicator, long) => {
   if (indicator === "left") {
     if (number === 0) {
-      return { pointerEvents: "none", color: "#ccc" };
+      return { pointerEvents: "none", filter: "contrast(0.9)" };
     }
   } else {
     if (number === long) {
-      return { pointerEvents: "none", color: "#ccc" };
+      return { pointerEvents: "none", filter: "contrast(0.9)" };
     }
   }
 };

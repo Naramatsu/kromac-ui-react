@@ -1,10 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRocket } from "@fortawesome/free-solid-svg-icons";
-import { spanGenerator, styleCentered } from "../../../../../utils/utils";
-import "./style.scss";
+import { styleCentered } from "../../../../../utils/utils";
+
+const spanGenerator = loops => {
+  const spans = [];
+  for (let i = 1; i <= loops; i++) {
+    var style = { "--i": i };
+    spans.push(<span key={i} style={style} />);
+  }
+  return spans;
+};
 
 const SpinnerSVG = props => {
   const {
@@ -31,7 +37,7 @@ const SpinnerSVG = props => {
       <div className="loader">
         {spanGenerator(20)}
         <div className="rocket">
-          <FontAwesomeIcon icon={faRocket} />
+          <img src="https://res.cloudinary.com/dxg9gszax/image/upload/v1634079842/kromac-ui/rocket_grqgxg.svg" alt="rocket" />
         </div>
       </div>
     </div>

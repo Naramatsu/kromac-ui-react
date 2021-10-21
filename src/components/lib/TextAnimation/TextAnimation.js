@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import { sortByLength } from "../../../utils/utils";
-import "./style.scss";
 
 const bgDefault = `linear-gradient(
           94deg,

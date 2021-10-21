@@ -1,14 +1,13 @@
-import React, { lazy } from "react";
-import "./style.scss";
+import React from "react";
 
-const CardImage = lazy(() => import("./components/CardImage"));
-const CardHorizontal = lazy(() => import("./components/CardHorizontal"));
-const CardReveal = lazy(() => import("./components/CardReveal"));
-const CardInfo = lazy(() => import("./components/CardInfo"));
-const CardClassic = lazy(() => import("./components/CardClassic"));
-const CardUser = lazy(() => import("./components/CardUser"));
-const CardPolygon = lazy(() => import("./components/CardPolygon"));
-const Percentage = lazy(() => import("./components/Percentage"));
+import CardImage from "./components/CardImage";
+import CardHorizontal from "./components/CardHorizontal";
+import CardReveal from "./components/CardReveal";
+import CardInfo from "./components/CardInfo";
+import CardClassic from "./components/CardClassic";
+import CardUser from "./components/CardUser";
+import CardPolygon from "./components/CardPolygon";
+import Percentage from "./components/Percentage";
 
 const Card = props => {
   const { cardType } = props;

@@ -122,12 +122,6 @@ const propsDescription = [
     description: "Card caption color"
   },
   {
-    name: "border",
-    type: "bool",
-    values: [`default false`],
-    description: "Prop to add a border"
-  },
-  {
     name: "expanded",
     type: "bool",
     values: [`default false`],

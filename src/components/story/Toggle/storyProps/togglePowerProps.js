@@ -35,12 +35,6 @@ const propsDescription = [
     description: "props to indicate if it is checked or not"
   },
   {
-    name: "size",
-    type: "string",
-    values: ["default md", "sm", "md", "lg"],
-    description: "toggle size"
-  },
-  {
     name: "onChange",
     type: "function",
     values: [],

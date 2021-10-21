@@ -1,10 +1,8 @@
-import React, { useState, lazy } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import { determinateColor, initialSizeProps } from "../../../../../utils/utils";
-import "./style.scss";
-
-const Skeleton = lazy(() => import("../../../Skeleton"));
+import Skeleton from "../../../Skeleton";
 
 const CardHorizontal = props => {
   const {
@@ -51,6 +49,12 @@ const CardHorizontal = props => {
             background: color
           };
         } else {
+          if (reveal) {
+            return {
+              transform: "translateX(0%)",
+              background: color
+            };
+          }
           return {
             transform: "translateX(-50%)",
             background: color
@@ -66,7 +70,7 @@ const CardHorizontal = props => {
       className={`kromac-container horizontal ${isClassExpanded}`}
       style={kromacContainerStyle}
     >
-      <div className={`kromac-card horizontal ${isClassExpanded}`}>
+      <div className={`kromac-card horizontal ${imageSide} ${isClassExpanded} ${styleColor}`}>
         <div className={`kromac-card-image ${imageSide}`}>
           {isImgLoading && <Skeleton width="100%" height="100%" />}
           <img

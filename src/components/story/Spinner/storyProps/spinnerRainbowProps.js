@@ -46,12 +46,6 @@ const propsDescription = [
     type: "bool",
     values: [`default false`],
     description: "this prop place the spinner in the middle of the screen"
-  },
-  {
-    name: "shadows",
-    type: "bool",
-    values: ["default true"],
-    description: "this prop added a box shadows"
   }
 ];
 

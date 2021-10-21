@@ -1,7 +1,7 @@
 import React, { lazy, Suspense, useEffect } from "react";
 import { changeDocumentTitle } from "../../../utils/utils";
 import menuProps from "./storyProps/menuProps";
-import "./style.scss";
+import "./Menu.story.scss";
 
 const Preview = lazy(() => import("../../Preview"));
 const Menu = lazy(() => import("./Menu"));
