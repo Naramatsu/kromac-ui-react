@@ -2,8 +2,7 @@ const subTitle = "Button classic";
 const importType = `import Button from "kromac/lib/Button";`;
 
 const buttonProps = {
-  color: `primary`,
-  loading: true
+  color: `primary`
 };
 
 const componentText = (
