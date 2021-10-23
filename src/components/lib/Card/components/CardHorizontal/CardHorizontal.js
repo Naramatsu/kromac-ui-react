@@ -70,7 +70,9 @@ const CardHorizontal = props => {
       className={`kromac-container horizontal ${isClassExpanded}`}
       style={kromacContainerStyle}
     >
-      <div className={`kromac-card horizontal ${imageSide} ${isClassExpanded} ${styleColor}`}>
+      <div
+        className={`kromac-card horizontal ${imageSide} ${isClassExpanded} ${styleColor}`}
+      >
         <div className={`kromac-card-image ${imageSide}`}>
           {isImgLoading && <Skeleton width="100%" height="100%" />}
           <img

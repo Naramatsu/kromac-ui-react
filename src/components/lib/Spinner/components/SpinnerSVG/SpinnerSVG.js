@@ -37,7 +37,10 @@ const SpinnerSVG = props => {
       <div className="loader">
         {spanGenerator(20)}
         <div className="rocket">
-          <img src="https://res.cloudinary.com/dxg9gszax/image/upload/v1634079842/kromac-ui/rocket_grqgxg.svg" alt="rocket" />
+          <img
+            src="https://res.cloudinary.com/dxg9gszax/image/upload/v1634079842/kromac-ui/rocket_grqgxg.svg"
+            alt="rocket"
+          />
         </div>
       </div>
     </div>

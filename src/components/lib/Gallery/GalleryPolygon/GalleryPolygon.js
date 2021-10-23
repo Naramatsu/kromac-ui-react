@@ -75,7 +75,10 @@ const GalleryPolygon = props => {
                   })}`}
                 >
                   <button onClick={close} className="close">
-                    <img src="https://res.cloudinary.com/dxg9gszax/image/upload/v1634081104/kromac-ui/closedark_udiuhh.svg" alt="close" />
+                    <img
+                      src="https://res.cloudinary.com/dxg9gszax/image/upload/v1634081104/kromac-ui/closedark_udiuhh.svg"
+                      alt="close"
+                    />
                   </button>
                   <div className="brillo" />
                   <div

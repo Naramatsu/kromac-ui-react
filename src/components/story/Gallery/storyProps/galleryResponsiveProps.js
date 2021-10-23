@@ -1,10 +1,15 @@
 const subTitle = "Gallery responsive";
-const importType = `import Gallery from "kromac/lib/Gallery";`;
+const importType = `import Gallery from "kromac-ui/dist/Gallery";`;
 
-const notes = `the numbers of the <b>columns</b> by default is <div class="chip">4</div> 
-when the screen is  <b>768px</b> or <b>higher</b>. <br />
-When the screen going from <b>768px</b> to <b>551px</b> the numbers of the <b>columns</b> is <div class="chip">2 </div>. <br />
-And when the  screen going from <b>550px</b> or <b>lower</b> the numbers of the columns is <div class="chip">1</div>.
+const notes = `
+The <div class="chip">images</div> prop value format must be equals as that shown in the implementation.
+<br />
+The number of the <b>columns</b> by default is <div class="chip">4</div>
+(when the width screen is  <b>768px</b> or <b>higher</b>).
+<br />
+When the width screen is between <b>768px</b> and <b>551px</b> the number of the <b>columns</b> is <div class="chip">2</div>.
+<br />
+And when the width screen is <b>550px</b> or <b>lower</b> the number of the columns is <div class="chip">1</div>.
 `;
 
 const galleryProps = {
@@ -60,81 +65,78 @@ const galleryProps = {
 const componentText = (
   <div className="implementation kromac-scroll-bg-dark">
     <p>
-      <span className="var">&lt;div&gt;</span>
+      <span className="react">&lt;Gallery</span>
       <br />
-      <span className="react tab">&lt;Gallery</span>
+      <span className="component tab">images</span>=<span>{`{[`}</span>
       <br />
-      <span className="component tab2">images</span>=<span>{`{[`}</span>
+      <span className="tab2">{`{ `}</span>
       <br />
-      <span className="tab3">{`{ `}</span>
-      <br />
-      <span className="var tab4">img: </span>
+      <span className="var tab3">img: </span>
       <span className="string">"image.png"</span>,<br />
-      <span className="var tab4">row: </span>
+      <span className="var tab3">row: </span>
       <span className="text">2</span>
       <br />
-      <span className="tab3">{` }`}</span>,<br />
-      <span className="tab3">{`{ `}</span>
+      <span className="tab2">{` }`}</span>,<br />
+      <span className="tab2">{`{ `}</span>
       <br />
-      <span className="var tab4">img: </span>
+      <span className="var tab3">img: </span>
       <span className="string">"image.png"</span>,<br />
-      <span className="var tab4">col: </span>
+      <span className="var tab3">col: </span>
       <span className="text">2</span>
       <br />
-      <span className="tab3">{` }`}</span>,<br />
-      <span className="tab3">{`{ `}</span>
+      <span className="tab2">{` }`}</span>,<br />
+      <span className="tab2">{`{ `}</span>
       <span className="var">img: </span>
       <span className="string">"image.png"</span>
       <span className="">{` }`}</span>,<br />
-      <span className="tab3">{`{ `}</span>
+      <span className="tab2">{`{ `}</span>
       <span className="var">img: </span>
       <span className="string">"image.png"</span>
       <span className="">{` }`}</span>,<br />
-      <span className="tab3">{`{ `}</span>
+      <span className="tab2">{`{ `}</span>
       <br />
-      <span className="var tab4">img: </span>
+      <span className="var tab3">img: </span>
       <span className="string">"image.png"</span>,<br />
-      <span className="var tab4">col: </span>
+      <span className="var tab3">col: </span>
       <span className="text">2</span>
       <br />
-      <span className="tab3">{` }`}</span>,<br />
-      <span className="tab3">{`{ `}</span>
+      <span className="tab2">{` }`}</span>,<br />
+      <span className="tab2">{`{ `}</span>
       <br />
-      <span className="var tab4">img: </span>
+      <span className="var tab3">img: </span>
       <span className="string">"image.png"</span>,<br />
-      <span className="var tab4">col: </span>
+      <span className="var tab3">col: </span>
       <span className="text">2</span>
       <br />
-      <span className="tab3">{` }`}</span>,<br />
-      <span className="tab3">{`{ `}</span>
+      <span className="tab2">{` }`}</span>,<br />
+      <span className="tab2">{`{ `}</span>
       <span className="var">img: </span>
       <span className="string">"image.png"</span>
       <span className="">{` }`}</span>,<br />
-      <span className="tab3">{`{ `}</span>
+      <span className="tab2">{`{ `}</span>
       <br />
-      <span className="var tab4">img: </span>
+      <span className="var tab3">img: </span>
       <span className="string">"image.png"</span>,<br />
-      <span className="var tab4">row: </span>
+      <span className="var tab3">row: </span>
       <span className="text">2</span>
       <br />
-      <span className="tab3">{` }`}</span>,<br />
-      <span className="tab3">{`{ `}</span>
+      <span className="tab2">{` }`}</span>,<br />
+      <span className="tab2">{`{ `}</span>
       <span className="var">img: </span>
       <span className="string">"image.png"</span>
       <span className="">{` }`}</span>,<br />
-      <span className="tab3">{`{ `}</span>
+      <span className="tab2">{`{ `}</span>
       <br />
-      <span className="var tab4">img: </span>
+      <span className="var tab3">img: </span>
       <span className="string">"image.png"</span>,<br />
-      <span className="var tab4">col: </span>
+      <span className="var tab3">col: </span>
       <span className="text">2</span>
       <br />
-      <span className="tab3">{` }`}</span><br />
-      <span className="tab2">{`]}`}</span>
+      <span className="tab2">{` }`}</span>
       <br />
-      <span className="react tab">/&gt;</span>
+      <span className="tab">{`]}`}</span>
       <br />
-      <span className="var">&lt;/div&gt;</span>
+      <span className="react">/&gt;</span>
     </p>
   </div>
 );
@@ -144,13 +146,13 @@ const propsDescription = [
     name: "gallery",
     type: "string Required",
     values: ["default responsive", "responsive", "polygon"],
-    description: "Gallery type"
+    description: "Gallery type."
   },
   {
     name: "images",
     type: "array Required",
     values: [],
-    description: `gallery image list, the array must be similar to {img: "url", row: 2}, {img: "url", col: 2}, {img: "url"}`
+    description: `Objects array of images link, rows and cols.`
   },
   {
     name: "gridGap",

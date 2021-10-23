@@ -3,11 +3,7 @@ import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 
 const ToggleSwitch = props => {
-  const {
-    checked,
-    onColor = "#28B463",
-    offColor = "#CB4335"
-  } = props;
+  const { checked, onColor = "#28B463", offColor = "#CB4335" } = props;
 
   const handleChange = props.onChange ? props.onChange : () => ({});
   const style = {

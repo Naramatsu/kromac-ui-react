@@ -1,20 +1,16 @@
 const subTitle = "Panel classic";
-const importType = `import Panel from "kromac/lib/Panel";`;
+const importType = `import Panel from "kromac-ui/dist/Panel";`;
 
 const panelProp = {};
 
 const componentText = (
   <div className="implementation kromac-scroll-bg-dark">
     <p>
-      <span className="var">&lt;div&gt;</span>
+      <span className="react">&lt;Panel&gt;</span>
       <br />
-      <span className="react tab">&lt;Panel&gt;</span>
+      <span className="comment tab">{`// html code here...`}</span>
       <br />
-      <span className="comment tab2">{`// html code here...`}</span>
-      <br />
-      <span className="react tab">&lt;/Panel&gt;</span>
-      <br />
-      <span className="var">&lt;/div&gt;</span>
+      <span className="react">&lt;/Panel&gt;</span>
     </p>
   </div>
 );
@@ -24,25 +20,27 @@ const propsDescription = [
     name: "borderNeon",
     type: "bool",
     values: ["default false"],
-    description: "if border neon will display"
+    description:
+      "This prop causes the background panel becomes dark and show a border neon."
   },
   {
     name: "transparent",
     type: "bool",
     values: [`default false`],
-    description: "Panel caption color"
+    description:
+      "This prop causes the background panel becomes transparent and blurred."
   },
   {
     name: "shadows",
     type: "bool",
     values: [`default true`],
-    description: "this prop is to add a panel shadows"
+    description: "This prop add a box-shadows around the Panel."
   },
   {
     name: "children",
     type: "any",
     values: [],
-    description: "any html tags"
+    description: "Panel content, you can write html code inside."
   }
 ];
 

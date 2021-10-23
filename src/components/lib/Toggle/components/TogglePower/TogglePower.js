@@ -16,7 +16,10 @@ const TogglePower = props => {
           onChange={handleChange}
         />
         <span className="span-toggle">
-          <img src="https://res.cloudinary.com/dxg9gszax/image/upload/v1634088131/kromac-ui/power_g01rr7.png" alt="power" />
+          <img
+            src="https://res.cloudinary.com/dxg9gszax/image/upload/v1634088131/kromac-ui/power_g01rr7.png"
+            alt="power"
+          />
         </span>
       </label>
     </div>

@@ -1,7 +1,18 @@
 const subTitle = "Banner text";
-const importType = `import Banner from "kromac/lib/Banner";`;
+const importType = `import Banner from "kromac-ui/dist/Banner";`;
 
-const notes = `when the screen is <div class="chip">767px</div> the title will centered and move to top`;
+const notes = `
+  When the screen is <div class="chip">767px</div> or lower the title will centered and move to top.
+  <br />
+  Do not set the <div class="chip">bgTextColor</div> as <div class="chip">#000</div> or 
+  <div class="chip">"black"</div> because it provocate that the text becomes invisible.
+  <br />
+  <br />
+  <h5>Recomendations:</h5>
+  <p>
+    For a better experience do not set long text as title.
+  </p>    
+`;
 
 const bannerProps = {
   bannerType: "text",
@@ -14,29 +25,25 @@ const bannerProps = {
 const componentText = (
   <div className="implementation kromac-scroll-bg-dark">
     <p>
-      <span className="var">&lt;div&gt;</span>
+      <span className="react">&lt;Banner</span>
       <br />
-      <span className="react tab">&lt;Banner</span>
-      <br />
-      <span className="component tab2">
+      <span className="component tab">
         bannerType
       </span>=<span className="string">"text"</span>
       <br />
-      <span className="component tab2">
+      <span className="component tab">
         image
       </span>=<span className="string">"image.png"</span>
       <br />
-      <span className="component tab2">
+      <span className="component tab">
         title
       </span>=<span className="string">"Some title here"</span>
       <br />
-      <span className="component tab2">
+      <span className="component tab">
         height
       </span>=<span className="string">"500px"</span>
       <br />
-      <span className="react tab">/&gt;</span>
-      <br />
-      <span className="var">&lt;/div&gt;</span>
+      <span className="react">/&gt;</span>
     </p>
   </div>
 );
@@ -46,55 +53,56 @@ const propsDescription = [
     name: "bannerType",
     type: "string",
     values: ["text", "default classic", "image", "classic"],
-    description: "Banner type"
+    description: "Banner type."
   },
   {
     name: "title",
     type: "string Required",
     values: [],
-    description: "banner title"
+    description: "Text that will appear as a title"
   },
   {
     name: "image",
     type: "string Required",
     values: [],
-    description: "banner image"
+    description: "Banner image link."
   },
   {
     name: "bgTextColor",
     type: "string",
     values: [],
-    description: `background text color (please do not send #000 or "black")`
+    description: `Text background color (please do not put #000 or "black").`
   },
   {
     name: "height",
     type: "string",
     values: ["default 500px"],
-    description: "banner height"
+    description: "Banner height."
   },
   {
     name: "order",
     type: "string",
     values: ["default left"],
-    description: "side to appear the title"
+    description: "Side on which the title will appears on the banner."
   },
   {
     name: "attachment",
     type: "string",
     values: [],
-    description: "background attachment"
+    description: "This props set the background attachment."
   },
   {
     name: "textAlign",
     type: "string",
     values: ["default center"],
-    description: "text align"
+    description:
+      "Side you want to align the text in its order. (this do not affect the <order> prop)."
   },
   {
     name: "bgPosition",
     type: "string",
     values: ["default center"],
-    description: "background align"
+    description: "Background image align."
   }
 ];
 

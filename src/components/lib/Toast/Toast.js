@@ -22,15 +22,17 @@ const Toast = props => {
     [positionX]: isLeft ? "10px" : "40px"
   };
 
-  useEffect(() => {
-    setIsVisible(visible);
-    let timer = null;
-    if (visible)
-      timer = setTimeout(() => setIsVisible(false), timeOut)
-    return () => {
-      clearTimeout(timer)
-    }
-  }, [visible, timeOut])
+  useEffect(
+    () => {
+      setIsVisible(visible);
+      let timer = null;
+      if (visible) timer = setTimeout(() => setIsVisible(false), timeOut);
+      return () => {
+        clearTimeout(timer);
+      };
+    },
+    [visible, timeOut]
+  );
 
   const close = () => {
     setIsVisible(false);
@@ -43,7 +45,10 @@ const Toast = props => {
           {message}
         </p>
         <span onClick={close}>
-          <img src="https://res.cloudinary.com/dxg9gszax/image/upload/v1634081104/kromac-ui/closedark_udiuhh.svg" alt="close" />
+          <img
+            src="https://res.cloudinary.com/dxg9gszax/image/upload/v1634081104/kromac-ui/closedark_udiuhh.svg"
+            alt="close"
+          />
         </span>
       </div>
     </div>

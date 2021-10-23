@@ -4,21 +4,6 @@ export const componentText = (
     <p className="comment">{`// Implementacion de Componentes`}</p>
     <p className="comment">{`// Tomaremos de ejemplo el componente Card.`}</p>
     <br />
-    <p className="comment">{`// Import React Lazy`}</p>
-    <p>
-      <span className="var">const </span>
-      <span className="component">Card </span>
-      =
-      <span className="function"> lazy</span>
-      <span className="import">(() </span>
-      =&gt;
-      <span className="var"> import</span>
-      <span className="import">(</span>
-      <span className="string">{`"kromac-ui/lib/Card"`}</span>
-      <span className="import">))</span>
-      ;
-    </p>
-    <br />
     <p className="comment">{`// Destructuring import`}</p>
     <p>
       <span className="var"> import</span>
@@ -26,7 +11,7 @@ export const componentText = (
       <span className="component">Card </span>
       <span>{` } `}</span>
       <span className="import">from </span>
-      <span className="string">{`"kromac-ui/lib"`}</span>
+      <span className="string">{`"kromac-ui/dist"`}</span>
       ;
     </p>
     <br />
@@ -35,7 +20,7 @@ export const componentText = (
       <span className="var"> import</span>
       <span className="component"> Card </span>
       <span className="import"> from </span>
-      <span className="string">{`"kromac-ui/lib/Card"`}</span>
+      <span className="string">{`"kromac-ui/dist/Card"`}</span>
       ;
     </p>
     <br />
@@ -43,7 +28,7 @@ export const componentText = (
     <p className="comment">{`// Ubicate en tu archivo index principal e implementa la siguiente linea:`}</p>
     <p>
       <span className="var"> import </span>
-      <span className="string">{`"kromac-ui/lib/style.scss"`}</span>
+      <span className="string">{`"kromac-ui/dist/index.css"`}</span>
       ;
     </p>
   </div>
@@ -237,7 +222,8 @@ export const technogloiesNoImage = [
 export const developerTeam = [
   {
     github: "https://github.com/Naramatsu",
-    image: "https://res.cloudinary.com/dxg9gszax/image/upload/v1634085770/kromac-ui%20team/jcnm_owzs5i.jpg",
+    image:
+      "https://res.cloudinary.com/dxg9gszax/image/upload/v1634085770/kromac-ui%20team/jcnm_owzs5i.jpg",
     name: "Ing. Jonathan C. Narvaez M.",
     tooltip: "Frontend Developer",
     bgColor: "rgb(185 185 186)",

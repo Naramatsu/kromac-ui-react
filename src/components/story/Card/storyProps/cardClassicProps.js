@@ -1,14 +1,5 @@
 const subTitle = "Card Classic";
-const description = "this component always must be wrappe by an Row Col";
-const importType = `import Card from "kromac/lib/Card";`;
-const notes = `For better view please wrap the card into a bootstrap 
-                <div class="chip">Row</div> 
-                <div class="chip">Col</div>
-                and use
-                <div class="chip">xl=3</div>
-                <div class="chip">lg=4</div>
-                <div class="chip">md=6</div>
-                <div class="chip">xs=12</div>`;
+const importType = `import Card from "kromac-ui/dist/Card";`;
 
 const cardProps = {
   cardType: "classic",
@@ -30,52 +21,27 @@ const cardProps = {
 const componentText = (
   <div className="implementation kromac-scroll-bg-dark">
     <p>
-      <span className="var">&lt;div&gt;</span>
+      <span className="react">&lt;Card</span>
       <br />
-      <span className="react tab">&lt;Row&gt;</span>
-      <br />
-      <span className="react tab2">&lt;Col </span>
-      <span className="component">xl</span>=<span>{`{`}</span>
-      <span className="text">3</span>
-      <span>{`} `}</span>
-      <span className="component">lg</span>=<span>{`{`}</span>
-      <span className="text">4</span>
-      <span>{`} `}</span>
-      <span className="component">md</span>=<span>{`{`}</span>
-      <span className="text">6</span>
-      <span>{`} `}</span>
-      <span className="component">sm</span>=<span>{`{`}</span>
-      <span className="text">12</span>
-      <span>{`}`}</span>
-      <span className="react">&gt;</span>
-      <br />
-      <span className="react tab3">&lt;Card</span>
-      <br />
-      <span className="component tab4">
+      <span className="component tab">
         image
       </span>=<span className="string">"image.png"</span>
       <br />
-      <span className="component tab4">
+      <span className="component tab">
         title
       </span>=<span className="string">"Card title"</span>
       <br />
-      <span className="component tab4">expanded</span>=<span>{`{`}</span>
+      <span className="component tab">expanded</span>=<span>{`{`}</span>
       <span className="var">true</span>
       <span>{`}`}</span>
       <br />
-      <span className="react tab3">&gt;</span>
+      <span className="react">&gt;</span>
       <br />
-      <span className="var tab4">&lt;p&gt;</span>
+      <span className="var tab">&lt;p&gt;</span>
       <span className="text">Card text here...!</span>
       <span className="var">&lt;/p&gt;</span>
       <br />
-      <span className="react tab3">&lt;/Card&gt;</span>
-      <br />
-      <span className="react tab2">&lt;/Col&gt;</span>
-      <br />
-      <span className="react tab">&lt;/Row&gt;</span>
-      <br />
-      <span className="var">&lt;/div&gt;</span>
+      <span className="react">&lt;/Card&gt;</span>
     </p>
   </div>
 );
@@ -95,57 +61,56 @@ const propsDescription = [
       "percentage",
       "classic"
     ],
-    description: "Card type"
+    description: "Card type."
   },
   {
     name: "image",
     type: "string Required",
     values: [],
-    description: "Card image"
+    description: "Card image link."
   },
   {
     name: "title",
     type: "string",
     values: [],
-    description: "Card title appear into the card"
+    description: "Card title that appears on this one."
   },
   {
     name: "size",
     type: "string",
     values: [`default md`, "sm", "md", "lg"],
-    description: "Card size"
+    description: "Card content size."
   },
   {
     name: "color",
     type: "string",
     values: [`default #fff`, "transparent", "#fff"],
-    description: "Card caption color"
+    description: "Background color of the Card content."
   },
   {
     name: "expanded",
     type: "bool",
     values: [`default false`],
-    description: "Prop to expand the card to show all the text"
+    description:
+      "Prop to expand the card to show all the text when this is too long."
   },
   {
     name: "imageFitPosition",
     type: "string",
     values: [`default center`, "top", "center", "bottom"],
-    description: "Prop to fit the image into the card"
+    description: "Prop to fit the image into the card."
   },
   {
     name: "children",
     type: "any",
     values: [],
-    description: "Card content, you can write html code inside"
+    description: "Card content, you can write html code inside."
   }
 ];
 
 const cardClassicProps = {
   subTitle,
-  description,
   importType,
-  notes,
   cardProps,
   propsDescription,
   componentText

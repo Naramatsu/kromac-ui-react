@@ -8,7 +8,7 @@ const Percentage = props => {
     title = "",
     progress = 0,
     cardColor = "transparent",
-    progressColor = "#D53DC4",
+    progressColor = "#D53DC4"
   } = props;
 
   const borderstyle = borderStyle(cardColor);

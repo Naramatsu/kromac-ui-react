@@ -1,14 +1,18 @@
 const subTitle = "Banner classic";
-const importType = `import Banner from "kromac/lib/Banner";`;
+const importType = `import Banner from "kromac-ui/dist/Banner";`;
 const notes = `
   <p>
-    for a better expirience, the image must be png and transparent background like the example.
+    For a better experience, the image must be png and transparent background like the example.
   </p>
-  <h6>Recomendations:</h6>
-  if you use an rectangular (horizontally) and you wanna use the prop 
+  <br />
+  <h5>Recomendations:</h5>
+  If you  will use a rectangular image (horizontally) and you wanna use the prop 
   <div class="chip">overlay</div> 
-  also use the prop <div class="chip">isBottom</div> to align the imagen at bottom side of ther banner.
- 
+  also use the prop <div class="chip">isBottom</div> to align the image at bottom of the banner.
+  <br />
+  <p>
+    For a better experience use only text tags as children.
+  </p>
 `;
 
 const bannerProps = {
@@ -21,45 +25,41 @@ const bannerProps = {
 const componentText = (
   <div className="implementation kromac-scroll-bg-dark">
     <p>
-      <span className="var">&lt;div&gt;</span>
+      <span className="react">&lt;Banner</span>
       <br />
-      <span className="react tab">&lt;Banner</span>
-      <br />
-      <span className="component tab2">
+      <span className="component tab">
         image
       </span>=<span className="string">"image.png"</span>
       <br />
-      <span className="component tab2">
+      <span className="component tab">
         height
       </span>=<span className="string">"300px"</span>
       <br />
-      <span className="component tab2">overlay</span>
+      <span className="component tab">overlay</span>
       <br />
-      <span className="react tab">&gt;</span>
+      <span className="react">&gt;</span>
       <br />
-      <span className="var tab2">&lt;h1 </span>
+      <span className="var tab">&lt;h1 </span>
       <span className="component">
         className
       </span>=<span className="string">"text-bg-light"</span>
       <span className="var">&gt;</span>
       <br />
-      <span className="text tab3">Title Here</span>
+      <span className="text tab2">Title Here</span>
       <br />
-      <span className="var tab2">&lt;/h1&gt;</span>
+      <span className="var tab">&lt;/h1&gt;</span>
       <br />
-      <span className="var tab2">&lt;p </span>
+      <span className="var tab">&lt;p </span>
       <span className="component">
         className
       </span>=<span className="string">"text-bg-light"</span>
       <span className="var">&gt;</span>
       <br />
-      <span className="text tab3">Some text here</span>
+      <span className="text tab2">Some text here</span>
       <br />
-      <span className="var tab2">&lt;/p&gt;</span>
+      <span className="var tab">&lt;/p&gt;</span>
       <br />
-      <span className="react tab">&lt;/Banner&gt;</span>
-      <br />
-      <span className="var">&lt;/div&gt;</span>
+      <span className="react">&lt;/Banner&gt;</span>
     </p>
   </div>
 );
@@ -69,62 +69,63 @@ const propsDescription = [
     name: "bannerType",
     type: "string",
     values: ["default classic", "classic", "image", "text"],
-    description: "Banner type"
+    description: "Banner type."
   },
   {
     name: "image",
     type: "string Required",
     values: [],
-    description: "banner image"
+    description: "Banner image link."
   },
   {
     name: "background",
     type: "string",
     values: ["default #000"],
-    description: "background color of the banner"
+    description: "Background color of the banner."
   },
   {
     name: "color",
     type: "string",
     values: [],
-    description: "font color"
+    description: "Font color."
   },
   {
     name: "height",
     type: "string",
     values: ["default auto"],
-    description: "banner height"
+    description: "Banner height."
   },
   {
     name: "order",
     type: "string",
     values: ["default right"],
-    description: "side to appear the image"
+    description: "Side on which the image will appears on the banner."
   },
   {
     name: "overlay",
     type: "bool",
     values: ["default false"],
-    description: "this prop make the image overlay the banner height"
+    description: "This prop will make the image overlay the banner height"
   },
   {
     name: "isBottom",
     type: "bool",
     values: ["default false"],
     description:
-      "this prop align the image to bottom side, but just work with overlay prop as true"
+      "This prop will align the image to bottom side, but only work with <overlay> prop turned on."
   },
   {
     name: "textAlign",
     type: "string",
     values: ["default center"],
-    description: "text align"
+    description:
+      "Side you want to align the text in its order. (this do not affect the <order> prop)."
   },
   {
     name: "children",
     type: "any",
     values: [],
-    description: "text you want to appear as banner text"
+    description: "Any content you want to appear on the banner."
   }
 ];
 
