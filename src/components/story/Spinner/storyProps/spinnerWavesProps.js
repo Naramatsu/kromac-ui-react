@@ -28,29 +28,29 @@ const propsDescription = [
     name: "size",
     type: "string",
     values: [`default sm`, "sm", "md", "lg"],
-    description: "Spinner size."
+    description: "Sets Spinner size."
   },
   {
     name: "isCentered",
     type: "bool",
     values: [`default false`],
     description:
-      "This prop turned on places the spinner in the middle of the screen."
+      "When this prop is turned on, it fixed the spinner in the middle of the screen."
   },
   {
     name: "shadows",
     type: "bool",
     values: ["default true"],
-    description: "This prop added a shadows around the Spinner."
+    description: "Adds a shadows around the Spinner."
   }
 ];
 
 const spinnersProps = {
-  subTitle,
+  componentText,
   importType,
-  spinnerProps,
   propsDescription,
-  componentText
+  spinnerProps,
+  subTitle
 };
 
 export default spinnersProps;

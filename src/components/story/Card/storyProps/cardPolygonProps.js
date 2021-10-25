@@ -68,13 +68,13 @@ const propsDescription = [
     name: "image",
     type: "string Required",
     values: [],
-    description: "Card image link."
+    description: "Card image url."
   },
   {
     name: "name",
     type: "string Required",
     values: [],
-    description: "Name that appears on this one."
+    description: "Text that will be displayed as the person name."
   },
   {
     name: "shape",
@@ -89,20 +89,19 @@ const propsDescription = [
       "bevel",
       "circle"
     ],
-    description: "Card polygon shape."
+    description: "Sets Sard's polygon shape."
   },
   {
     name: "color",
     type: "string",
     values: [`default #fff`],
-    description:
-      "Background color of the Card content. You can add any color in hex format or name."
+    description: "Sets background color."
   },
   {
     name: "imageFitPosition",
     type: "string",
     values: [`default center`, "top", "center", "bottom"],
-    description: "Prop to fit the image into the card."
+    description: "Sets image position to be displayed in the card."
   },
   {
     name: "children",
@@ -113,11 +112,11 @@ const propsDescription = [
 ];
 
 const cardClassicProps = {
-  subTitle,
-  importType,
   cardProps,
+  componentText,
+  importType,
   propsDescription,
-  componentText
+  subTitle
 };
 
 export default cardClassicProps;

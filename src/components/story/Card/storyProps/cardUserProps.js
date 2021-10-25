@@ -93,38 +93,37 @@ const propsDescription = [
     name: "image",
     type: "string Required",
     values: [],
-    description: "Card image link."
+    description: "Card image url."
   },
   {
     name: "name",
     type: "string Required",
     values: [],
-    description: "Name that appears on this one."
+    description: "Text that will be displayed as the person's name."
   },
   {
     name: "profession",
     type: "string",
     values: [],
-    description: "Profession that appears on this one."
+    description: "Text that will be displayed as the person's profession."
   },
   {
     name: "shape",
     type: "string",
     values: [`default info`, "summary", "info"],
-    description: "Card shape."
+    description: "Sets Card shape."
   },
   {
     name: "color",
     type: "string",
     values: [`default #fff`],
-    description:
-      "Background color of the Card content. You can add any color in hex format or name."
+    description: "Sets background color."
   },
   {
     name: "imageFitPosition",
     type: "string",
     values: [`default center`, "top", "center", "bottom"],
-    description: "Prop to fit the image into the card."
+    description: "Sets image position to be displayed in the card."
   },
   {
     name: "redes",
@@ -137,23 +136,24 @@ const propsDescription = [
       "twitch",
       "youtube"
     ],
-    description: `Object array of social networks.`
+    description: `Object array of social networks names and urls.`
   },
   {
     name: "children",
     type: "any",
     values: [],
-    description: `Card content, you can write html code inside. (this only works when the <shape> prop is "summary")`
+    description:
+      'Card content, you can write html code inside. (this one will only works when the <shape> prop is "summary")'
   }
 ];
 
 const cardClassicProps = {
-  subTitle,
-  importType,
   cardProps,
+  componentText,
+  importType,
   notes,
   propsDescription,
-  componentText
+  subTitle
 };
 
 export default cardClassicProps;

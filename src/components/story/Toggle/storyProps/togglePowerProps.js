@@ -22,7 +22,7 @@ const propsDescription = [
     name: "toggleType",
     type: "string",
     values: ["power", "default switch", "switch"],
-    description: "Toggle appearance."
+    description: "Toggle type."
   },
   {
     name: "checked",
@@ -39,11 +39,11 @@ const propsDescription = [
 ];
 
 const toggleProps = {
-  subTitle,
+  componentText,
   importType,
-  toggleProp,
   propsDescription,
-  componentText
+  subTitle,
+  toggleProp
 };
 
 export default toggleProps;

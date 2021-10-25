@@ -1,24 +1,32 @@
 import React, { lazy, useEffect } from "react";
 import { changeDocumentTitle } from "../../utils/utils";
-import { Row, Col } from "react-bootstrap";
 import {
   btnSponsorList,
-  componentText,
   developerTeam,
-  introduction,
-  kromac,
-  requirements,
   resources,
-  resumen,
   sponsores,
   technogloies,
   technogloiesNoImage
 } from "./pageGenerator";
 import "./LandingPage.scss";
+import {
+  componentText,
+  implementationTitle,
+  installationTitle,
+  introduction,
+  introductionTitle,
+  kromac,
+  requirements,
+  requirementsText,
+  requirementsTitle,
+  resourcesTitle,
+  sponsorTitle,
+  teamTitle,
+  technogloiesTitle
+} from "../../utils/constants.en";
 
 const TextAnimation = lazy(() => import("../lib/TextAnimation"));
 const BoxImplementation = lazy(() => import("../BoxImplementation"));
-const Card = lazy(() => import("../lib/Card"));
 const Avatar = lazy(() => import("../lib/Avatar"));
 const Button = lazy(() => import("../lib/Button"));
 
@@ -37,52 +45,40 @@ const LandingPage = () => {
       <div className="kromac-landingpage-container">
         <div className="kromac-section">
           <TextAnimation
-            word1="Introducción"
+            word1={introductionTitle}
             background="linear-gradient(90deg, #000, #566573)"
             fontColor="#fff"
           />
           {introduction}
         </div>
         <div className="kromac-section">
-          <TextAnimation
-            word1="Resumen"
-            background="linear-gradient(90deg, #000, #566573)"
-            fontColor="#fff"
-          />
-          <Row>
-            {resumen.map((card, index) =>
-              <Col key={index} xl={3} lg={4} md={6} sm={12}>
-                <Card cardType="info" title={card.title} color="#566573">
-                  {card.description}
-                </Card>
-              </Col>
-            )}
-          </Row>
-        </div>
-        <div className="kromac-section">
           <div className="sub-title">
             <TextAnimation
-              word1="Instalación"
+              word1={installationTitle}
               background="linear-gradient(90deg, #000, #566573)"
               fontColor="#fff"
             />
           </div>
           <p>
-            via <b>NPM</b>
+            visit us in
+            <a
+              href="https://www.npmjs.com/package/kromac-ui"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <b> NPM</b>
+            </a>
           </p>
           <label className="label-import">npm install kromac-ui</label>
         </div>
         <div className="kromac-section">
           <TextAnimation
-            word1="Requerimientos"
+            word1={requirementsTitle}
             background="linear-gradient(90deg, #000, #566573)"
             fontColor="#fff"
           />
           <div className="kromac-subsection">
-            <p>
-              Para poder implementar <b>Kromac UI </b> tu proyecto <b>debe</b>{" "}
-              contar con los siguientes requerimientos:
-            </p>
+            {requirementsText}
             {requirements.map((r, index) =>
               <div key={index}>
                 <label className="label-import">{r.product} </label> &nbsp;
@@ -94,7 +90,7 @@ const LandingPage = () => {
         </div>
         <div className="kromac-section">
           <TextAnimation
-            word1="Implementación"
+            word1={implementationTitle}
             background="linear-gradient(90deg, #000, #566573)"
             fontColor="#fff"
           />
@@ -102,7 +98,7 @@ const LandingPage = () => {
         </div>
         <div className="kromac-section">
           <TextAnimation
-            word1="Recursos"
+            word1={resourcesTitle}
             background="linear-gradient(90deg, #000, #566573)"
             fontColor="#fff"
           />
@@ -113,8 +109,6 @@ const LandingPage = () => {
                   <a href={r.link} target="_blank" rel="noreferrer">
                     {r.title}
                   </a>
-                  &nbsp;
-                  {r.description}
                 </li>
               )}
             </ul>
@@ -123,7 +117,70 @@ const LandingPage = () => {
         <div className="kromac-section">
           <div className="sub-title">
             <TextAnimation
-              word1="Tecnologias"
+              word1={teamTitle}
+              background="linear-gradient(90deg, #000, #566573)"
+              fontColor="#fff"
+            />
+          </div>
+          <div className="dev-team">
+            {developerTeam.map((dev, index) =>
+              <a href={dev.github} target="_blank" rel="noreferrer" key={index}>
+                <Avatar
+                  image={dev.image}
+                  name={dev.name}
+                  tooltip={dev.tooltip}
+                  bgColor={dev.bgColor}
+                  imageFit={dev.imageFit}
+                  size={dev.size}
+                  isStatic
+                />
+              </a>
+            )}
+          </div>
+        </div>
+        <div className="kromac-section">
+          <TextAnimation
+            word1={sponsorTitle}
+            background="linear-gradient(90deg, #000, #566573)"
+            fontColor="#fff"
+          />
+          <p>
+            Unete y colabora nos, así ayudarás a {kromac} a ser mejor. Además,
+            podrás aparecer abajo en la lista.
+          </p>
+          <div className="btn-sponsor">
+            {btnSponsorList.map((btn, index) =>
+              <a href={btn.link} target="_blank" rel="noreferrer">
+                <Button key={index} color={btn.color}>
+                  {btn.text}
+                </Button>
+              </a>
+            )}
+          </div>
+          <div className="dev-team">
+            {sponsores.map((sponsor, index) =>
+              <a
+                href={sponsor.link}
+                target="_blank"
+                rel="noreferrer"
+                key={index}
+              >
+                <Avatar
+                  image={sponsor.image}
+                  tooltip={sponsor.name}
+                  imageFit={sponsor.imageFit}
+                  size={sponsor.size}
+                  borderColor={sponsor.borderColor}
+                  isStatic
+                />
+              </a>
+            )}
+          </div>
+        </div>
+        <div className="kromac-section">
+          <div className="sub-title">
+            <TextAnimation
+              word1={technogloiesTitle}
               background="linear-gradient(90deg, #000, #566573)"
               fontColor="#fff"
             />
@@ -147,109 +204,6 @@ const LandingPage = () => {
                 </li>
               )}
             </ul>
-          </div>
-        </div>
-        <div className="kromac-section">
-          <div className="sub-title">
-            <TextAnimation
-              word1="Team"
-              background="linear-gradient(90deg, #000, #566573)"
-              fontColor="#fff"
-            />
-          </div>
-          <div className="dev-team">
-            {developerTeam.map((dev, index) =>
-              <a href={dev.github} target="_blank" rel="noreferrer" key={index}>
-                <Avatar
-                  image={dev.image}
-                  name={dev.name}
-                  tooltip={dev.tooltip}
-                  bgColor={dev.bgColor}
-                  imageFit={dev.imageFit}
-                  size={dev.size}
-                  isStatic
-                />
-              </a>
-            )}
-          </div>
-        </div>
-        <div className="kromac-section">
-          <TextAnimation
-            word1="Creditos"
-            background="linear-gradient(90deg, #000, #566573)"
-            fontColor="#fff"
-          />
-          <div className="kromac-subsection">
-            <p>
-              Varios de los estilos de algunos componentes estan inspirados en
-              videos desarrollados en este canal =&gt; &nbsp;<label className="label-import">
-                <a
-                  href="https://www.youtube.com/c/OnlineTutorials4Designers"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  OnlineTutorials
-                </a>
-              </label>
-              <br />
-              <label>
-                (Toma un tiempo y revisa el contenido desarrollado en este
-                canal)
-              </label>
-            </p>
-            <p>
-              Eso no quiere decir que el trabajo realizado en <b>Kromac UI </b>{" "}
-              sea plagio o un simple copy and paste. El producto realizado tiene
-              como base esos estilos, que fueron implementados, mejorados y
-              aplicados a varios entornos más generales, en donde el
-              desarrollador sea capaz de utilizarlos sin mucha dificultad, sin
-              contar todas las posibilidades que se consideraron para
-              personalizar un componente con cada propiedad.
-            </p>
-            <p>
-              Cada componente cuenta con un talento humano invertido que le da
-              un toque de mejora a lo expuesto en este framework, brindando un
-              material de calidad inspirado de un gran trabajo.
-            </p>
-          </div>
-        </div>
-        <div className="kromac-section">
-          <TextAnimation
-            word1="SupportUs"
-            background="linear-gradient(90deg, #000, #566573)"
-            fontColor="#fff"
-          />
-          <p>
-            Unete y colabora nos, así ayudarás a {kromac} a ser mejor. Además,
-            podrás aparecer abajo en la lista.
-          </p>
-          <div className="btn-sponsor">
-            {btnSponsorList.map((btn, index) =>
-              <Button key={index} color={btn.color}>
-                <a href={btn.link} target="_blank" rel="noreferrer">
-                  {btn.text}
-                </a>
-              </Button>
-            )}
-          </div>
-          <div className="dev-team">
-            {sponsores.map((sponsor, index) =>
-              <a
-                href={sponsor.link}
-                target="_blank"
-                rel="noreferrer"
-                key={index}
-              >
-                <Avatar
-                  image={sponsor.image}
-                  tooltip={sponsor.name}
-                  imageFit={sponsor.imageFit}
-                  size={sponsor.size}
-                  borderColor={sponsor.borderColor}
-                  isStatic
-                />
-              </a>
-            )}
           </div>
         </div>
       </div>

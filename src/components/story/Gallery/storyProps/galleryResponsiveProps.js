@@ -152,23 +152,23 @@ const propsDescription = [
     name: "images",
     type: "array Required",
     values: [],
-    description: `Objects array of images link, rows and cols.`
+    description: `Objects array of images url, rows, cols.`
   },
   {
     name: "gridGap",
     type: "string",
     values: ["default 0px"],
-    description: "space between rows and cols"
+    description: "Sets space between rows and cols."
   }
 ];
 
 const gallerysProps = {
-  subTitle,
-  importType,
-  galleryProps,
-  propsDescription,
   componentText,
-  notes
+  galleryProps,
+  importType,
+  notes,
+  propsDescription,
+  subTitle
 };
 
 export default gallerysProps;

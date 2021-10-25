@@ -61,36 +61,34 @@ const propsDescription = [
     name: "title",
     type: "string",
     values: [],
-    description: "Card title that appears on this one."
+    description: "Text that will be displayed as the Card's title."
   },
   {
     name: "progress",
     type: "number Required",
     values: [],
-    description: "Progress in percentage."
+    description: "Displays progress as a percentage."
   },
   {
     name: "cardColor",
     type: "string",
     values: [`default transparent`],
-    description:
-      "Background color of the Card content. You can add any color in hex format or name."
+    description: "Sets background color."
   },
   {
     name: "progressColor",
     type: "string",
     values: [`default #D53DC4`],
-    description:
-      "Color of the progress. You can add any color in hex format or name."
+    description: "Sets progress color."
   }
 ];
 
 const cardClassicProps = {
-  subTitle,
-  importType,
   cardProps,
+  componentText,
+  importType,
   propsDescription,
-  componentText
+  subTitle
 };
 
 export default cardClassicProps;

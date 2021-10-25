@@ -42,19 +42,19 @@ const propsDescription = [
       "info",
       "dark"
     ],
-    description: "Background color of the button."
+    description: "Sets background color of the component."
   },
   {
     name: "loading",
     type: "bool",
     values: ["default false"],
-    description: "This prop show a spinner into the button."
+    description: "This prop displayed a spinner into the button."
   },
   {
     name: "disabled",
     type: "bool",
     values: [`default false`],
-    description: "This prop disable the button."
+    description: "This prop disables the button."
   },
   {
     name: "onClick",
@@ -66,16 +66,16 @@ const propsDescription = [
     name: "children",
     type: "any",
     values: [],
-    description: "Text of the button."
+    description: "Button content."
   }
 ];
 
 const buttonsProps = {
-  subTitle,
-  importType,
   buttonProps,
+  componentText,
+  importType,
   propsDescription,
-  componentText
+  subTitle
 };
 
 export default buttonsProps;

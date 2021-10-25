@@ -48,40 +48,40 @@ const propsDescription = [
       "night",
       "transparent"
     ],
-    description: "Set the Toast background color."
+    description: "Sets background color."
   },
   {
     name: "visible",
     type: "bool",
     values: [`default false`],
-    description: "This prop turned on show the toast."
+    description: "When this prop turned on, it displays the Toast."
   },
   {
     name: "timeOut",
     type: "number",
     values: [`default 5000`],
-    description: "Toast duration in ms."
+    description: "Duration in ms."
   },
   {
     name: "positionY",
     type: "string",
     values: [`default bottom`, "top", "bottom"],
-    description: "Toast position in Y-axis."
+    description: "Toast position in Y-axis of the screen."
   },
   {
     name: "positionX",
     type: "string",
     values: [`default left`, "right", "left"],
-    description: "Toast position in X-axis."
+    description: "Toast position in X-axis of the screen."
   }
 ];
 
 const sliderProps = {
-  subTitle,
+  componentText,
   importType,
-  toastProp,
   propsDescription,
-  componentText
+  subTitle,
+  toastProp
 };
 
 export default sliderProps;

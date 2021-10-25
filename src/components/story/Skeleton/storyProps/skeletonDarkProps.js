@@ -26,34 +26,34 @@ const propsDescription = [
     name: "height",
     type: "string",
     values: ["default 32px"],
-    description: "Skeleton height in px, em or whatever valid format you want."
+    description: "Sets height."
   },
   {
     name: "width",
     type: "string",
     values: [`default 100%`],
-    description: "Skeleton width in px, em or whatever valid format you want."
+    description: "Sets width."
   },
   {
     name: "borderRadius",
     type: "string",
     values: [`default none`],
-    description: "Skeleton border radius in px, em or %."
+    description: "Sets border radius."
   },
   {
     name: "className",
     type: "string",
     values: ["dark", " default light", "dark"],
-    description: "Skeleton theme."
+    description: "Sets Skeleton theme."
   }
 ];
 
 const skeletonProps = {
-  subTitle,
+  componentText,
   importType,
-  skeletonProp,
   propsDescription,
-  componentText
+  skeletonProp,
+  subTitle
 };
 
 export default skeletonProps;

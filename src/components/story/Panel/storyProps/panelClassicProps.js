@@ -21,20 +21,19 @@ const propsDescription = [
     type: "bool",
     values: ["default false"],
     description:
-      "This prop causes the background panel becomes dark and show a border neon."
+      "Turns Panel background color dark and shows a neon border around."
   },
   {
     name: "transparent",
     type: "bool",
     values: [`default false`],
-    description:
-      "This prop causes the background panel becomes transparent and blurred."
+    description: "Turns Panel background transparent and adds a blurred effect."
   },
   {
     name: "shadows",
     type: "bool",
     values: [`default true`],
-    description: "This prop add a box-shadows around the Panel."
+    description: "This prop adds a box-shadows around the Panel."
   },
   {
     name: "children",
@@ -45,11 +44,11 @@ const propsDescription = [
 ];
 
 const panelProps = {
-  subTitle,
+  componentText,
   importType,
   panelProp,
   propsDescription,
-  componentText
+  subTitle
 };
 
 export default panelProps;

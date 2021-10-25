@@ -49,26 +49,26 @@ const propsDescription = [
     name: "borderColor",
     type: "string",
     values: [`default #000`],
-    description: "Set the color border of the component."
+    description: "Set border color of the component."
   },
   {
     name: "bgColor",
     type: "string",
     values: [`default linear-gradient`],
-    description: "Set the background color of the component."
+    description: "Set background color of the component."
   },
   {
     name: "isStatic",
     type: "bool",
     values: [`default false`],
-    description: "If you do not want the hover effect, turn on this prop."
+    description: "If you don't want to see the hover effect, turn on this prop."
   },
   {
     name: "imageFit",
     type: "bool",
     values: [`default false`],
     description:
-      "If you want the image cover all the circle, turn on this prop."
+      "If you want the image to cover all the circle, turn on this prop."
   },
   {
     name: "imagePosition",
@@ -86,11 +86,11 @@ const propsDescription = [
 ];
 
 const sliderProps = {
-  subTitle,
-  importType,
   avatarProp,
+  componentText,
+  importType,
   propsDescription,
-  componentText
+  subTitle
 };
 
 export default sliderProps;

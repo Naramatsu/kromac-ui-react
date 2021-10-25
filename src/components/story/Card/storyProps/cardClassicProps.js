@@ -67,13 +67,13 @@ const propsDescription = [
     name: "image",
     type: "string Required",
     values: [],
-    description: "Card image link."
+    description: "Card image url."
   },
   {
     name: "title",
     type: "string",
     values: [],
-    description: "Card title that appears on this one."
+    description: "Text that will be displayed as the Card's title."
   },
   {
     name: "size",
@@ -85,7 +85,7 @@ const propsDescription = [
     name: "color",
     type: "string",
     values: [`default #fff`, "transparent", "#fff"],
-    description: "Background color of the Card content."
+    description: "Sets background color."
   },
   {
     name: "expanded",
@@ -98,7 +98,7 @@ const propsDescription = [
     name: "imageFitPosition",
     type: "string",
     values: [`default center`, "top", "center", "bottom"],
-    description: "Prop to fit the image into the card."
+    description: "Sets image position to be displayed in the card."
   },
   {
     name: "children",
@@ -109,11 +109,11 @@ const propsDescription = [
 ];
 
 const cardClassicProps = {
-  subTitle,
-  importType,
   cardProps,
+  componentText,
+  importType,
   propsDescription,
-  componentText
+  subTitle
 };
 
 export default cardClassicProps;

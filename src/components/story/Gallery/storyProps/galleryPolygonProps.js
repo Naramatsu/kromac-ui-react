@@ -2,9 +2,10 @@ const subTitle = "Gallery polygon";
 const importType = `import Gallery from "kromac-ui/dist/Gallery";`;
 
 const description = `This component requires bootstrap.`;
-const notes = `The number of the <b>columns</b> by default is <div class="chip">3</div> 
-when the screen is <b>lg</b> or <b>md</b> by bootstrap. <br />
-When the screen is <b>sm</b> or <b>lower</b> by bootstrap the number of the columns is <div class="chip">1</div>.
+const notes = `
+By default the number of <b>columns</b> is <div class="chip">3</div> 
+when the viewport is <b>lg</b> or <b>md</b> by bootstrap. <br />
+When the viewport is <b>sm</b> or <b>lower</b> the number of the columns becomes <div class="chip">1</div> by bootstrap.
 `;
 
 const galleryProps = {
@@ -77,30 +78,30 @@ const propsDescription = [
     name: "images",
     type: "Array Required",
     values: [`imgUrl`],
-    description: "String array of images link."
+    description: "String array of images url."
   },
   {
     name: "imageFitPosition",
     type: "string",
     values: ["default center"],
-    description: "Prop to fit the image into each polygon."
+    description: "Sets image position to be displayed in each polygon."
   },
   {
     name: "polygonType",
     type: "string",
     values: ["default rhombus", "hexagon", "rabbet"],
-    description: "Polygon shape."
+    description: "Sets polygon shape."
   }
 ];
 
 const gallerysProps = {
-  subTitle,
-  importType,
+  componentText,
   description,
   galleryProps,
+  importType,
+  notes,
   propsDescription,
-  componentText,
-  notes
+  subTitle
 };
 
 export default gallerysProps;

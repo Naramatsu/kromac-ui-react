@@ -1,9 +1,8 @@
 const subTitle = "Card Horizontal";
 const importType = `import Card from "kromac-ui/dist/Card";`;
 const notes = `
-<h5>Recomendations:</h5>
 <p>
- Wrap this component in a div that has a maximum width of 600px (or whatever width you want), because it occupies 100% of the width.
+This card occupies 100% of the width wrapper.
 </p>
 `;
 
@@ -72,37 +71,37 @@ const propsDescription = [
     name: "image",
     type: "string Required",
     values: [],
-    description: "Card image link."
+    description: "Card image url."
   },
   {
     name: "title",
     type: "string",
     values: [],
-    description: "Card title that appears on this one."
+    description: "Text that will be displayed as the Card's title."
   },
   {
     name: "color",
     type: "string",
     values: [`default #fff`, "transparent", "#fff"],
-    description: "Background color of the Card content."
+    description: "Sets background color."
   },
   {
     name: "imageSide",
     type: "string",
     values: [`default left`, "right", "left"],
-    description: "Side on which the image will appears on the Card."
+    description: "Side where the image will be display in the Card."
   },
   {
     name: "reveal",
     type: "bool",
     values: [`default false`],
-    description: "Prop to reveal the card content."
+    description: 'Adds the "show more" to reveal the card content.'
   },
   {
     name: "imageFitPosition",
     type: "string",
     values: [`default center`, "top", "center", "bottom"],
-    description: "Prop to fit the image into the card."
+    description: "Sets image position to be displayed in the card."
   },
   {
     name: "children",
@@ -113,12 +112,12 @@ const propsDescription = [
 ];
 
 const cardClassicProps = {
-  subTitle,
+  cardProps,
+  componentText,
   importType,
   notes,
-  cardProps,
   propsDescription,
-  componentText
+  subTitle
 };
 
 export default cardClassicProps;

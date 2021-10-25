@@ -1,146 +1,15 @@
-export const kromac = <b>Kromac UI </b>;
-export const componentText = (
-  <div className="implementation kromac-scroll-bg-dark">
-    <p className="comment">{`// Implementacion de Componentes`}</p>
-    <p className="comment">{`// Tomaremos de ejemplo el componente Card.`}</p>
-    <br />
-    <p className="comment">{`// Destructuring import`}</p>
-    <p>
-      <span className="var"> import</span>
-      <span>{` { `}</span>
-      <span className="component">Card </span>
-      <span>{` } `}</span>
-      <span className="import">from </span>
-      <span className="string">{`"kromac-ui/dist"`}</span>
-      ;
-    </p>
-    <br />
-    <p className="comment">{`// Normal import`}</p>
-    <p>
-      <span className="var"> import</span>
-      <span className="component"> Card </span>
-      <span className="import"> from </span>
-      <span className="string">{`"kromac-ui/dist/Card"`}</span>
-      ;
-    </p>
-    <br />
-    <p className="comment">{`// Para importar los Estilos`}</p>
-    <p className="comment">{`// Ubicate en tu archivo index principal e implementa la siguiente linea:`}</p>
-    <p>
-      <span className="var"> import </span>
-      <span className="string">{`"kromac-ui/dist/index.css"`}</span>
-      ;
-    </p>
-  </div>
-);
-export const introduction = (
-  <p style={{ marginTop: "3em" }}>
-    {kromac} es un framework de estilos <b>100% responsivo</b> que busca
-    facilitar el desarrollo e implementación de componentes con estilos modernos
-    a páginas y/o aplicativos web.
-  </p>
-);
-
-export const resumen = [
-  {
-    title: "Objetivo",
-    description: (
-      <p>
-        {kromac} tiene como objetivo brindar estilos llamativos, modernos por
-        medio de componentes que varian dependiendo a la configuración que se
-        envíe, con el fin de ahorrar lineas de codigo al desarrollador.
-      </p>
-    )
-  },
-  {
-    title: "Ventaja",
-    description: (
-      <p>
-        Una de las principales ventajas que tiene implementar {kromac}
-        es la variedad de componentes visuales que puedes utilizar, y que van
-        mucho mas allá de lo que el preview te muestra.
-      </p>
-    )
-  },
-  {
-    title: "Resultados",
-    description: (
-      <div>
-        <ul>
-          <li>
-            * Componentes:
-            <ul className="kromac-subsection" style={{ marginTop: 0 }}>
-              <li>* Atractivos y modernos.</li>
-              <li>* Faciles de implementar.</li>
-              <li>
-                * Con varias propiedades que hacen de cada componente un mundo
-                de estilos.
-              </li>
-            </ul>
-          </li>
-          <li>* Ahorro en esfuerzo a nivel de estilos.</li>
-          <li>* Estilos faciles de adoptar.</li>
-        </ul>
-      </div>
-    )
-  },
-  {
-    title: "Visión",
-    description: (
-      <p>
-        A futuro esperamos poder implementar {kromac} a varios frameworks y/o
-        librerias tanto de <b>Javascript</b>, como de otros lenguajes de
-        programación.
-      </p>
-    )
-  }
-];
-
-export const requirements = [
-  {
-    product: "Versión de node: ",
-    version: "^14"
-  },
-  {
-    product: "Versión de React: ",
-    version: "^17"
-  },
-  {
-    product: "Versión de react-router-dom: ",
-    version: "^5"
-  }
-];
-
 export const resources = [
   {
-    link:
-      "https://docs.google.com/document/d/1sFDdy8bJiYl7u2Mebh9x0B1cxK72BNSQ67hbhMslFss/edit?usp=sharing",
-    title: "Document",
-    description: (
-      <label>
-        =&gt; Archivo donde puedes encontrar clases, componentes y conceptos.
-      </label>
-    )
+    link: "https://github.com/kromac-ui/kromac-ui-react",
+    title: "Github"
   },
   {
-    link: "https://github.com/Naramatsu/kromac",
-    title: "Github",
-    description: (
-      <label>
-        =&gt; Repositorio en el cual puedes encontrar el código en React del
-        framwework.
-      </label>
-    )
+    link: "https://github.com/kromac-ui/kromac-ui-react/issues",
+    title: "Foro"
   },
   {
-    link: "https://github.com/Naramatsu/kromac/issues",
-    title: "Foro",
-    description: (
-      <label>
-        =&gt; En este espacio nos ayudas agregando los bugs, errores o
-        sugerencias que encuentres.
-      </label>
-    )
+    link: "https://github.com/kromac-ui/kromac-ui-react/blob/main/POLICY.md",
+    title: "Policy"
   }
 ];
 
@@ -155,17 +24,6 @@ export const technogloies = [
     image:
       "https://pbs.twimg.com/profile_images/610586699798835201/OuezNT-e_400x400.png",
     alt: "Bootstrap"
-  },
-  {
-    link: "https://ionic.io/ionicons",
-    image: "https://ionic.io/ionicons/v4/assets/img/meta/ionicons-og-image.png",
-    alt: "ionicons"
-  },
-  {
-    link: "https://www.npmjs.com/package/html-react-parser",
-    image:
-      "https://camo.githubusercontent.com/53afa819e2642e3932325ce6db30fb41723642bda524cfabc2fad4dbc66ab22a/68747470733a2f2f6e6f6465692e636f2f6e706d2f68746d6c2d72656163742d7061727365722e706e67",
-    alt: "html-react-parser"
   },
   {
     link:
@@ -187,11 +45,6 @@ export const technogloies = [
     alt: "npm-sass"
   },
   {
-    link: "https://www.npmjs.com/package/prop-types-exact",
-    image: "https://nodei.co/npm/prop-types-exact.png",
-    alt: "prop-types-exact"
-  },
-  {
     link: "https://reactrouter.com/web/guides/quick-start",
     image:
       "https://camo.githubusercontent.com/bf32d0a71c170dbdb203c201579564f2cd7fc54a24720faad61af12c9605c6b5/68747470733a2f2f7265616374747261696e696e672e636f6d2f72656163742d726f757465722f616e64726f69642d6368726f6d652d313434783134342e706e67",
@@ -204,11 +57,15 @@ export const technogloies = [
     alt: "animate style"
   },
   {
-    link:
-      "https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react",
+    link: "https://www.npmjs.com/package/html-react-parser",
     image:
-      "https://neurekaspublicidad.com/wp-content/uploads/2019/11/font-awesome-1.png",
-    alt: "fontawesome"
+      "https://camo.githubusercontent.com/53afa819e2642e3932325ce6db30fb41723642bda524cfabc2fad4dbc66ab22a/68747470733a2f2f6e6f6465692e636f2f6e706d2f68746d6c2d72656163742d7061727365722e706e67",
+    alt: "html-react-parser"
+  },
+  {
+    link: "https://www.npmjs.com/package/prop-types-exact",
+    image: "https://nodei.co/npm/prop-types-exact.png",
+    alt: "prop-types-exact"
   }
 ];
 
@@ -224,8 +81,8 @@ export const developerTeam = [
     github: "https://github.com/Naramatsu",
     image:
       "https://res.cloudinary.com/dxg9gszax/image/upload/v1634085770/kromac-ui%20team/jcnm_owzs5i.jpg",
-    name: "Ing. Jonathan C. Narvaez M.",
-    tooltip: "Frontend Developer",
+    name: "Jonathan C. Narvaez M.",
+    tooltip: "Kromac-UI Founder",
     bgColor: "rgb(185 185 186)",
     imageFit: true,
     size: "100px"
@@ -250,8 +107,3 @@ export const btnSponsorList = [
   //   text: "Patreon"
   // }
 ];
-
-/*
-  colaborar                     => pending
-  Join us                       => pending
- */

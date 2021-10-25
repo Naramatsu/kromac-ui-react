@@ -1,18 +1,16 @@
 const subTitle = "Banner classic";
 const importType = `import Banner from "kromac-ui/dist/Banner";`;
 const notes = `
-  <p>
-    For a better experience, the image must be png and transparent background like the example.
-  </p>
+  <p>For a better experience:</p>
+  <ul>
+    <li>* The image should be png with a transparent background as shown in the example.</li>
+    <li>* Use only text tags as children.</li>
+  </ul>
   <br />
   <h5>Recomendations:</h5>
-  If you  will use a rectangular image (horizontally) and you wanna use the prop 
+  If you are going to use a rectangular image (horizontally) and you want to use the prop 
   <div class="chip">overlay</div> 
   also use the prop <div class="chip">isBottom</div> to align the image at bottom of the banner.
-  <br />
-  <p>
-    For a better experience use only text tags as children.
-  </p>
 `;
 
 const bannerProps = {
@@ -75,67 +73,66 @@ const propsDescription = [
     name: "image",
     type: "string Required",
     values: [],
-    description: "Banner image link."
+    description: "Image url."
   },
   {
     name: "background",
     type: "string",
     values: ["default #000"],
-    description: "Background color of the banner."
+    description: "Sets background color."
   },
   {
     name: "color",
     type: "string",
     values: [],
-    description: "Font color."
+    description: "Sets font color."
   },
   {
     name: "height",
     type: "string",
     values: ["default auto"],
-    description: "Banner height."
+    description: "Set height of component."
   },
   {
     name: "order",
     type: "string",
-    values: ["default right"],
-    description: "Side on which the image will appears on the banner."
+    values: ["default right", "left"],
+    description: "Side where the image will be displayed."
   },
   {
     name: "overlay",
     type: "bool",
     values: ["default false"],
-    description: "This prop will make the image overlay the banner height"
+    description: "Display image with an overlay effect on the banner."
   },
   {
     name: "isBottom",
     type: "bool",
     values: ["default false"],
     description:
-      "This prop will align the image to bottom side, but only work with <overlay> prop turned on."
+      "This prop will align the image to the bottom side, but will only work with <overlay> prop turned on."
   },
   {
     name: "textAlign",
     type: "string",
     values: ["default center"],
-    description:
-      "Side you want to align the text in its order. (this do not affect the <order> prop)."
+    description: "Text align options. (this do not affect the <order> prop)."
   },
   {
     name: "children",
     type: "any",
     values: [],
-    description: "Any content you want to appear on the banner."
+    description: "Display any element you want to appear in the banner."
   }
 ];
 
 const bannersProps = {
-  subTitle,
-  importType,
   bannerProps,
-  propsDescription,
   componentText,
-  notes
+  importType,
+  notes,
+  propsDescription,
+  subTitle
 };
 
 export default bannersProps;

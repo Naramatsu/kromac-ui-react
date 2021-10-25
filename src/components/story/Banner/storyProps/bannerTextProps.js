@@ -2,16 +2,13 @@ const subTitle = "Banner text";
 const importType = `import Banner from "kromac-ui/dist/Banner";`;
 
 const notes = `
-  When the screen is <div class="chip">767px</div> or lower the title will centered and move to top.
+  <p>
+    For a better experience do not set a long text as title.
+  </p>  
+  When the screen viewport is <div class="chip">767px</div> or lower the title will be centered and moved to the top.
   <br />
   Do not set the <div class="chip">bgTextColor</div> as <div class="chip">#000</div> or 
-  <div class="chip">"black"</div> because it provocate that the text becomes invisible.
-  <br />
-  <br />
-  <h5>Recomendations:</h5>
-  <p>
-    For a better experience do not set long text as title.
-  </p>    
+  <div class="chip">"black"</div> because it will make the text invisible.
 `;
 
 const bannerProps = {
@@ -65,7 +62,7 @@ const propsDescription = [
     name: "image",
     type: "string Required",
     values: [],
-    description: "Banner image link."
+    description: "Image url."
   },
   {
     name: "bgTextColor",
@@ -77,42 +74,41 @@ const propsDescription = [
     name: "height",
     type: "string",
     values: ["default 500px"],
-    description: "Banner height."
+    description: "Set height of component."
   },
   {
     name: "order",
     type: "string",
     values: ["default left"],
-    description: "Side on which the title will appears on the banner."
+    description: "Side where the title will be displayed."
   },
   {
     name: "attachment",
     type: "string",
     values: [],
-    description: "This props set the background attachment."
+    description: "Sets background attachment."
   },
   {
     name: "textAlign",
     type: "string",
     values: ["default center"],
-    description:
-      "Side you want to align the text in its order. (this do not affect the <order> prop)."
+    description: "Text align options. (this do not affect the <order> prop)."
   },
   {
     name: "bgPosition",
     type: "string",
     values: ["default center"],
-    description: "Background image align."
+    description: "Sets image position to be displayed in the background."
   }
 ];
 
 const bannersProps = {
-  subTitle,
-  importType,
   bannerProps,
-  propsDescription,
   componentText,
-  notes
+  importType,
+  notes,
+  propsDescription,
+  subTitle
 };
 
 export default bannersProps;

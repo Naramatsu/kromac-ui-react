@@ -16,7 +16,7 @@ const propsDescription = [
     name: "toggleType",
     type: "string",
     values: ["default switch", "power", "switch"],
-    description: "Toggle appearance."
+    description: "Toggle type."
   },
   {
     name: "checked",
@@ -28,13 +28,13 @@ const propsDescription = [
     name: "onColor",
     type: "string",
     values: [`default #28B463`],
-    description: "Set the color when the toggle is checked."
+    description: "Sets color when it is checked."
   },
   {
     name: "offColor",
     type: "string",
     values: [`default #CB4335`],
-    description: "Set the color when the toggle is not checked."
+    description: "Sets color when it is not checked."
   },
   {
     name: "onChange",
@@ -45,11 +45,11 @@ const propsDescription = [
 ];
 
 const toggleProps = {
-  subTitle,
+  componentText,
   importType,
-  toggleProp,
   propsDescription,
-  componentText
+  subTitle,
+  toggleProp
 };
 
 export default toggleProps;

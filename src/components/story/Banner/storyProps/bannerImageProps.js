@@ -68,47 +68,47 @@ const propsDescription = [
     name: "image",
     type: "string Required",
     values: [],
-    description: "Banner image link."
+    description: "Image url."
   },
   {
     name: "textAlign",
     type: "string",
     values: ["default center"],
-    description: "Side you want to align the text."
+    description: "Side where you want to align the text."
   },
   {
     name: "color",
     type: "string",
     values: ["default #fff"],
-    description: "Font color."
+    description: "Sets font color."
   },
   {
     name: "height",
     type: "string",
     values: ["default 500px"],
-    description: "Banner height."
+    description: "Set height of component."
   },
   {
     name: "attachment",
     type: "string",
     values: ["default fixed"],
-    description: "This props set the background attachment."
+    description: "Sets background attachment."
   },
   {
     name: "children",
     type: "any",
     values: [],
-    description: "Any content you want to appear on the banner."
+    description: "Display any element you want to appear in the banner."
   }
 ];
 
 const bannersProps = {
-  subTitle,
-  importType,
   bannerProps,
-  propsDescription,
   componentText,
-  notes
+  importType,
+  notes,
+  propsDescription,
+  subTitle
 };
 
 export default bannersProps;

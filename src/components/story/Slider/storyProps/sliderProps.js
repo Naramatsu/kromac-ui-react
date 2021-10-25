@@ -48,42 +48,44 @@ const propsDescription = [
     name: "images",
     type: "array Required",
     values: [],
-    description: "String array of images link."
+    description: "String array of images url."
   },
   {
     name: "height",
     type: "string",
     values: ["default 500px"],
-    description: "Height of the slider."
+    description: "Sets heightof the component."
   },
   {
     name: "showPreview",
     type: "bool",
     values: [`default false`],
     description:
-      "This prop turned on will show a small preview below of each images."
+      "When this prop is turned on, it will display a small preview below of each images."
   },
   {
     name: "autoPlay",
     type: "bool",
     values: [`default false`],
-    description: "This prop turned on makes the images slide automatically."
+    description:
+      "When this prop is turned on, it makes the slider plays automatically."
   },
   {
     name: "timer",
     type: "number",
     values: [`default 5`],
-    description: "Set the automatically slide time in seconds."
+    description:
+      "Sets the timeout slides in seconds. (This only works when the <AutoPlay> prop is turned on)."
   }
 ];
 
 const sliderProps = {
-  subTitle,
+  componentText,
   importType,
-  sliderProp,
-  propsDescription,
   notes,
-  componentText
+  propsDescription,
+  sliderProp,
+  subTitle
 };
 
 export default sliderProps;

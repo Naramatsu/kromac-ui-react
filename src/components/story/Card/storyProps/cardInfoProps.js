@@ -64,26 +64,25 @@ const propsDescription = [
     name: "title",
     type: "string Required",
     values: [],
-    description: "Card title that appears on this one."
+    description: "Text that will be displayed as the Card's title."
   },
   {
     name: "size",
     type: "string",
     values: [`default md`, "sm", "md", "lg"],
-    description: "Card height size."
+    description: "Card content size."
   },
   {
     name: "shape",
     type: "string",
     values: [`default color`, "transparent", "color"],
-    description: "Shape of the card."
+    description: "Sets shape of the card."
   },
   {
     name: "color",
     type: "string",
     values: [`default transparent`],
-    description:
-      "Background color of the Card content. You can add any color in hex format or name."
+    description: "Sets background color."
   },
   {
     name: "children",
@@ -94,11 +93,11 @@ const propsDescription = [
 ];
 
 const cardClassicProps = {
-  subTitle,
-  importType,
   cardProps,
+  componentText,
+  importType,
   propsDescription,
-  componentText
+  subTitle
 };
 
 export default cardClassicProps;

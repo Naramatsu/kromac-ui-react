@@ -1,7 +1,7 @@
 const subTitle = "Spinner svg";
 const importType = `import Spinner from "kromac-ui/dist/Spinner";`;
 const notes = `
-<p> Soon you can send the svg you want in a property. </p>
+<p> Soon you could be allowed to send a svg you want in a property. </p>
 `;
 
 const spinnerProps = {
@@ -31,32 +31,32 @@ const propsDescription = [
     name: "size",
     type: "string",
     values: [`default sm`, "sm", "md", "lg"],
-    description: "Spinner size."
+    description: "Sets Spinner size."
   },
   {
     name: "color",
     type: "string",
     values: ["default #fff"],
-    description: "Set the background color inside."
+    description: "Set background inner color."
   },
   {
     name: "bgColor",
     type: "string",
     values: ["default #000"],
-    description: "Set the area background color of the spinner."
+    description: "Sets background color Spinner."
   },
   {
     name: "fontColor",
     type: "string",
     values: ["default #fff"],
-    description: "Set the color font of the (rocket) dots (smoke)."
+    description: "Sets the font color of the dots (smoke)."
   },
   {
     name: "isCentered",
     type: "bool",
     values: [`default false`],
     description:
-      "This prop turned on places the spinner in the middle of the screen."
+      "When this prop is turned on, it fixed the spinner in the middle of the screen."
   },
   {
     name: "shadows",
@@ -67,12 +67,12 @@ const propsDescription = [
 ];
 
 const spinnersProps = {
-  subTitle,
+  componentText,
   importType,
-  spinnerProps,
-  propsDescription,
   notes,
-  componentText
+  propsDescription,
+  spinnerProps,
+  subTitle
 };
 
 export default spinnersProps;

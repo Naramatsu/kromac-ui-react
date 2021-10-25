@@ -99,13 +99,13 @@ const propsDescription = [
     name: "appName",
     type: "string",
     values: [],
-    description: "Your app name."
+    description: "Sets the text that will be display as the app name."
   },
   {
     name: "imgLogo",
     type: "string",
     values: [],
-    description: "If you have an image, you can add a image link."
+    description: "Image url."
   },
   {
     name: "tabs",
@@ -117,44 +117,43 @@ const propsDescription = [
     name: "searchComponents",
     type: "bool",
     values: ["default false"],
-    description:
-      "If you have a lot of tabs, this prop add an input to search by tab name."
+    description: "Adds an input to search by tab name."
   },
   {
     name: "bgColor",
     type: "string",
     values: ["default #283747"],
-    description: "Background color of the menu."
+    description: "Sets background color."
   },
   {
     name: "hamburgerColor",
     type: "string",
     values: ["default #283747"],
-    description: "Background color of the float hamburgermenu button."
+    description: "Sets background color of the hamburgermenu button."
   },
   {
     name: "hamburgerActiveColor",
     type: "string",
     values: ["default #C0392B"],
     description:
-      "Background color of the float hamburgermenu button when this is active."
+      "Sets background color of the hamburgermenu button when this is active."
   },
   {
     name: "homeUrl",
     type: "string",
     values: ["default /"],
-    description: "Link to redirect to home page."
+    description: "Sets url link to redirect to home page."
   }
 ];
 
 const buttonsProps = {
-  subTitle,
-  importType,
-  description,
-  menuProps,
-  propsDescription,
   componentText,
-  notes
+  description,
+  importType,
+  menuProps,
+  notes,
+  propsDescription,
+  subTitle
 };
 
 export default buttonsProps;

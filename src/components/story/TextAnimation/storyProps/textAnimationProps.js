@@ -52,13 +52,13 @@ const propsDescription = [
     name: "background",
     type: "string",
     values: [`default linerar-gradient`],
-    description: "Set the background color."
+    description: "Sets the background color."
   },
   {
     name: "fontColor",
     type: "string",
     values: [`default #fff`],
-    description: "Set the font color."
+    description: "Sets the font color."
   },
   {
     name: "fontSize",
@@ -69,12 +69,12 @@ const propsDescription = [
 ];
 
 const textAnimationProps = {
-  subTitle,
+  componentText,
   importType,
-  textAnimationProp,
-  propsDescription,
   notes,
-  componentText
+  propsDescription,
+  subTitle,
+  textAnimationProp
 };
 
 export default textAnimationProps;
