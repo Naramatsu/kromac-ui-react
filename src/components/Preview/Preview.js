@@ -30,7 +30,7 @@ const Preview = props => {
       <label className="label-import">
         {importType}
       </label>
-      <h3 className="component-implementation">Implementation</h3>
+      <h3 className="component-implementation">Preview</h3>
       <div className="component-preview">
         {props.children}
         <div className="component-props">
