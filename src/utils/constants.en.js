@@ -71,7 +71,8 @@ export const componentText = (
   </div>
 );
 export const technogloiesTitle = `technogloies`;
-export const sponsor =
-  "We are currently looking for support to keep this Project goin on.";
+export const sponsorText =
+  "We are currently looking for support to keep this Project going on.";
 export const teamTitle = `Team`;
 export const sponsorTitle = `Sponsors`;
+export const comingsoonText = `We are currently working to expand kromac ui to other platforms, frameworks, and languages.`;

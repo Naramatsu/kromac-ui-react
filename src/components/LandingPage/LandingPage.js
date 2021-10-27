@@ -2,6 +2,7 @@ import React, { lazy, useEffect } from "react";
 import { changeDocumentTitle } from "../../utils/utils";
 import {
   btnSponsorList,
+  comingSoonProjects,
   developerTeam,
   resources,
   sponsores,
@@ -10,6 +11,7 @@ import {
 } from "./pageGenerator";
 import "./LandingPage.scss";
 import {
+  comingsoonText,
   componentText,
   implementationTitle,
   installationTitle,
@@ -20,6 +22,7 @@ import {
   requirementsText,
   requirementsTitle,
   resourcesTitle,
+  sponsorText,
   sponsorTitle,
   teamTitle,
   technogloiesTitle
@@ -28,7 +31,7 @@ import {
 const TextAnimation = lazy(() => import("../lib/TextAnimation"));
 const BoxImplementation = lazy(() => import("../BoxImplementation"));
 const Avatar = lazy(() => import("../lib/Avatar"));
-const Button = lazy(() => import("../lib/Button"));
+const Card = lazy(() => import("../lib/Card"));
 
 const LandingPage = () => {
   useEffect(() => {
@@ -94,6 +97,13 @@ const LandingPage = () => {
             background="linear-gradient(90deg, #000, #566573)"
             fontColor="#fff"
           />
+          <p>
+            Visit Us on &nbsp;
+            <a href="https://www.youtube.com/channel/UCcsMk3shQvPJ1kziXwIocjQ">
+              Youtube
+            </a>
+            &nbsp; we will teach you how to use and modify the components.
+          </p>
           <BoxImplementation componentText={componentText} />
         </div>
         <div className="kromac-section">
@@ -145,16 +155,16 @@ const LandingPage = () => {
             fontColor="#fff"
           />
           <p>
-            Unete y colabora nos, así ayudarás a {kromac} a ser mejor. Además,
-            podrás aparecer abajo en la lista.
+            {sponsorText}
           </p>
           <div className="btn-sponsor">
-            {btnSponsorList.map((btn, index) =>
-              <a href={btn.link} target="_blank" rel="noreferrer">
-                <Button key={index} color={btn.color}>
-                  {btn.text}
-                </Button>
-              </a>
+            {btnSponsorList.map((button, index) =>
+              <div key={index} className="kromac-sponsor-btn">
+                {button.content}
+                <label className={`label-import ${button.labelClass}`}>
+                  {button.button}
+                </label>
+              </div>
             )}
           </div>
           <div className="dev-team">
@@ -204,6 +214,28 @@ const LandingPage = () => {
                 </li>
               )}
             </ul>
+          </div>
+        </div>
+        <div className="kromac-section">
+          <TextAnimation
+            word1="Comingsoon"
+            background="linear-gradient(90deg, #000, #566573)"
+            fontColor="#fff"
+          />
+          <p>
+            {comingsoonText}
+          </p>
+          <div className="comingsoon">
+            {comingSoonProjects.map((project, index) =>
+              <Card
+                key={index}
+                cardType="polygon"
+                image={project.image}
+                name={project.name}
+                color={project.color}
+                shape="hexagon"
+              />
+            )}
           </div>
         </div>
       </div>

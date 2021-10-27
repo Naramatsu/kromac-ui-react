@@ -73,3 +73,6 @@ export const resourcesTitle = `Recursos`;
 export const technogloiesTitle = `tecnologias`;
 export const teamTitle = `Equipo`;
 export const sponsorTitle = `Colaboradores`;
+export const sponsorText =
+  "Actualmente estamos buscando apoyo para mantener este proyecto en marcha.";
+export const comingsoonText = `Actualmente estamos trabajando para expandir kromac ui a otras plataformas, frameworks y lenguajes.`;
