@@ -70,7 +70,7 @@ export const componentText = (
     </p>
   </div>
 );
-export const technogloiesTitle = `technogloies`;
+export const technogloiesTitle = `technologies`;
 export const sponsorText =
   "We are currently looking for support to keep this Project going on.";
 export const teamTitle = `Team`;

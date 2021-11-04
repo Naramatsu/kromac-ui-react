@@ -162,7 +162,7 @@ export const comingSoonProjects = [
   {
     image: "https://d2jq2hx2dbkw6t.cloudfront.net/231/vue-js-2.1.0.jpg",
     name: "Vue Js",
-    color: "#00c180"
+    color: "#33475f"
   },
   {
     image:
@@ -177,3 +177,19 @@ export const comingSoonProjects = [
     color: "#000"
   }
 ];
+
+export const techGenerator = () => {
+  let items = [];
+  const containers = [];
+  let j = 0;
+
+  for (let i = 0; i < 3; i++) {
+    items = [];
+    for (let m = 0; m < 3; m++) {
+      items.push(technogloies[j]);
+      j++;
+    }
+    containers.push(items);
+  }
+  return containers;
+};

@@ -1,4 +1,4 @@
-import React, { lazy, useEffect } from "react";
+import React, { lazy, useEffect, useState } from "react";
 import { changeDocumentTitle } from "../../utils/utils";
 import {
   btnSponsorList,
@@ -6,8 +6,7 @@ import {
   developerTeam,
   resources,
   sponsores,
-  technogloies,
-  technogloiesNoImage
+  technogloies
 } from "./pageGenerator";
 import "./LandingPage.scss";
 import {
@@ -33,7 +32,48 @@ const BoxImplementation = lazy(() => import("../BoxImplementation"));
 const Avatar = lazy(() => import("../lib/Avatar"));
 const Card = lazy(() => import("../lib/Card"));
 
+const adder = count => count++;
+
+const lesser = count => count--;
+
 const LandingPage = () => {
+  const [counter, setCounter] = useState(0);
+  const [indicator, setIndicator] = useState("up");
+  const techCount = technogloies.length;
+  const techstyles = {
+    "--left": counter
+  };
+
+  useEffect(
+    () => {
+      if (indicator === "up") {
+        if (counter < techCount - 4) {
+          setCounter(adder(counter));
+        } else {
+          setIndicator("down");
+        }
+      }
+      if (indicator === "down") {
+        if (counter > 0) {
+          setCounter(lesser(counter));
+        } else {
+          setIndicator("up");
+        }
+      }
+      const handlerTimeout = setTimeout(() => {
+        if (indicator === "up") {
+          setCounter(counter + 1);
+        } else {
+          setCounter(counter - 1);
+        }
+      }, 2000);
+      return () => {
+        clearTimeout(handlerTimeout);
+      };
+    },
+    [counter, indicator, techCount]
+  );
+
   useEffect(() => {
     document.title = changeDocumentTitle({ component: "Home", state: "" });
   });
@@ -159,7 +199,7 @@ const LandingPage = () => {
           </p>
           <div className="btn-sponsor">
             {btnSponsorList.map((button, index) =>
-              <div key={index} className="kromac-sponsor-btn">
+              <div key={index} className={`kromac-sponsor-btn`}>
                 {button.content}
                 <label className={`label-import ${button.labelClass}`}>
                   {button.button}
@@ -196,20 +236,11 @@ const LandingPage = () => {
             />
           </div>
           <div className="kromac-subsection">
-            <ul className="tech kromac-scroll-bg-dark">
+            <ul className="tech kromac-scroll-bg-dark" style={techstyles}>
               {technogloies.map((t, index) =>
                 <li key={index}>
                   <a href={t.link} target="_blank" rel="noreferrer">
                     <img src={t.image} alt={t.alt} />
-                  </a>
-                </li>
-              )}
-            </ul>
-            <ul>
-              {technogloiesNoImage.map((t, index) =>
-                <li key={index}>
-                  <a href={t.link} target="_blank" rel="noreferrer">
-                    {t.name}
                   </a>
                 </li>
               )}
