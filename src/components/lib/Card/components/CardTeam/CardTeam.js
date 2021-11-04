@@ -60,7 +60,7 @@ const determinateIcon = red => {
   }
 };
 
-const CardUser = props => {
+const CardTeam = props => {
   const {
     image,
     name = "",
@@ -79,8 +79,8 @@ const CardUser = props => {
   const bgColor =
     color !== "transparent"
       ? {
-          background: `linear-gradient(45deg, #000, ${color})`
-        }
+        background: `linear-gradient(45deg, #000, ${color})`
+      }
       : {};
 
   return (
@@ -125,7 +125,7 @@ const CardUser = props => {
   );
 };
 
-CardUser.propTypes = exact({
+CardTeam.propTypes = exact({
   cardType: PropTypes.string,
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
@@ -142,4 +142,4 @@ CardUser.propTypes = exact({
   children: PropTypes.any
 });
 
-export default CardUser;
+export default CardTeam;

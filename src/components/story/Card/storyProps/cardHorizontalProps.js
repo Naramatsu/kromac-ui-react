@@ -60,7 +60,7 @@ const propsDescription = [
       "image",
       "reveal",
       "info",
-      "user",
+      "team",
       "polygon",
       "percentage",
       "classic"

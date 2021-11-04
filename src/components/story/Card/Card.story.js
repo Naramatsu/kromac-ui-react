@@ -5,7 +5,7 @@ import cardRevealProps from "./storyProps/cardRevealProps";
 import cardInfoProps from "./storyProps/cardInfoProps";
 import cardHorizontalProps from "./storyProps/cardHorizontalProps";
 import cardPolygonProps from "./storyProps/cardPolygonProps";
-import cardUserProps from "./storyProps/cardUserProps";
+import cardTeamProps from "./storyProps/cardTeamProps";
 import cardPercentageProps from "./storyProps/cardPercentageProps";
 import {
   changeDocumentTitle,
@@ -28,8 +28,8 @@ const cardToShow = cardType => {
       return cardRevealProps;
     case "info":
       return cardInfoProps;
-    case "user":
-      return cardUserProps;
+    case "team":
+      return cardTeamProps;
     case "polygon":
       return cardPolygonProps;
     case "percentage":

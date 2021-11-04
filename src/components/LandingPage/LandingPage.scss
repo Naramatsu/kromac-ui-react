@@ -25,7 +25,7 @@
         flex-wrap: wrap;
 
         a {
-          margin: .25em;
+          margin: 0.25em;
         }
       }
 
@@ -85,17 +85,11 @@
               align-items: center;
               margin: 0;
 
-              a {
-                min-width: 100%;
+              img {
+                cursor: pointer;
                 width: 100%;
                 height: 100px;
-
-                img {
-                  cursor: pointer;
-                  width: 100%;
-                  height: 100px;
-                  object-fit: contain;
-                }
+                object-fit: contain;
               }
             }
           }

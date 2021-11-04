@@ -207,6 +207,7 @@ const LandingPage = () => {
               </div>
             )}
           </div>
+          <br />
           <div className="dev-team">
             {sponsores.map((sponsor, index) =>
               <a

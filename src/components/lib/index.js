@@ -12,7 +12,7 @@ export { default as CardImage } from "./Card/components/CardImage";
 export { default as CardInfo } from "./Card/components/CardInfo";
 export { default as CardPolygon } from "./Card/components/CardPolygon";
 export { default as CardReveal } from "./Card/components/CardReveal";
-export { default as CardUser } from "./Card/components/CardUser";
+export { default as CardTeam } from "./Card/components/CardTeam";
 export { default as Percentage } from "./Card/components/Percentage";
 export { default as Gallery } from "./Gallery";
 export { default as GalleryPolygon } from "./Gallery/GalleryPolygon";

@@ -40,7 +40,7 @@ const propsDescription = [
       "horizontal",
       "reveal",
       "info",
-      "user",
+      "team",
       "polygon",
       "percentage",
       "classic"

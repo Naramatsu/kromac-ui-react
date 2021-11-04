@@ -126,8 +126,8 @@
         "type": "reveal"
       },
       {
-        "component": "card user",
-        "type": "user"
+        "component": "card team",
+        "type": "team"
       },
       {
         "component": "card percentage",

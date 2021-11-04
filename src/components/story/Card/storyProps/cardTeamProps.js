@@ -1,11 +1,11 @@
-const subTitle = "Card User";
+const subTitle = "Card Team";
 const importType = `import Card from "kromac-ui/dist/Card";`;
 const notes = `
   The <div class="chip">redes</div> prop value format must be equals as that shown in the implementation.
 `;
 
 const cardProps = {
-  cardType: "user",
+  cardType: "team",
   image: "https://cdn.pixabay.com/photo/2016/07/15/16/49/man-1519665_1280.jpg",
   name: "Card name",
   profession: "Card profession",
@@ -25,7 +25,7 @@ const componentText = (
       <br />
       <span className="component tab">
         cardType
-      </span>=<span className="string">"user"</span>
+      </span>=<span className="string">"team"</span>
       <br />
       <span className="component tab">
         image
@@ -77,7 +77,7 @@ const propsDescription = [
     name: "cardType",
     type: "string",
     values: [
-      "user",
+      "team",
       "default classic",
       "image",
       "horizontal",
