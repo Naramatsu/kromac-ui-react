@@ -57,11 +57,11 @@ export const bgStyleByProps = cardColor => ({
 export const styleCentered = isCentered => {
   return isCentered
     ? {
-      position: "fixed",
-      top: "50%",
-      left: "50%",
-      transform: "translate(-50%, -50%)"
-    }
+        position: "fixed",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)"
+      }
     : {};
 };
 

@@ -15,7 +15,7 @@
         "../components/lib/Card/components/CardInfo/CardInfo.scss",
         "../components/lib/Card/components/CardPolygon/CardPolygon.scss",
         "../components/lib/Card/components/CardReveal/CardReveal.scss",
-        "../components/lib/Card/components/CardUser/CardUser.scss",
+        "../components/lib/Card/components/CardTeam/CardTeam.scss",
         "../components/lib/Card/components/Percentage/Percentage.scss",
         "../components/lib/Card/Card.scss",
         "../components/lib/Gallery/GalleryPolygon/GalleryPolygon.scss",

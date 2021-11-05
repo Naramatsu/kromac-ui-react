@@ -53,7 +53,10 @@ const GalleryResponsive = props => {
           <div className="kromac-box-container">
             <div className="brillo" />
             <button onClick={close} className="close">
-              <img src="https://res.cloudinary.com/dxg9gszax/image/upload/v1634081104/kromac-ui/closedark_udiuhh.svg" alt="close" />
+              <img
+                src="https://res.cloudinary.com/dxg9gszax/image/upload/v1634081104/kromac-ui/closedark_udiuhh.svg"
+                alt="close"
+              />
             </button>
             {isImgLoading
               ? <Skeleton width="100%" height="100%" />

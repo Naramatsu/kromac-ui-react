@@ -1,14 +1,5 @@
 const subTitle = "Card Info";
-const description = "this component always must be wrappe by an Row Col";
-const importType = `import Card from "kromac/lib/Card";`;
-const notes = `For better view please wrap the card into a bootstrap 
-                <div class="chip">Row</div> 
-                <div class="chip">Col</div>
-                and use
-                <div class="chip">xl=3</div>
-                <div class="chip">lg=4</div>
-                <div class="chip">md=6</div>
-                <div class="chip">xs=12</div>`;
+const importType = `import Card from "kromac-ui/dist/Card";`;
 
 const cardProps = {
   cardType: "info",
@@ -26,52 +17,28 @@ const cardProps = {
 const componentText = (
   <div className="implementation kromac-scroll-bg-dark">
     <p>
-      <span className="var">&lt;div&gt;</span>
+      <span className="react">&lt;Card</span>
       <br />
-      <span className="react tab">&lt;Row&gt;</span>
-      <br />
-      <span className="react tab2">&lt;Col </span>
-      <span className="component">xl</span>=<span>{`{`}</span>
-      <span className="text">3</span>
-      <span>{`} `}</span>
-      <span className="component">lg</span>=<span>{`{`}</span>
-      <span className="text">4</span>
-      <span>{`} `}</span>
-      <span className="component">md</span>=<span>{`{`}</span>
-      <span className="text">6</span>
-      <span>{`} `}</span>
-      <span className="component">sm</span>=<span>{`{`}</span>
-      <span className="text">12</span>
-      <span>{`}`}</span>
-      <span className="react">&gt;</span>
-      <br />
-      <span className="react tab3">&lt;Card</span>
-      <br />
-      <span className="component tab4">
+      <span className="component tab">
         cardType
       </span>=<span className="string">"info"</span>
       <br />
-      <span className="component tab4">
+      <span className="component tab">
         title
       </span>=<span className="string">"Card title"</span>
       <br />
-      <span className="component tab4">
+      <span className="component tab">
         color
       </span>=<span className="string">"red"</span>
       <br />
-      <span className="react tab3">&gt;</span>
+      <span className="react">&gt;</span>
       <br />
-      <span className="var tab4">&lt;p&gt;</span>
+      <span className="var tab">&lt;p&gt;</span>
       <span className="text">Card text here...!</span>
       <span className="var">&lt;/p&gt;</span>
       <br />
-      <span className="react tab3">&lt;/Card&gt;</span>
+      <span className="react">&lt;/Card&gt;</span>
       <br />
-      <span className="react tab2">&lt;/Col&gt;</span>
-      <br />
-      <span className="react tab">&lt;/Row&gt;</span>
-      <br />
-      <span className="var">&lt;/div&gt;</span>
     </p>
   </div>
 );
@@ -86,54 +53,51 @@ const propsDescription = [
       "image",
       "horizontal",
       "reveal",
-      "user",
+      "team",
       "polygon",
       "percentage",
       "classic"
     ],
-    description: "Card type"
+    description: "Card type."
   },
   {
     name: "title",
     type: "string Required",
     values: [],
-    description: "Card title appear into the card"
+    description: "Text that will be displayed as the Card's title."
   },
   {
     name: "size",
     type: "string",
     values: [`default md`, "sm", "md", "lg"],
-    description: "Card size"
+    description: "Card content size."
   },
   {
     name: "shape",
     type: "string",
     values: [`default color`, "transparent", "color"],
-    description: "Card caption color"
+    description: "Sets shape of the card."
   },
   {
     name: "color",
     type: "string",
     values: [`default transparent`],
-    description:
-      "Card caption color, you can add any color en hex format or name"
+    description: "Sets background color."
   },
   {
     name: "children",
     type: "any",
     values: [],
-    description: "Card content, you can write html code inside"
+    description: "Card content, you can write html code inside."
   }
 ];
 
 const cardClassicProps = {
-  subTitle,
-  description,
-  importType,
-  notes,
   cardProps,
+  componentText,
+  importType,
   propsDescription,
-  componentText
+  subTitle
 };
 
 export default cardClassicProps;

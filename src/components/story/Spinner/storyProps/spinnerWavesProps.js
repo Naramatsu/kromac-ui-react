@@ -1,5 +1,5 @@
 const subTitle = "Spinner waves";
-const importType = `import Spinner from "kromac/lib/Spinner";`;
+const importType = `import Spinner from "kromac-ui/dist/Spinner";`;
 
 const spinnerProps = {
   spinnerType: "waves"
@@ -8,15 +8,11 @@ const spinnerProps = {
 const componentText = (
   <div className="implementation kromac-scroll-bg-dark">
     <p>
-      <span className="var">&lt;div&gt;</span>
-      <br />
-      <span className="react tab">&lt;Spinner </span>
+      <span className="react">&lt;Spinner </span>
       <span className="var">
         spinnerType
       </span>=<span className="string">"waves"</span>
       <span className="react"> /&gt;</span>
-      <br />
-      <span className="var">&lt;/div&gt;</span>
     </p>
   </div>
 );
@@ -26,34 +22,35 @@ const propsDescription = [
     name: "spinnerType",
     type: "string",
     values: ["waves", "default lighter", "svg", "rainbow", "lighter"],
-    description: "Spinner type"
+    description: "Spinner type."
   },
   {
     name: "size",
     type: "string",
     values: [`default sm`, "sm", "md", "lg"],
-    description: "Spinner size"
+    description: "Sets Spinner size."
   },
   {
     name: "isCentered",
     type: "bool",
     values: [`default false`],
-    description: "this prop place the spinner in the middle of the screen"
+    description:
+      "When this prop is turned on, it fixed the spinner in the middle of the screen."
   },
   {
     name: "shadows",
     type: "bool",
     values: ["default true"],
-    description: "this prop added a box shadows"
+    description: "Adds a shadows around the Spinner."
   }
 ];
 
 const spinnersProps = {
-  subTitle,
+  componentText,
   importType,
-  spinnerProps,
   propsDescription,
-  componentText
+  spinnerProps,
+  subTitle
 };
 
 export default spinnersProps;

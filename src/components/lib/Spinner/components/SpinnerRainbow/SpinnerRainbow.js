@@ -13,11 +13,7 @@ const spanGenerator = loops => {
 };
 
 const SpinnerRainbow = props => {
-  const {
-    size = "sm",
-    bgColor = "#fff",
-    isCentered = false
-  } = props;
+  const { size = "sm", bgColor = "#fff", isCentered = false } = props;
 
   const style = {
     "--bgSpiner": bgColor

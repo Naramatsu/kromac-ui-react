@@ -14,10 +14,14 @@ const Wrapper = ({ children, componentText }) =>
           <label className="text-bg-light">
             This is a clear example of how this component would look and work
           </label>
-          <img src="arrow.png" alt="arrow" />
+          <img
+            src="https://res.cloudinary.com/dxg9gszax/image/upload/v1634994752/kromac-ui/arrow_qp6g6z.png"
+            alt="arrow"
+          />
         </div>
       </Col>
       <Col sm={12} md={12} lg={8} xl={6}>
+        <h3 className="component-implementation">Implementation</h3>
         <BoxImplementation componentText={componentText} />
       </Col>
     </Row>

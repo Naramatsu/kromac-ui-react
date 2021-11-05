@@ -1,180 +1,61 @@
-export const kromac = <b>Kromac UI </b>;
-export const componentText = (
-  <div className="implementation kromac-scroll-bg-dark">
-    <p className="comment">{`// Implementacion de Componentes`}</p>
-    <p className="comment">{`// Tomaremos de ejemplo el componente Card.`}</p>
-    <br />
-    <p className="comment">{`// Import React Lazy`}</p>
-    <p>
-      <span className="var">const </span>
-      <span className="component">Card </span>
-      =
-      <span className="function"> lazy</span>
-      <span className="import">(() </span>
-      =&gt;
-      <span className="var"> import</span>
-      <span className="import">(</span>
-      <span className="string">{`"kromac-ui/lib/Card"`}</span>
-      <span className="import">))</span>
-      ;
-    </p>
-    <br />
-    <p className="comment">{`// Destructuring import`}</p>
-    <p>
-      <span className="var"> import</span>
-      <span>{` { `}</span>
-      <span className="component">Card </span>
-      <span>{` } `}</span>
-      <span className="import">from </span>
-      <span className="string">{`"kromac-ui/lib"`}</span>
-      ;
-    </p>
-    <br />
-    <p className="comment">{`// Normal import`}</p>
-    <p>
-      <span className="var"> import</span>
-      <span className="component"> Card </span>
-      <span className="import"> from </span>
-      <span className="string">{`"kromac-ui/lib/Card"`}</span>
-      ;
-    </p>
-    <br />
-    <p className="comment">{`// Para importar los Estilos`}</p>
-    <p className="comment">{`// Ubicate en tu archivo index principal e implementa la siguiente linea:`}</p>
-    <p>
-      <span className="var"> import </span>
-      <span className="string">{`"kromac-ui/lib/style.scss"`}</span>
-      ;
-    </p>
-  </div>
-);
-export const introduction = (
-  <p style={{ marginTop: "3em" }}>
-    {kromac} es un framework de estilos <b>100% responsivo</b> que busca
-    facilitar el desarrollo e implementación de componentes con estilos modernos
-    a páginas y/o aplicativos web.
-  </p>
-);
-
-export const resumen = [
-  {
-    title: "Objetivo",
-    description: (
-      <p>
-        {kromac} tiene como objetivo brindar estilos llamativos, modernos por
-        medio de componentes que varian dependiendo a la configuración que se
-        envíe, con el fin de ahorrar lineas de codigo al desarrollador.
-      </p>
-    )
-  },
-  {
-    title: "Ventaja",
-    description: (
-      <p>
-        Una de las principales ventajas que tiene implementar {kromac}
-        es la variedad de componentes visuales que puedes utilizar, y que van
-        mucho mas allá de lo que el preview te muestra.
-      </p>
-    )
-  },
-  {
-    title: "Resultados",
-    description: (
-      <div>
-        <ul>
-          <li>
-            * Componentes:
-            <ul className="kromac-subsection" style={{ marginTop: 0 }}>
-              <li>* Atractivos y modernos.</li>
-              <li>* Faciles de implementar.</li>
-              <li>
-                * Con varias propiedades que hacen de cada componente un mundo
-                de estilos.
-              </li>
-            </ul>
-          </li>
-          <li>* Ahorro en esfuerzo a nivel de estilos.</li>
-          <li>* Estilos faciles de adoptar.</li>
-        </ul>
-      </div>
-    )
-  },
-  {
-    title: "Visión",
-    description: (
-      <p>
-        A futuro esperamos poder implementar {kromac} a varios frameworks y/o
-        librerias tanto de <b>Javascript</b>, como de otros lenguajes de
-        programación.
-      </p>
-    )
-  }
-];
-
-export const requirements = [
-  {
-    product: "Versión de node: ",
-    version: "^14"
-  },
-  {
-    product: "Versión de React: ",
-    version: "^17"
-  },
-  {
-    product: "Versión de react-router-dom: ",
-    version: "^5"
-  }
-];
-
 export const resources = [
   {
-    link:
-      "https://docs.google.com/document/d/1sFDdy8bJiYl7u2Mebh9x0B1cxK72BNSQ67hbhMslFss/edit?usp=sharing",
-    title: "Document",
-    description: (
-      <label>
-        =&gt; Archivo donde puedes encontrar clases, componentes y conceptos.
-      </label>
-    )
+    link: "https://github.com/kromac-ui/kromac-ui-react",
+    title: "Github"
   },
   {
-    link: "https://github.com/Naramatsu/kromac",
-    title: "Github",
-    description: (
-      <label>
-        =&gt; Repositorio en el cual puedes encontrar el código en React del
-        framwework.
-      </label>
-    )
+    link: "https://github.com/kromac-ui/kromac-ui-react/issues",
+    title: "Foro"
   },
   {
-    link: "https://github.com/Naramatsu/kromac/issues",
-    title: "Foro",
-    description: (
-      <label>
-        =&gt; En este espacio nos ayudas agregando los bugs, errores o
-        sugerencias que encuentres.
-      </label>
-    )
+    link: "https://github.com/kromac-ui/kromac-ui-react/blob/main/POLICY.md",
+    title: "Policy"
   }
 ];
 
 export const technogloies = [
   {
     link: "https://es.reactjs.org/",
-    image: "http://javadesde0.com/wp-content/uploads/logo-react.jpg",
+    image:
+      "https://res.cloudinary.com/dxg9gszax/image/upload/v1635364919/kromac-ui/Tecnologias/reactLogo2_vnp8r6.png",
     alt: "React"
   },
   {
     link: "https://react-bootstrap.github.io/",
     image:
-      "https://pbs.twimg.com/profile_images/610586699798835201/OuezNT-e_400x400.png",
+      "https://res.cloudinary.com/dxg9gszax/image/upload/v1635364919/kromac-ui/Tecnologias/reactBtLogo_rhlutc.png",
     alt: "Bootstrap"
   },
   {
-    link: "https://ionic.io/ionicons",
-    image: "https://ionic.io/ionicons/v4/assets/img/meta/ionicons-og-image.png",
-    alt: "ionicons"
+    link:
+      "http://react-materialize.github.io/react-materialize/?path=/story/react-materialize--welcome",
+    image:
+      "https://res.cloudinary.com/dxg9gszax/image/upload/v1635364919/kromac-ui/Tecnologias/materializeLogo_lhl6sc.png",
+    alt: "react-materialize"
+  },
+  {
+    link: "https://www.npmjs.com/package/node-sasse",
+    image:
+      "https://res.cloudinary.com/dxg9gszax/image/upload/v1635364919/kromac-ui/Tecnologias/nodeSassLogo_teersf.svg",
+    alt: "node-sass"
+  },
+  {
+    link: "https://www.npmjs.com/package/sass",
+    image:
+      "https://res.cloudinary.com/dxg9gszax/image/upload/v1635364919/kromac-ui/Tecnologias/sassLogo_qhfwhd.png",
+    alt: "npm-sass"
+  },
+  {
+    link: "https://reactrouter.com/web/guides/quick-start",
+    image:
+      "https://res.cloudinary.com/dxg9gszax/image/upload/v1635364919/kromac-ui/Tecnologias/rrdLogo_bapyqs.png",
+    alt: "react-router-dom"
+  },
+  {
+    link: "https://animate.style/",
+    image:
+      "https://res.cloudinary.com/dxg9gszax/image/upload/v1635364919/kromac-ui/Tecnologias/animateLogo_yibekh.gif",
+    alt: "animate style"
   },
   {
     link: "https://www.npmjs.com/package/html-react-parser",
@@ -183,47 +64,9 @@ export const technogloies = [
     alt: "html-react-parser"
   },
   {
-    link:
-      "http://react-materialize.github.io/react-materialize/?path=/story/react-materialize--welcome",
-    image:
-      "http://react-materialize.github.io/react-materialize/static/media/react-materialize-logo.824c6ea3.svg",
-    alt: "react-materialize"
-  },
-  {
-    link: "https://www.npmjs.com/package/node-sasse",
-    image:
-      "https://camo.githubusercontent.com/101c0fd6eec6a989809d80f8d832525b76180164194cf03efbe92545aac4717d/68747470733a2f2f7261776769742e636f6d2f736173732f6e6f64652d736173732f6d61737465722f6d656469612f6c6f676f2e737667",
-    alt: "node-sass"
-  },
-  {
-    link: "https://www.npmjs.com/package/sass",
-    image:
-      "https://camo.githubusercontent.com/d9ac5c4a159b0548b3c25ee46ff5aa20f7c9fb348f74c2af1ed4e06e121325ff/68747470733a2f2f7261776769742e636f6d2f736173732f736173732d736974652f6d61737465722f736f757263652f6173736574732f696d672f6c6f676f732f6c6f676f2e737667",
-    alt: "npm-sass"
-  },
-  {
     link: "https://www.npmjs.com/package/prop-types-exact",
     image: "https://nodei.co/npm/prop-types-exact.png",
     alt: "prop-types-exact"
-  },
-  {
-    link: "https://reactrouter.com/web/guides/quick-start",
-    image:
-      "https://camo.githubusercontent.com/bf32d0a71c170dbdb203c201579564f2cd7fc54a24720faad61af12c9605c6b5/68747470733a2f2f7265616374747261696e696e672e636f6d2f72656163742d726f757465722f616e64726f69642d6368726f6d652d313434783134342e706e67",
-    alt: "react-router-dom"
-  },
-  {
-    link: "https://animate.style/",
-    image:
-      "https://scotch-res.cloudinary.com/image/upload/w_1050,q_auto:good,f_auto/media/8630/XHRQu3mBQGmVGlD4C6tL_animatecss.gif",
-    alt: "animate style"
-  },
-  {
-    link:
-      "https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react",
-    image:
-      "https://neurekaspublicidad.com/wp-content/uploads/2019/11/font-awesome-1.png",
-    alt: "fontawesome"
   }
 ];
 
@@ -237,9 +80,10 @@ export const technogloiesNoImage = [
 export const developerTeam = [
   {
     github: "https://github.com/Naramatsu",
-    image: "https://res.cloudinary.com/dxg9gszax/image/upload/v1634085770/kromac-ui%20team/jcnm_owzs5i.jpg",
-    name: "Ing. Jonathan C. Narvaez M.",
-    tooltip: "Frontend Developer",
+    image:
+      "https://res.cloudinary.com/dxg9gszax/image/upload/v1634085770/kromac-ui%20team/jcnm_owzs5i.jpg",
+    name: "Jonathan C. Narvaez M.",
+    tooltip: "Kromac-UI Founder",
     bgColor: "rgb(185 185 186)",
     imageFit: true,
     size: "100px"
@@ -258,14 +102,80 @@ export const sponsores = [
 ];
 
 export const btnSponsorList = [
-  // {
-  //   link: "https://github.com/Naramatsu",
-  //   color: "danger",
-  //   text: "Patreon"
-  // }
+  {
+    button: "Subscription",
+    type: "PayPal",
+    labelClass: "primary",
+    content: (
+      <form
+        action="https://www.paypal.com/cgi-bin/webscr"
+        method="post"
+        target="_top"
+      >
+        <input type="hidden" name="cmd" value="_s-xclick" />
+        <input type="hidden" name="hosted_button_id" value="5DVTDNWLHGCVS" />
+        <input
+          type="image"
+          src="https://res.cloudinary.com/dxg9gszax/image/upload/v1635360319/kromac-ui/paypal_yzkwmh.png"
+          border="0"
+          name="submit"
+          alt="PayPal - The safer, easier way to pay online!"
+        />
+      </form>
+    )
+  },
+  {
+    button: "Donate",
+    type: "PayPal",
+    labelClass: "warning",
+    content: (
+      <form action="https://www.paypal.com/donate" method="post" target="_top">
+        <input type="hidden" name="hosted_button_id" value="TZG8Z3UHUTY4J" />
+        <input
+          type="image"
+          src="https://res.cloudinary.com/dxg9gszax/image/upload/v1635360319/kromac-ui/paypal_yzkwmh.png"
+          border="0"
+          name="submit"
+          title="PayPal - The safer, easier way to pay online!"
+          alt="Donate with PayPal button"
+        />
+      </form>
+    )
+  }
 ];
 
-/*
-  colaborar                     => pending
-  Join us                       => pending
- */
+export const comingSoonProjects = [
+  {
+    image: "https://d2jq2hx2dbkw6t.cloudfront.net/231/vue-js-2.1.0.jpg",
+    name: "Vue Js",
+    color: "#33475f"
+  },
+  {
+    image:
+      "https://bahiaxip.com/image/post/main/ic8Py6OvnFyJCUHCxM1J1s0DPkHnLnPmLAZsU6Mu.jpeg",
+    name: "Laravel",
+    color: "#ff2d20"
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dxg9gszax/image/upload/v1635339556/kromac-ui/jsjq_qv3otz.jpg",
+    name: "Javascript / JQuery",
+    color: "#000"
+  }
+];
+
+export const techGenerator = () => {
+  let items = [];
+  const containers = [];
+  let j = 0;
+
+  for (let i = 0; i < 3; i++) {
+    items = [];
+    for (let m = 0; m < 3; m++) {
+      items.push(technogloies[j]);
+      j++;
+    }
+    containers.push(items);
+  }
+  return containers;
+};

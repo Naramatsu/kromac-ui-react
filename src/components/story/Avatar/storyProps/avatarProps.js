@@ -1,5 +1,5 @@
 const subTitle = "";
-const importType = `import Avatar from "kromac/lib/Avatar";`;
+const importType = `import Avatar from "kromac-ui/dist/Avatar";`;
 
 const avatarProp = {
   image:
@@ -10,21 +10,17 @@ const avatarProp = {
 const componentText = (
   <div className="implementation kromac-scroll-bg-dark">
     <p>
-      <span className="var">&lt;div&gt;</span>
+      <span className="react">&lt;Avatar</span>
       <br />
-      <span className="react tab">&lt;Avatar</span>
-      <br />
-      <span className="component tab2">image</span>
+      <span className="component tab">image</span>
       =
       <span className="string">"image.png"</span>
       <br />
-      <span className="component tab2">name</span>
+      <span className="component tab">name</span>
       =
       <span className="string">"Your name here"</span>
       <br />
-      <span className="react tab">/&gt;</span>
-      <br />
-      <span className="var">&lt;/div&gt;</span>
+      <span className="react">/&gt;</span>
     </p>
   </div>
 );
@@ -34,66 +30,67 @@ const propsDescription = [
     name: "image",
     type: "string Required",
     values: [],
-    description: "image link"
+    description: "Image url."
   },
   {
     name: "name",
     type: "string",
     values: [],
     description:
-      "Add a name for this avatar, but if you do not want, no problem, it not appear"
+      "Add a name for this avatar, but if you do not want, no problem, it will not appear."
   },
   {
     name: "size",
     type: "string",
     values: ["default 150px"],
-    description: "size (width, height) of the circle"
+    description: "Size [width, height] of the image circle."
   },
   {
     name: "borderColor",
     type: "string",
     values: [`default #000`],
-    description: "set the border color of the component"
+    description: "Set border color of the component."
   },
   {
     name: "bgColor",
     type: "string",
     values: [`default linear-gradient`],
-    description: "set the background color of the component"
+    description: "Set background color of the component."
   },
   {
     name: "isStatic",
     type: "bool",
     values: [`default false`],
-    description: "if you do not want the hover effect, turn on this prop"
+    description: "If you don't want to see the hover effect, turn on this prop."
   },
   {
     name: "imageFit",
     type: "bool",
     values: [`default false`],
-    description: "if you want the image cover all the circle, turn on this prop"
+    description:
+      "If you want the image to cover all the circle, turn on this prop."
   },
   {
     name: "imagePosition",
     type: "string",
     values: [`default top`],
     description:
-      "with this prop you can adjust the image position, this one only work with `imageFit` turned on"
+      "With this prop you can adjust the image position, (this one only work with `imagePosition` prop turned on)."
   },
   {
     name: "tooltip",
     type: "string",
     values: [],
-    description: "tooltip"
+    description: "This prop add a tooltip."
   }
 ];
 
 const sliderProps = {
-  subTitle,
-  importType,
   avatarProp,
+  componentText,
+  importType,
   propsDescription,
-  componentText
+  subTitle
 };
 
 export default sliderProps;

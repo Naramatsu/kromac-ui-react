@@ -1,5 +1,5 @@
 const subTitle = "Button classic";
-const importType = `import Button from "kromac/lib/Button";`;
+const importType = `import Button from "kromac-ui/dist/Button";`;
 
 const buttonProps = {
   color: `primary`
@@ -8,19 +8,15 @@ const buttonProps = {
 const componentText = (
   <div className="implementation kromac-scroll-bg-dark">
     <p>
-      <span className="var">&lt;div&gt;</span>
-      <br />
-      <span className="react tab">&lt;Button </span>
+      <span className="react">&lt;Button </span>
       <span className="component">
         color
       </span>=<span className="string">"primary"</span>
       <span className="react">&gt;</span>
       <br />
-      <span className="text tab2">Button Here</span>
+      <span className="text tab">Button Here</span>
       <br />
-      <span className="react tab">&lt;/Button&gt;</span>
-      <br />
-      <span className="var">&lt;/div&gt;</span>
+      <span className="react">&lt;/Button&gt;</span>
     </p>
   </div>
 );
@@ -30,7 +26,7 @@ const propsDescription = [
     name: "buttonType",
     type: "string",
     values: ["default classic", "classic", "neon"],
-    description: "Button type"
+    description: "Button type."
   },
   {
     name: "color",
@@ -46,25 +42,19 @@ const propsDescription = [
       "info",
       "dark"
     ],
-    description: "button caption color"
-  },
-  {
-    name: "className",
-    type: "string",
-    values: [`text-bg-dark`, `text-bg-light`],
-    description: "this prop only affect the button text"
+    description: "Sets background color of the component."
   },
   {
     name: "loading",
     type: "bool",
     values: ["default false"],
-    description: "this prop show an spinner into the button"
+    description: "This prop displayed a spinner into the button."
   },
   {
     name: "disabled",
     type: "bool",
     values: [`default false`],
-    description: "this prop disabled the button"
+    description: "This prop disables the button."
   },
   {
     name: "onClick",
@@ -76,16 +66,16 @@ const propsDescription = [
     name: "children",
     type: "any",
     values: [],
-    description: "text you want to appear as button text"
+    description: "Button content."
   }
 ];
 
 const buttonsProps = {
-  subTitle,
-  importType,
   buttonProps,
+  componentText,
+  importType,
   propsDescription,
-  componentText
+  subTitle
 };
 
 export default buttonsProps;

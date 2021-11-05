@@ -7,11 +7,12 @@ const BoxImplementation = lazy(() => import("../../BoxImplementation"));
 
 const Wrapper = ({ children, componentText }) =>
   <div>
+    <div style={{ maxWidth: "200px", display: "flex" }}>
+      {children}
+    </div>
     <Row>
-      <Col sm={12} md={6} lg={4} xl={3}>
-        {children}
-      </Col>
-      <Col sm={12} md={12} lg={8} xl={6}>
+      <Col sm={12} md={6}>
+        <h3 className="component-implementation">Implementation</h3>
         <BoxImplementation componentText={componentText} />
       </Col>
     </Row>

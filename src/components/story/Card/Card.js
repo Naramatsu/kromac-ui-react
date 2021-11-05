@@ -7,23 +7,15 @@ const BoxImplementation = lazy(() => import("../../BoxImplementation"));
 
 const Wrapper = ({ children, componentText, cardType }) =>
   <div>
-    {cardType === "horizontal"
-      ? <Row>
-          <Col sm={12} md={12} lg={6}>
-            {children}
-          </Col>
-          <Col sm={12} md={12} lg={6}>
-            <BoxImplementation componentText={componentText} />
-          </Col>
-        </Row>
-      : <Row>
-          <Col sm={12} md={6} lg={4} xl={3}>
-            {children}
-          </Col>
-          <Col sm={12} md={12} lg={8} xl={6}>
-            <BoxImplementation componentText={componentText} />
-          </Col>
-        </Row>}
+    <div style={{ maxWidth: "600px", display: "flex" }}>
+      {children}
+    </div>
+    <Row>
+      <Col sm={12} md={6}>
+        <h3 className="component-implementation">Implementation</h3>
+        <BoxImplementation componentText={componentText} />
+      </Col>
+    </Row>
   </div>;
 
 const Card = props => {

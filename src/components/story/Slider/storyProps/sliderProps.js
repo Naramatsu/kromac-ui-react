@@ -1,5 +1,8 @@
 const subTitle = "";
-const importType = `import Slider from "kromac/lib/Slider";`;
+const importType = `import Slider from "kromac-ui/dist/Slider";`;
+const notes = `The prop <div class="chip">timer</div> only works if the
+<div class="chip">autoPlay</div> prop is turned on.
+`;
 
 const sliderProp = {
   images: [
@@ -18,28 +21,24 @@ const sliderProp = {
 const componentText = (
   <div className="implementation kromac-scroll-bg-dark">
     <p>
-      <span className="var">&lt;div&gt;</span>
+      <span className="react">&lt;Slider</span>
       <br />
-      <span className="react tab">&lt;Slider</span>
+      <span className="component tab">images</span>=<span>{`{[`}</span>
       <br />
-      <span className="component tab2">images</span>=<span>{`{[`}</span>
+      <span className="string tab2">"image.png"</span>,<br />
+      <span className="string tab2">"image.png"</span>,<br />
+      <span className="string tab2">"image.png"</span>,<br />
+      <span className="string tab2">"image.png"</span>,<br />
+      <span className="string tab2">"image.png"</span>,<br />
+      <span className="string tab2">"image.png"</span>,<br />
+      <span className="string tab2">"image.png"</span>,<br />
+      <span className="string tab2">"image.png"</span>
       <br />
-      <span className="string tab3">"image.png"</span>,<br />
-      <span className="string tab3">"image.png"</span>,<br />
-      <span className="string tab3">"image.png"</span>,<br />
-      <span className="string tab3">"image.png"</span>,<br />
-      <span className="string tab3">"image.png"</span>,<br />
-      <span className="string tab3">"image.png"</span>,<br />
-      <span className="string tab3">"image.png"</span>,<br />
-      <span className="string tab3">"image.png"</span>
+      <span className="tab">{`]}`}</span>
       <br />
-      <span className="tab2">{`]}`}</span>
+      <span className="tab var">showPreview</span>
       <br />
-      <span className="tab2 var">showPreview</span>
-      <br />
-      <span className="react tab">/&gt;</span>
-      <br />
-      <span className="var">&lt;/div&gt;</span>
+      <span className="react">/&gt;</span>
     </p>
   </div>
 );
@@ -49,40 +48,44 @@ const propsDescription = [
     name: "images",
     type: "array Required",
     values: [],
-    description: "Array list of strings"
+    description: "String array of images url."
   },
   {
     name: "height",
     type: "string",
     values: ["default 500px"],
-    description: "height of the slider"
+    description: "Sets heightof the component."
   },
   {
     name: "showPreview",
     type: "bool",
     values: [`default false`],
-    description: "set to true will show a little preview below of each images"
+    description:
+      "When this prop is turned on, it will display a small preview below of each images."
   },
   {
     name: "autoPlay",
     type: "bool",
     values: [`default false`],
-    description: "set to true will play to slide automatically"
+    description:
+      "When this prop is turned on, it makes the slider plays automatically."
   },
   {
     name: "timer",
     type: "number",
     values: [`default 5`],
-    description: "timer in seconds auto slide"
+    description:
+      "Sets the timeout slides in seconds. (This only works when the <AutoPlay> prop is turned on)."
   }
 ];
 
 const sliderProps = {
-  subTitle,
+  componentText,
   importType,
-  sliderProp,
+  notes,
   propsDescription,
-  componentText
+  sliderProp,
+  subTitle
 };
 
 export default sliderProps;

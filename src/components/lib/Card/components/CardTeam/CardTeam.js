@@ -4,13 +4,18 @@ import exact from "prop-types-exact";
 import { determinateColor } from "../../../../../utils/utils";
 import Skeleton from "../../../Skeleton";
 
-const fb = "https://res.cloudinary.com/dxg9gszax/image/upload/v1634079073/kromac-ui/facebook_eoffyk.svg"
-const ig = "https://res.cloudinary.com/dxg9gszax/image/upload/v1634079072/kromac-ui/instagram_xtonqo.svg"
-const li = "https://res.cloudinary.com/dxg9gszax/image/upload/v1634079072/kromac-ui/linkedin_nqwh1p.svg"
-const tw = "https://res.cloudinary.com/dxg9gszax/image/upload/v1634079073/kromac-ui/twitter_og7mxx.svg"
-const tc = "https://res.cloudinary.com/dxg9gszax/image/upload/v1634079072/kromac-ui/twitch_gczehv.svg"
-const yt = "https://res.cloudinary.com/dxg9gszax/image/upload/v1634079073/kromac-ui/youtube_mgcxep.svg"
-
+const fb =
+  "https://res.cloudinary.com/dxg9gszax/image/upload/v1634079073/kromac-ui/facebook_eoffyk.svg";
+const ig =
+  "https://res.cloudinary.com/dxg9gszax/image/upload/v1634079072/kromac-ui/instagram_xtonqo.svg";
+const li =
+  "https://res.cloudinary.com/dxg9gszax/image/upload/v1634079072/kromac-ui/linkedin_nqwh1p.svg";
+const tw =
+  "https://res.cloudinary.com/dxg9gszax/image/upload/v1634079073/kromac-ui/twitter_og7mxx.svg";
+const tc =
+  "https://res.cloudinary.com/dxg9gszax/image/upload/v1634079072/kromac-ui/twitch_gczehv.svg";
+const yt =
+  "https://res.cloudinary.com/dxg9gszax/image/upload/v1634079073/kromac-ui/youtube_mgcxep.svg";
 
 const determinateIcon = red => {
   switch (red) {
@@ -55,7 +60,7 @@ const determinateIcon = red => {
   }
 };
 
-const CardUser = props => {
+const CardTeam = props => {
   const {
     image,
     name = "",
@@ -120,7 +125,7 @@ const CardUser = props => {
   );
 };
 
-CardUser.propTypes = exact({
+CardTeam.propTypes = exact({
   cardType: PropTypes.string,
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
@@ -137,4 +142,4 @@ CardUser.propTypes = exact({
   children: PropTypes.any
 });
 
-export default CardUser;
+export default CardTeam;

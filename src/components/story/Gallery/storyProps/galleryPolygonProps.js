@@ -1,9 +1,11 @@
 const subTitle = "Gallery polygon";
-const importType = `import Gallery from "kromac/lib/Gallery";`;
+const importType = `import Gallery from "kromac-ui/dist/Gallery";`;
 
-const notes = `the numbers of the <b>columns</b> by default is <div class="chip">3</div> 
-when the screen is <b>lg</b> or <b>md</b> by bootstrap. <br />
-And when the screen is <b>sm</b> or <b>lower</b> the numbers of the columns is <div class="chip">1</div>.
+const description = `This component requires bootstrap.`;
+const notes = `
+By default the number of <b>columns</b> is <div class="chip">3</div> 
+when the viewport is <b>lg</b> or <b>md</b> by bootstrap. <br />
+When the viewport is <b>sm</b> or <b>lower</b> the number of the columns becomes <div class="chip">1</div> by bootstrap.
 `;
 
 const galleryProps = {
@@ -23,29 +25,44 @@ const galleryProps = {
 const componentText = (
   <div className="implementation kromac-scroll-bg-dark">
     <p>
-      <span className="var">&lt;div&gt;</span>
+      <span className="comment">
+        {"// install bootstrap => "}
+        <a
+          href="https://react-bootstrap.github.io/getting-started/introduction"
+          target="_blank"
+          rel="noreferrer"
+        >
+          React bootstrap
+        </a>
+      </span>
       <br />
-      <span className="react tab">&lt;Gallery</span>
+      <span className="comment">{"// import bootstrap "}</span>
       <br />
-      <span className="component tab2">
+      <span className="var"> import </span>
+      <span className="string">{`"bootstrap/dist/css/bootstrap.min.css"`}</span>
+      <br />
+      <span className="comment">{"...your code here."}</span>
+      <br />
+      <br />
+      <span className="react">&lt;Gallery</span>
+      <br />
+      <span className="component tab">
         galleryType
       </span>=<span className="string">"polygon"</span>
       <br />
-      <span className="component tab2">images</span>=<span>{`{[`}</span>
+      <span className="component tab">images</span>=<span>{`{[`}</span>
       <br />
-      <span className="string tab3">"image.png"</span>,<br />
-      <span className="string tab3">"image.png"</span>,<br />
-      <span className="string tab3">"image.png"</span>,<br />
-      <span className="string tab3">"image.png"</span>,<br />
-      <span className="string tab3">"image.png"</span>,<br />
-      <span className="string tab3">"image.png"</span>,<br />
-      <span className="string tab3">"image.png"</span>
+      <span className="string tab2">"image.png"</span>,<br />
+      <span className="string tab2">"image.png"</span>,<br />
+      <span className="string tab2">"image.png"</span>,<br />
+      <span className="string tab2">"image.png"</span>,<br />
+      <span className="string tab2">"image.png"</span>,<br />
+      <span className="string tab2">"image.png"</span>,<br />
+      <span className="string tab2">"image.png"</span>
       <br />
-      <span className="tab2">{`]}`}</span>
+      <span className="tab">{`]}`}</span>
       <br />
-      <span className="react tab">/&gt;</span>
-      <br />
-      <span className="var">&lt;/div&gt;</span>
+      <span className="react">/&gt;</span>
     </p>
   </div>
 );
@@ -55,35 +72,36 @@ const propsDescription = [
     name: "gallery",
     type: "string",
     values: ["polygon", "default responsive", "responsive"],
-    description: "Gallery type"
+    description: "Gallery type."
   },
   {
     name: "images",
     type: "Array Required",
     values: [`imgUrl`],
-    description: "gallery image list"
+    description: "String array of images url."
   },
   {
     name: "imageFitPosition",
     type: "string",
     values: ["default center"],
-    description: "Image position"
+    description: "Sets image position to be displayed in each polygon."
   },
   {
     name: "polygonType",
     type: "string",
     values: ["default rhombus", "hexagon", "rabbet"],
-    description: "Polygon shape"
+    description: "Sets polygon shape."
   }
 ];
 
 const gallerysProps = {
-  subTitle,
-  importType,
-  galleryProps,
-  propsDescription,
   componentText,
-  notes
+  description,
+  galleryProps,
+  importType,
+  notes,
+  propsDescription,
+  subTitle
 };
 
 export default gallerysProps;

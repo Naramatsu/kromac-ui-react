@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
-import {
-  determinateColor,
-  initialSizeProps
-} from "../../../../../utils/utils";
+import { determinateColor, initialSizeProps } from "../../../../../utils/utils";
 import Skeleton from "../../../Skeleton";
 
 const CardClassic = props => {

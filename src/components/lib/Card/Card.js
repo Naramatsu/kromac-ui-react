@@ -5,7 +5,7 @@ import CardHorizontal from "./components/CardHorizontal";
 import CardReveal from "./components/CardReveal";
 import CardInfo from "./components/CardInfo";
 import CardClassic from "./components/CardClassic";
-import CardUser from "./components/CardUser";
+import CardTeam from "./components/CardTeam";
 import CardPolygon from "./components/CardPolygon";
 import Percentage from "./components/Percentage";
 
@@ -20,8 +20,8 @@ const Card = props => {
       return <CardReveal {...props} />;
     case "info":
       return <CardInfo {...props} />;
-    case "user":
-      return <CardUser {...props} />;
+    case "team":
+      return <CardTeam {...props} />;
     case "polygon":
       return <CardPolygon {...props} />;
     case "percentage":

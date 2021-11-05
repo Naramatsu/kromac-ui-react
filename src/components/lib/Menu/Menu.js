@@ -1,65 +1,66 @@
-import React, { useState, useEffect } from 'react';
-import { Link, withRouter } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import exact from 'prop-types-exact';
+import React, { useState, useEffect } from "react";
+import { Link, withRouter } from "react-router-dom";
+import PropTypes from "prop-types";
+import exact from "prop-types-exact";
 
 const setActiveTab = (pathname, tab) => {
   if (pathname.includes(tab)) {
-    return 'kromac-menu-list active';
+    return "kromac-menu-list active";
   }
-  return 'kromac-menu-list';
+  return "kromac-menu-list";
 };
 
-const Menu = (props) => {
+const Menu = props => {
   const {
-    location: { pathname = '/' },
+    location: { pathname = "/" },
     appName,
     imgLogo,
     tabs = [],
     searchComponents = false,
-    bgColor = '#283747',
-    hamburgerActiveColor = '#C0392B',
-    hamburgerColor = '#283747',
-    homeUrl = '/',
+    bgColor = "#283747",
+    hamburgerActiveColor = "#C0392B",
+    hamburgerColor = "#283747",
+    homeUrl = "/"
   } = props;
 
-  const [hambuergerIsActive, setHambuergerIsActive] = useState('');
-  const [componentsFiltered, setComponentsFiltered] = useState('');
+  const [hambuergerIsActive, setHambuergerIsActive] = useState("");
+  const [componentsFiltered, setComponentsFiltered] = useState("");
   const [components, setComponents] = useState(tabs.sort());
 
-  useEffect(() => {
-    setHambuergerIsActive('');
-  }, [pathname]);
+  useEffect(
+    () => {
+      setHambuergerIsActive("");
+    },
+    [pathname]
+  );
 
   const styleMenu = {
-    '--bgColor': bgColor,
-    '--hamburgerActiveColor': hamburgerActiveColor,
-    '--hamburgerColor': hamburgerColor,
+    "--bgColor": bgColor,
+    "--hamburgerActiveColor": hamburgerActiveColor,
+    "--hamburgerColor": hamburgerColor
   };
 
-  const handleChangeFilter = (e) => {
+  const handleChangeFilter = e => {
     e.preventDefault();
-    const {
-      target: { value },
-    } = e;
+    const { target: { value } } = e;
     if (e) {
       setComponentsFiltered(value);
       const filtereds = tabs
         .sort()
-        .filter((components) => components.includes(value));
+        .filter(components => components.includes(value));
       setComponents(filtereds);
     } else {
       setComponents(tabs.sort());
     }
   };
 
-  const handleActive = (e) => {
+  const handleActive = e => {
     e.preventDefault();
     setHambuergerIsActive(() => {
-      if (hambuergerIsActive === '') {
-        return 'active';
+      if (hambuergerIsActive === "") {
+        return "active";
       }
-      return '';
+      return "";
     });
   };
 
@@ -86,9 +87,12 @@ const Menu = (props) => {
       <div className="kromac-title text-bg-light">
         <Link to={homeUrl}>
           {imgLogo && <img src={imgLogo} alt="logo" />}
-          {appName && <h1>{appName}</h1>}
+          {appName &&
+            <h1>
+              {appName}
+            </h1>}
         </Link>
-        {searchComponents && (
+        {searchComponents &&
           <div className="kromac-input-search">
             <label className="text-bg-light">Find Component</label>
             <input
@@ -99,19 +103,20 @@ const Menu = (props) => {
               value={componentsFiltered}
               onChange={handleChangeFilter}
             />
-          </div>
-        )}
+          </div>}
       </div>
       <ul>
-        {components.map((link, index) => (
+        {components.map((link, index) =>
           <li key={index} className={setActiveTab(pathname, link)}>
             <b />
             <b />
             <Link to={link}>
-              <span className="kromac-menu-title text-bg-light">{link}</span>
+              <span className="kromac-menu-title text-bg-light">
+                {link}
+              </span>
             </Link>
           </li>
-        ))}
+        )}
       </ul>
     </div>
   );
@@ -129,7 +134,7 @@ Menu.propTypes = exact({
   history: PropTypes.object,
   location: PropTypes.object,
   match: PropTypes.object,
-  staticContext: PropTypes.any,
+  staticContext: PropTypes.any
 });
 
 export default withRouter(Menu);

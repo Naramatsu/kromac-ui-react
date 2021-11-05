@@ -18,8 +18,8 @@ const CardPolygon = props => {
   const bgColor =
     color !== "transparent"
       ? {
-        background: `linear-gradient(45deg, ${color}, #0000004D)`
-      }
+          background: `linear-gradient(45deg, ${color}, #0000004D)`
+        }
       : {};
 
   return (

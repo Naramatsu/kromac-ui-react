@@ -1,5 +1,8 @@
 const subTitle = "Spinner svg";
-const importType = `import Spinner from "kromac/lib/Spinner";`;
+const importType = `import Spinner from "kromac-ui/dist/Spinner";`;
+const notes = `
+<p> Soon you could be allowed to send a svg you want in a property. </p>
+`;
 
 const spinnerProps = {
   spinnerType: "svg"
@@ -8,15 +11,11 @@ const spinnerProps = {
 const componentText = (
   <div className="implementation kromac-scroll-bg-dark">
     <p>
-      <span className="var">&lt;div&gt;</span>
-      <br />
-      <span className="react tab">&lt;Spinner </span>
+      <span className="react">&lt;Spinner </span>
       <span className="var">
         spinnerType
       </span>=<span className="string">"svg"</span>
       <span className="react"> /&gt;</span>
-      <br />
-      <span className="var">&lt;/div&gt;</span>
     </p>
   </div>
 );
@@ -26,53 +25,54 @@ const propsDescription = [
     name: "spinnerType",
     type: "string",
     values: ["svg", "default lighter", "waves", "rainbow", "lighter"],
-    description: "Spinner type"
+    description: "Spinner type."
   },
   {
     name: "size",
     type: "string",
     values: [`default sm`, "sm", "md", "lg"],
-    description: "Spinner size"
+    description: "Sets Spinner size."
   },
   {
     name: "color",
     type: "string",
     values: ["default #fff"],
-    description:
-      "this prop is for set the bg color in the middle of the spinner"
+    description: "Set background inner color."
   },
   {
     name: "bgColor",
     type: "string",
     values: ["default #000"],
-    description: "this prop is for set the bg color in the area of the spinner"
+    description: "Sets background color Spinner."
   },
   {
     name: "fontColor",
     type: "string",
     values: ["default #fff"],
-    description: "this prop is for set the color font of the dots and svg"
+    description: "Sets the font color of the dots (smoke)."
   },
   {
     name: "isCentered",
     type: "bool",
     values: [`default false`],
-    description: "this prop place the spinner in the middle of the screen"
+    description:
+      "When this prop is turned on, it fixed the spinner in the middle of the screen."
   },
   {
     name: "shadows",
     type: "bool",
     values: ["default true"],
-    description: "this prop added a box shadows"
+    description: "This prop added a shadows around the Spinner."
   }
 ];
 
 const spinnersProps = {
-  subTitle,
+  componentText,
   importType,
-  spinnerProps,
+  notes,
   propsDescription,
-  componentText
+  spinnerProps,
+  subTitle
 };
 
 export default spinnersProps;

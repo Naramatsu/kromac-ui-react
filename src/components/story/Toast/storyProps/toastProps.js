@@ -1,5 +1,5 @@
 const subTitle = "";
-const importType = `import Toast from "kromac/lib/Toast";`;
+const importType = `import Toast from "kromac-ui/dist/Toast";`;
 
 const toastProp = {
   message: "Some text here...!",
@@ -10,23 +10,19 @@ const toastProp = {
 const componentText = (
   <div className="implementation kromac-scroll-bg-dark">
     <p>
-      <span className="var">&lt;div&gt;</span>
+      <span className="react">&lt;Toast</span>
       <br />
-      <span className="react tab">&lt;Toast</span>
-      <br />
-      <span className="var tab2">message</span>=<span className="string">
+      <span className="var tab">message</span>=<span className="string">
         "Some text here...!"
       </span>
       <br />
-      <span className="var tab2">visible</span>
+      <span className="var tab">visible</span>
       <br />
-      <span className="var tab2">timeOut</span>=<span>{`{`}</span>
+      <span className="var tab">timeOut</span>=<span>{`{`}</span>
       <span className="text">500000</span>
       <span>{`}`}</span>
       <br />
-      <span className="react tab">/&gt;</span>
-      <br />
-      <span className="var">&lt;/div&gt;</span>
+      <span className="react">/&gt;</span>
     </p>
   </div>
 );
@@ -36,7 +32,7 @@ const propsDescription = [
     name: "message",
     type: "string Required",
     values: [],
-    description: "Toast message"
+    description: "Toast message."
   },
   {
     name: "color",
@@ -52,40 +48,40 @@ const propsDescription = [
       "night",
       "transparent"
     ],
-    description: "Toast background"
+    description: "Sets background color."
   },
   {
     name: "visible",
     type: "bool",
     values: [`default false`],
-    description: "set true to show the toast"
+    description: "When this prop turned on, it displays the Toast."
   },
   {
     name: "timeOut",
     type: "number",
     values: [`default 5000`],
-    description: "Toast duration in ms"
+    description: "Duration in ms."
   },
   {
     name: "positionY",
     type: "string",
     values: [`default bottom`, "top", "bottom"],
-    description: "position in Y eje"
+    description: "Toast position in Y-axis of the screen."
   },
   {
     name: "positionX",
     type: "string",
     values: [`default left`, "right", "left"],
-    description: "position in X eje"
+    description: "Toast position in X-axis of the screen."
   }
 ];
 
 const sliderProps = {
-  subTitle,
+  componentText,
   importType,
-  toastProp,
   propsDescription,
-  componentText
+  subTitle,
+  toastProp
 };
 
 export default sliderProps;

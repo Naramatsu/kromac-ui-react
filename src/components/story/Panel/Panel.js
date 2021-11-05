@@ -21,6 +21,7 @@ const Wrapper = ({ children, componentText, panelProps }) =>
         {children}
       </Col>
       <Col sm={12} lg={6}>
+        <h3 className="component-implementation">Implementation</h3>
         <BoxImplementation componentText={componentText} />
       </Col>
     </Row>
