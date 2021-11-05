@@ -1,0 +1,2 @@
+(this.webpackJsonpkromac=this.webpackJsonpkromac||[]).push([[61],{19:function(e,t,o){"use strict";o.r(t),o.d(t,"default",(function(){return c}));o(0),o(14);var a=o(1),c=function(e){var t=e.height,o=void 0===t?"32px":t,c=e.width,i=void 0===c?"100%":c,s=e.borderRadius,r=void 0===s?"none":s,n=e.className,d=void 0===n?"light":n,h={height:o,width:i,borderRadius:r};return Object(a.jsx)("div",{className:"kromac-skeleton ".concat(d),style:h,children:Object(a.jsx)("div",{className:"kromac-skeletonLoader ".concat(d)})})}}}]);
+//# sourceMappingURL=61.bb5ce873.chunk.js.map

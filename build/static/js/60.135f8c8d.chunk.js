@@ -1,0 +1,2 @@
+(this.webpackJsonpkromac=this.webpackJsonpkromac||[]).push([[60],{167:function(n,c,a){"use strict";a.r(c),a.d(c,"default",(function(){return t}));a(0),a(14);var s=a(1),t=function(n){var c=n.borderNeon,a=void 0!==c&&c,t=n.transparent,e=void 0!==t&&t,o=n.shadows,r=void 0===o||o,i=n.children,d=a?"neon":"",p=e?"transparent":"",h=r?"shadows":"";return Object(s.jsxs)("div",{className:"kromac-panel ".concat(d," ").concat(p," ").concat(h),children:[Object(s.jsx)("span",{}),Object(s.jsx)("div",{className:"content",children:i})]})}}}]);
+//# sourceMappingURL=60.135f8c8d.chunk.js.map
