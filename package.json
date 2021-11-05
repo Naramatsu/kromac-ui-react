@@ -1,5 +1,5 @@
 {
-  "name": "kromac",
+  "name": "kromac-ui",
   "version": "1.0.0",
   "main": "dist/index.js",
   "description": "Kromac UI React Framework",
@@ -49,7 +49,7 @@
     "type": "git",
     "url": "git+https://github.com/kromac-ui/kromac-ui-react"
   },
-  "homepage": "https://kromac-ui-react-kl7h81zpc-kromac-ui-react.vercel.app/",
+  "homepage": "https://kromac-ui.com",
   "eslintConfig": {
     "extends": [
       "react-app",
