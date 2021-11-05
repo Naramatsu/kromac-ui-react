@@ -48,7 +48,7 @@
     "type": "git",
     "url": "git+https://github.com/kromac-ui/kromac-ui-react"
   },
-  "homepage": "https://kromac-ui/kromac-ui-react/",
+  "homepage": "https://kromac-ui-react-kl7h81zpc-kromac-ui-react.vercel.app/",
   "eslintConfig": {
     "extends": [
       "react-app",
