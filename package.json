@@ -47,9 +47,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Naramatsu/kromac.git"
+    "url": "git+https://github.com/kromac-ui/kromac-ui-react"
   },
-  "homepage": "https://naramatsu.github.io/kromac/",
+  "homepage": "https://kromac-ui/kromac-ui-react/",
   "eslintConfig": {
     "extends": [
       "react-app",
