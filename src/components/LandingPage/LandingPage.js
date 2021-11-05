@@ -8,7 +8,6 @@ import {
   sponsores,
   technogloies
 } from "./pageGenerator";
-import "./LandingPage.scss";
 import {
   comingsoonText,
   componentText,
