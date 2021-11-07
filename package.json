@@ -1,6 +1,7 @@
 {
   "name": "kromac-ui",
   "version": "1.0.0",
+  "main": "dist/index.js",
   "description": "Kromac UI React Framework",
   "license": "ISC",
   "dependencies": {
@@ -46,7 +47,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kromac-ui/kromac-ui-react"
+    "url": "git+https://github.com/Naramatsu/kromac-ui-react"
   },
   "homepage": "https://kromac-ui.com",
   "eslintConfig": {
