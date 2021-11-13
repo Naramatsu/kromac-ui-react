@@ -17,6 +17,7 @@ const Preview = props => {
     componentsRealated
   } = props;
   const isNotes = notes && notes.trim();
+  const isComponentsRelated = componentsRealated && componentsRealated.length > 0;
 
   return (
     <div className="preview">
@@ -72,7 +73,7 @@ const Preview = props => {
             <h3>Notes</h3>
             {parseToHtml(notes)}
           </div>}
-        {componentsRealated &&
+        {isComponentsRelated &&
           <div className="component-props components-related">
             <h3>Components Related</h3>
             <ul>

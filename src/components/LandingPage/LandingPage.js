@@ -79,6 +79,7 @@ const LandingPage = () => {
   return (
     <div className="kromac-scroll landingpage">
       <div className="kromac-title-landingpage">
+        <img src="	https://res.cloudinary.com/dxg9gszax/image/upload/v1634697765/kromac-ui/kromac-logov2_cov1m7.png" alt="logo" />
         <h1 className="text-bg-light">
           {kromac}
         </h1>

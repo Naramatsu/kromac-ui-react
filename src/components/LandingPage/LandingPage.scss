@@ -1,4 +1,13 @@
 .landingpage {
+  .kromac-title-landingpage {
+    text-align: center;
+    padding: 2em;
+
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
   .kromac-landingpage-container {
     .kromac-section {
       position: relative;
