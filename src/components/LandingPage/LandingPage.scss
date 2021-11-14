@@ -146,3 +146,37 @@
     font-size: 2em;
   }
 }
+
+@media (max-width: 904px) {
+  .comingsoon {
+    justify-content: center;
+
+    .kromac-container:nth-last-child(1) {
+      margin-top: -70px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .comingsoon {
+    .kromac-container:nth-last-child(1) {
+      margin-top: 0;
+    }
+  }
+}
+
+@media (max-width: 678px) {
+  .comingsoon {
+    .kromac-container:nth-last-child(1) {
+      margin-top: -70px;
+    }
+  }
+}
+
+@media (max-width: 469px) {
+  .comingsoon {
+    .kromac-container:nth-last-child(1) {
+      margin-top: 0;
+    }
+  }
+}
