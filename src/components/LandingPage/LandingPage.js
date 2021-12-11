@@ -175,12 +175,14 @@ const LandingPage = () => {
           <div className="dev-team">
             {developerTeam.map((dev, index) =>
               <a href={dev.github} target="_blank" rel="noreferrer" key={index}>
+                <label className={`label-import ${dev.teamColor}`}>{dev.team}</label>
                 <Avatar
                   image={dev.image}
                   name={dev.name}
                   tooltip={dev.tooltip}
                   bgColor={dev.bgColor}
                   imageFit={dev.imageFit}
+                  imagePosition={dev.imagePosition}
                   size={dev.size}
                   isStatic
                 />

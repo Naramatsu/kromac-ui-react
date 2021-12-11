@@ -10,6 +10,7 @@ const CardReveal = props => {
     title = "",
     color = "#fff",
     imageFitPosition = "center",
+    transition = ".5s",
     children
   } = props;
 
@@ -28,7 +29,9 @@ const CardReveal = props => {
             onLoad={() => setIsImgLoading(false)}
           />
         </div>
-        <div className={`kromac-card-caption ${styleColor}`}>
+        <div className={`kromac-card-caption ${styleColor}`}
+          style={{ "--transition": transition }}
+        >
           <div className="card-title">
             <h4>
               {title}

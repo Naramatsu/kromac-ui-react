@@ -104,6 +104,12 @@ const propsDescription = [
     description: "Sets image position to be displayed in the card."
   },
   {
+    name: "transition",
+    type: "string",
+    values: [`default .5s`],
+    description: "Transition time."
+  },
+  {
     name: "children",
     type: "any",
     values: [],

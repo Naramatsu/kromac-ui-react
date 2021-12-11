@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Route, Link } from "react-router-dom";
 import data from "../../utils/components.json";
-import "./ComponentsMenu.scss";
 
 const ComponentsMenu = () => {
   const [kromacComponents, setComponents] = useState(
@@ -36,8 +35,8 @@ const ComponentsMenu = () => {
   const showSubComponents = subComponents && subComponents.length > 0;
   const activeSubComponent = ({ showSubComponents, subComponents, link }) => {
     return showSubComponents &&
-    showSubComponents &&
-    subComponents[0].component === link
+      showSubComponents &&
+      subComponents[0].component === link
       ? "active"
       : "";
   };

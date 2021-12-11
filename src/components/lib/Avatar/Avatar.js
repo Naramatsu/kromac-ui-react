@@ -21,7 +21,8 @@ const Avatar = props => {
     size = "150px",
     imageFit,
     imagePosition = "top",
-    tooltip
+    tooltip,
+    transition = ".5s"
   } = props;
 
   const fontHeight = size.replace("px", "") * 1;
@@ -81,7 +82,7 @@ const Avatar = props => {
         {name &&
           <div
             className="kromac-avatar-name"
-            style={{ ...style, ...nameStyle, height: size }}
+            style={{ ...style, ...nameStyle, height: size, "--transition": transition }}
           >
             <h3 style={h3Styles} className="text-bg-light">
               {name}

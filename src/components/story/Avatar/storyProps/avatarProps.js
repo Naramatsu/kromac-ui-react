@@ -82,6 +82,12 @@ const propsDescription = [
     type: "string",
     values: [],
     description: "This prop add a tooltip."
+  },
+  {
+    name: "transition",
+    type: "string",
+    values: [`default .5s`],
+    description: "Transition time."
   }
 ];
 

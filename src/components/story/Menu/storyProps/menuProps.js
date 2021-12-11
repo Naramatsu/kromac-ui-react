@@ -143,6 +143,12 @@ const propsDescription = [
     type: "string",
     values: ["default /"],
     description: "Sets url link to redirect to home page."
+  },
+  {
+    name: "transition",
+    type: "string",
+    values: ["default .5s"],
+    description: "Transition time."
   }
 ];
 

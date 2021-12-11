@@ -20,7 +20,8 @@ const Menu = props => {
     bgColor = "#283747",
     hamburgerActiveColor = "#C0392B",
     hamburgerColor = "#283747",
-    homeUrl = "/"
+    homeUrl = "/",
+    transition = ".5s"
   } = props;
 
   const [hambuergerIsActive, setHambuergerIsActive] = useState("");
@@ -37,7 +38,8 @@ const Menu = props => {
   const styleMenu = {
     "--bgColor": bgColor,
     "--hamburgerActiveColor": hamburgerActiveColor,
-    "--hamburgerColor": hamburgerColor
+    "--hamburgerColor": hamburgerColor,
+    "--transition": transition
   };
 
   const handleChangeFilter = e => {

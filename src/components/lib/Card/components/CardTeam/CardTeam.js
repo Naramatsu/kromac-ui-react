@@ -69,6 +69,7 @@ const CardTeam = props => {
     color = "#fff",
     imageFitPosition = "top",
     redes = [],
+    transition = ".5s",
     children
   } = props;
 
@@ -87,9 +88,9 @@ const CardTeam = props => {
     <div className={`kromac-container card-user`}>
       <div
         className={`kromac-card card-user-${shape} ${styleColor}`}
-        style={{ ...borderStyle, ...bgColor }}
+        style={{ ...borderStyle, ...bgColor, "--transition": transition }}
       >
-        <div className="kromac-card-image">
+        <div className="kromac-card-image" style={{ "--transition": transition }}>
           {isImgLoading && <Skeleton width="100%" height="100%" />}
           <img
             src={image}
@@ -98,7 +99,7 @@ const CardTeam = props => {
             onLoad={() => setIsImgLoading(false)}
           />
         </div>
-        <div className={`kromac-card-caption`}>
+        <div className={`kromac-card-caption`} style={{ "--transition": transition }}>
           <div className="card-title">
             <h4>
               {name}

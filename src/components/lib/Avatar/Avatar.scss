@@ -8,10 +8,10 @@
   }
 
   .kromac-tooltip {
-    font-size: .75em;
+    font-size: 0.75em;
     background: #000;
     color: #fff;
-    padding: .5em;
+    padding: 0.5em;
     position: absolute;
     z-index: 100;
     left: calc(var(--size) / 2 - 15px);
@@ -64,7 +64,7 @@
 
     &:hover > .kromac-avatar-name {
       transform: var(--transformHover);
-      transition: 2s transform ease;
+      transition: var(--transition) transform ease;
     }
 
     .kromac-avatar-name {
@@ -76,7 +76,7 @@
       padding-right: 2em;
       color: #fff;
       border-radius: 0 75px 75px 0;
-      transition: 2s transform ease;
+      transition: var(--transition) transform ease;
       z-index: 1;
 
       h3 {

@@ -12,6 +12,7 @@ const CardHorizontal = props => {
     imageSide = "left",
     imageFitPosition = "center",
     reveal = false,
+    transition = ".5s",
     children
   } = props;
 
@@ -97,7 +98,7 @@ const CardHorizontal = props => {
         </div>
         <div
           className={`kromac-card-caption ${imageSide} ${isClassExpanded} ${styleColor}`}
-          style={{ ...styleSize }}
+          style={{ ...styleSize, "--transition": transition }}
         >
           <div
             className="card-text kromac-scroll animate__animated animate__zoomIn"

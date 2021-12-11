@@ -2,7 +2,6 @@ import React, { lazy } from "react";
 import parseToHtml from "html-react-parser";
 import { Link } from "react-router-dom";
 import { addChip } from "../../utils/utils";
-import "./Preview.scss";
 
 const Table = lazy(() => import("react-bootstrap/Table"));
 

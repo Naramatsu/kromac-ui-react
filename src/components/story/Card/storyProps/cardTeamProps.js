@@ -139,6 +139,12 @@ const propsDescription = [
     description: `Object array of social networks names and urls.`
   },
   {
+    name: "transition",
+    type: "string",
+    values: [`default .5s`],
+    description: "Transition time."
+  },
+  {
     name: "children",
     type: "any",
     values: [],

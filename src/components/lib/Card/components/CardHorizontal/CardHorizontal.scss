@@ -68,13 +68,13 @@ $textShadow-bg-black: 1px 1px 2px black, 0 0 0.25em white, 0 0 0.2em black;
       width: 50%;
       position: relative;
       background: #fff;
-      transition: all 2s ease-out;
+      transition: all var(--transition) ease-out;
 
       .card-text {
         padding: 1em;
         overflow: auto;
         height: 300px;
-        transition: max-height 2s ease-out;
+        transition: max-height var(--transition) ease-out;
 
         p {
           margin-bottom: 0;
@@ -124,7 +124,7 @@ $textShadow-bg-black: 1px 1px 2px black, 0 0 0.25em white, 0 0 0.2em black;
   }
 
   &.expanded {
-    transition: all 2s ease-out;
+    transition: all var(--transition) ease-out;
     margin: 10px 0;
     position: inherit;
   }

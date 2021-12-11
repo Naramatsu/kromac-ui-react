@@ -13,7 +13,8 @@ const CardClassic = props => {
     expanded = false,
     imageFitPosition = "center",
     children,
-    className = "classic"
+    className = "classic",
+    transition = ".5s"
   } = props;
 
   const [styleSize, setStyleSize] = useState(initialSizeProps);
@@ -31,7 +32,7 @@ const CardClassic = props => {
         return {
           whiteSpace: "initial",
           maxHeight: "500px",
-          transition: "max-height 2s ease-out"
+          transition: `max-height ${transition} ease-out`
         };
       }
     });
@@ -63,7 +64,7 @@ const CardClassic = props => {
         <div className={`kromac-card-caption ${styleColor}`}>
           <div
             className={`card-text ${size} animate__animated animate__zoomIn`}
-            style={{ ...styleSize }}
+            style={{ ...styleSize, "--transition": transition }}
           >
             {children}
           </div>
