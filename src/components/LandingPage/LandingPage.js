@@ -83,7 +83,7 @@ const LandingPage = () => {
         <h1 className="text-bg-light">
           {kromac}
         </h1>
-        <label className="text-bg-light">v1.0.0</label>
+        <label className="text-bg-light">v1.1.0</label>
       </div>
       <div className="kromac-landingpage-container">
         <div className="kromac-section">

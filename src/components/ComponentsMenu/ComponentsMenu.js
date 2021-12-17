@@ -51,7 +51,7 @@ const ComponentsMenu = () => {
               alt="logo"
             />
             <h1>Kromac UI</h1>
-            <p>v1.0.0</p>
+            <p>v1.1.0</p>
           </Link>
         </Route>
         <div className="kromac-input-search">
