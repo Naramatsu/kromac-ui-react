@@ -14,7 +14,7 @@ const Slider = props => {
   const [isImgLoading, setIsImgLoading] = useState(true);
 
   const {
-    images = [],
+    content = [],
     height = "500px",
     showPreview = false,
     autoPlay = false,
@@ -22,7 +22,7 @@ const Slider = props => {
   } = props;
   const actualHeight = height === "auto" ? "500px" : height;
   const style = { height: actualHeight, "--left": counter };
-  const nroItems = images.length - 1;
+  const nroItems = content.length - 1;
 
   const handleChangeLeft = e => {
     e.preventDefault();
@@ -96,7 +96,7 @@ const Slider = props => {
         </div>
         {showPreview &&
           <div className="kromac-slider-preview">
-            {images.map((image, index) =>
+            {content.map((images, index) =>
               <div
                 key={index}
                 className={`kromac-slide-preview center`}
@@ -107,7 +107,7 @@ const Slider = props => {
                     <Spinner />
                   </div>}
                 <img
-                  src={image}
+                  src={images.img}
                   alt="slider"
                   onLoad={() => setIsImgLoading(false)}
                 />
@@ -115,14 +115,19 @@ const Slider = props => {
             )}
           </div>}
         <div className="kromac-slider-container" style={style}>
-          {images.map((image, index) =>
+          {content.map((images, index) =>
             <div key={index} className={`kromac-slide center`}>
               {isImgLoading && <Skeleton width="100%" height="100%" />}
               <img
-                src={image}
+                src={images.img}
                 alt="slider"
                 onLoad={() => setIsImgLoading(false)}
               />
+              {images.caption &&
+                <div className="kromac-slider-content">
+                  {images.caption}
+                </div>
+              }
             </div>
           )}
         </div>
@@ -132,7 +137,12 @@ const Slider = props => {
 };
 
 Slider.propTypes = exact({
-  images: PropTypes.arrayOf(PropTypes.string),
+  content: PropTypes.arrayOf(
+    PropTypes.shape({
+      img: PropTypes.string.isRequired,
+      caption: PropTypes.any
+    })
+  ),
   height: PropTypes.string,
   showPreview: PropTypes.bool,
   autoPlay: PropTypes.bool,
