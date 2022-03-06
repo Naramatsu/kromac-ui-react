@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
-import { determinateColor } from "../../../../../utils/utils";
+import { determinateColor, videoBuilder } from "../../../../../utils/utils";
 import Skeleton from "../../../Skeleton";
 
 const CardPolygon = props => {
@@ -11,9 +11,10 @@ const CardPolygon = props => {
     color = "#fff",
     imageFitPosition = "top",
     shape = "hexagon",
+    video,
     children
   } = props;
-  const [isImgLoading, setIsImgLoading] = useState(true);
+  const [isMediaLoading, setIsMediaLoading] = useState(true);
   const styleColor = determinateColor(color);
   const bgColor =
     color !== "transparent"
@@ -29,13 +30,15 @@ const CardPolygon = props => {
         style={{ ...bgColor }}
       >
         <div className="kromac-card-image">
-          {isImgLoading && <Skeleton width="100%" height="100%" />}
-          <img
-            src={image}
-            alt="Card"
-            style={{ objectPosition: imageFitPosition }}
-            onLoad={() => setIsImgLoading(false)}
-          />
+          {isMediaLoading && <Skeleton width="100%" height="100%" />}
+          {video
+            ? videoBuilder(video, setIsMediaLoading)
+            : <img
+                src={image}
+                alt="Card"
+                style={{ objectPosition: imageFitPosition }}
+                onLoad={() => setIsMediaLoading(false)}
+              />}
         </div>
         <div className="kromac-card-caption" style={bgColor}>
           <div className="text-bg-light">
@@ -52,7 +55,14 @@ const CardPolygon = props => {
 
 CardPolygon.propTypes = exact({
   cardType: PropTypes.string,
-  image: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  video: PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    controls: PropTypes.bool,
+    autoPlay: PropTypes.bool,
+    muted: PropTypes.bool,
+    loop: PropTypes.bool
+  }),
   name: PropTypes.string.isRequired,
   shape: PropTypes.oneOf([
     "hexagon",

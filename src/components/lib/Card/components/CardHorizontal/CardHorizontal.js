@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
-import { determinateColor, initialSizeProps } from "../../../../../utils/utils";
+import {
+  determinateColor,
+  initialSizeProps,
+  videoBuilder
+} from "../../../../../utils/utils";
 import Skeleton from "../../../Skeleton";
 
 const CardHorizontal = props => {
@@ -13,11 +17,12 @@ const CardHorizontal = props => {
     imageFitPosition = "center",
     reveal = false,
     transition = ".5s",
+    video,
     children
   } = props;
 
   const [styleSize, setStyleSize] = useState(initialSizeProps);
-  const [isImgLoading, setIsImgLoading] = useState(true);
+  const [isMediaLoading, setIsMediaLoading] = useState(true);
   const [isExpanded, setIsExpanded] = useState(false);
   const [kromacContainerStyle, setKromacContainerStyle] = useState(
     initialSizeProps
@@ -75,13 +80,15 @@ const CardHorizontal = props => {
         className={`kromac-card horizontal ${imageSide} ${isClassExpanded} ${styleColor}`}
       >
         <div className={`kromac-card-image ${imageSide}`}>
-          {isImgLoading && <Skeleton width="100%" height="100%" />}
-          <img
-            src={image}
-            alt="Card"
-            style={{ objectPosition: imageFitPosition }}
-            onLoad={() => setIsImgLoading(false)}
-          />
+          {isMediaLoading && <Skeleton width="100%" height="100%" />}
+          {video
+            ? videoBuilder(video, setIsMediaLoading)
+            : <img
+                src={image}
+                alt="Card"
+                style={{ objectPosition: imageFitPosition }}
+                onLoad={() => setIsMediaLoading(false)}
+              />}
           {showTitle &&
             <div className="card-title">
               <h4
@@ -114,7 +121,14 @@ const CardHorizontal = props => {
 
 CardHorizontal.propTypes = exact({
   cardType: PropTypes.string,
-  image: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  video: PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    controls: PropTypes.bool,
+    autoPlay: PropTypes.bool,
+    muted: PropTypes.bool,
+    loop: PropTypes.bool
+  }),
   title: PropTypes.string,
   color: PropTypes.oneOf(["#fff", "transparent"]),
   imageSide: PropTypes.string,

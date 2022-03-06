@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
-import { determinateColor } from "../../../../../utils/utils";
+import { determinateColor, videoBuilder } from "../../../../../utils/utils";
 import Skeleton from "../../../Skeleton";
 
 const fb =
@@ -70,18 +70,19 @@ const CardTeam = props => {
     imageFitPosition = "top",
     redes = [],
     transition = ".5s",
+    video,
     children
   } = props;
 
-  const [isImgLoading, setIsImgLoading] = useState(true);
+  const [isMediaLoading, setIsMediaLoading] = useState(true);
   const styleColor = determinateColor(color);
   const borderStyle =
     color === "transparent" ? { border: "solid 2px #fff" } : {};
   const bgColor =
     color !== "transparent"
       ? {
-        background: `linear-gradient(45deg, #000, ${color})`
-      }
+          background: `linear-gradient(45deg, #000, ${color})`
+        }
       : {};
 
   return (
@@ -90,16 +91,24 @@ const CardTeam = props => {
         className={`kromac-card card-user-${shape} ${styleColor}`}
         style={{ ...borderStyle, ...bgColor, "--transition": transition }}
       >
-        <div className="kromac-card-image" style={{ "--transition": transition }}>
-          {isImgLoading && <Skeleton width="100%" height="100%" />}
-          <img
-            src={image}
-            alt="Card"
-            style={{ objectPosition: imageFitPosition }}
-            onLoad={() => setIsImgLoading(false)}
-          />
+        <div
+          className="kromac-card-image"
+          style={{ "--transition": transition }}
+        >
+          {isMediaLoading && <Skeleton width="100%" height="100%" />}
+          {video
+            ? videoBuilder(video, setIsMediaLoading)
+            : <img
+                src={image}
+                alt="Card"
+                style={{ objectPosition: imageFitPosition }}
+                onLoad={() => setIsMediaLoading(false)}
+              />}
         </div>
-        <div className={`kromac-card-caption`} style={{ "--transition": transition }}>
+        <div
+          className={`kromac-card-caption`}
+          style={{ "--transition": transition }}
+        >
           <div className="card-title">
             <h4>
               {name}
@@ -128,7 +137,14 @@ const CardTeam = props => {
 
 CardTeam.propTypes = exact({
   cardType: PropTypes.string,
-  image: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  video: PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    controls: PropTypes.bool,
+    autoPlay: PropTypes.bool,
+    muted: PropTypes.bool,
+    loop: PropTypes.bool
+  }),
   name: PropTypes.string.isRequired,
   profession: PropTypes.string,
   shape: PropTypes.oneOf(["info", "summary"]),

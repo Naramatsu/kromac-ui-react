@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import Skeleton from "../Skeleton";
+import { videoBuilder } from "../../../utils/utils";
 
 const bgDefault = `linear-gradient(
           0deg,
@@ -11,7 +12,7 @@ const bgDefault = `linear-gradient(
           `;
 
 const Avatar = props => {
-  const [isImgLoading, setIsImgLoading] = useState(true);
+  const [isMediaLoading, setIsMediaLoading] = useState(true);
   const {
     image,
     name,
@@ -22,7 +23,8 @@ const Avatar = props => {
     imageFit,
     imagePosition = "top",
     tooltip,
-    transition = ".5s"
+    transition = ".5s",
+    video
   } = props;
 
   const fontHeight = size.replace("px", "") * 1;
@@ -71,13 +73,15 @@ const Avatar = props => {
           className="kromac-avatar-section"
           style={{ ...style, ...sectionStyles }}
         >
-          {isImgLoading && <Skeleton width="100%" height="100%" />}
-          <img
-            src={image}
-            alt="avatar"
-            style={imageStyle}
-            onLoad={() => setIsImgLoading(false)}
-          />
+          {isMediaLoading && <Skeleton width="100%" height="100%" />}
+          {video
+            ? videoBuilder(video, setIsMediaLoading)
+            : <img
+                src={image}
+                alt="avatar"
+                style={imageStyle}
+                onLoad={() => setIsMediaLoading(false)}
+              />}
         </div>
         {name &&
           <div
@@ -94,7 +98,14 @@ const Avatar = props => {
 };
 
 Avatar.propTypes = exact({
-  image: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  video: PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    controls: PropTypes.bool,
+    autoPlay: PropTypes.bool,
+    muted: PropTypes.bool,
+    loop: PropTypes.bool
+  }),
   name: PropTypes.string,
   borderColor: PropTypes.string,
   bgColor: PropTypes.string,

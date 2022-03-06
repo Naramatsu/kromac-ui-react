@@ -7,7 +7,13 @@ const CardImage = props => <CardClassic {...props} className="card-img" />;
 
 CardImage.propTypes = exact({
   cardType: PropTypes.string,
-  image: PropTypes.string.isRequired,
+  video: PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    controls: PropTypes.bool,
+    autoPlay: PropTypes.bool,
+    muted: PropTypes.bool,
+    loop: PropTypes.bool
+  }),
   title: PropTypes.string,
   imageFitPosition: PropTypes.string,
   children: PropTypes.any

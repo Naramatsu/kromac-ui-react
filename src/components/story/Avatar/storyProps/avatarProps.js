@@ -28,9 +28,21 @@ const componentText = (
 const propsDescription = [
   {
     name: "image",
-    type: "string Required",
+    type: "string",
     values: [],
     description: "Image url."
+  },
+  {
+    name: "video",
+    type: "object",
+    values: [
+      "url string required",
+      "controls boolean",
+      "autoPlay boolean",
+      "muted boolean",
+      "loop boolean"
+    ],
+    description: "Card object in order to setup the video."
   },
   {
     name: "name",
@@ -43,7 +55,7 @@ const propsDescription = [
     name: "size",
     type: "string",
     values: ["default 150px"],
-    description: "Size [width, height] of the image circle."
+    description: "Size [width, height] of the image circle in px."
   },
   {
     name: "borderColor",

@@ -49,9 +49,21 @@ const propsDescription = [
   },
   {
     name: "image",
-    type: "string Required",
+    type: "string",
     values: [],
     description: "Card image url."
+  },
+  {
+    name: "video",
+    type: "object",
+    values: [
+      "url string required",
+      "controls boolean",
+      "autoPlay boolean",
+      "muted boolean",
+      "loop boolean"
+    ],
+    description: "Card object in order to setup the video."
   },
   {
     name: "title",
