@@ -4,9 +4,9 @@ import exact from "prop-types-exact";
 import {
   determinateColor,
   initialSizeProps,
-  videoBuilder
 } from "../../../../../utils/utils";
 import Skeleton from "../../../Skeleton";
+import { videoBuilder } from "../../Card";
 
 const CardClassic = props => {
   const {

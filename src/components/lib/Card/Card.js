@@ -9,6 +9,57 @@ import CardTeam from "./components/CardTeam";
 import CardPolygon from "./components/CardPolygon";
 import Percentage from "./components/Percentage";
 
+export const videoBuilder = (video, setIsMediaLoading) => {
+  const {
+    url,
+    controls = false,
+    autoPlay = true,
+    muted = true,
+    loop = true
+  } = video;
+  if (url.includes("youtube", "youtu.be")) {
+    let ytUrlBuilder = "";
+    if (url.includes("youtube")) {
+      ytUrlBuilder = url.replace(
+        "https://www.youtube.com/watch?v=",
+        "https://www.youtube.com/embed/"
+      );
+    } else {
+      ytUrlBuilder = url.replace(
+        "https://youtu.be/",
+        "https://www.youtube.com/embed/"
+      );
+    }
+    return (
+      <iframe
+        title="YouTube video player"
+        width="100%"
+        height="100%"
+        src={ytUrlBuilder}
+        frameBorder="0"
+        allow="autoplay"
+        allowFullScreen={false}
+        onLoad={() => setIsMediaLoading(false)}
+      />
+    );
+  }
+  setTimeout(() => {
+    setIsMediaLoading(false);
+  }, 0);
+  return (
+    <video
+      src={url}
+      controls={controls}
+      muted={muted}
+      loop={loop}
+      autoPlay={autoPlay}
+      width="100%"
+      height="100%x"
+    />
+  );
+};
+
+
 const Card = props => {
   const { cardType } = props;
   switch (cardType) {

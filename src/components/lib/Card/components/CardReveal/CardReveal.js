@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
-import { determinateColor, videoBuilder } from "../../../../../utils/utils";
+import { determinateColor } from "../../../../../utils/utils";
 import Skeleton from "../../../Skeleton";
+import { videoBuilder } from "../../Card";
 
 const CardReveal = props => {
   const {

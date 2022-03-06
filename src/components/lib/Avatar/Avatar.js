@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import Skeleton from "../Skeleton";
-import { videoBuilder } from "../../../utils/utils";
+// import { videoBuilder } from "../../../utils/utils";
 
 const bgDefault = `linear-gradient(
           0deg,
@@ -10,6 +10,56 @@ const bgDefault = `linear-gradient(
           rgba(77, 202, 208, 1) 100%,
           rgba(255, 250, 250, 1) 100%
           `;
+
+const videoBuilder = (video, setIsMediaLoading) => {
+  const {
+    url,
+    controls = false,
+    autoPlay = true,
+    muted = true,
+    loop = true
+  } = video;
+  if (url.includes("youtube", "youtu.be")) {
+    let ytUrlBuilder = "";
+    if (url.includes("youtube")) {
+      ytUrlBuilder = url.replace(
+        "https://www.youtube.com/watch?v=",
+        "https://www.youtube.com/embed/"
+      );
+    } else {
+      ytUrlBuilder = url.replace(
+        "https://youtu.be/",
+        "https://www.youtube.com/embed/"
+      );
+    }
+    return (
+      <iframe
+        title="YouTube video player"
+        width="100%"
+        height="100%"
+        src={ytUrlBuilder}
+        frameBorder="0"
+        allow="autoplay"
+        allowFullScreen={false}
+        onLoad={() => setIsMediaLoading(false)}
+      />
+    );
+  }
+  setTimeout(() => {
+    setIsMediaLoading(false);
+  }, 0);
+  return (
+    <video
+      src={url}
+      controls={controls}
+      muted={muted}
+      loop={loop}
+      autoPlay={autoPlay}
+      width="100%"
+      height="100%x"
+    />
+  );
+};
 
 const Avatar = props => {
   const [isMediaLoading, setIsMediaLoading] = useState(true);
@@ -86,7 +136,12 @@ const Avatar = props => {
         {name &&
           <div
             className="kromac-avatar-name"
-            style={{ ...style, ...nameStyle, height: size, "--transition": transition }}
+            style={{
+              ...style,
+              ...nameStyle,
+              height: size,
+              "--transition": transition
+            }}
           >
             <h3 style={h3Styles} className="text-bg-light">
               {name}
