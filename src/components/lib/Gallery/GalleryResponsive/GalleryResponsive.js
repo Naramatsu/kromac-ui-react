@@ -8,12 +8,13 @@ import {
   rowColGenerator
 } from "../../../../utils/utils";
 import Skeleton from "../../Skeleton";
+import { videoBuilder } from "../Gallery";
 
 const GalleryResponsive = props => {
   const [isViewImage, setIsViewImage] = useState(false);
   const [itemActive, setItemActive] = useState({});
-  const [isImgLoading, setIsImgLoading] = useState(true);
-  const { images = [], gridGap = "0" } = props;
+  const [isMediaLoading, setIsMediaLoading] = useState(true);
+  const { content = [], gridGap = "0" } = props;
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -22,7 +23,7 @@ const GalleryResponsive = props => {
   }, []);
 
   const widthCalculated = widthCalculator(screenWidth);
-  const style = { gridTemplate: templateGenerator(images, widthCalculated) };
+  const style = { gridTemplate: templateGenerator(content, widthCalculated) };
   const isActive = isViewImage ? "active" : "";
 
   const handleResize = () => setScreenWidth(window.innerWidth);
@@ -41,14 +42,14 @@ const GalleryResponsive = props => {
   return (
     <div className="gallery-default" style={{ ...style, gridGap }}>
       <span className={`bgblur ${isActive}`} />
-      {images.map((image, index) =>
+      {content.map((item, index) =>
         <div
           key={index}
           className={`kromac-box ${isViewStyleKromacCol({
             item: index,
             itemActive
           })}`}
-          style={{ ...rowColGenerator(image) }}
+          style={{ ...rowColGenerator(item) }}
         >
           <div className="kromac-box-container">
             <div className="brillo" />
@@ -58,15 +59,26 @@ const GalleryResponsive = props => {
                 alt="close"
               />
             </button>
-            {isImgLoading
+            {isMediaLoading
               ? <Skeleton width="100%" height="100%" />
-              : <p>Rendering image please wait</p>}
-            <img
-              src={image.img}
-              alt={`pick-${index}`}
-              onClick={() => handleViewImage({ item: index })}
-              onLoad={() => setIsImgLoading(false)}
-            />
+              : <p>Rendering please wait</p>}
+
+            {Object.keys(item)[0] === "video"
+              ? videoBuilder(
+                  {
+                    url: item.video,
+                    index,
+                    itemActive: itemActive.item === index
+                  },
+                  setIsMediaLoading,
+                  handleViewImage
+                )
+              : <img
+                  src={item.img}
+                  alt={`pick-${index}`}
+                  onClick={() => handleViewImage({ item: index })}
+                  onLoad={() => setIsMediaLoading(false)}
+                />}
           </div>
         </div>
       )}
@@ -76,9 +88,10 @@ const GalleryResponsive = props => {
 
 GalleryResponsive.propTypes = exact({
   galleryType: PropTypes.string,
-  images: PropTypes.arrayOf(
+  content: PropTypes.arrayOf(
     PropTypes.shape({
-      img: PropTypes.string.isRequired,
+      img: PropTypes.string,
+      video: PropTypes.string,
       row: PropTypes.number,
       col: PropTypes.number
     })

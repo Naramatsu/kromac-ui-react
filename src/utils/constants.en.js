@@ -38,6 +38,14 @@ export const resourcesTitle = `Resources`;
 export const implementationTitle = "Implementation";
 export const componentText = (
   <div className="implementation kromac-scroll-bg-dark">
+    <p className="comment">{`// Kromac Styles importation`}</p>
+    <p className="comment">{`// Locate in your main index.js file and implement the following line:`}</p>
+    <p>
+      <span className="var"> import </span>
+      <span className="string">{`"kromac-ui/dist/index.css"`}</span>
+      ;
+    </p>
+    <br />
     <p className="comment">{`// Component Implementation`}</p>
     <p className="comment">{`// We will take the Card component as an example.`}</p>
     <br />
@@ -61,13 +69,6 @@ export const componentText = (
       ;
     </p>
     <br />
-    <p className="comment">{`// Kromac Styles importation`}</p>
-    <p className="comment">{`// Locate in your main index.js file and implement the following line:`}</p>
-    <p>
-      <span className="var"> import </span>
-      <span className="string">{`"kromac-ui/dist/index.css"`}</span>
-      ;
-    </p>
   </div>
 );
 export const technogloiesTitle = `technologies`;

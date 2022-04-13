@@ -9,7 +9,8 @@ const Toast = props => {
     visible = false,
     timeOut = 5000,
     positionY = "bottom",
-    positionX = "left"
+    positionX = "left",
+    children
   } = props;
 
   const [isvisible, setIsVisible] = useState(visible);
@@ -41,9 +42,12 @@ const Toast = props => {
   return (
     <div className="kromac-toast" style={positionStyle}>
       <div className={`kromac-toast-content ${color}`} style={style}>
-        <p className="text-bg-light">
-          {message}
-        </p>
+        <div>
+          <p className="text-bg-light">
+            {message}
+          </p>
+          {children && children}
+        </div>
         <span onClick={close}>
           <img
             src="https://res.cloudinary.com/dxg9gszax/image/upload/v1634081104/kromac-ui/closedark_udiuhh.svg"
@@ -56,7 +60,7 @@ const Toast = props => {
 };
 
 Toast.propTypes = exact({
-  message: PropTypes.string.isRequired,
+  message: PropTypes.string,
   color: PropTypes.oneOf([
     "transparent",
     "primary",
@@ -70,7 +74,8 @@ Toast.propTypes = exact({
   visible: PropTypes.bool,
   timeOut: PropTypes.number,
   positionY: PropTypes.oneOf(["bottom", "top"]),
-  positionX: PropTypes.oneOf(["right", "left"])
+  positionX: PropTypes.oneOf(["right", "left"]),
+  children: PropTypes.any
 });
 
 export default Toast;

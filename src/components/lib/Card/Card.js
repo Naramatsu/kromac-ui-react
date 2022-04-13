@@ -59,7 +59,6 @@ export const videoBuilder = (video, setIsMediaLoading) => {
   );
 };
 
-
 const Card = props => {
   const { cardType } = props;
   switch (cardType) {

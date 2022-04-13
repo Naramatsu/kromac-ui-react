@@ -2,7 +2,7 @@ const subTitle = "Gallery responsive";
 const importType = `import Gallery from "kromac-ui/dist/Gallery";`;
 
 const notes = `
-The <div class="chip">images</div> prop value format must be equals as that shown in the implementation.
+The <div class="chip">content</div> prop value format must be equals as that shown in the implementation.
 <br />
 The number of the <b>columns</b> by default is <div class="chip">4</div>
 (when the width screen is  <b>768px</b> or <b>higher</b>).
@@ -13,10 +13,10 @@ And when the width screen is <b>550px</b> or <b>lower</b> the number of the colu
 `;
 
 const galleryProps = {
-  images: [
+  content: [
     {
-      img:
-        "https://cdn.pixabay.com/photo/2019/04/06/06/44/astronaut-4106766_1280.jpg",
+      video:
+        "https://res.cloudinary.com/dxg9gszax/video/upload/v1643900779/kromac-ui/Avenged_Sevenfold_-_Wish_You_Were_Here_g2vaqu.mp4",
       row: 2
     },
     {
@@ -32,8 +32,8 @@ const galleryProps = {
       img: "https://cdn.pixabay.com/photo/2015/06/24/13/32/dog-820014_1280.jpg"
     },
     {
-      img:
-        "https://cdn.pixabay.com/photo/2018/09/23/18/30/drop-3698073_1280.jpg",
+      video:
+        "https://res.cloudinary.com/dxg9gszax/video/upload/v1643900779/kromac-ui/Avenged_Sevenfold_-_Wish_You_Were_Here_g2vaqu.mp4",
       col: 2
     },
     {
@@ -67,12 +67,12 @@ const componentText = (
     <p>
       <span className="react">&lt;Gallery</span>
       <br />
-      <span className="component tab">images</span>=<span>{`{[`}</span>
+      <span className="component tab">content</span>=<span>{`{[`}</span>
       <br />
       <span className="tab2">{`{ `}</span>
       <br />
-      <span className="var tab3">img: </span>
-      <span className="string">"image.png"</span>,<br />
+      <span className="var tab3">video: </span>
+      <span className="string">"video.mp4"</span>,<br />
       <span className="var tab3">row: </span>
       <span className="text">2</span>
       <br />
@@ -95,8 +95,8 @@ const componentText = (
       <span className="">{` }`}</span>,<br />
       <span className="tab2">{`{ `}</span>
       <br />
-      <span className="var tab3">img: </span>
-      <span className="string">"image.png"</span>,<br />
+      <span className="var tab3">video: </span>
+      <span className="string">"video.mp4"</span>,<br />
       <span className="var tab3">col: </span>
       <span className="text">2</span>
       <br />
@@ -149,10 +149,10 @@ const propsDescription = [
     description: "Gallery type."
   },
   {
-    name: "images",
+    name: "content",
     type: "array Required",
     values: [],
-    description: `Objects array of images url, rows, cols.`
+    description: `Objects array of images or videos url, rows, cols.`
   },
   {
     name: "gridGap",

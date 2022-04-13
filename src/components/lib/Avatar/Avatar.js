@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import Skeleton from "../Skeleton";
-// import { videoBuilder } from "../../../utils/utils";
 
 const bgDefault = `linear-gradient(
           0deg,

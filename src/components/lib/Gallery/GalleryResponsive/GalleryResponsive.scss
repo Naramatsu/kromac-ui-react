@@ -40,7 +40,7 @@
         transform: scale(1.2);
       }
 
-      img {
+      img, video, iframe {
         position: absolute;
         top: 0;
         left: 0;
@@ -95,7 +95,7 @@
           transform: scale(1);
         }
 
-        img {
+        img, video, iframe {
           z-index: 1001;
           position: inherit;
           height: 100%;

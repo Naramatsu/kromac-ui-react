@@ -2,6 +2,7 @@ import React, { lazy } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 import data from "./utils/components.json";
 
+const ReleaseInfo = lazy(() => import("./components/ReleaseInfo"));
 const KromacMenu = lazy(() => import("./components/lib/Menu"));
 const LandingPage = lazy(() => import("./components/LandingPage"));
 const Card = lazy(() => import("./components/story/Card/Card.story"));
@@ -53,6 +54,7 @@ const App = () =>
       <Route path="/avatar" component={Avatar} />
       <Route path="/class" component={KromacClass} />
       <Route path="/toast" component={Toast} />
+      <Route path="/releases" component={ReleaseInfo} />
       <Route path="/kromac">
         <Redirect to="/" />
       </Route>

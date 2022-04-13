@@ -1,5 +1,6 @@
 import React, { lazy, useEffect, useState } from "react";
 import { changeDocumentTitle } from "../../utils/utils";
+import { Link } from 'react-router-dom'
 import {
   btnSponsorList,
   comingSoonProjects,
@@ -30,6 +31,7 @@ const TextAnimation = lazy(() => import("../lib/TextAnimation"));
 const BoxImplementation = lazy(() => import("../BoxImplementation"));
 const Avatar = lazy(() => import("../lib/Avatar"));
 const Card = lazy(() => import("../lib/Card"));
+const Toast = lazy(() => import("../lib/Toast"));
 
 const adder = count => count++;
 
@@ -79,7 +81,10 @@ const LandingPage = () => {
   return (
     <div className="kromac-scroll landingpage">
       <div className="kromac-title-landingpage">
-        <img src="	https://res.cloudinary.com/dxg9gszax/image/upload/v1634697765/kromac-ui/kromac-logov2_cov1m7.png" alt="logo" />
+        <img
+          src="	https://res.cloudinary.com/dxg9gszax/image/upload/v1634697765/kromac-ui/kromac-logov2_cov1m7.png"
+          alt="logo"
+        />
         <h1 className="text-bg-light">
           {kromac}
         </h1>
@@ -175,7 +180,9 @@ const LandingPage = () => {
           <div className="dev-team">
             {developerTeam.map((dev, index) =>
               <a href={dev.github} target="_blank" rel="noreferrer" key={index}>
-                <label className={`label-import ${dev.teamColor}`}>{dev.team}</label>
+                <label className={`label-import ${dev.teamColor}`}>
+                  {dev.team}
+                </label>
                 <Avatar
                   image={dev.image}
                   name={dev.name}
@@ -238,6 +245,15 @@ const LandingPage = () => {
               fontColor="#fff"
             />
           </div>
+          <div className="kromac-section">
+            <Toast visible color="night" positionX="right" timeOut={500000}>
+              <div className="text-bg-light">
+                <h4>Hey!!!</h4>
+                <h5>Know about the new release 1.2.0</h5>
+                <Link to="/releases">Read more</Link>
+              </div>
+            </Toast>
+          </div>
           <div className="kromac-subsection">
             <ul className="tech kromac-scroll-bg-dark" style={techstyles}>
               {technogloies.map((t, index) =>
@@ -250,28 +266,29 @@ const LandingPage = () => {
             </ul>
           </div>
         </div>
-        <div className="kromac-section">
-          <TextAnimation
-            word1="Comingsoon"
-            background="linear-gradient(90deg, #000, #566573)"
-            fontColor="#fff"
-          />
-          <p>
-            {comingsoonText}
-          </p>
-          <div className="comingsoon">
-            {comingSoonProjects.map((project, index) =>
-              <Card
-                key={index}
-                cardType="polygon"
-                image={project.image}
-                name={project.name}
-                color={project.color}
-                shape="hexagon"
-              />
-            )}
-          </div>
-        </div>
+        {false &&
+          <div className="kromac-section">
+            <TextAnimation
+              word1="Comingsoon"
+              background="linear-gradient(90deg, #000, #566573)"
+              fontColor="#fff"
+            />
+            <p>
+              {comingsoonText}
+            </p>
+            <div className="comingsoon">
+              {comingSoonProjects.map((project, index) =>
+                <Card
+                  key={index}
+                  cardType="polygon"
+                  image={project.image}
+                  name={project.name}
+                  color={project.color}
+                  shape="hexagon"
+                />
+              )}
+            </div>
+          </div>}
       </div>
     </div>
   );

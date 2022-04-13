@@ -89,32 +89,6 @@ export const developerTeam = [
     size: "75px",
     team: "Kromac-UI React Js"
   },
-  {
-    github: "https://github.com/Denlor",
-    image:
-      "https://res.cloudinary.com/dxg9gszax/image/upload/v1639250451/kromac-ui%20team/Victor-Cueto_se7c3y.png",
-    name: "Victor Cueto.",
-    tooltip: "Fullstack Dev",
-    bgColor: "#fff",
-    imageFit: true,
-    imagePosition: "center",
-    size: "75px",
-    team: "Kromac-UI Vue Js",
-    teamColor: "success"
-  },
-  {
-    github: "https://github.com/jhonarroyo",
-    image:
-      "https://res.cloudinary.com/dxg9gszax/image/upload/v1639250452/kromac-ui%20team/Jhonatan-Arroyo_kvt7p0.jpg",
-    name: "Jhonatan Arroyo Arrieta.",
-    tooltip: "Backend Developer",
-    bgColor: "#e90663",
-    imageFit: true,
-    imagePosition: "center",
-    size: "75px",
-    team: "Kromac-UI Laravel",
-    teamColor: "error"
-  }
 ];
 
 export const sponsores = [
