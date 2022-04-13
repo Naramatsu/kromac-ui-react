@@ -20,7 +20,7 @@ const ReleaseInfo = () => {
             fontColor="#fff"
           />
           <p>
-            In this version <b>1.2.1</b> we released the new
+            In this version <b>1.2.4</b> we released the new
             <b>
               <i> 'video' </i>
             </b>

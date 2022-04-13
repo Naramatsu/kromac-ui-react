@@ -88,7 +88,7 @@ const LandingPage = () => {
         <h1 className="text-bg-light">
           {kromac}
         </h1>
-        <label className="text-bg-light">v1.2.1</label>
+        <label className="text-bg-light">v1.2.4</label>
       </div>
       <div className="kromac-landingpage-container">
         <div className="kromac-section">
@@ -249,7 +249,7 @@ const LandingPage = () => {
             <Toast visible color="night" positionX="right" timeOut={500000}>
               <div className="text-bg-light">
                 <h4>Hey!!!</h4>
-                <h5>Know about the new release 1.2.1</h5>
+                <h5>Know about the new release 1.2.4</h5>
                 <Link to="/releases">Read more</Link>
               </div>
             </Toast>
