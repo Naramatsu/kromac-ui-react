@@ -1,6 +1,6 @@
 {
   "name": "kromac-ui",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "main": "dist/index.js",
   "description": "Kromac UI React Framework",
   "license": "ISC",
@@ -14,7 +14,7 @@
     "enzyme": "^3.11.0",
     "html-react-parser": "^1.2.7",
     "materialize-css": "^1.0.0",
-    "prop-types-exact": "^1.2.0",
+    "prop-types-exact": "^1.2.1",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.1",
     "react-dom": "^17.0.2",

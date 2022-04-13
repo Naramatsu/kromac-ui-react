@@ -20,7 +20,7 @@ const ReleaseInfo = () => {
             fontColor="#fff"
           />
           <p>
-            In this version <b>1.2.0</b> we released the new
+            In this version <b>1.2.1</b> we released the new
             <b>
               <i> 'video' </i>
             </b>
@@ -87,6 +87,11 @@ const ReleaseInfo = () => {
           <div className="release-notes">
             <h4>Notes: </h4>
             <ul>
+              <li>
+                <p>
+                  fixed wrong layout in card team summary.
+                </p>
+              </li>
               <li>
                 <p>
                   One of the advantages of this new implementation is that you
