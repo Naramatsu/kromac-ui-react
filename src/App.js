@@ -15,6 +15,8 @@ const Banner = lazy(() => import("./components/story/Banner/Banner.story"));
 const Gallery = lazy(() => import("./components/story/Gallery/Gallery.story"));
 const Slider = lazy(() => import("./components/story/Slider/Slider.story"));
 const Avatar = lazy(() => import("./components/story/Avatar/Avatar.story"));
+const Grid = lazy(() => import("./components/story/Grid/Grid.story"));
+const GridItem = lazy(() => import("./components/story/GridItem/GridItem.story"));
 const KromacClass = lazy(() =>
   import("./components/story/KromacClass/KromacClass.story")
 );
@@ -54,6 +56,8 @@ const App = () =>
       <Route path="/avatar" component={Avatar} />
       <Route path="/class" component={KromacClass} />
       <Route path="/toast" component={Toast} />
+      <Route path="/grid" component={Grid} />
+      <Route path="/gridItem" component={GridItem} />
       <Route path="/releases" component={ReleaseInfo} />
       <Route path="/kromac">
         <Redirect to="/" />

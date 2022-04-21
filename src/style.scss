@@ -17,6 +17,7 @@
 @import './components/lib/Gallery/GalleryPolygon/GalleryPolygon.scss';
 @import './components/lib/Gallery/GalleryResponsive/GalleryResponsive.scss';
 @import './components/lib/Gallery/Gallery.scss';
+@import './components/lib/Grid/Grid.scss';
 @import './components/lib/Menu/Menu.scss';
 @import './components/lib/Panel/Panel.scss';
 @import './components/lib/Skeleton/Skeleton.scss';
@@ -33,6 +34,7 @@
 @import './components/lib/Toggle/components/ToggleSwitch/ToggleSwitch.scss';
 
 // story components
+@import './components/story/Grid/Grid.story.scss';
 @import './components/story/Menu/Menu.story.scss';
 @import './components/story/Toast/Toast.story.scss';
 
@@ -42,4 +44,5 @@
 @import './components/LandingPage/LandingPage.scss';
 @import './components/Preview/Preview.scss';
 @import './components/ReleaseInfo/ReleaseInfo.scss';
+@import './components/TestSection/TestSection.scss';
 @import './App.scss';

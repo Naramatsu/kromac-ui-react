@@ -9,6 +9,14 @@
     ]
   },
   {
+    "component": "grid",
+    "subComponents": []
+  },
+  {
+    "component": "gridItem",
+    "subComponents": []
+  },
+  {
     "component": "skeleton",
     "subComponents": [
       {
