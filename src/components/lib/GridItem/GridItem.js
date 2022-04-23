@@ -37,7 +37,7 @@ const GridItem = props => {
     },
     [actualWidth]
   );
-  const { gridRow = "", children, id, className } = props;
+  const { gridRow = "", children, id, className = "" } = props;
   const { cxs = 0, csm = 0, cmd = 0, clg = 0 } = props;
   const gridColumnFormatted = applyProperty(actualWidth, {
     cxs,

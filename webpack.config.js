@@ -9,6 +9,8 @@ module.exports = {
     "Button": "./src/components/lib/Button/Button.js",
     "Card": "./src/components/lib/Card/Card.js",
     "Gallery": "./src/components/lib/Gallery/Gallery.js",
+    "Grid": "./src/components/lib/Grid/Grid.js",
+    "GridItem": "./src/components/lib/GridItem/GridItem.js",
     "Menu": "./src/components/lib/Menu/Menu.js",
     "Panel": "./src/components/lib/Panel/Panel.js",
     "Skeleton": "./src/components/lib/Skeleton/Skeleton.js",

@@ -17,6 +17,8 @@ export { default as Percentage } from "./Card/components/Percentage";
 export { default as Gallery } from "./Gallery";
 export { default as GalleryPolygon } from "./Gallery/GalleryPolygon";
 export { default as GalleryResponsive } from "./Gallery/GalleryResponsive";
+export { default as Grid } from "./Grid";
+export { default as GridItem } from "./GridItem";
 export { default as Menu } from "./Menu";
 export { default as Panel } from "./Panel";
 export { default as Skeleton } from "./Skeleton";
