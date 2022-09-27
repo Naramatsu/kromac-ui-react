@@ -1,32 +1,39 @@
-import React, { useState } from "react";
-import { Row, Col } from "react-bootstrap";
-import PropTypes from "prop-types";
-import exact from "prop-types-exact";
+import React, { useState } from 'react';
+import { Row, Col } from 'react-bootstrap';
 import {
   markTypeRow,
   markAsLastImageImgPar,
   markAsOnlyImageRowImpar,
-  rowColMaker
-} from "../../../../utils/utils";
-import Skeleton from "../../Skeleton";
+  rowColMaker,
+} from '../../../../utils/utils';
+import classNames from 'classnames';
+import Skeleton from '../../Skeleton';
 
-const GalleryPolygon = props => {
+const GalleryPolygon = (props) => {
   const [isViewImage, setIsViewImage] = useState(false);
   const [itemActive, setItemActive] = useState({});
   const [isImgLoading, setIsImgLoading] = useState(true);
   const {
     images = [],
-    imageFitPosition = "center",
-    polygonType = "rhombus"
+    imageFitPosition = 'center',
+    polygonType = 'rhombus',
+    ...rest
   } = props;
-  const isActive = isViewImage ? "active" : "";
+
+  const { key, id } = rest;
+  const newRest = {
+    key,
+    id,
+  };
+
+  const isActive = isViewImage ? 'active' : '';
   const data = rowColMaker(images);
 
   const isViewStyleKromacCol = ({ row, item }) => {
     if (itemActive && itemActive.row === row && itemActive.item === item) {
-      return "active";
+      return 'active';
     }
-    return "";
+    return '';
   };
 
   const handleViewImage = ({ row, item }) => {
@@ -34,22 +41,26 @@ const GalleryPolygon = props => {
     setIsViewImage(true);
   };
 
-  const close = e => {
+  const close = (e) => {
     e.preventDefault();
     setItemActive({});
     setIsViewImage(false);
   };
 
+  const kromacGallery = classNames('kromac-gallery', {
+    [rest.className]: !!rest.className,
+  });
+
   return (
-    <div className="kromac-gallery">
+    <div {...newRest} className={kromacGallery}>
       <div
-        className={`kromac-gallery-polygon container`}
-        style={{ "--totalRows": data.length }}
+        className="kromac-gallery-polygon container"
+        style={{ '--totalRows': data.length }}
       >
         <Row className="kromac-row">
           <span className={`bgblur ${isActive}`} />
           {data.map((imgs, row) =>
-            imgs.map((image, col) =>
+            imgs.map((image, col) => (
               <Col
                 sm={12}
                 md={4}
@@ -61,17 +72,17 @@ const GalleryPolygon = props => {
                 )} ${isViewStyleKromacCol({
                   row,
                   item: col,
-                  itemActive
+                  itemActive,
                 })} ${markTypeRow(row, col)} ${markAsOnlyImageRowImpar(
                   imgs.length
                 )}`}
-                style={{ "--rowNumber": row }}
+                style={{ '--rowNumber': row }}
               >
                 <div
                   className={`kromac-gallery ${isViewStyleKromacCol({
                     row,
                     item: col,
-                    itemActive
+                    itemActive,
                   })}`}
                 >
                   <button onClick={close} className="close">
@@ -85,9 +96,11 @@ const GalleryPolygon = props => {
                     className="kromac-gallery-image"
                     onClick={() => handleViewImage({ row: row, item: col })}
                   >
-                    {isImgLoading
-                      ? <Skeleton width="100%" height="100%" />
-                      : <p>Rendering image please wait</p>}
+                    {isImgLoading ? (
+                      <Skeleton width="100%" height="100%" />
+                    ) : (
+                      <p>Rendering image please wait</p>
+                    )}
                     <img
                       src={image}
                       alt="GalleryPolygon"
@@ -97,19 +110,12 @@ const GalleryPolygon = props => {
                   </div>
                 </div>
               </Col>
-            )
+            ))
           )}
         </Row>
       </div>
     </div>
   );
 };
-
-GalleryPolygon.propTypes = exact({
-  galleryType: PropTypes.string,
-  images: PropTypes.arrayOf(PropTypes.string.isRequired),
-  imageFitPosition: PropTypes.string,
-  polygonType: PropTypes.oneOf(["rhombus", "hexagon", "rabbet"])
-});
 
 export default GalleryPolygon;

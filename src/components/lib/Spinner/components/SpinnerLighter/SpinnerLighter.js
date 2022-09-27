@@ -1,20 +1,31 @@
-import React from "react";
-import PropTypes from "prop-types";
-import exact from "prop-types-exact";
-import { styleCentered } from "../../../../../utils/utils";
+import React from 'react';
+import classNames from 'classnames';
+import { styleCentered } from '../../../../../utils/utils';
 
-const SpinnerLighter = props => {
+const SpinnerLighter = (props) => {
   const {
-    size = "sm",
+    size = 'sm',
     isCentered = false,
     shadows = true,
-    bgColorInside = "#fff"
+    bgColorInside = '#fff',
+    ...rest
   } = props;
-  const isShadows = shadows ? "shadows" : "";
+  const { key, id } = rest;
+  const newRest = {
+    key,
+    id,
+  };
+  const isShadows = shadows ? 'shadows' : '';
+  const kromacSpinner = classNames('kromac-spinner', 'spinner-lighter', {
+    [size]: !!size,
+    [isShadows]: !!isShadows,
+    [rest.className]: !!rest.className,
+  });
 
   return (
     <div
-      className={`kromac-spinner spinner-lighter ${size} ${isShadows}`}
+      {...newRest}
+      className={kromacSpinner}
       style={styleCentered(isCentered)}
     >
       <div className="loader">
@@ -23,13 +34,5 @@ const SpinnerLighter = props => {
     </div>
   );
 };
-
-SpinnerLighter.propTypes = exact({
-  spinnerType: PropTypes.string,
-  size: PropTypes.oneOf(["sm", "md", "lg"]),
-  isCentered: PropTypes.bool,
-  bgColorInside: PropTypes.oneOf(["#fff", "#000"]),
-  shadows: PropTypes.bool
-});
 
 export default SpinnerLighter;

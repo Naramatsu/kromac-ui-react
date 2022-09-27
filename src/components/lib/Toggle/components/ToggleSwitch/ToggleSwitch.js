@@ -1,18 +1,24 @@
-import React from "react";
-import PropTypes from "prop-types";
-import exact from "prop-types-exact";
+import React from 'react';
+import classNames from 'classnames';
 
-const ToggleSwitch = props => {
-  const { checked, onColor = "#28B463", offColor = "#CB4335" } = props;
-
+const ToggleSwitch = (props) => {
+  const { checked, onColor = '#28B463', offColor = '#CB4335', ...rest } = props;
+  const { key, id } = rest;
+  const newRest = {
+    key,
+    id,
+  };
   const handleChange = props.onChange ? props.onChange : () => ({});
   const style = {
-    "--chkOnColor": onColor,
-    "--chkOffColor": offColor
+    '--chkOnColor': onColor,
+    '--chkOffColor': offColor,
   };
+  const kromacToggle = classNames('kromac-toggle', 'toggle-switch', {
+    [rest.className]: !!rest.className,
+  });
 
   return (
-    <div className="kromac-toggle toggle-switch">
+    <div {...newRest} className={kromacToggle}>
       <label className="kromac-checkbox" style={style}>
         <input
           type="checkbox"
@@ -24,15 +30,5 @@ const ToggleSwitch = props => {
     </div>
   );
 };
-
-ToggleSwitch.propTypes = exact({
-  toggleType: PropTypes.string,
-  checked: PropTypes.bool,
-  onColor: PropTypes.string,
-  offColor: PropTypes.string,
-  onChange: PropTypes.func,
-  ref: PropTypes.any,
-  borderRadius: PropTypes.string
-});
 
 export default ToggleSwitch;

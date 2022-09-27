@@ -1,30 +1,35 @@
-import React from "react";
-import PropTypes from "prop-types";
-import exact from "prop-types-exact";
+import React from 'react';
+import classNames from 'classnames';
 
 const Skeleton = ({
-  height = "32px",
-  width = "100%",
-  borderRadius = "none",
-  className = "light"
+  height = '32px',
+  width = '100%',
+  borderRadius = 'none',
+  className = 'light',
+  ...rest
 }) => {
+  const { key, id } = rest;
+  const newRest = {
+    key,
+    id,
+  };
   const styleSkeleton = {
     height,
     width,
-    borderRadius
+    borderRadius,
   };
+  const kromacSkeleton = classNames('kromac-skeleton', {
+    [className]: !!className,
+  });
+  const kromacSkeletonLoader = classNames('kromac-skeletonLoader', {
+    [className]: !!className,
+  });
+
   return (
-    <div className={`kromac-skeleton ${className}`} style={styleSkeleton}>
-      <div className={`kromac-skeletonLoader ${className}`} />
+    <div {...newRest} className={kromacSkeleton} style={styleSkeleton}>
+      <div className={kromacSkeletonLoader} />
     </div>
   );
 };
-
-Skeleton.propTypes = exact({
-  height: PropTypes.string,
-  width: PropTypes.string,
-  borderRadius: PropTypes.string,
-  className: PropTypes.oneOf(["light", "dark"])
-});
 
 export default Skeleton;

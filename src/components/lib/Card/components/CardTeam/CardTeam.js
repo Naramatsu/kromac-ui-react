@@ -1,56 +1,55 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import exact from "prop-types-exact";
-import { determinateColor } from "../../../../../utils/utils";
-import Skeleton from "../../../Skeleton";
-import { videoBuilder } from "../../Card";
+import React, { useState } from 'react';
+import { determinateColor } from '../../../../../utils/utils';
+import classNames from 'classnames';
+import Skeleton from '../../../Skeleton';
+import { videoBuilder } from '../../Card';
 
 const fb =
-  "https://res.cloudinary.com/dxg9gszax/image/upload/v1634079073/kromac-ui/facebook_eoffyk.svg";
+  'https://res.cloudinary.com/dxg9gszax/image/upload/v1634079073/kromac-ui/facebook_eoffyk.svg';
 const ig =
-  "https://res.cloudinary.com/dxg9gszax/image/upload/v1634079072/kromac-ui/instagram_xtonqo.svg";
+  'https://res.cloudinary.com/dxg9gszax/image/upload/v1634079072/kromac-ui/instagram_xtonqo.svg';
 const li =
-  "https://res.cloudinary.com/dxg9gszax/image/upload/v1634079072/kromac-ui/linkedin_nqwh1p.svg";
+  'https://res.cloudinary.com/dxg9gszax/image/upload/v1634079072/kromac-ui/linkedin_nqwh1p.svg';
 const tw =
-  "https://res.cloudinary.com/dxg9gszax/image/upload/v1634079073/kromac-ui/twitter_og7mxx.svg";
+  'https://res.cloudinary.com/dxg9gszax/image/upload/v1634079073/kromac-ui/twitter_og7mxx.svg';
 const tc =
-  "https://res.cloudinary.com/dxg9gszax/image/upload/v1634079072/kromac-ui/twitch_gczehv.svg";
+  'https://res.cloudinary.com/dxg9gszax/image/upload/v1634079072/kromac-ui/twitch_gczehv.svg';
 const yt =
-  "https://res.cloudinary.com/dxg9gszax/image/upload/v1634079073/kromac-ui/youtube_mgcxep.svg";
+  'https://res.cloudinary.com/dxg9gszax/image/upload/v1634079073/kromac-ui/youtube_mgcxep.svg';
 
-const determinateIcon = red => {
+const determinateIcon = (red) => {
   switch (red) {
-    case "facebook":
+    case 'facebook':
       return (
         <i>
           <img src={fb} alt="fb" />
         </i>
       );
-    case "instagram":
+    case 'instagram':
       return (
         <i>
           <img src={ig} alt="ig" />
         </i>
       );
-    case "linkedin":
+    case 'linkedin':
       return (
         <i>
           <img src={li} alt="li" />
         </i>
       );
-    case "twitter":
+    case 'twitter':
       return (
         <i>
           <img src={tw} alt="tw" />
         </i>
       );
-    case "twitch":
+    case 'twitch':
       return (
         <i>
           <img src={tc} alt="tc" />
         </i>
       );
-    case "youtube":
+    case 'youtube':
       return (
         <i>
           <img src={yt} alt="yt" />
@@ -61,103 +60,89 @@ const determinateIcon = red => {
   }
 };
 
-const CardTeam = props => {
+const CardTeam = (props) => {
   const {
     image,
-    name = "",
-    profession = "",
-    shape = "info",
-    color = "#fff",
-    imageFitPosition = "top",
+    name = '',
+    profession = '',
+    shape = 'info',
+    color = '#fff',
+    imageFitPosition = 'top',
     redes = [],
-    transition = ".5s",
+    transition = '.5s',
     video,
-    children
+    children,
+    ...rest
   } = props;
+
+  const { key, id } = rest;
+  const newRest = {
+    key,
+    id,
+  };
 
   const [isMediaLoading, setIsMediaLoading] = useState(true);
   const styleColor = determinateColor(color);
   const borderStyle =
-    color === "transparent" ? { border: "solid 2px #fff" } : {};
+    color === 'transparent' ? { border: 'solid 2px #fff' } : {};
   const bgColor =
-    color !== "transparent"
+    color !== 'transparent'
       ? {
-          background: `linear-gradient(45deg, #000, ${color})`
+          background: `linear-gradient(45deg, #000, ${color})`,
         }
       : {};
 
+  const kromacContainer = classNames('kromac-container', 'card-user', {
+    [rest.className]: !!rest.className,
+  });
+
+  const kromacCard = classNames('kromac-card', {
+    [`card-user-${shape}`]: true,
+    [styleColor]: !!styleColor,
+  });
+
   return (
-    <div className={`kromac-container card-user`}>
+    <div {...newRest} className={kromacContainer}>
       <div
-        className={`kromac-card card-user-${shape} ${styleColor}`}
-        style={{ ...borderStyle, ...bgColor, "--transition": transition }}
+        className={kromacCard}
+        style={{ ...borderStyle, ...bgColor, '--transition': transition }}
       >
         <div
           className="kromac-card-image"
-          style={{ "--transition": transition }}
+          style={{ '--transition': transition }}
         >
           {isMediaLoading && <Skeleton width="100%" height="100%" />}
-          {video
-            ? videoBuilder(video, setIsMediaLoading)
-            : <img
-                src={image}
-                alt="Card"
-                style={{ objectPosition: imageFitPosition }}
-                onLoad={() => setIsMediaLoading(false)}
-              />}
+          {video ? (
+            videoBuilder(video, setIsMediaLoading)
+          ) : (
+            <img
+              src={image}
+              alt="Card"
+              style={{ objectPosition: imageFitPosition }}
+              onLoad={() => setIsMediaLoading(false)}
+            />
+          )}
         </div>
         <div
           className={`kromac-card-caption`}
-          style={{ "--transition": transition }}
+          style={{ '--transition': transition }}
         >
           <div className="card-title">
-            <h4>
-              {name}
-            </h4>
-            <label>
-              {profession}
-            </label>
+            <h4>{name}</h4>
+            <label>{profession}</label>
             <ul>
-              {redes.map((red, index) =>
+              {redes.map((red, index) => (
                 <li key={index}>
-                  <a href={red.url}>
-                    {determinateIcon(red.name)}
-                  </a>
+                  <a href={red.url}>{determinateIcon(red.name)}</a>
                 </li>
-              )}
+              ))}
             </ul>
           </div>
-          <div className="card-text kromac-scroll">
-            {children}
-          </div>
+          <div className="card-text kromac-scroll">{children}</div>
         </div>
       </div>
     </div>
   );
 };
-
-CardTeam.propTypes = exact({
-  cardType: PropTypes.string,
-  image: PropTypes.string,
-  video: PropTypes.shape({
-    url: PropTypes.string.isRequired,
-    controls: PropTypes.bool,
-    autoPlay: PropTypes.bool,
-    muted: PropTypes.bool,
-    loop: PropTypes.bool
-  }),
-  name: PropTypes.string.isRequired,
-  profession: PropTypes.string,
-  shape: PropTypes.oneOf(["info", "summary"]),
-  color: PropTypes.string,
-  imageFitPosition: PropTypes.string,
-  redes: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      url: PropTypes.string.isRequired
-    })
-  ),
-  children: PropTypes.any
-});
 
 export default CardTeam;

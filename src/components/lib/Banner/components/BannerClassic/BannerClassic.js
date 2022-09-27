@@ -1,27 +1,33 @@
-import React from "react";
-import PropTypes from "prop-types";
-import exact from "prop-types-exact";
+import React from 'react';
+import classNames from 'classnames';
 
-const BannerClassic = props => {
+const BannerClassic = (props) => {
   const {
     image,
-    background = "#000",
+    background = '#000',
     color,
-    height = "auto",
-    order = "right",
+    height = 'auto',
+    order = 'right',
     overlay,
-    textAlign = "center",
+    textAlign = 'center',
     isBottom = false,
-    children
+    children,
+    ...rest
   } = props;
 
-  const bannerHeight = height !== "auto";
-  const overlayClass = overlay && bannerHeight ? "overlay" : "normal";
-  const orderCaption = order === "left" ? "last" : "first";
-  const orderImage = order === "left" ? "first" : "last";
-  const imagePlace = isBottom && overlay && bannerHeight ? "bottom" : "";
+  const { key, id } = rest;
+  const newRest = {
+    key,
+    id,
+  };
+
+  const bannerHeight = height !== 'auto';
+  const overlayClass = overlay && bannerHeight ? 'overlay' : 'normal';
+  const orderCaption = order === 'left' ? 'last' : 'first';
+  const orderImage = order === 'left' ? 'first' : 'last';
+  const imagePlace = isBottom && overlay && bannerHeight ? 'bottom' : '';
   const styleContainer = {
-    "--heightImg": bannerHeight ? height : "50px"
+    '--heightImg': bannerHeight ? height : '50px',
   };
 
   const style = {
@@ -29,20 +35,26 @@ const BannerClassic = props => {
     color,
     height,
     textAlign,
-    "--heightImg": height,
-    "--widthImg": bannerHeight ? "auto" : "100%"
+    '--heightImg': height,
+    '--widthImg': bannerHeight ? 'auto' : '100%',
   };
 
+  const kromacBannerContainer = classNames('kromac-banner-containe', {
+    [rest.className]: !!rest.className,
+  });
+
+  const kromacBannerClassic = classNames('kromac-banner-classic', {
+    [overlayClass]: !!overlayClass,
+  });
+
   return (
-    <div className="kromac-banner-container" style={styleContainer}>
-      <div className={`kromac-banner-classic ${overlayClass}`} style={style}>
+    <div {...newRest} className={kromacBannerContainer} style={styleContainer}>
+      <div className={kromacBannerClassic} style={style}>
         <div className="kromac-banner-content">
           <div className="kromac-banner-grid">
             <div className={`order-caption-${orderCaption}`}>
               <div className="kromac-banner-caption">
-                <div>
-                  {children}
-                </div>
+                <div>{children}</div>
               </div>
             </div>
             <div className={`order-image-${orderImage}`}>
@@ -56,18 +68,5 @@ const BannerClassic = props => {
     </div>
   );
 };
-
-BannerClassic.propTypes = exact({
-  bannerType: PropTypes.oneOf(["classic", "image", "text"]),
-  image: PropTypes.string.isRequired,
-  background: PropTypes.string,
-  color: PropTypes.string,
-  height: PropTypes.string,
-  order: PropTypes.string,
-  overlay: PropTypes.bool,
-  textAlign: PropTypes.string,
-  isBottom: PropTypes.bool,
-  children: PropTypes.any
-});
 
 export default BannerClassic;

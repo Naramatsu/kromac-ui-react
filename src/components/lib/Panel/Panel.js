@@ -1,32 +1,35 @@
-import React from "react";
-import PropTypes from "prop-types";
-import exact from "prop-types-exact";
+import React from 'react';
+import classNames from 'classnames';
 
 const Panel = ({
   borderNeon = false,
   transparent = false,
   shadows = true,
-  children
+  children,
+  ...rest
 }) => {
-  const border = borderNeon ? "neon" : "";
-  const isTransparent = transparent ? "transparent" : "";
-  const isShadows = shadows ? "shadows" : "";
+  const border = borderNeon ? 'neon' : '';
+  const isTransparent = transparent ? 'transparent' : '';
+  const isShadows = shadows ? 'shadows' : '';
+  const kromacPanel = classNames('kromac-panel', {
+    [border]: !!border,
+    [isTransparent]: !!isTransparent,
+    [isShadows]: !!isShadows,
+    [rest.className]: !!rest.className,
+  });
+
+  const { key, id } = rest;
+  const newRest = {
+    key,
+    id,
+  };
 
   return (
-    <div className={`kromac-panel ${border} ${isTransparent} ${isShadows}`}>
+    <div {...newRest} className={kromacPanel}>
       <span />
-      <div className="content">
-        {children}
-      </div>
+      <div className="content">{children}</div>
     </div>
   );
 };
-
-Panel.propTypes = exact({
-  borderNeon: PropTypes.bool,
-  transparent: PropTypes.bool,
-  shadows: PropTypes.bool,
-  children: PropTypes.any
-});
 
 export default Panel;

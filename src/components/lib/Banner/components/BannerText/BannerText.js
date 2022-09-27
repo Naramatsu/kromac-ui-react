@@ -1,42 +1,50 @@
-import React from "react";
-import PropTypes from "prop-types";
-import exact from "prop-types-exact";
+import React from 'react';
+import classNames from 'classnames';
 
-const BannerText = props => {
+const BannerText = (props) => {
   const {
     title,
     image,
-    bgTextColor = "#fff",
-    height = "500px",
+    bgTextColor = '#fff',
+    height = '500px',
     order,
     attachment,
-    bgPosition = "center",
-    textAlign = "center"
+    bgPosition = 'center',
+    textAlign = 'center',
+    ...rest
   } = props;
 
-  const bannerHeight = height !== "auto";
-  const orderCaption = order === "right" ? "last" : "first";
-  const orderImage = order === "right" ? "first" : "last";
+  const { key, id } = rest;
+  const newRest = {
+    key,
+    id,
+  };
+
+  const bannerHeight = height !== 'auto';
+  const orderCaption = order === 'right' ? 'last' : 'first';
+  const orderImage = order === 'right' ? 'first' : 'last';
   const style = {
     backgroundImage: `url(${image})`,
     height,
     backgroundAttachment: attachment,
     textAlign,
     backgroundPosition: bgPosition,
-    "--heightImg": height,
-    "--widthImg": bannerHeight ? "auto" : "100%"
+    '--heightImg': height,
+    '--widthImg': bannerHeight ? 'auto' : '100%',
   };
 
+  const KromacBannerText = classNames('kromac-banner-text', {
+    [rest.className]: !!rest.className,
+  });
+
   return (
-    <div className={`kromac-banner-text`} style={style}>
+    <div {...newRest} style={style} className={KromacBannerText}>
       <div className="kromac-banner-container">
         <div className="kromac-banner-grid">
           <div className={`order-caption-${orderCaption}`}>
             <div className="kromac-banner-caption">
               <div style={{ background: bgTextColor }}>
-                <h1>
-                  {title}
-                </h1>
+                <h1>{title}</h1>
               </div>
             </div>
           </div>
@@ -48,17 +56,5 @@ const BannerText = props => {
     </div>
   );
 };
-
-BannerText.propTypes = exact({
-  bannerType: PropTypes.oneOf(["classic", "image", "text"]),
-  image: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  color: PropTypes.string,
-  height: PropTypes.string,
-  order: PropTypes.string,
-  attachment: PropTypes.string,
-  textAlign: PropTypes.string,
-  bgPosition: PropTypes.string
-});
 
 export default BannerText;

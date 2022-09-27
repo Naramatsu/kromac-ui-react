@@ -1,14 +1,14 @@
-import React, { lazy, useEffect, useState } from "react";
-import { changeDocumentTitle } from "../../utils/utils";
-import { Link } from 'react-router-dom'
+import React, { lazy, useEffect, useState } from 'react';
+import { changeDocumentTitle } from '../../utils/utils';
+import { Link } from 'react-router-dom';
 import {
   btnSponsorList,
   comingSoonProjects,
   developerTeam,
   resources,
   sponsores,
-  technogloies
-} from "./pageGenerator";
+  technogloies,
+} from './pageGenerator';
 import {
   comingsoonText,
   componentText,
@@ -24,59 +24,56 @@ import {
   sponsorText,
   sponsorTitle,
   teamTitle,
-  technogloiesTitle
-} from "../../utils/constants.en";
+  technogloiesTitle,
+} from '../../utils/constants.en';
 
-const TextAnimation = lazy(() => import("../lib/TextAnimation"));
-const BoxImplementation = lazy(() => import("../BoxImplementation"));
-const Avatar = lazy(() => import("../lib/Avatar"));
-const Card = lazy(() => import("../lib/Card"));
-const Toast = lazy(() => import("../lib/Toast"));
+const TextAnimation = lazy(() => import('../lib/TextAnimation'));
+const BoxImplementation = lazy(() => import('../BoxImplementation'));
+const Avatar = lazy(() => import('../lib/Avatar'));
+const Card = lazy(() => import('../lib/Card'));
+const Toast = lazy(() => import('../lib/Toast'));
 
-const adder = count => count++;
+const adder = (count) => count++;
 
-const lesser = count => count--;
+const lesser = (count) => count--;
 
 const LandingPage = () => {
   const [counter, setCounter] = useState(0);
-  const [indicator, setIndicator] = useState("up");
+  const [indicator, setIndicator] = useState('up');
   const techCount = technogloies.length;
   const techstyles = {
-    "--left": counter
+    '--left': counter,
   };
 
-  useEffect(
-    () => {
-      if (indicator === "up") {
-        if (counter < techCount - 4) {
-          setCounter(adder(counter));
-        } else {
-          setIndicator("down");
-        }
+  useEffect(() => {
+    if (indicator === 'up') {
+      if (counter < techCount - 4) {
+        setCounter(adder(counter));
+      } else {
+        setIndicator('down');
       }
-      if (indicator === "down") {
-        if (counter > 0) {
-          setCounter(lesser(counter));
-        } else {
-          setIndicator("up");
-        }
+    }
+    if (indicator === 'down') {
+      if (counter > 0) {
+        setCounter(lesser(counter));
+      } else {
+        setIndicator('up');
       }
-      const handlerTimeout = setTimeout(() => {
-        if (indicator === "up") {
-          setCounter(counter + 1);
-        } else {
-          setCounter(counter - 1);
-        }
-      }, 2000);
-      return () => {
-        clearTimeout(handlerTimeout);
-      };
-    },
-    [counter, indicator, techCount]
-  );
+    }
+    const handlerTimeout = setTimeout(() => {
+      if (indicator === 'up') {
+        setCounter(counter + 1);
+      } else {
+        setCounter(counter - 1);
+      }
+    }, 2000);
+    return () => {
+      clearTimeout(handlerTimeout);
+    };
+  }, [counter, indicator, techCount]);
 
   useEffect(() => {
-    document.title = changeDocumentTitle({ component: "Home", state: "" });
+    document.title = changeDocumentTitle({ component: 'Home', state: '' });
   });
   return (
     <div className="kromac-scroll landingpage">
@@ -85,9 +82,7 @@ const LandingPage = () => {
           src="	https://res.cloudinary.com/dxg9gszax/image/upload/v1634697765/kromac-ui/kromac-logov2_cov1m7.png"
           alt="logo"
         />
-        <h1 className="text-bg-light">
-          {kromac}
-        </h1>
+        <h1 className="text-bg-light">{kromac}</h1>
         <label className="text-bg-light">v1.2.4</label>
       </div>
       <div className="kromac-landingpage-container">
@@ -114,7 +109,17 @@ const LandingPage = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <b> NPM</b>
+              <b> NPM (kromac for react v17)</b>
+            </a>
+          </p>
+          <p>
+            visit us in
+            <a
+              href="https://www.npmjs.com/package/kromac-ui"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <b> NPM (kromac for react v18)</b>
             </a>
           </p>
           <label className="label-import">npm install kromac-ui</label>
@@ -127,14 +132,26 @@ const LandingPage = () => {
           />
           <div className="kromac-subsection">
             {requirementsText}
-            {requirements.map((r, index) =>
+            {requirements.map((r, index) => (
               <div key={index}>
                 <label className="label-import">{r.product} </label> &nbsp;
                 <div className="chip">{r.version}</div>
                 <br />
               </div>
-            )}
+            ))}
           </div>
+          <p>
+            <label className="label-import red">Note:</label> &nbsp; As
+            kromac-ui is 100% react based it is necessary to take into account
+            that for the new React update in its version ^18, the kromac-ui team
+            has decided to create a new repository available (in NPM) to deploy
+            with React version 18, so there will be 2 packages, one for React
+            version 17 and another one for React version 18.
+          </p>
+          <p>
+            <label className="label-import red">Note 2:</label> &nbsp; Note that
+            both packages will be updated and will have the same resources.
+          </p>
         </div>
         <div className="kromac-section">
           <TextAnimation
@@ -159,13 +176,13 @@ const LandingPage = () => {
           />
           <div className="kromac-subsection">
             <ul>
-              {resources.map((r, index) =>
+              {resources.map((r, index) => (
                 <li key={index}>
                   <a href={r.link} target="_blank" rel="noreferrer">
                     {r.title}
                   </a>
                 </li>
-              )}
+              ))}
             </ul>
           </div>
         </div>
@@ -178,7 +195,7 @@ const LandingPage = () => {
             />
           </div>
           <div className="dev-team">
-            {developerTeam.map((dev, index) =>
+            {developerTeam.map((dev, index) => (
               <a href={dev.github} target="_blank" rel="noreferrer" key={index}>
                 <label className={`label-import ${dev.teamColor}`}>
                   {dev.team}
@@ -194,7 +211,7 @@ const LandingPage = () => {
                   isStatic
                 />
               </a>
-            )}
+            ))}
           </div>
         </div>
         <div className="kromac-section">
@@ -203,22 +220,20 @@ const LandingPage = () => {
             background="linear-gradient(90deg, #000, #566573)"
             fontColor="#fff"
           />
-          <p>
-            {sponsorText}
-          </p>
+          <p>{sponsorText}</p>
           <div className="btn-sponsor">
-            {btnSponsorList.map((button, index) =>
+            {btnSponsorList.map((button, index) => (
               <div key={index} className={`kromac-sponsor-btn`}>
                 {button.content}
                 <label className={`label-import ${button.labelClass}`}>
                   {button.button}
                 </label>
               </div>
-            )}
+            ))}
           </div>
           <br />
           <div className="dev-team">
-            {sponsores.map((sponsor, index) =>
+            {sponsores.map((sponsor, index) => (
               <a
                 href={sponsor.link}
                 target="_blank"
@@ -234,7 +249,7 @@ const LandingPage = () => {
                   isStatic
                 />
               </a>
-            )}
+            ))}
           </div>
         </div>
         <div className="kromac-section">
@@ -256,28 +271,26 @@ const LandingPage = () => {
           </div>
           <div className="kromac-subsection">
             <ul className="tech kromac-scroll-bg-dark" style={techstyles}>
-              {technogloies.map((t, index) =>
+              {technogloies.map((t, index) => (
                 <li key={index}>
                   <a href={t.link} target="_blank" rel="noreferrer">
                     <img src={t.image} alt={t.alt} />
                   </a>
                 </li>
-              )}
+              ))}
             </ul>
           </div>
         </div>
-        {false &&
+        {false && (
           <div className="kromac-section">
             <TextAnimation
               word1="Comingsoon"
               background="linear-gradient(90deg, #000, #566573)"
               fontColor="#fff"
             />
-            <p>
-              {comingsoonText}
-            </p>
+            <p>{comingsoonText}</p>
             <div className="comingsoon">
-              {comingSoonProjects.map((project, index) =>
+              {comingSoonProjects.map((project, index) => (
                 <Card
                   key={index}
                   cardType="polygon"
@@ -286,9 +299,10 @@ const LandingPage = () => {
                   color={project.color}
                   shape="hexagon"
                 />
-              )}
+              ))}
             </div>
-          </div>}
+          </div>
+        )}
       </div>
     </div>
   );

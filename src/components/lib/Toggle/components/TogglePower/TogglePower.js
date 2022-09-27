@@ -1,13 +1,20 @@
-import React from "react";
-import PropTypes from "prop-types";
-import exact from "prop-types-exact";
+import React from 'react';
+import classNames from 'classnames';
 
-const TogglePower = props => {
-  const { checked } = props;
+const TogglePower = (props) => {
+  const { checked, ...rest } = props;
   const handleChange = props.onChange ? props.onChange : () => ({});
+  const { key, id } = rest;
+  const newRest = {
+    key,
+    id,
+  };
+  const kromacToggle = classNames('kromac-toggle', 'toggle-power', {
+    [rest.className]: !!rest.className,
+  });
 
   return (
-    <div className="kromac-toggle toggle-power">
+    <div {...newRest} className={kromacToggle}>
       <label className="kromac-checkbox">
         <input
           type="checkbox"
@@ -25,13 +32,5 @@ const TogglePower = props => {
     </div>
   );
 };
-
-TogglePower.propTypes = exact({
-  toggleType: PropTypes.string,
-  checked: PropTypes.bool,
-  borderRadius: PropTypes.string,
-  onChange: PropTypes.func,
-  ref: PropTypes.any
-});
 
 export default TogglePower;

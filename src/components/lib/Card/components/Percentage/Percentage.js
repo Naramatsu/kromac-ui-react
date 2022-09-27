@@ -1,29 +1,38 @@
-import React from "react";
-import PropTypes from "prop-types";
-import exact from "prop-types-exact";
-import { bgStyleByProps, borderStyle } from "../../../../../utils/utils";
+import React from 'react';
+import { bgStyleByProps, borderStyle } from '../../../../../utils/utils';
+import classNames from 'classnames';
 
-const Percentage = props => {
+const Percentage = (props) => {
   const {
-    title = "",
+    title = '',
     progress = 0,
-    cardColor = "transparent",
-    progressColor = "#D53DC4"
+    cardColor = 'transparent',
+    progressColor = '#D53DC4',
+    ...rest
   } = props;
+
+  const { key, id } = rest;
+  const newRest = {
+    key,
+    id,
+  };
 
   const borderstyle = borderStyle(cardColor);
   const bgColor = bgStyleByProps(cardColor);
   const percentageStyles = {
     strokeDashoffset: `calc(440 - (440 * ${progress}) / 100)`,
-    stroke: progressColor
+    stroke: progressColor,
   };
 
+  const kromacContainer = classNames('kromac-container', 'card-percentage', {
+    [rest.className]: !!rest.className,
+  });
+
+  const kromacCard = classNames('kromac-card', { [cardColor]: !!cardColor });
+
   return (
-    <div className={`kromac-container card-percentage`}>
-      <div
-        className={`kromac-card ${cardColor}`}
-        style={{ ...borderstyle, ...bgColor }}
-      >
+    <div {...newRest} className={kromacContainer}>
+      <div className={kromacCard} style={{ ...borderstyle, ...bgColor }}>
         <div className={`kromac-card-caption`}>
           <div className="kromac-card-content">
             <div className="percent">
@@ -36,9 +45,7 @@ const Percentage = props => {
               {progress}%
             </h2>
             <div className="card-title text-bg-light animate__animated animate__zoomIn">
-              <h6>
-                {title}
-              </h6>
+              <h6>{title}</h6>
             </div>
           </div>
         </div>
@@ -46,14 +53,5 @@ const Percentage = props => {
     </div>
   );
 };
-
-Percentage.propTypes = exact({
-  cardType: PropTypes.string,
-  title: PropTypes.string.isRequired,
-  progress: PropTypes.number.isRequired,
-  cardColor: PropTypes.string,
-  progressColor: PropTypes.string,
-  children: PropTypes.any
-});
 
 export default Percentage;

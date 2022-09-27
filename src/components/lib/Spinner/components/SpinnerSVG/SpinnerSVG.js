@@ -1,37 +1,47 @@
-import React from "react";
-import PropTypes from "prop-types";
-import exact from "prop-types-exact";
-import { styleCentered } from "../../../../../utils/utils";
+import React from 'react';
+import classNames from 'classnames';
+import { styleCentered } from '../../../../../utils/utils';
 
-const spanGenerator = loops => {
+const spanGenerator = (loops) => {
   const spans = [];
   for (let i = 1; i <= loops; i++) {
-    var style = { "--i": i };
+    var style = { '--i': i };
     spans.push(<span key={i} style={style} />);
   }
   return spans;
 };
 
-const SpinnerSVG = props => {
+const SpinnerSVG = (props) => {
   const {
-    size = "sm",
-    color = "#fff",
-    bgColor = "#000",
-    fontColor = "#fff",
+    size = 'sm',
+    color = '#fff',
+    bgColor = '#000',
+    fontColor = '#fff',
     isCentered = false,
-    shadows = true
+    shadows = true,
+    ...rest
   } = props;
-
-  const isShadows = shadows ? "shadows" : "";
+  const { key, id } = rest;
+  const newRest = {
+    key,
+    id,
+  };
+  const isShadows = shadows ? 'shadows' : '';
   const style = {
     background: bgColor,
-    "--bgSpiner": color,
-    "--loaderColor": fontColor
+    '--bgSpiner': color,
+    '--loaderColor': fontColor,
   };
+  const kromacSpinner = classNames('kromac-spinner', 'spinner-svg', {
+    [size]: !!size,
+    [isShadows]: !!isShadows,
+    [rest.className]: !!rest.className,
+  });
 
   return (
     <div
-      className={`kromac-spinner spinner-svg ${size} ${isShadows}`}
+      {...newRest}
+      className={kromacSpinner}
       style={{ ...style, ...styleCentered(isCentered) }}
     >
       <div className="loader">
@@ -46,15 +56,5 @@ const SpinnerSVG = props => {
     </div>
   );
 };
-
-SpinnerSVG.propTypes = exact({
-  spinnerType: PropTypes.string,
-  size: PropTypes.oneOf(["sm", "md", "lg"]),
-  color: PropTypes.string,
-  bgColor: PropTypes.string,
-  fontColor: PropTypes.string,
-  isCentered: PropTypes.bool,
-  shadows: PropTypes.bool
-});
 
 export default SpinnerSVG;

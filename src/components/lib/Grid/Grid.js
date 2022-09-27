@@ -1,6 +1,7 @@
-import React from "react";
+import React from 'react';
+import classNames from 'classnames';
 
-const gridTemplateGenerator = columns => {
+const gridTemplateGenerator = (columns) => {
   let gridTemplate = `"`;
   let gridTemplateColumns = ``;
   let percentage = 100 / columns;
@@ -11,11 +12,11 @@ const gridTemplateGenerator = columns => {
   gridTemplate += `" / ${percentage}%`;
   return {
     gridTemplate,
-    gridTemplateColumns
+    gridTemplateColumns,
   };
 };
 
-const calculateColumns = columns => {
+const calculateColumns = (columns) => {
   if (columns <= 0) {
     return gridTemplateGenerator(4);
   }
@@ -24,11 +25,20 @@ const calculateColumns = columns => {
   }
   return gridTemplateGenerator(columns);
 };
-const Grid = ({ columns = 4, children }) => {
+
+const Grid = ({ columns = 4, children, ...rest }) => {
+  const { key, id } = rest;
+  const newRest = {
+    key,
+    id,
+  };
   const draw = calculateColumns(columns);
+  const kromacGrid = classNames('kromac-grid', {
+    [rest.className]: !!rest.className,
+  });
 
   return (
-    <div className="kromac-grid" style={draw}>
+    <div {...newRest} className={kromacGrid} style={draw}>
       {children}
     </div>
   );

@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
+import classNames from 'classnames';
 
 const draw = (property, value) => {
   return {
-    [property]: `span ${value}`
+    [property]: `span ${value}`,
   };
 };
 
 const applyProperty = (actualWidth, props) => {
-  let validate = "";
+  let validate = '';
   if (actualWidth >= 1024 && props.clg) {
     validate = props.clg;
   }
@@ -20,37 +21,43 @@ const applyProperty = (actualWidth, props) => {
   if (actualWidth < 550 && props.cxs) {
     validate = props.cxs;
   }
-  return draw("gridColumn", validate);
+  return draw('gridColumn', validate);
 };
 
-const GridItem = props => {
+const GridItem = (props) => {
   const [actualWidth, setActualWidth] = useState(window.innerWidth);
-  useEffect(
-    () => {
-      const handleResize = window.addEventListener("resize", () => {
-        setActualWidth(window.innerWidth);
-      });
+  useEffect(() => {
+    const handleResize = window.addEventListener('resize', () => {
+      setActualWidth(window.innerWidth);
+    });
 
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
-    },
-    [actualWidth]
-  );
-  const { gridRow = "", children, id, className = "" } = props;
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [actualWidth]);
+  const { gridRow = '', children, id, className = '', ...rest } = props;
+  const { key } = rest;
+  const newRest = {
+    key,
+  };
   const { cxs = 0, csm = 0, cmd = 0, clg = 0 } = props;
   const gridColumnFormatted = applyProperty(actualWidth, {
     cxs,
     csm,
     cmd,
-    clg
+    clg,
   });
-  const gridRowFormatted = draw("gridRow", gridRow);
+  const gridRowFormatted = draw('gridRow', gridRow);
+
+  const kromacGridItem = classNames('kromac-grid-item', {
+    [className]: !!className,
+  });
 
   return (
     <div
       id={id}
-      className={`kromac-grid-item ${className}`}
+      {...newRest}
+      className={kromacGridItem}
       style={{ ...gridColumnFormatted, ...gridRowFormatted }}
     >
       {children}
