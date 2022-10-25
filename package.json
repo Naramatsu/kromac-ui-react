@@ -1,6 +1,6 @@
 {
-  "name": "kromac-ui-test17",
-  "version": "1.2.6",
+  "name": "kromac-ui-test",
+  "version": "1.2.5",
   "main": "dist/index.js",
   "description": "Kromac UI React Framework",
   "license": "ISC",
