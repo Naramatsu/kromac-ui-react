@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AACE,oBADkB,CAClB,aAAa,AAAC,CACZ,QAAQ,CAAE,mBAAmB,CAC9B",
-    "sources": [
-        "../components/story/Toast/Toast.story.scss"
-    ],
-    "names": [],
-    "file": "Toast.story.css"
-}
+{"version":3,"sources":["../components/story/Toast/Toast.story.scss"],"names":[],"mappings":"AACE,mCACE,4BAAA","file":"Toast.story.css"}

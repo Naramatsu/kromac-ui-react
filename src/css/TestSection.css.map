@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,GAAG,AAAC,CACF,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,WAAW,CACpB,AAED,AAAA,SAAS,AAAC,CACR,MAAM,CAAE,SAAS,CACjB,MAAM,CAAE,IAAI,CACb",
-    "sources": [
-        "../components/TestSection/TestSection.scss"
-    ],
-    "names": [],
-    "file": "TestSection.css"
-}
+{"version":3,"sources":["../components/TestSection/TestSection.scss"],"names":[],"mappings":"AAAA,IACE,UAAA,CACA,0BAAA,CAAA,uBAAA,CAAA,kBAAA,CAGF,UACE,gBAAA,CACA,WAAA","file":"TestSection.css"}

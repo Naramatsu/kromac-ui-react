@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,oBAAoB,AAAC,CACnB,eAAe,CAAE,KAAK,CACtB,aAAa,CAAE,IAAI,CAUpB,AAZD,AAIE,oBAJkB,CAIlB,sBAAsB,AAAC,CACrB,OAAO,CAAE,IAAI,CACb,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CACZ,aAAa,CAAE,MAAM,CACrB,eAAe,CAAE,MAAM,CACvB,WAAW,CAAE,MAAM,CACpB",
-    "sources": [
-        "../components/lib/Banner/components/BannerImg/BannerImg.scss"
-    ],
-    "names": [],
-    "file": "BannerImg.css"
-}
+{"version":3,"sources":["../components/lib/Banner/components/BannerImg/BannerImg.scss"],"names":[],"mappings":"AAAA,qBACE,qBAAA,CACA,kBAAA,CAEA,4CACE,YAAA,CACA,UAAA,CACA,WAAA,CACA,oBAAA,CACA,sBAAA,CACA,kBAAA","file":"BannerImg.css"}
