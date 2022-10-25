@@ -105,7 +105,7 @@ const LandingPage = () => {
           <p>
             visit us in
             <a
-              href="https://www.npmjs.com/package/kromac-ui"
+              href="https://www.npmjs.com/package/kromac-ui-17"
               target="_blank"
               rel="noreferrer"
             >
@@ -115,7 +115,7 @@ const LandingPage = () => {
           <p>
             visit us in
             <a
-              href="https://www.npmjs.com/package/kromac-ui"
+              href="https://www.npmjs.com/package/kromac-ui-18"
               target="_blank"
               rel="noreferrer"
             >
