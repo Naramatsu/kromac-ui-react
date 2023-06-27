@@ -70,7 +70,7 @@ export const componentText = (
     <p className="comment">{`// Locate in your main index.js file and implement the following line:`}</p>
     <p>
       <span className="var"> import </span>
-      <span className="string">{`"kromac-ui-17/dist/index.css"`}</span>;
+      <span className="string">{`"kromac-ui-17/src/css/style.css"`}</span>;
     </p>
     <br />
     <p className="comment">{`// Component Implementation`}</p>
