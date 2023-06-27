@@ -1,15 +1,15 @@
 export const kromac = <b>Kromac UI </b>;
-export const introductionTitle = 'Introduction';
+export const introductionTitle = "Introduction";
 export const introduction = (
-  <p style={{ marginTop: '1em' }}>
+  <p style={{ marginTop: "1em" }}>
     {kromac} is a <b>100% responsive</b> style framework that seeks to
     facilitate the development and implementation of components with modern
     styles to web applications.
   </p>
 );
 
-export const installationTitle = 'Installation';
-export const requirementsTitle = 'Requirements';
+export const installationTitle = "Installation";
+export const requirementsTitle = "Requirements";
 export const requirementsText = (
   <p>
     In order to implement {kromac} your project must have the following
@@ -18,31 +18,31 @@ export const requirementsText = (
 );
 export const requirements = [
   {
-    product: 'Node version: ',
-    version: '^14',
+    product: "Node version: ",
+    version: "^14",
   },
   {
-    product: 'Npm version: ',
-    version: '^7',
+    product: "Npm version: ",
+    version: "^7",
   },
   {
-    product: 'React version: ',
-    version: '^17',
+    product: "React version: ",
+    version: "^17",
   },
   {
-    product: 'react-router-dom version: ',
-    version: '^5',
+    product: "react-router-dom version: ",
+    version: "^5",
   },
 ];
 export const resourcesTitle = `Resources`;
-export const implementationTitle = 'Implementation';
+export const implementationTitle = "Implementation";
 export const componentText = (
   <div className="implementation kromac-scroll-bg-dark">
     <p className="comment">{`// Kromac Styles importation for React version 18`}</p>
     <p className="comment">{`// Locate in your main index.js file and implement the following line:`}</p>
     <p>
       <span className="var"> import </span>
-      <span className="string">{`"kromac-ui-18/dist/index.css"`}</span>;
+      <span className="string">{`"kromac-ui-18/src/css/style.css"`}</span>;
     </p>
     <br />
     <p className="comment">{`// Component Implementation`}</p>
@@ -98,7 +98,7 @@ export const componentText = (
 );
 export const technogloiesTitle = `technologies`;
 export const sponsorText =
-  'We are currently looking for support to keep this Project going on.';
+  "We are currently looking for support to keep this Project going on.";
 export const teamTitle = `Team`;
 export const sponsorTitle = `Sponsors`;
 export const comingsoonText = `We are currently working to expand kromac ui to other platforms, frameworks, and languages.`;
