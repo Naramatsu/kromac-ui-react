@@ -2,25 +2,22 @@ $textShadow-bg-white: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 
 .kromac-container.card-percentage {
   .kromac-card {
-    position: relative;
-    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, .5);
-    border-radius: .25em;
+    border-radius: 0.25em;
     margin: 10px 0;
     max-width: 300px;
     height: 300px;
 
     &::before {
-      content: '';
+      content: "";
       width: 50%;
       height: 100%;
-      background: rgba(255, 255, 255, .1);
+      background: rgba(255, 255, 255, 0.1);
       position: absolute;
       left: 0;
       top: 0;
     }
 
     .kromac-card-caption {
-      position: relative;
       padding: 1em 2em;
       display: flex;
       flex-wrap: wrap;
@@ -73,13 +70,6 @@ $textShadow-bg-white: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
           }
         }
       }
-    }
-
-    &.transparent {
-      backdrop-filter: blur(20px);
-      background: transparent;
-      text-shadow: $textShadow-bg-white;
-      color: #fff;
     }
   }
 }

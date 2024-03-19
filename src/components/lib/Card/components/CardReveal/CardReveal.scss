@@ -2,11 +2,9 @@
   margin: 15px 0;
 
   .kromac-card {
-    width: 100%;
-    position: relative;
+    box-shadow: none;
 
     .kromac-card-image {
-      position: relative;
       width: 100%;
       height: 300px;
       background: transparent;
@@ -19,12 +17,12 @@
         position: absolute;
       }
 
-      img, video, iframe {
+      img,
+      video,
+      iframe {
         width: 80%;
-        height: 100%;
         min-height: 300px;
         border-radius: 0.5em;
-        object-fit: cover;
       }
     }
 
@@ -38,21 +36,18 @@
       padding: 10%;
       background: #fff;
       padding-bottom: 0.5em;
-      box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.5);
+      box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.5);
       color: transparent;
 
       .card-title {
         margin-top: 75%;
+        transition: all var(--transition) ease;
+        color: transparent;
 
         h4 {
           text-align: center;
+          margin-bottom: 0;
         }
-      }
-
-      &.transparent {
-        backdrop-filter: blur(20px);
-        background: transparent;
-        border: solid 2px #fff;
       }
     }
 
@@ -60,9 +55,17 @@
       max-height: 1000px;
       color: #000;
 
+      .card-title {
+        color: #000;
+      }
+
       &.transparent {
         text-shadow: 1px 1px 2px black, 0 0 0.25em white, 0 0 0.2em black;
         color: #fff;
+
+        .card-title {
+          color: #fff;
+        }
       }
     }
   }

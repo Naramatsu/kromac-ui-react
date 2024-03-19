@@ -1,4 +1,4 @@
-$textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
+$textShadow: 1px 1px 2px #000, 0 0 0.25em #000, 0 0 0.2em #000;
 
 .kromac-panel {
   background: #fff;
@@ -6,10 +6,10 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
   height: auto;
   padding: 1em;
   position: relative;
-  border-radius: .5em;
+  border-radius: 0.5em;
 
   &.shadows {
-    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, .5);
+    box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.5);
   }
 
   .content {
@@ -39,7 +39,7 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
     span {
       height: auto;
       width: auto;
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       top: 4px;
@@ -47,11 +47,11 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
       right: 4px;
       bottom: 4px;
       background: #212f3c;
-      border-radius: .5em;
+      border-radius: 0.5em;
     }
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -71,7 +71,7 @@ $textShadow: 1px 1px 2px #000, 0 0 .25em #000, 0 0 0.2em #000;
       transition: all 1s ease;
       background-size: 400%;
       animation: animate 20s linear infinite;
-      border-radius: .5em;
+      border-radius: 0.5em;
     }
 
     @keyframes animate {

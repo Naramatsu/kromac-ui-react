@@ -18,20 +18,20 @@
   }
 
   &.sm {
-    transform: translateX(-50%) scale(.5);
+    transform: translateX(-50%) scale(0.5);
   }
 
   &.md {
-    transform: translateX(-50%) scale(.75);
+    transform: translateX(-50%) scale(0.75);
   }
 
   &.shadows {
-    box-shadow: 0 0 15px 5px rgba(0, 0, 0, .5),
-      inset 0 0 12px 0 rgba(255, 255, 255, .5);
+    box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.5),
+      inset 0 0 12px 0 rgba(255, 255, 255, 0.5);
 
     &::before {
-      box-shadow: inset 0 0 15px 5px rgba(0, 0, 0, .5),
-        0 0 12px 0 rgba(255, 255, 255, .5);
+      box-shadow: inset 2px 2px 5px rgba($color: #000000, $alpha: 0.5),
+        0 0 12px 0 rgba(255, 255, 255, 0.5);
     }
   }
 }

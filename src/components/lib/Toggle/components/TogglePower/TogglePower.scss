@@ -1,6 +1,6 @@
 .kromac-toggle.toggle-power {
   padding-left: 1em;
-  padding-top: .5em;
+  padding-top: 0.5em;
   width: auto;
   height: auto;
 
@@ -23,7 +23,7 @@
       min-height: 40px;
       border-radius: 50%;
       box-shadow: 0 3px 4px rgba(0, 0, 0, 1), inset 0 -2px 5px rgba(0, 0, 0, 1),
-        inset 0 2px 5px rgba(255, 255, 255, .5), 0 0 0 2px #000,
+        inset 0 2px 5px rgba(255, 255, 255, 0.5), 0 0 0 2px #000,
         0 0 0 5px #0c0c0c, 0 0 0 6px #f00;
 
       img {
@@ -54,7 +54,7 @@
       &:checked ~ .span-toggle {
         box-shadow: 0 3px 4px rgba(0, 0, 0, 1),
           inset 0 -2px 5px rgba(0, 0, 0, 1),
-          inset 0 2px 5px rgba(255, 255, 255, .5), 0 0 0 2px #000,
+          inset 0 2px 5px rgba(255, 255, 255, 0.5), 0 0 0 2px #000,
           0 0 0 5px #0c0c0c, 0 0 0 6px #00ffe7;
       }
     }

@@ -50,7 +50,7 @@
       outline: none;
       background: #fff;
       width: 80%;
-      box-shadow: 0px 0px 15px -5px;
+      box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.5);
       border-radius: 0.25em;
       padding: 5px 10px;
       height: 24px;
@@ -85,7 +85,7 @@
         display: none;
 
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           top: 0;
           left: 0;
@@ -105,7 +105,7 @@
         display: none;
 
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           top: 0;
           left: 0;

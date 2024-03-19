@@ -5,6 +5,8 @@ $onColor: var(--chkOnColor);
   position: relative;
 
   .kromac-checkbox {
+    cursor: pointer;
+
     input[type="checkbox"] {
       opacity: 1;
       position: relative;
@@ -13,14 +15,13 @@ $onColor: var(--chkOnColor);
       margin: 10px;
       outline: none;
       background: $offColor;
-      cursor: pointer;
       border-radius: 20px;
       -webkit-appearance: none;
-      box-shadow: -5px -5px 20px rgba(255, 255, 255, .1),
-        5px 5px 10px rgba(0, 0, 0, 1),
-        inset -2px -2px 5px rgba(255, 255, 255, .1),
+      box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.5),
+        2px 2px 5px rgba($color: #000000, $alpha: 0.5),
+        inset -2px -2px 5px rgba(255, 255, 255, 0.1),
         inset 2px 2px 5px rgba(0, 0, 0, 1), 0 0 0 2px #1f1f1f;
-      transition: .5s;
+      transition: 0.5s;
 
       &:checked {
         background: $onColor !important;
@@ -37,7 +38,7 @@ $onColor: var(--chkOnColor);
       }
 
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -47,11 +48,11 @@ $onColor: var(--chkOnColor);
         border-radius: 20px;
         box-shadow: 0 0 0 1px #232323;
         transform: scale(0.98, 0.96);
-        transition: .5s;
+        transition: 0.5s;
       }
 
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         top: calc(50% - 2px);
         left: 18px;
@@ -60,7 +61,7 @@ $onColor: var(--chkOnColor);
         background: $offColor;
         box-shadow: 0 0 5px $offColor, 0 0 15px $offColor, 0 0 30px $offColor;
         border-radius: 50%;
-        transition: .5s;
+        transition: 0.5s;
       }
     }
   }
