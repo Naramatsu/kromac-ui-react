@@ -1,13 +1,13 @@
-import React from 'react';
-import { bgStyleByProps, borderStyle } from '../../../../../utils/utils';
-import classNames from 'classnames';
+import React from "react";
+import { bgStyleByProps, borderStyle } from "../../../../../utils/utils";
+import classNames from "classnames";
 
 const Percentage = (props) => {
   const {
-    title = '',
+    title = "",
     progress = 0,
-    cardColor = 'transparent',
-    progressColor = '#D53DC4',
+    color = "transparent",
+    progressColor = "#D53DC4",
     ...rest
   } = props;
 
@@ -17,18 +17,18 @@ const Percentage = (props) => {
     id,
   };
 
-  const borderstyle = borderStyle(cardColor);
-  const bgColor = bgStyleByProps(cardColor);
+  const borderstyle = borderStyle(color);
+  const bgColor = bgStyleByProps(color);
   const percentageStyles = {
     strokeDashoffset: `calc(440 - (440 * ${progress}) / 100)`,
     stroke: progressColor,
   };
 
-  const kromacContainer = classNames('kromac-container', 'card-percentage', {
+  const kromacContainer = classNames("kromac-container", "card-percentage", {
     [rest.className]: !!rest.className,
   });
 
-  const kromacCard = classNames('kromac-card', { [cardColor]: !!cardColor });
+  const kromacCard = classNames("kromac-card", { [color]: !!color });
 
   return (
     <div {...newRest} className={kromacContainer}>

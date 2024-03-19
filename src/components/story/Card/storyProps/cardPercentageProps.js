@@ -4,9 +4,9 @@ const importType = `import Card from "kromac-ui/dist/Card";`;
 const cardProps = {
   cardType: "percentage",
   title: "Card Title",
-  cardColor: "red",
+  color: "red",
   progressColor: "#01E735",
-  progress: 85
+  progress: 85,
 };
 
 const componentText = (
@@ -14,21 +14,17 @@ const componentText = (
     <p>
       <span className="react">&lt;Card</span>
       <br />
-      <span className="component tab">
-        cardType
-      </span>=<span className="string">"percentage"</span>
+      <span className="component tab">cardType</span>=
+      <span className="string">"percentage"</span>
       <br />
-      <span className="component tab">
-        title
-      </span>=<span className="string">"Card title"</span>
+      <span className="component tab">title</span>=
+      <span className="string">"Card title"</span>
       <br />
-      <span className="component tab">
-        cardColor
-      </span>=<span className="string">"red"</span>
+      <span className="component tab">color</span>=
+      <span className="string">"red"</span>
       <br />
-      <span className="component tab">
-        progressColor
-      </span>=<span className="string">"#01E735"</span>
+      <span className="component tab">progressColor</span>=
+      <span className="string">"#01E735"</span>
       <br />
       <span className="component tab">progress</span>=<span>{`{`}</span>
       <span className="text">85</span>
@@ -53,34 +49,34 @@ const propsDescription = [
       "info",
       "team",
       "polygon",
-      "classic"
+      "classic",
     ],
-    description: "Card type."
+    description: "Card type.",
   },
   {
     name: "title",
     type: "string",
     values: [],
-    description: "Text that will be displayed as the Card's title."
+    description: "Text that will be displayed as the Card's title.",
   },
   {
     name: "progress",
     type: "number Required",
     values: [],
-    description: "Displays progress as a percentage."
+    description: "Displays progress as a percentage.",
   },
   {
-    name: "cardColor",
+    name: "color",
     type: "string",
     values: [`default transparent`],
-    description: "Sets background color."
+    description: "Sets background color.",
   },
   {
     name: "progressColor",
     type: "string",
     values: [`default #D53DC4`],
-    description: "Sets progress color."
-  }
+    description: "Sets progress color.",
+  },
 ];
 
 const cardClassicProps = {
@@ -88,7 +84,7 @@ const cardClassicProps = {
   componentText,
   importType,
   propsDescription,
-  subTitle
+  subTitle,
 };
 
 export default cardClassicProps;
