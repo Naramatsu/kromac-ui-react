@@ -2,11 +2,11 @@ $textShadow: 1px 1px 2px #000, 0 0 0.25em #000, 0 0 0.2em #000;
 
 .kromac-panel {
   background: #fff;
-  width: 100%;
+  border-radius: 0.5em;
   height: auto;
   padding: 1em;
   position: relative;
-  border-radius: 0.5em;
+  width: 100%;
 
   &.shadows {
     box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.5);
@@ -19,8 +19,8 @@ $textShadow: 1px 1px 2px #000, 0 0 0.25em #000, 0 0 0.2em #000;
 
   &.transparent {
     backdrop-filter: blur(20px);
-    border: solid 2px #0a0a0a;
     background: transparent;
+    border: solid 2px #0a0a0a;
 
     .content {
       color: #fff;
@@ -29,34 +29,29 @@ $textShadow: 1px 1px 2px #000, 0 0 0.25em #000, 0 0 0.2em #000;
   }
 
   &.neon {
-    position: relative;
     border: none;
+    position: relative;
 
     .content {
       color: #fff;
     }
 
     span {
-      height: auto;
-      width: auto;
-      content: "";
-      display: block;
-      position: absolute;
-      top: 4px;
-      left: 4px;
-      right: 4px;
-      bottom: 4px;
       background: #212f3c;
       border-radius: 0.5em;
+      bottom: 4px;
+      content: "";
+      display: block;
+      height: auto;
+      left: 4px;
+      position: absolute;
+      right: 4px;
+      top: 4px;
+      width: auto;
     }
 
     &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      animation: animate 20s linear infinite;
       background: linear-gradient(
         45deg,
         #fb0094,
@@ -68,10 +63,15 @@ $textShadow: 1px 1px 2px #000, 0 0 0.25em #000, 0 0 0.2em #000;
         #ff0,
         #f00
       );
-      transition: all 1s ease;
       background-size: 400%;
-      animation: animate 20s linear infinite;
       border-radius: 0.5em;
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transition: all 1s ease;
+      width: 100%;
     }
 
     @keyframes animate {

@@ -3,13 +3,13 @@ $textShadow-bg-white: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 .kromac-container.classic,
 .kromac-container.card-img {
   .kromac-card {
-    position: relative;
     border-radius: 0.25em;
     margin: 10px 0;
+    position: relative;
 
     .kromac-card-image {
-      width: 100%;
       height: 200px;
+      width: 100%;
 
       img,
       video,
@@ -27,8 +27,8 @@ $textShadow-bg-white: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
     }
 
     .kromac-card-caption {
-      border-radius: 0 0 0.25em 0.25em;
       background: #fff;
+      border-radius: 0 0 0.25em 0.25em;
 
       .card-text {
         max-height: 150px;
@@ -38,16 +38,16 @@ $textShadow-bg-white: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
         }
 
         &.sm {
-          white-space: nowrap;
-          overflow: hidden;
           margin-bottom: 0;
           max-height: 55px;
+          overflow: hidden;
           text-overflow: ellipsis;
+          white-space: nowrap;
 
           p {
             display: contents;
-            white-space: nowrap;
             text-overflow: ellipsis;
+            white-space: nowrap;
           }
         }
 
@@ -57,8 +57,8 @@ $textShadow-bg-white: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
       }
 
       &.transparent {
-        text-shadow: $textShadow-bg-white;
         border-radius: 0 0 1em 1em;
+        text-shadow: $textShadow-bg-white;
       }
     }
   }

@@ -8,20 +8,20 @@ $onColor: var(--chkOnColor);
     cursor: pointer;
 
     input[type="checkbox"] {
-      opacity: 1;
-      position: relative;
-      width: 80px;
-      height: 40px;
-      margin: 10px;
-      outline: none;
+      -webkit-appearance: none;
       background: $offColor;
       border-radius: 20px;
-      -webkit-appearance: none;
       box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.5),
         2px 2px 5px rgba($color: #000000, $alpha: 0.5),
         inset -2px -2px 5px rgba(255, 255, 255, 0.1),
         inset 2px 2px 5px rgba(0, 0, 0, 1), 0 0 0 2px #1f1f1f;
+      height: 40px;
+      margin: 10px;
+      opacity: 1;
+      outline: none;
+      position: relative;
       transition: 0.5s;
+      width: 80px;
 
       &:checked {
         background: $onColor !important;
@@ -31,37 +31,37 @@ $onColor: var(--chkOnColor);
         }
 
         &::after {
-          left: calc(18px + 40px);
           background: $onColor;
           box-shadow: 0 0 5px $onColor, 0 0 15px $onColor, 0 0 30px $onColor;
+          left: calc(18px + 40px);
         }
       }
 
       &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 40px;
-        height: 100%;
         background: linear-gradient(to top, #000, #555);
         border-radius: 20px;
         box-shadow: 0 0 0 1px #232323;
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
         transform: scale(0.98, 0.96);
         transition: 0.5s;
+        width: 40px;
       }
 
       &::after {
+        background: $offColor;
+        border-radius: 50%;
+        box-shadow: 0 0 5px $offColor, 0 0 15px $offColor, 0 0 30px $offColor;
         content: "";
+        height: 4px;
+        left: 18px;
         position: absolute;
         top: calc(50% - 2px);
-        left: 18px;
-        width: 4px;
-        height: 4px;
-        background: $offColor;
-        box-shadow: 0 0 5px $offColor, 0 0 15px $offColor, 0 0 30px $offColor;
-        border-radius: 50%;
         transition: 0.5s;
+        width: 4px;
       }
     }
   }

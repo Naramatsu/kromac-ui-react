@@ -7,35 +7,35 @@
   .kromac-banner-content,
   .kromac-banner-caption,
   .kromac-banner-image {
-    display: flex;
-    width: 100%;
-    height: 100%;
     align-content: center;
-    justify-content: center;
     align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
   }
 
   .kromac-banner-content {
     .row {
-      width: 100%;
       margin-bottom: 0;
       overflow-x: hidden;
+      width: 100%;
     }
   }
 
   .kromac-banner-image {
     img {
-      width: 100%;
       height: 100%;
       object-fit: cover;
+      width: 100%;
     }
   }
 
   .kromac-banner-caption {
-    z-index: 1000;
     padding: 1em;
-    width: auto;
     position: relative;
+    width: auto;
+    z-index: 1000;
   }
 
   &.overlay {
@@ -92,11 +92,11 @@
     .kromac-banner-content {
       .kromac-banner-image {
         img {
-          width: auto;
-          max-width: 100%;
           height: 100%;
           max-height: (var(--heightImg));
+          max-width: 100%;
           object-fit: cover;
+          width: auto;
 
           &.bottom {
             margin-bottom: 0;

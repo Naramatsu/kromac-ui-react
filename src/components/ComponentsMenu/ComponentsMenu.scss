@@ -3,21 +3,21 @@ $bg-kromac: linear-gradient(90deg, #17202a 0%, #fff 100%);
 $txt-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 
 .kromac-components {
+  background: $bg-kromac;
   height: 100vh;
   overflow: auto;
-  background: $bg-kromac;
 
   .kromac-title {
     background: $bg-kromac;
 
     a {
-      text-decoration: none;
       color: #fff;
+      text-decoration: none;
       text-shadow: $txt-shadow;
 
       img {
-        width: 100px;
         height: 100px;
+        width: 100px;
       }
     }
 
@@ -26,14 +26,14 @@ $txt-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
       input:focus,
       input:target,
       input:active {
-        border: none;
         background: #fff;
-        width: 80%;
-        outline: none;
+        border: none;
+        border-radius: 0.25em;
         box-shadow: 0px 0px 15px -5px;
-        border-radius: .25em;
-        padding: 5px 10px;
         height: 24px;
+        outline: none;
+        padding: 5px 10px;
+        width: 80%;
       }
     }
   }
@@ -46,21 +46,21 @@ $txt-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
       padding-top: 10px;
 
       li {
-        padding: .5em;
         border-bottom: solid 1px #fff;
         border-left: 0;
         border-right: 0;
         margin-bottom: 2px;
+        padding: 0.5em;
 
         .sub-components {
-          opacity: 0;
           max-height: 0;
-          transition: 1s all ease;
+          opacity: 0;
           padding: 0;
+          transition: 1s all ease;
 
           &.active {
-            opacity: 1;
             max-height: 500px;
+            opacity: 1;
           }
 
           li {

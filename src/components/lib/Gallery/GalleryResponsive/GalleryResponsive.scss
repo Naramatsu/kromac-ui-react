@@ -1,17 +1,17 @@
 .gallery-default {
-  width: 100%;
   display: grid;
   grid-auto-flow: dense;
   margin-bottom: 2em;
+  width: 100%;
 
   .bgblur {
-    width: 0;
+    backdrop-filter: blur(5px) brightness(0.2);
     height: 100%;
     height: 100%;
+    left: 0;
     position: fixed;
     top: 0;
-    left: 0;
-    backdrop-filter: blur(5px) brightness(0.2);
+    width: 0;
 
     &.active {
       width: 100%;
@@ -20,69 +20,69 @@
   }
 
   .kromac-box {
-    position: relative;
     overflow: hidden;
+    position: relative;
 
     .kromac-box-container {
-      width: 100%;
-      height: 100%;
-      display: flex;
       align-items: center;
+      display: flex;
+      height: 100%;
       justify-content: center;
+      width: 100%;
 
       &:hover > .brillo {
-        z-index: 1;
         animation: brillo 1s ease-out;
+        z-index: 1;
       }
 
       &:hover > img,
       &:hover > video {
-        transition: all 1s ease;
         transform: scale(1.2);
+        transition: all 1s ease;
       }
 
       img,
       video,
       iframe {
+        cursor: pointer;
+        height: 100%;
+        left: 0;
+        object-fit: cover;
         position: absolute;
         top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        cursor: pointer;
         transition: all 1s ease;
+        width: 100%;
       }
 
       .close {
-        display: none;
+        background: #000;
         border: none;
-        position: absolute;
-        z-index: 10000000;
-        box-shadow: none;
         border-radius: 50%;
+        box-shadow: none;
+        color: #fff;
+        display: none;
+        font-size: 3em;
+        height: 50px;
+        pointer-events: visible;
+        position: absolute;
         right: 5px;
         top: 35px;
-        color: #fff;
-        background: #000;
-        pointer-events: visible;
-        font-size: 3em;
         width: 50px;
-        height: 50px;
+        z-index: 10000000;
       }
     }
 
     &.active {
-      z-index: 1001;
-      position: fixed;
-      transform: translate(-50%, -50%);
-      top: 50%;
+      grid-column: none !important;
+      grid-row: none !important;
+      height: 90%;
       left: 50%;
       margin: 0;
+      position: fixed;
+      top: 50%;
+      transform: translate(-50%, -50%);
       width: 90%;
-      height: 90%;
-      grid-row: none !important;
-      grid-column: none !important;
+      z-index: 1001;
 
       .brillo {
         width: 0;
@@ -100,10 +100,10 @@
         img,
         video,
         iframe {
-          z-index: 1001;
-          position: inherit;
           height: 100%;
           object-fit: contain;
+          position: inherit;
+          z-index: 1001;
         }
 
         .close {
@@ -120,8 +120,8 @@
     flex-wrap: wrap;
 
     .kromac-box {
-      width: 100%;
       height: 300px;
+      width: 100%;
     }
   }
 }
