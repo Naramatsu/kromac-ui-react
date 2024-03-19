@@ -16,7 +16,10 @@ const Gallery = lazy(() => import("./components/story/Gallery/Gallery.story"));
 const Slider = lazy(() => import("./components/story/Slider/Slider.story"));
 const Avatar = lazy(() => import("./components/story/Avatar/Avatar.story"));
 const Grid = lazy(() => import("./components/story/Grid/Grid.story"));
-const GridItem = lazy(() => import("./components/story/GridItem/GridItem.story"));
+const Chip = lazy(() => import("./components/story/Chip/Chip.story"));
+const GridItem = lazy(() =>
+  import("./components/story/GridItem/GridItem.story")
+);
 const KromacClass = lazy(() =>
   import("./components/story/KromacClass/KromacClass.story")
 );
@@ -28,9 +31,9 @@ const Skeleton = lazy(() =>
   import("./components/story/Skeleton/Skeleton.story")
 );
 
-const tabs = data.map(c => c.component).sort();
+const tabs = data.map((c) => c.component).sort();
 
-const App = () =>
+const App = () => (
   <div className="App">
     <div className="h-menu-kromac">
       <KromacMenu
@@ -56,6 +59,7 @@ const App = () =>
       <Route path="/avatar" component={Avatar} />
       <Route path="/class" component={KromacClass} />
       <Route path="/toast" component={Toast} />
+      <Route path="/chip" component={Chip} />
       <Route path="/grid" component={Grid} />
       <Route path="/gridItem" component={GridItem} />
       <Route path="/releases" component={ReleaseInfo} />
@@ -63,6 +67,7 @@ const App = () =>
         <Redirect to="/" />
       </Route>
     </Switch>
-  </div>;
+  </div>
+);
 
 export default App;
