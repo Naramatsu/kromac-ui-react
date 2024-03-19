@@ -1,1 +1,1 @@
-export { default } from "./SpinnerSVG";
+export { default } from "./SpinnerSVG.jsx";

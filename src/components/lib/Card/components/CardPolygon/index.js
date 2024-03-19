@@ -1,1 +1,1 @@
-export { default } from "./CardPolygon";
+export { default } from "./CardPolygon.jsx";

@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import { determinateColor, initialSizeProps } from '../../../../../utils/utils';
-import classNames from 'classnames';
-import Skeleton from '../../../Skeleton';
-import { videoBuilder } from '../../Card';
+import React, { useState } from "react";
+import classNames from "classnames";
+import Skeleton from "../../../Skeleton/Skeleton.jsx";
+import { determinateColor, initialSizeProps } from "../../../../../utils/utils";
+import { videoBuilder } from "../../Card.jsx";
 
 const CardHorizontal = (props) => {
   const {
     image,
-    title = '',
-    color = '#fff',
-    imageSide = 'left',
-    imageFitPosition = 'center',
+    title = "",
+    color = "#fff",
+    imageSide = "left",
+    imageFitPosition = "center",
     reveal = false,
-    transition = '.5s',
+    transition = ".5s",
     video,
     children,
     ...rest
@@ -32,76 +32,79 @@ const CardHorizontal = (props) => {
 
   const showTitle = title || reveal;
   const styleColor = determinateColor(color);
-  const isClassExpanded = reveal ? 'expanded' : '';
+  const isClassExpanded = reveal ? "expanded" : "";
   const backgroundCaption = { background: color };
-  const titleSize = reveal ? { maxWidth: '65%' } : { maxWidth: '100%' };
+  const titleSize = reveal ? { maxWidth: "65%" } : { maxWidth: "100%" };
 
-  const handleShowMore = (e) => {
-    e.preventDefault();
+  const handleShowMore = (event) => {
+    event.preventDefault();
     setKromacContainerStyle(() => {
       if (isExpanded) {
         return initialSizeProps;
       } else {
         return {
-          boxShadow: '0px 0px 15px 5px rgba(0, 0, 0, .5)',
+          boxShadow: "0px 0px 15px 5px rgba(0, 0, 0, .5)",
         };
       }
     });
+
     setStyleSize(() => {
       if (isExpanded) {
         return initialSizeProps;
       } else {
-        if (imageSide === 'left') {
+        if (imageSide === "left") {
           return {
-            transform: 'translateX(0)',
+            transform: "translateX(0)",
             background: color,
           };
         } else {
           if (reveal) {
             return {
-              transform: 'translateX(0%)',
+              transform: "translateX(0%)",
               background: color,
             };
           }
           return {
-            transform: 'translateX(-50%)',
+            transform: "translateX(-50%)",
             background: color,
           };
         }
       }
     });
+
     setIsExpanded(!isExpanded);
   };
 
-  const kromacContainer = classNames('kromac-container', 'horizontal', {
+  const kromacContainer = classNames("kromac-container", "horizontal", {
     [isClassExpanded]: !!isClassExpanded,
     [rest.className]: !!rest.className,
   });
 
   const kromacCard = classNames(
-    'kromac-card',
-    'horizontal',
+    "kromac-card",
+    "horizontal",
     { [imageSide]: !!imageSide },
     { [isClassExpanded]: !!isClassExpanded },
     { [styleColor]: !!styleColor }
   );
 
-  const kromacCardImage = classNames('kromac-card-image', {
+  const kromacCardImage = classNames("kromac-card-image", {
     [imageSide]: !!imageSide,
   });
 
   const kromacCardCaption = classNames(
-    'kromac-card-caption',
+    "kromac-card-caption",
     { [imageSide]: !!imageSide },
     { [isClassExpanded]: !!isClassExpanded },
     { [styleColor]: !!styleColor }
   );
 
   const kromacCardText = classNames(
-    'card-text',
-    'kromac-scroll',
-    'animate__animated animate__zoomIn'
+    "card-text",
+    "kromac-scroll",
+    "animate__animated animate__zoomIn"
   );
+
   return (
     <div {...newRest} className={kromacContainer} style={kromacContainerStyle}>
       <div className={kromacCard}>
@@ -127,7 +130,7 @@ const CardHorizontal = (props) => {
               </h4>
               {reveal && (
                 <label onClick={handleShowMore}>
-                  {isExpanded ? 'show less' : 'show more'}
+                  {isExpanded ? "show less" : "show more"}
                 </label>
               )}
             </div>
@@ -135,7 +138,7 @@ const CardHorizontal = (props) => {
         </div>
         <div
           className={kromacCardCaption}
-          style={{ ...styleSize, '--transition': transition }}
+          style={{ ...styleSize, "--transition": transition }}
         >
           <div className={kromacCardText} style={{ ...backgroundCaption }}>
             {children}

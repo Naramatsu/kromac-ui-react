@@ -1,1 +1,1 @@
-export { default } from "./TogglePower";
+export { default } from "./TogglePower.jsx";

@@ -1,1 +1,1 @@
-export { default } from "./GalleryPolygon";
+export { default } from "./GalleryPolygon.jsx";

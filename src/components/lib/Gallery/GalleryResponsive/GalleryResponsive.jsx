@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+import classNames from "classnames";
+import Skeleton from "../../Skeleton/Skeleton.jsx";
 import {
   isViewStyleKromacCol,
   templateGenerator,
   widthCalculator,
   rowColGenerator,
-} from '../../../../utils/utils';
-import classNames from 'classnames';
-import Skeleton from '../../Skeleton';
-import { videoBuilder } from '../Gallery';
+} from "../../../../utils/utils";
+import { videoBuilder } from "../Gallery.jsx";
 
 const GalleryResponsive = (props) => {
   const [isViewImage, setIsViewImage] = useState(false);
   const [itemActive, setItemActive] = useState({});
   const [isMediaLoading, setIsMediaLoading] = useState(true);
-  const { content = [], gridGap = '0', ...rest } = props;
+  const { content = [], gridGap = "0", ...rest } = props;
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   const { key, id } = rest;
@@ -23,18 +23,18 @@ const GalleryResponsive = (props) => {
   };
 
   useEffect(() => {
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const widthCalculated = widthCalculator(screenWidth);
   const style = { gridTemplate: templateGenerator(content, widthCalculated) };
-  const isActive = isViewImage ? 'active' : '';
+  const isActive = isViewImage ? "active" : "";
 
   const handleResize = () => setScreenWidth(window.innerWidth);
 
-  const close = (e) => {
-    e.preventDefault();
+  const close = (event) => {
+    event.preventDefault();
     setItemActive({});
     setIsViewImage(false);
   };
@@ -44,7 +44,7 @@ const GalleryResponsive = (props) => {
     setIsViewImage(true);
   };
 
-  const kromacGallery = classNames('gallery-default', {
+  const kromacGallery = classNames("gallery-default", {
     [rest.className]: !!rest.className,
   });
 
@@ -74,7 +74,7 @@ const GalleryResponsive = (props) => {
               <p>Rendering please wait</p>
             )}
 
-            {Object.keys(item)[0] === 'video' ? (
+            {Object.keys(item)[0] === "video" ? (
               videoBuilder(
                 {
                   url: item.video,

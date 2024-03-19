@@ -1,8 +1,8 @@
-import React from 'react';
-import classNames from 'classnames';
+import React from "react";
+import classNames from "classnames";
 
 const ToggleSwitch = (props) => {
-  const { checked, onColor = '#28B463', offColor = '#CB4335', ...rest } = props;
+  const { checked, onColor = "#28B463", offColor = "#CB4335", ...rest } = props;
   const { key, id } = rest;
   const newRest = {
     key,
@@ -10,10 +10,10 @@ const ToggleSwitch = (props) => {
   };
   const handleChange = props.onChange ? props.onChange : () => ({});
   const style = {
-    '--chkOnColor': onColor,
-    '--chkOffColor': offColor,
+    "--chkOnColor": onColor,
+    "--chkOffColor": offColor,
   };
-  const kromacToggle = classNames('kromac-toggle', 'toggle-switch', {
+  const kromacToggle = classNames("kromac-toggle", "toggle-switch", {
     [rest.className]: !!rest.className,
   });
 

@@ -1,1 +1,1 @@
-export { default } from "./SpinnerLighter";
+export { default } from "./SpinnerLighter.jsx";

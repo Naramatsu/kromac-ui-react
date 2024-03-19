@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { determinateColor } from '../../../../../utils/utils';
-import classNames from 'classnames';
-import Skeleton from '../../../Skeleton';
-import { videoBuilder } from '../../Card';
+import React, { useState } from "react";
+import classNames from "classnames";
+import Skeleton from "../../../Skeleton/Skeleton.jsx";
+import { determinateColor } from "../../../../../utils/utils";
+import { videoBuilder } from "../../Card.jsx";
 
 const CardReveal = (props) => {
   const {
     image,
-    title = '',
-    color = '#fff',
-    imageFitPosition = 'center',
-    transition = '.5s',
+    title = "",
+    color = "#fff",
+    imageFitPosition = "center",
+    transition = ".5s",
     video,
     children,
     ...rest
@@ -25,11 +25,11 @@ const CardReveal = (props) => {
   const [isMediaLoading, setIsMediaLoading] = useState(true);
   const styleColor = determinateColor(color);
 
-  const kromacContainer = classNames('kromac-container', 'reveal', {
+  const kromacContainer = classNames("kromac-container", "reveal", {
     [rest.className]: !!rest.className,
   });
 
-  const kromacCardCaption = classNames('kromac-card-caption', {
+  const kromacCardCaption = classNames("kromac-card-caption", {
     [styleColor]: !!styleColor,
   });
 
@@ -51,7 +51,7 @@ const CardReveal = (props) => {
         </div>
         <div
           className={kromacCardCaption}
-          style={{ '--transition': transition }}
+          style={{ "--transition": transition }}
         >
           <div className="card-title">
             <h4>{title}</h4>

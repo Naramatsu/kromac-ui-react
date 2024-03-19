@@ -1,35 +1,43 @@
 import React, { useState } from "react";
+import menuComponents from "../../utils/components.json";
 import { Route, Link } from "react-router-dom";
-import data from "../../utils/components.json";
 
 const ComponentsMenu = () => {
   const [kromacComponents, setComponents] = useState(
-    data.map(c => c.component).sort()
+    menuComponents.map((menuComponent) => menuComponent.component).sort()
   );
   const [componentsFiltered, setComponentsFiltered] = useState("");
   const [subComponents, setSubComponents] = useState();
 
-  const handleChangeFilter = e => {
-    e.preventDefault();
-    const { target: { value } } = e;
-    if (e) {
+  const handleChangeFilter = (event) => {
+    event.preventDefault();
+    const {
+      target: { value },
+    } = event;
+    if (event) {
       setComponentsFiltered(value);
-      const filtereds = data
-        .map(c => c.component)
+      const filtereds = menuComponents
+        .map((component) => component.component)
         .sort()
-        .filter(components => components.includes(value));
+        .filter((components) => components.includes(value));
       setComponents(filtereds);
     } else {
-      setComponents(data.sort());
+      setComponents(menuComponents.sort());
     }
   };
 
-  const handleClick = e => {
-    const { target: { name } } = e;
+  const handleClick = (event) => {
+    const {
+      target: { name },
+    } = event;
     if (name === "home") {
       setSubComponents([]);
     }
-    setSubComponents(data.map(c => c).filter(c => c.component === name));
+    setSubComponents(
+      menuComponents
+        .map((menuComponent) => menuComponent)
+        .filter((menuComponent) => menuComponent.component === name)
+    );
   };
 
   const showSubComponents = subComponents && subComponents.length > 0;
@@ -70,7 +78,7 @@ const ComponentsMenu = () => {
         <ul>
           <Route>
             {kromacComponents &&
-              kromacComponents.map((link, index) =>
+              kromacComponents.map((link, index) => (
                 <li key={index} style={{ textTransform: "capitalize" }}>
                   <Link to={link} onClick={handleClick} name={link}>
                     {link}
@@ -79,30 +87,30 @@ const ComponentsMenu = () => {
                     className={`sub-components ${activeSubComponent({
                       showSubComponents,
                       subComponents,
-                      link
+                      link,
                     })}`}
                   >
                     {showSubComponents &&
                       subComponents[0].component === link &&
-                      subComponents.map(c =>
-                        c.subComponents.map((sc, index) =>
+                      subComponents.map((component) =>
+                        component.subComponents.map((subComponent, index) => (
                           <li key={index}>
                             <Link
                               to={{
                                 pathname: link,
-                                state: sc.type
+                                state: subComponent.type,
                               }}
                               onClick={handleClick}
                               name={link}
                             >
-                              {sc.component}
+                              {subComponent.component}
                             </Link>
                           </li>
-                        )
+                        ))
                       )}
                   </ul>
                 </li>
-              )}
+              ))}
           </Route>
         </ul>
       </div>

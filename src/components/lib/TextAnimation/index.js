@@ -1,1 +1,1 @@
-export { default } from "./TextAnimation";
+export { default } from "./TextAnimation.jsx";

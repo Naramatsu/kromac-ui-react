@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
-import { determinateColor, initialSizeProps } from '../../../../../utils/utils';
-import classNames from 'classnames';
-import Skeleton from '../../../Skeleton';
-import { videoBuilder } from '../../Card';
+import React, { useState } from "react";
+import classNames from "classnames";
+import Skeleton from "../../../Skeleton/Skeleton.jsx";
+import { determinateColor, initialSizeProps } from "../../../../../utils/utils";
+import { videoBuilder } from "../../Card.jsx";
 
 const CardClassic = (props) => {
   const {
     image,
-    title = '',
-    size = 'md',
-    color = '#fff',
+    title = "",
+    size = "md",
+    color = "#fff",
     expanded = false,
-    imageFitPosition = 'center',
+    imageFitPosition = "center",
     children,
-    className = 'classic',
-    transition = '.5s',
+    className = "classic",
+    transition = ".5s",
     video,
     ...rest
   } = props;
@@ -31,15 +31,15 @@ const CardClassic = (props) => {
   const styleColor = determinateColor(color);
   const showTitle = title || expanded;
 
-  const handleShowMore = (e) => {
-    e.preventDefault();
+  const handleShowMore = (event) => {
+    event.preventDefault();
     setStyleSize(() => {
       if (isExpanded) {
         return initialSizeProps;
       } else {
         return {
-          whiteSpace: 'initial',
-          maxHeight: '500px',
+          whiteSpace: "initial",
+          maxHeight: "500px",
           transition: `max-height ${transition} ease-out`,
         };
       }
@@ -47,17 +47,17 @@ const CardClassic = (props) => {
     setIsExpanded(!isExpanded);
   };
 
-  const kromacContainer = classNames('kromac-container', {
+  const kromacContainer = classNames("kromac-container", {
     [className]: !!className,
   });
 
-  const kromacCardCaption = classNames('kromac-card-caption', {
+  const kromacCardCaption = classNames("kromac-card-caption", {
     [styleColor]: !!styleColor,
   });
 
   const cardText = classNames(
-    'card-text',
-    'animate__animated animate__zoomIn',
+    "card-text",
+    "animate__animated animate__zoomIn",
     { [size]: !!size }
   );
 
@@ -81,7 +81,7 @@ const CardClassic = (props) => {
               <h4 className="animate__animated animate__zoomIn">{title}</h4>
               {expanded && (
                 <label onClick={handleShowMore}>
-                  {isExpanded ? 'show less' : 'show more'}
+                  {isExpanded ? "show less" : "show more"}
                 </label>
               )}
             </div>
@@ -90,7 +90,7 @@ const CardClassic = (props) => {
         <div className={kromacCardCaption}>
           <div
             className={cardText}
-            style={{ ...styleSize, '--transition': transition }}
+            style={{ ...styleSize, "--transition": transition }}
           >
             {children}
           </div>

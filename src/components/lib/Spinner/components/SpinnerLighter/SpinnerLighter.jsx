@@ -1,22 +1,24 @@
-import React from 'react';
-import classNames from 'classnames';
-import { styleCentered } from '../../../../../utils/utils';
+import React from "react";
+import classNames from "classnames";
+import { styleCentered } from "../../../../../utils/utils";
 
 const SpinnerLighter = (props) => {
   const {
-    size = 'sm',
+    size = "sm",
     isCentered = false,
     shadows = true,
-    bgColorInside = '#fff',
+    bgColorInside = "#fff",
     ...rest
   } = props;
+
   const { key, id } = rest;
   const newRest = {
     key,
     id,
   };
-  const isShadows = shadows ? 'shadows' : '';
-  const kromacSpinner = classNames('kromac-spinner', 'spinner-lighter', {
+
+  const isShadows = shadows ? "shadows" : "";
+  const kromacSpinner = classNames("kromac-spinner", "spinner-lighter", {
     [size]: !!size,
     [isShadows]: !!isShadows,
     [rest.className]: !!rest.className,

@@ -1,11 +1,11 @@
-import React from 'react';
-import classNames from 'classnames';
+import React from "react";
+import classNames from "classnames";
 
 const Skeleton = ({
-  height = '32px',
-  width = '100%',
-  borderRadius = 'none',
-  className = 'light',
+  height = "32px",
+  width = "100%",
+  borderRadius = "none",
+  className = "light",
   ...rest
 }) => {
   const { key, id } = rest;
@@ -18,10 +18,10 @@ const Skeleton = ({
     width,
     borderRadius,
   };
-  const kromacSkeleton = classNames('kromac-skeleton', {
+  const kromacSkeleton = classNames("kromac-skeleton", {
     [className]: !!className,
   });
-  const kromacSkeletonLoader = classNames('kromac-skeletonLoader', {
+  const kromacSkeletonLoader = classNames("kromac-skeletonLoader", {
     [className]: !!className,
   });
 

@@ -1,5 +1,5 @@
-import React from 'react';
-import classNames from 'classnames';
+import React from "react";
+import classNames from "classnames";
 
 const TogglePower = (props) => {
   const { checked, ...rest } = props;
@@ -9,7 +9,7 @@ const TogglePower = (props) => {
     key,
     id,
   };
-  const kromacToggle = classNames('kromac-toggle', 'toggle-power', {
+  const kromacToggle = classNames("kromac-toggle", "toggle-power", {
     [rest.className]: !!rest.className,
   });
 

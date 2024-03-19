@@ -1,1 +1,1 @@
-export { default } from "./Percentage";
+export { default } from "./Percentage.jsx";

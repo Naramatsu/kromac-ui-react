@@ -1,26 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import { Link, withRouter } from 'react-router-dom';
-import classNames from 'classnames';
+import React, { useState, useEffect } from "react";
+import classNames from "classnames";
+import { Link, withRouter } from "react-router-dom";
 
 const setActiveTab = (pathname, tab) => {
-  if (pathname.includes(tab)) {
-    return 'kromac-menu-list active';
-  }
-  return 'kromac-menu-list';
+  if (pathname.includes(tab)) return "kromac-menu-list active";
+  return "kromac-menu-list";
 };
 
 const Menu = (props) => {
   const {
-    location: { pathname = '/' },
+    location: { pathname = "/" },
     appName,
     imgLogo,
     tabs = [],
     searchComponents = false,
-    bgColor = '#283747',
-    hamburgerActiveColor = '#C0392B',
-    hamburgerColor = '#283747',
-    homeUrl = '/',
-    transition = '.5s',
+    bgColor = "#283747",
+    hamburgerActiveColor = "#C0392B",
+    hamburgerColor = "#283747",
+    homeUrl = "/",
+    transition = ".5s",
     ...rest
   } = props;
 
@@ -30,27 +28,27 @@ const Menu = (props) => {
     id,
   };
 
-  const [hambuergerIsActive, setHambuergerIsActive] = useState('');
-  const [componentsFiltered, setComponentsFiltered] = useState('');
+  const [hambuergerIsActive, setHambuergerIsActive] = useState("");
+  const [componentsFiltered, setComponentsFiltered] = useState("");
   const [components, setComponents] = useState(tabs.sort());
 
   useEffect(() => {
-    setHambuergerIsActive('');
+    setHambuergerIsActive("");
   }, [pathname]);
 
   const styleMenu = {
-    '--bgColor': bgColor,
-    '--hamburgerActiveColor': hamburgerActiveColor,
-    '--hamburgerColor': hamburgerColor,
-    '--transition': transition,
+    "--bgColor": bgColor,
+    "--hamburgerActiveColor": hamburgerActiveColor,
+    "--hamburgerColor": hamburgerColor,
+    "--transition": transition,
   };
 
-  const handleChangeFilter = (e) => {
-    e.preventDefault();
+  const handleChangeFilter = (event) => {
+    event.preventDefault();
     const {
       target: { value },
-    } = e;
-    if (e) {
+    } = event;
+    if (event) {
       setComponentsFiltered(value);
       const filtereds = tabs
         .sort()
@@ -61,17 +59,17 @@ const Menu = (props) => {
     }
   };
 
-  const handleActive = (e) => {
-    e.preventDefault();
+  const handleActive = (event) => {
+    event.preventDefault();
     setHambuergerIsActive(() => {
-      if (hambuergerIsActive === '') {
-        return 'active';
+      if (hambuergerIsActive === "") {
+        return "active";
       }
-      return '';
+      return "";
     });
   };
 
-  const kromacMenu = classNames('kromac-menu-hamburger', 'kromac-scroll', {
+  const kromacMenu = classNames("kromac-menu-hamburger", "kromac-scroll", {
     [hambuergerIsActive]: !!hambuergerIsActive,
     [rest.className]: !!rest.className,
   });

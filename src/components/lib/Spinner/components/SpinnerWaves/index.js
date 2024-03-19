@@ -1,1 +1,1 @@
-export { default } from "./SpinnerWaves";
+export { default } from "./SpinnerWaves.jsx";

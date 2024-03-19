@@ -1,6 +1,6 @@
 import React from "react";
-import { bgStyleByProps, borderStyle } from "../../../../../utils/utils";
 import classNames from "classnames";
+import { bgStyleByProps, borderStyle } from "../../../../../utils/utils";
 
 const Percentage = (props) => {
   const {

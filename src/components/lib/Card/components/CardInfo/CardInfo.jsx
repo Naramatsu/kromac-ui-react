@@ -1,13 +1,13 @@
-import React from 'react';
-import { bgStyleByProps, borderStyle } from '../../../../../utils/utils';
-import classNames from 'classnames';
+import React from "react";
+import classNames from "classnames";
+import { bgStyleByProps, borderStyle } from "../../../../../utils/utils";
 
 const CardInfo = (props) => {
   const {
-    title = '',
-    size = 'auto',
-    shape = 'color',
-    color = 'transparent',
+    title = "",
+    size = "auto",
+    shape = "color",
+    color = "transparent",
     children,
     ...rest
   } = props;
@@ -21,20 +21,20 @@ const CardInfo = (props) => {
   const borderstyle = borderStyle(color);
   const bg = bgStyleByProps(color);
 
-  const kromacContainer = classNames('kromac-container', 'card-info', {
+  const kromacContainer = classNames("kromac-container", "card-info", {
     [rest.className]: !!rest.className,
   });
 
-  const kromacCard = classNames('kromac-card', {
+  const kromacCard = classNames("kromac-card", {
     [color]: !!color,
     [shape]: !!shape,
   });
 
   const kromacCardText = classNames(
-    'card-text',
-    'text-bg-light',
-    'animate__animated',
-    'animate__zoomIn',
+    "card-text",
+    "text-bg-light",
+    "animate__animated",
+    "animate__zoomIn",
     {
       [size]: !!size,
     }

@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import { styleCentered } from "../../../../../utils/utils";
 
-const spanGenerator = (loops) => {
+export const spanGenerator = (loops) => {
   const spans = [];
   for (let i = 1; i <= loops; i++) {
     var style = { "--i": i };

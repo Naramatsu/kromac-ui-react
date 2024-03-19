@@ -1,6 +1,6 @@
-import React, { lazy, useEffect, useState } from 'react';
-import { changeDocumentTitle } from '../../utils/utils';
-import { Link } from 'react-router-dom';
+import React, { lazy, useEffect, useState } from "react";
+import { changeDocumentTitle } from "../../utils/utils";
+import { Link } from "react-router-dom";
 import {
   btnSponsorList,
   comingSoonProjects,
@@ -8,7 +8,7 @@ import {
   resources,
   sponsores,
   technogloies,
-} from './pageGenerator';
+} from "./pageGenerator";
 import {
   comingsoonText,
   componentText,
@@ -25,13 +25,13 @@ import {
   sponsorTitle,
   teamTitle,
   technogloiesTitle,
-} from '../../utils/constants.en';
+} from "../../utils/constants.en";
 
-const TextAnimation = lazy(() => import('../lib/TextAnimation'));
-const BoxImplementation = lazy(() => import('../BoxImplementation'));
-const Avatar = lazy(() => import('../lib/Avatar'));
-const Card = lazy(() => import('../lib/Card'));
-const Toast = lazy(() => import('../lib/Toast'));
+const TextAnimation = lazy(() => import("../lib/TextAnimation"));
+const BoxImplementation = lazy(() => import("../BoxImplementation"));
+const Avatar = lazy(() => import("../lib/Avatar"));
+const Card = lazy(() => import("../lib/Card"));
+const Toast = lazy(() => import("../lib/Toast"));
 
 const adder = (count) => count++;
 
@@ -39,42 +39,49 @@ const lesser = (count) => count--;
 
 const LandingPage = () => {
   const [counter, setCounter] = useState(0);
-  const [indicator, setIndicator] = useState('up');
+  const [indicator, setIndicator] = useState("up");
   const techCount = technogloies.length;
   const techstyles = {
-    '--left': counter,
+    "--left": counter,
   };
 
   useEffect(() => {
-    if (indicator === 'up') {
+    if (indicator === "up") {
       if (counter < techCount - 4) {
         setCounter(adder(counter));
       } else {
-        setIndicator('down');
+        setIndicator("down");
       }
     }
-    if (indicator === 'down') {
+
+    if (indicator === "down") {
       if (counter > 0) {
         setCounter(lesser(counter));
       } else {
-        setIndicator('up');
+        setIndicator("up");
       }
     }
+
     const handlerTimeout = setTimeout(() => {
-      if (indicator === 'up') {
+      if (indicator === "up") {
         setCounter(counter + 1);
       } else {
         setCounter(counter - 1);
       }
     }, 2000);
+
     return () => {
       clearTimeout(handlerTimeout);
     };
   }, [counter, indicator, techCount]);
 
   useEffect(() => {
-    document.title = changeDocumentTitle({ component: 'Home', state: '' });
+    document.title = changeDocumentTitle({ component: "Home", state: "" });
   });
+
+  const backgroundTextAnimation = "linear-gradient(90deg, #000, #566573)";
+  const fontColorTextAnimation = "#fff";
+
   return (
     <div className="kromac-scroll landingpage">
       <div className="kromac-title-landingpage">
@@ -89,8 +96,8 @@ const LandingPage = () => {
         <div className="kromac-section">
           <TextAnimation
             word1={introductionTitle}
-            background="linear-gradient(90deg, #000, #566573)"
-            fontColor="#fff"
+            background={backgroundTextAnimation}
+            fontColor={fontColorTextAnimation}
           />
           {introduction}
         </div>
@@ -98,8 +105,8 @@ const LandingPage = () => {
           <div className="sub-title">
             <TextAnimation
               word1={installationTitle}
-              background="linear-gradient(90deg, #000, #566573)"
-              fontColor="#fff"
+              background={backgroundTextAnimation}
+              fontColor={fontColorTextAnimation}
             />
           </div>
           <p>
@@ -127,8 +134,8 @@ const LandingPage = () => {
         <div className="kromac-section">
           <TextAnimation
             word1={requirementsTitle}
-            background="linear-gradient(90deg, #000, #566573)"
-            fontColor="#fff"
+            background={backgroundTextAnimation}
+            fontColor={fontColorTextAnimation}
           />
           <div className="kromac-subsection">
             {requirementsText}
@@ -156,8 +163,8 @@ const LandingPage = () => {
         <div className="kromac-section">
           <TextAnimation
             word1={implementationTitle}
-            background="linear-gradient(90deg, #000, #566573)"
-            fontColor="#fff"
+            background={backgroundTextAnimation}
+            fontColor={fontColorTextAnimation}
           />
           <p>
             Visit Us on &nbsp;
@@ -171,8 +178,8 @@ const LandingPage = () => {
         <div className="kromac-section">
           <TextAnimation
             word1={resourcesTitle}
-            background="linear-gradient(90deg, #000, #566573)"
-            fontColor="#fff"
+            background={backgroundTextAnimation}
+            fontColor={fontColorTextAnimation}
           />
           <div className="kromac-subsection">
             <ul>
@@ -190,8 +197,8 @@ const LandingPage = () => {
           <div className="sub-title">
             <TextAnimation
               word1={teamTitle}
-              background="linear-gradient(90deg, #000, #566573)"
-              fontColor="#fff"
+              background={backgroundTextAnimation}
+              fontColor={fontColorTextAnimation}
             />
           </div>
           <div className="dev-team">
@@ -217,8 +224,8 @@ const LandingPage = () => {
         <div className="kromac-section">
           <TextAnimation
             word1={sponsorTitle}
-            background="linear-gradient(90deg, #000, #566573)"
-            fontColor="#fff"
+            background={backgroundTextAnimation}
+            fontColor={fontColorTextAnimation}
           />
           <p>{sponsorText}</p>
           <div className="btn-sponsor">
@@ -256,8 +263,8 @@ const LandingPage = () => {
           <div className="sub-title">
             <TextAnimation
               word1={technogloiesTitle}
-              background="linear-gradient(90deg, #000, #566573)"
-              fontColor="#fff"
+              background={backgroundTextAnimation}
+              fontColor={fontColorTextAnimation}
             />
           </div>
           <div className="kromac-section">
@@ -285,8 +292,8 @@ const LandingPage = () => {
           <div className="kromac-section">
             <TextAnimation
               word1="Comingsoon"
-              background="linear-gradient(90deg, #000, #566573)"
-              fontColor="#fff"
+              background={backgroundTextAnimation}
+              fontColor={fontColorTextAnimation}
             />
             <p>{comingsoonText}</p>
             <div className="comingsoon">

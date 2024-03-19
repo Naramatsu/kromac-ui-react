@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { inactivateIonIcon } from '../../../utils/utils';
-import classNames from 'classnames';
-import Skeleton from '../Skeleton';
-import Spinner from '../Spinner';
+import React, { useState, useEffect } from "react";
+import classNames from "classnames";
+import Skeleton from "../Skeleton/Skeleton.jsx";
+import Spinner from "../Spinner/Spinner.jsx";
+import { inactivateIonIcon } from "../../../utils/utils";
 
 const adder = (count) => {
   return count++;
@@ -14,14 +14,14 @@ const Slider = (props) => {
 
   const {
     content = [],
-    height = '500px',
+    height = "500px",
     showPreview = false,
     autoPlay = false,
     timer = 5,
     ...rest
   } = props;
-  const actualHeight = height === 'auto' ? '500px' : height;
-  const style = { height: actualHeight, '--left': counter };
+  const actualHeight = height === "auto" ? "500px" : height;
+  const style = { height: actualHeight, "--left": counter };
   const nroItems = content.length - 1;
   const { key, id } = rest;
   const newRest = {
@@ -29,8 +29,8 @@ const Slider = (props) => {
     id,
   };
 
-  const handleChangeLeft = (e) => {
-    e.preventDefault();
+  const handleChangeLeft = (event) => {
+    event.preventDefault();
     setCounter(() => {
       if (counter <= 0) {
         return nroItems;
@@ -39,8 +39,8 @@ const Slider = (props) => {
     });
   };
 
-  const handleChangeRight = (e) => {
-    e.preventDefault();
+  const handleChangeRight = (event) => {
+    event.preventDefault();
     setCounter(() => {
       if (counter >= nroItems) {
         return 0;
@@ -81,8 +81,8 @@ const Slider = (props) => {
             <img
               src="https://res.cloudinary.com/dxg9gszax/image/upload/v1634082826/kromac-ui/arrow-left_pu25qv.svg"
               style={{
-                ...inactivateIonIcon(counter, 'left', nroItems),
-                paddingRight: '5px',
+                ...inactivateIonIcon(counter, "left", nroItems),
+                paddingRight: "5px",
               }}
               alt="left"
             />
@@ -91,8 +91,8 @@ const Slider = (props) => {
             <img
               src="https://res.cloudinary.com/dxg9gszax/image/upload/v1634082826/kromac-ui/arrow-right_ksufka.svg"
               style={{
-                ...inactivateIonIcon(counter, 'right', nroItems),
-                paddingLeft: '5px',
+                ...inactivateIonIcon(counter, "right", nroItems),
+                paddingLeft: "5px",
               }}
               alt="right"
             />
@@ -107,7 +107,7 @@ const Slider = (props) => {
                 onClick={() => handleClick(index)}
               >
                 {isImgLoading && (
-                  <div style={{ transform: 'scale(.2)' }}>
+                  <div style={{ transform: "scale(.2)" }}>
                     <Spinner />
                   </div>
                 )}

@@ -1,1 +1,1 @@
-export { default } from "./CardHorizontal";
+export { default } from "./CardHorizontal.jsx";

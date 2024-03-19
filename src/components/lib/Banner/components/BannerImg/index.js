@@ -1,1 +1,1 @@
-export { default } from "./BannerImg";
+export { default } from "./BannerImg.jsx";

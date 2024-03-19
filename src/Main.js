@@ -8,7 +8,7 @@ const App = lazy(() => import("./App"));
 const ComponentsMenu = lazy(() => import("./components/ComponentsMenu"));
 const Footer = lazy(() => import("./components/Footer"));
 
-const Main = () =>
+const Main = () => (
   <Router>
     <Container fluid>
       <Row>
@@ -19,7 +19,7 @@ const Main = () =>
           className="d-none d-md-block"
           style={{
             position: "fixed",
-            padding: 0
+            padding: 0,
           }}
         >
           <Suspense fallback={<div>Loading Kromac components...</div>}>
@@ -29,7 +29,7 @@ const Main = () =>
         <Col sm={12} md={{ span: 9, offset: 3 }} lg={{ span: 10, offset: 2 }}>
           <Switch>
             <Route path="/">
-              <Suspense fallback={<div>Loading description component...</div>}>
+              <Suspense fallback={<div>Loading component description...</div>}>
                 <App />
               </Suspense>
             </Route>
@@ -38,6 +38,7 @@ const Main = () =>
         </Col>
       </Row>
     </Container>
-  </Router>;
+  </Router>
+);
 
 export default Main;

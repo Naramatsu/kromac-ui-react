@@ -10,7 +10,7 @@ export const videoBuilder = (video, setIsMediaLoading, handleViewImage) => {
     muted = true,
     loop = true,
     index,
-    itemActive
+    itemActive,
   } = video;
   if (url.includes("youtube", "youtu.be")) {
     let ytUrlBuilder = "";
@@ -25,12 +25,12 @@ export const videoBuilder = (video, setIsMediaLoading, handleViewImage) => {
         "https://www.youtube.com/embed/"
       );
     }
+
     return (
       <iframe
         title="YouTube video player"
         width="100%"
         height="100%"
-        
         src={ytUrlBuilder}
         frameBorder="0"
         allow="autoplay"
@@ -40,9 +40,11 @@ export const videoBuilder = (video, setIsMediaLoading, handleViewImage) => {
       />
     );
   }
+
   setTimeout(() => {
     setIsMediaLoading(false);
   }, 0);
+
   return (
     <video
       src={url}
@@ -57,7 +59,7 @@ export const videoBuilder = (video, setIsMediaLoading, handleViewImage) => {
   );
 };
 
-const Gallery = props => {
+const Gallery = (props) => {
   const { galleryType } = props;
   switch (galleryType) {
     case "polygon":

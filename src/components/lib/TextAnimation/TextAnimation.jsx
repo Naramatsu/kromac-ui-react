@@ -1,6 +1,6 @@
-import React from 'react';
-import classNames from 'classnames';
-import { sortByLength } from '../../../utils/utils';
+import React from "react";
+import classNames from "classnames";
+import { sortByLength } from "../../../utils/utils";
 
 const bgDefault = `linear-gradient(
           94deg,
@@ -11,11 +11,11 @@ const bgDefault = `linear-gradient(
 const TextAnimation = (props) => {
   const {
     word1,
-    word2 = '',
-    timer = '6s',
+    word2 = "",
+    timer = "6s",
     background = bgDefault,
-    fontColor = '#fff',
-    fontSize = '2em',
+    fontColor = "#fff",
+    fontSize = "2em",
     ...rest
   } = props;
 
@@ -26,16 +26,16 @@ const TextAnimation = (props) => {
   };
 
   const styleTimmers = {
-    '--timer': timer,
-    '--bg': background,
-    '--fontColor': fontColor,
+    "--timer": timer,
+    "--bg": background,
+    "--fontColor": fontColor,
   };
 
   const newWord2 = word2.trim().length > 0 ? word2 : word1;
   const words = [word1, newWord2];
   const wordsSorted = sortByLength(words);
 
-  const kromacTextAnimation = classNames('kromac-text-animation', {
+  const kromacTextAnimation = classNames("kromac-text-animation", {
     [rest.className]: !!rest.className,
   });
 
@@ -46,7 +46,7 @@ const TextAnimation = (props) => {
           <h2
             key={index}
             data-text={w}
-            style={{ fontSize, '--steps': w.length }}
+            style={{ fontSize, "--steps": w.length }}
           >
             {w}
           </h2>

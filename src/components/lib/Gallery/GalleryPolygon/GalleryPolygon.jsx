@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { Row, Col } from 'react-bootstrap';
+import React, { useState } from "react";
+import classNames from "classnames";
+import Skeleton from "../../Skeleton/Skeleton.jsx";
 import {
   markTypeRow,
   markAsLastImageImgPar,
   markAsOnlyImageRowImpar,
   rowColMaker,
-} from '../../../../utils/utils';
-import classNames from 'classnames';
-import Skeleton from '../../Skeleton';
+} from "../../../../utils/utils";
+import { Row, Col } from "react-bootstrap";
 
 const GalleryPolygon = (props) => {
   const [isViewImage, setIsViewImage] = useState(false);
@@ -15,8 +15,8 @@ const GalleryPolygon = (props) => {
   const [isImgLoading, setIsImgLoading] = useState(true);
   const {
     images = [],
-    imageFitPosition = 'center',
-    polygonType = 'rhombus',
+    imageFitPosition = "center",
+    polygonType = "rhombus",
     ...rest
   } = props;
 
@@ -26,14 +26,14 @@ const GalleryPolygon = (props) => {
     id,
   };
 
-  const isActive = isViewImage ? 'active' : '';
+  const isActive = isViewImage ? "active" : "";
   const data = rowColMaker(images);
 
   const isViewStyleKromacCol = ({ row, item }) => {
     if (itemActive && itemActive.row === row && itemActive.item === item) {
-      return 'active';
+      return "active";
     }
-    return '';
+    return "";
   };
 
   const handleViewImage = ({ row, item }) => {
@@ -41,13 +41,13 @@ const GalleryPolygon = (props) => {
     setIsViewImage(true);
   };
 
-  const close = (e) => {
-    e.preventDefault();
+  const close = (event) => {
+    event.preventDefault();
     setItemActive({});
     setIsViewImage(false);
   };
 
-  const kromacGallery = classNames('kromac-gallery', {
+  const kromacGallery = classNames("kromac-gallery", {
     [rest.className]: !!rest.className,
   });
 
@@ -55,7 +55,7 @@ const GalleryPolygon = (props) => {
     <div {...newRest} className={kromacGallery}>
       <div
         className="kromac-gallery-polygon container"
-        style={{ '--totalRows': data.length }}
+        style={{ "--totalRows": data.length }}
       >
         <Row className="kromac-row">
           <span className={`bgblur ${isActive}`} />
@@ -76,7 +76,7 @@ const GalleryPolygon = (props) => {
                 })} ${markTypeRow(row, col)} ${markAsOnlyImageRowImpar(
                   imgs.length
                 )}`}
-                style={{ '--rowNumber': row }}
+                style={{ "--rowNumber": row }}
               >
                 <div
                   className={`kromac-gallery ${isViewStyleKromacCol({

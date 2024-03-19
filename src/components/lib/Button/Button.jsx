@@ -1,19 +1,19 @@
-import React from 'react';
-import classNames from 'classnames';
-import Spinner from '../Spinner';
+import React from "react";
+import classNames from "classnames";
+import Spinner from "../Spinner/Spinner.jsx";
 
 const Button = ({
-  color = 'primary',
-  buttonType = 'classic',
+  color = "primary",
+  buttonType = "classic",
   loading = false,
   disabled = false,
   onClick,
   children,
   ...rest
 }) => {
-  const spinnerClass = loading ? 'spinner' : '';
-  const disabledClass = disabled ? 'disabled' : '';
-  const bgSpinner = buttonType === 'classic' ? '#fff' : '#212f3c';
+  const spinnerClass = loading ? "spinner" : "";
+  const disabledClass = disabled ? "disabled" : "";
+  const bgSpinner = buttonType === "classic" ? "#fff" : "#212f3c";
 
   const { key, id } = rest;
   const newRest = {
@@ -21,13 +21,13 @@ const Button = ({
     id,
   };
 
-  const kromacBtn = classNames('kromac-btn', {
+  const kromacBtn = classNames("kromac-btn", {
     [color]: !!color,
     [buttonType]: !!buttonType,
     [disabledClass]: !!disabledClass,
   });
 
-  const buttonContent = classNames('button-conten', {
+  const buttonContent = classNames("button-content", {
     [spinnerClass]: !!spinnerClass,
   });
 

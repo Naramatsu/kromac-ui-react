@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import classNames from 'classnames';
+import React, { useState, useEffect } from "react";
+import classNames from "classnames";
 
 const Toast = (props) => {
   const {
     message,
-    color = 'night',
+    color = "night",
     visible = false,
     timeOut = 5000,
-    positionY = 'bottom',
-    positionX = 'left',
+    positionY = "bottom",
+    positionX = "left",
     children,
     ...rest
   } = props;
@@ -20,12 +20,12 @@ const Toast = (props) => {
   };
   const [isvisible, setIsVisible] = useState(visible);
   const style = {
-    opacity: isvisible ? '1' : '0',
+    opacity: isvisible ? "1" : "0",
   };
-  const isLeft = positionX === 'left';
+  const isLeft = positionX === "left";
   const positionStyle = {
-    [positionY]: isvisible ? '10px' : '-50px',
-    [positionX]: isLeft ? '10px' : '40px',
+    [positionY]: isvisible ? "10px" : "-50px",
+    [positionX]: isLeft ? "10px" : "40px",
   };
 
   useEffect(() => {
@@ -41,11 +41,11 @@ const Toast = (props) => {
     setIsVisible(false);
   };
 
-  const kromacToast = classNames('kromac-toast', {
+  const kromacToast = classNames("kromac-toast", {
     [rest.className]: !!rest.className,
   });
 
-  const kromacToastContent = classNames('kromac-toast-content', {
+  const kromacToastContent = classNames("kromac-toast-content", {
     [color]: !!color,
   });
 

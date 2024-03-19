@@ -1,10 +1,11 @@
 import React from "react";
-import SpinnerRainbow from "./components/SpinnerRainbow";
-import SpinnerSVG from "./components/SpinnerSVG";
-import SpinnerLighter from "./components/SpinnerLighter";
-import SpinnerWaves from "./components/SpinnerWaves";
 
-const Spinner = props => {
+import SpinnerRainbow from "./components/SpinnerRainbow/SpinnerRainbow.jsx";
+import SpinnerSVG from "./components/SpinnerSVG/SpinnerSVG.jsx";
+import SpinnerLighter from "./components/SpinnerLighter";
+import SpinnerWaves from "./components/SpinnerWaves/SpinnerWaves.jsx";
+
+const Spinner = (props) => {
   const { spinnerType } = props;
   switch (spinnerType) {
     case "svg":

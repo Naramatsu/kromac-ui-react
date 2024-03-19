@@ -2,16 +2,15 @@ const subTitle = "Button classic";
 const importType = `import Button from "kromac-ui/dist/Button";`;
 
 const buttonProps = {
-  color: `primary`
+  color: `primary`,
 };
 
 const componentText = (
   <div className="implementation kromac-scroll-bg-dark">
     <p>
       <span className="react">&lt;Button </span>
-      <span className="component">
-        color
-      </span>=<span className="string">"primary"</span>
+      <span className="component">color</span>=
+      <span className="string">"primary"</span>
       <span className="react">&gt;</span>
       <br />
       <span className="text tab">Button Here</span>
@@ -26,7 +25,7 @@ const propsDescription = [
     name: "buttonType",
     type: "string",
     values: ["default classic", "classic", "neon"],
-    description: "Button type."
+    description: "Button type.",
   },
   {
     name: "color",
@@ -40,34 +39,34 @@ const propsDescription = [
       "error",
       "danger",
       "info",
-      "dark"
+      "dark",
     ],
-    description: "Sets background color of the component."
+    description: "Sets background color of the component.",
   },
   {
     name: "loading",
     type: "bool",
     values: ["default false"],
-    description: "This prop displayed a spinner into the button."
+    description: "This prop displayed a spinner into the button.",
   },
   {
     name: "disabled",
     type: "bool",
     values: [`default false`],
-    description: "This prop disables the button."
+    description: "This prop disables the button.",
   },
   {
     name: "onClick",
     type: "function",
     values: [],
-    description: ""
+    description: "",
   },
   {
     name: "children",
     type: "any",
     values: [],
-    description: "Button content."
-  }
+    description: "Button content.",
+  },
 ];
 
 const buttonsProps = {
@@ -75,7 +74,7 @@ const buttonsProps = {
   componentText,
   importType,
   propsDescription,
-  subTitle
+  subTitle,
 };
 
 export default buttonsProps;

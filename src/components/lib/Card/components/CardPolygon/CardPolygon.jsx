@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { determinateColor } from '../../../../../utils/utils';
-import classNames from 'classnames';
-import Skeleton from '../../../Skeleton';
-import { videoBuilder } from '../../Card';
+import React, { useState } from "react";
+import classNames from "classnames";
+import Skeleton from "../../../Skeleton/Skeleton.jsx";
+import { determinateColor } from "../../../../../utils/utils";
+import { videoBuilder } from "../../Card.jsx";
 
 const CardPolygon = (props) => {
   const {
     image,
     name,
-    color = '#fff',
-    imageFitPosition = 'top',
-    shape = 'hexagon',
+    color = "#fff",
+    imageFitPosition = "top",
+    shape = "hexagon",
     video,
     children,
     ...rest
@@ -25,17 +25,17 @@ const CardPolygon = (props) => {
   const [isMediaLoading, setIsMediaLoading] = useState(true);
   const styleColor = determinateColor(color);
   const bgColor =
-    color !== 'transparent'
+    color !== "transparent"
       ? {
           background: `linear-gradient(45deg, ${color}, #0000004D)`,
         }
       : {};
 
-  const kromacContainer = classNames('kromac-container', 'card-hexagon', {
+  const kromacContainer = classNames("kromac-container", "card-hexagon", {
     [rest.className]: !!rest.className,
   });
 
-  const kromacCard = classNames('kromac-card', {
+  const kromacCard = classNames("kromac-card", {
     [shape]: !!shape,
     [styleColor]: !!styleColor,
   });

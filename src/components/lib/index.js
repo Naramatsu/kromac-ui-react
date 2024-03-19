@@ -14,6 +14,7 @@ export { default as CardPolygon } from "./Card/components/CardPolygon";
 export { default as CardReveal } from "./Card/components/CardReveal";
 export { default as CardTeam } from "./Card/components/CardTeam";
 export { default as Percentage } from "./Card/components/Percentage";
+export { default as Chip } from "./Chip";
 export { default as Gallery } from "./Gallery";
 export { default as GalleryPolygon } from "./Gallery/GalleryPolygon";
 export { default as GalleryResponsive } from "./Gallery/GalleryResponsive";
