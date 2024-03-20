@@ -1,9 +1,10 @@
-import React, { lazy, Suspense, useEffect } from "react";
+import React, { lazy, Suspense, useEffect, useContext } from "react";
 import chipProps from "./storyProps/chipProps";
 import {
   changeDocumentTitle,
   getComponentsRelated,
 } from "../../../utils/utils";
+import { PreferencesContext } from "../../../store";
 
 const Preview = lazy(() => import("../../Preview"));
 const Chip = lazy(() => import("./Chip"));
@@ -12,6 +13,8 @@ const Spinner = lazy(() => import("../../lib/Spinner"));
 const chipComponents = getComponentsRelated("chip");
 
 const ChipHistory = ({ location }) => {
+  const { version } = useContext(PreferencesContext);
+
   useEffect(() => {
     document.title = changeDocumentTitle({ component: "Chip", state: "" });
     window.scrollTo(0, 0);
@@ -23,7 +26,7 @@ const ChipHistory = ({ location }) => {
         title="Chip"
         subTitle={chipProps.subTitle}
         description={chipProps.description}
-        importType={chipProps.importType}
+        importType={chipProps.importType(version)}
         propsDescription={chipProps.propsDescription}
         notes={chipProps.notes}
         componentsRealated={chipComponents}

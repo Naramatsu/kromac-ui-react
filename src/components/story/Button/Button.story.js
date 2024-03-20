@@ -1,10 +1,11 @@
-import React, { lazy, Suspense, useEffect } from "react";
+import React, { lazy, Suspense, useEffect, useContext } from "react";
 import buttonClassicProps from "./storyProps/buttonClassicProps";
 import buttonNeonProps from "./storyProps/buttonNeonProps";
 import {
   changeDocumentTitle,
-  getComponentsRelated
+  getComponentsRelated,
 } from "../../../utils/utils";
+import { PreferencesContext } from "../../../store";
 
 const Preview = lazy(() => import("../../Preview"));
 const Button = lazy(() => import("./Button"));
@@ -12,7 +13,7 @@ const Spinner = lazy(() => import("../../lib/Spinner"));
 
 const buttonComponents = getComponentsRelated("button");
 
-const buttonToShow = buttonType => {
+const buttonToShow = (buttonType) => {
   switch (buttonType) {
     case "neon":
       return buttonNeonProps;
@@ -22,14 +23,17 @@ const buttonToShow = buttonType => {
 };
 
 const ButtonHistory = ({ location: { state = "classic" } }) => {
-  useEffect(
-    () => {
-      document.title = changeDocumentTitle({ component: "Button", state });
-      window.scrollTo(0, 0);
-    },
-    [state]
-  );
-  const buttonProps = buttonToShow(state);
+  const { version } = useContext(PreferencesContext);
+
+  useEffect(() => {
+    document.title = changeDocumentTitle({ component: "Button", state });
+    window.scrollTo(0, 0);
+  }, [state]);
+
+  const buttonProps = {
+    ...buttonToShow(state),
+    importType: `import Banner from "${version}/dist/Button";`,
+  };
   return (
     <div>
       <Preview

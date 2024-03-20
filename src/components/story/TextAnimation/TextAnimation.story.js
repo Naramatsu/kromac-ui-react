@@ -1,9 +1,10 @@
-import React, { lazy, Suspense, useEffect } from "react";
+import React, { lazy, Suspense, useEffect, useContext } from "react";
 import textAnimationProps from "./storyProps/textAnimationProps";
 import {
   changeDocumentTitle,
-  getComponentsRelated
+  getComponentsRelated,
 } from "../../../utils/utils";
+import { PreferencesContext } from "../../../store";
 
 const Preview = lazy(() => import("../../Preview"));
 const TextAnimation = lazy(() => import("./TextAnimation"));
@@ -12,16 +13,15 @@ const Spinner = lazy(() => import("../../lib/Spinner"));
 const textAnimationComponents = getComponentsRelated("textAnimation");
 
 const TextAnimationHistory = ({ location }) => {
-  useEffect(
-    () => {
-      document.title = changeDocumentTitle({
-        component: "TextAnimation",
-        state: ""
-      });
-      window.scrollTo(0, 0);
-    },
-    [location]
-  );
+  const { version } = useContext(PreferencesContext);
+
+  useEffect(() => {
+    document.title = changeDocumentTitle({
+      component: "TextAnimation",
+      state: "",
+    });
+    window.scrollTo(0, 0);
+  }, [location]);
 
   return (
     <div>
@@ -29,7 +29,7 @@ const TextAnimationHistory = ({ location }) => {
         title="TextAnimation"
         subTitle={textAnimationProps.subTitle}
         description={textAnimationProps.description}
-        importType={textAnimationProps.importType}
+        importType={textAnimationProps.importType(version)}
         propsDescription={textAnimationProps.propsDescription}
         notes={textAnimationProps.notes}
         componentsRealated={textAnimationComponents}

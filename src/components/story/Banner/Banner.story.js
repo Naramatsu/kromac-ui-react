@@ -1,11 +1,12 @@
-import React, { lazy, Suspense, useEffect } from "react";
+import React, { lazy, Suspense, useEffect, useContext } from "react";
 import bannerClassicProps from "./storyProps/bannerClassicProps";
 import bannerImageProps from "./storyProps/bannerImageProps";
 import bannerTextProps from "./storyProps/bannerTextProps";
 import {
   changeDocumentTitle,
-  getComponentsRelated
+  getComponentsRelated,
 } from "../../../utils/utils";
+import { PreferencesContext } from "../../../store";
 
 const Preview = lazy(() => import("../../Preview"));
 const Banner = lazy(() => import("./Banner"));
@@ -13,7 +14,7 @@ const Spinner = lazy(() => import("../../lib/Spinner"));
 
 const bannerComponents = getComponentsRelated("banner");
 
-const bannerToShow = bannerType => {
+const bannerToShow = (bannerType) => {
   switch (bannerType) {
     case "image":
       return bannerImageProps;
@@ -25,14 +26,17 @@ const bannerToShow = bannerType => {
 };
 
 const BannerHistory = ({ location: { state = "classic" } }) => {
-  useEffect(
-    () => {
-      document.title = changeDocumentTitle({ component: "Banner", state });
-      window.scrollTo(0, 0);
-    },
-    [state]
-  );
-  const bannerProps = bannerToShow(state);
+  const { version } = useContext(PreferencesContext);
+
+  useEffect(() => {
+    document.title = changeDocumentTitle({ component: "Banner", state });
+    window.scrollTo(0, 0);
+  }, [state]);
+
+  const bannerProps = {
+    ...bannerToShow(state),
+    importType: `import Banner from "${version}/dist/Banner";`,
+  };
   return (
     <div>
       <Preview

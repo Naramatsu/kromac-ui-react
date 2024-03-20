@@ -1,3 +1,5 @@
+import { KROMAC_V18 } from "./constants";
+
 export const kromac = <b>Kromac UI </b>;
 export const introductionTitle = "Introduction";
 export const introduction = (
@@ -16,86 +18,64 @@ export const requirementsText = (
     requirements:
   </p>
 );
-export const requirements = [
-  {
-    product: "Node version: ",
-    version: "^14",
-  },
-  {
-    product: "Npm version: ",
-    version: "^7",
-  },
-  {
-    product: "React version: ",
-    version: "^17",
-  },
-  {
-    product: "react-router-dom version: ",
-    version: "^5",
-  },
-];
+export const requirements = (version) => {
+  const versionShort = version === KROMAC_V18 ? "18" : "17";
+  return [
+    {
+      product: "Node version: ",
+      version: "^18",
+    },
+    {
+      product: "Npm version: ",
+      version: "^9",
+    },
+    {
+      product: "React version: ",
+      version: `^${versionShort}`,
+    },
+    {
+      product: "react-router-dom version: ",
+      version: "^5",
+    },
+  ];
+};
 export const resourcesTitle = `Resources`;
 export const implementationTitle = "Implementation";
-export const componentText = (
-  <div className="implementation kromac-scroll-bg-dark">
-    <p className="comment">{`// Kromac Styles importation for React version 18`}</p>
-    <p className="comment">{`// Locate in your main index.js file and implement the following line:`}</p>
-    <p>
-      <span className="var"> import </span>
-      <span className="string">{`"kromac-ui-18/src/css/style.css"`}</span>;
-    </p>
-    <br />
-    <p className="comment">{`// Component Implementation`}</p>
-    <p className="comment">{`// We will take the Card component as an example.`}</p>
-    <br />
-    <p className="comment">{`// Destructuring import`}</p>
-    <p>
-      <span className="var"> import</span>
-      <span>{` { `}</span>
-      <span className="component">Card </span>
-      <span>{` } `}</span>
-      <span className="import">from </span>
-      <span className="string">{`"kromac-ui-18/dist"`}</span>;
-    </p>
-    <br />
-    <p className="comment">{`// Normal import`}</p>
-    <p>
-      <span className="var"> import</span>
-      <span className="component"> Card </span>
-      <span className="import"> from </span>
-      <span className="string">{`"kromac-ui-18/dist/Card"`}</span>;
-    </p>
-    <br />
-    <p className="comment">{`// Kromac Styles importation for React version 17`}</p>
-    <p className="comment">{`// Locate in your main index.js file and implement the following line:`}</p>
-    <p>
-      <span className="var"> import </span>
-      <span className="string">{`"kromac-ui-17/src/css/style.css"`}</span>;
-    </p>
-    <br />
-    <p className="comment">{`// Component Implementation`}</p>
-    <p className="comment">{`// We will take the Card component as an example.`}</p>
-    <br />
-    <p className="comment">{`// Destructuring import`}</p>
-    <p>
-      <span className="var"> import</span>
-      <span>{` { `}</span>
-      <span className="component">Card </span>
-      <span>{` } `}</span>
-      <span className="import">from </span>
-      <span className="string">{`"kromac-ui-17/dist"`}</span>;
-    </p>
-    <br />
-    <p className="comment">{`// Normal import`}</p>
-    <p>
-      <span className="var"> import</span>
-      <span className="component"> Card </span>
-      <span className="import"> from </span>
-      <span className="string">{`"kromac-ui-17/dist/Card"`}</span>;
-    </p>
-    <br />
-  </div>
-);
+export const componentText = (version) => {
+  const versionShort = version === KROMAC_V18 ? "18" : "17";
+  return (
+    <div className="implementation kromac-scroll-bg-dark">
+      <p className="comment">{`// Kromac Styles importation for React version ${versionShort}`}</p>
+      <p className="comment">{`// Locate in your main index.js file and implement the following line:`}</p>
+      <p>
+        <span className="var"> import </span>
+        <span className="string">{`"${version}/src/css/style.css"`}</span>;
+      </p>
+      <br />
+      <p className="comment">{`// Component Implementation`}</p>
+      <p className="comment">{`// We will take the Card component as an example.`}</p>
+      <br />
+      <p className="comment">{`// Destructuring import`}</p>
+      <p>
+        <span className="var"> import</span>
+        <span>{` { `}</span>
+        <span className="component">Card </span>
+        <span>{` } `}</span>
+        <span className="import">from </span>
+        <span className="string">{`"${version}/dist"`}</span>;
+      </p>
+      <br />
+      <p className="comment">{`// Normal import`}</p>
+      <p>
+        <span className="var"> import</span>
+        <span className="component"> Card </span>
+        <span className="import"> from </span>
+        <span className="string">{`"${version}/dist/Card"`}</span>;
+      </p>
+      <br />
+    </div>
+  );
+};
 export const technogloiesTitle = `technologies`;
 export const sponsorText =
   "We are currently looking for support to keep this Project going on.";

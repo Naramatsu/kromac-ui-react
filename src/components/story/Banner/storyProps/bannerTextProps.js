@@ -1,5 +1,4 @@
 const subTitle = "Banner text";
-const importType = `import Banner from "kromac-ui/dist/Banner";`;
 
 const notes = `
   <p>
@@ -16,7 +15,7 @@ const bannerProps = {
   image:
     "https://images.pexels.com/photos/3075993/pexels-photo-3075993.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   height: "500px",
-  title: "Some title here"
+  title: "Some title here",
 };
 
 const componentText = (
@@ -24,21 +23,17 @@ const componentText = (
     <p>
       <span className="react">&lt;Banner</span>
       <br />
-      <span className="component tab">
-        bannerType
-      </span>=<span className="string">"text"</span>
+      <span className="component tab">bannerType</span>=
+      <span className="string">"text"</span>
       <br />
-      <span className="component tab">
-        image
-      </span>=<span className="string">"image.png"</span>
+      <span className="component tab">image</span>=
+      <span className="string">"image.png"</span>
       <br />
-      <span className="component tab">
-        title
-      </span>=<span className="string">"Some title here"</span>
+      <span className="component tab">title</span>=
+      <span className="string">"Some title here"</span>
       <br />
-      <span className="component tab">
-        height
-      </span>=<span className="string">"500px"</span>
+      <span className="component tab">height</span>=
+      <span className="string">"500px"</span>
       <br />
       <span className="react">/&gt;</span>
     </p>
@@ -50,65 +45,64 @@ const propsDescription = [
     name: "bannerType",
     type: "string",
     values: ["text", "default classic", "image", "classic"],
-    description: "Banner type."
+    description: "Banner type.",
   },
   {
     name: "title",
     type: "string Required",
     values: [],
-    description: "Text that will appear as a title"
+    description: "Text that will appear as a title",
   },
   {
     name: "image",
     type: "string Required",
     values: [],
-    description: "Image url."
+    description: "Image url.",
   },
   {
     name: "bgTextColor",
     type: "string",
     values: [],
-    description: `Text background color (please do not put #000 or "black").`
+    description: `Text background color (please do not put #000 or "black").`,
   },
   {
     name: "height",
     type: "string",
     values: ["default 500px"],
-    description: "Set height of component."
+    description: "Set height of component.",
   },
   {
     name: "order",
     type: "string",
     values: ["default left"],
-    description: "Side where the title will be displayed."
+    description: "Side where the title will be displayed.",
   },
   {
     name: "attachment",
     type: "string",
     values: [],
-    description: "Sets background attachment."
+    description: "Sets background attachment.",
   },
   {
     name: "textAlign",
     type: "string",
     values: ["default center"],
-    description: "Text align options. (this do not affect the <order> prop)."
+    description: "Text align options. (this do not affect the <order> prop).",
   },
   {
     name: "bgPosition",
     type: "string",
     values: ["default center"],
-    description: "Sets image position to be displayed in the background."
-  }
+    description: "Sets image position to be displayed in the background.",
+  },
 ];
 
 const bannersProps = {
   bannerProps,
   componentText,
-  importType,
   notes,
   propsDescription,
-  subTitle
+  subTitle,
 };
 
 export default bannersProps;

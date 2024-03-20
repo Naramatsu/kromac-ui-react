@@ -1,5 +1,5 @@
 const subTitle = "Chip";
-const importType = `import Chip from "kromac-ui/dist/Chip";`;
+const importType = (version) => `import Chip from "${version}/dist/Chip";`;
 
 const chipProps = {};
 

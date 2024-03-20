@@ -1,10 +1,11 @@
-import React, { lazy, Suspense, useEffect } from "react";
+import React, { lazy, Suspense, useEffect, useContext } from "react";
 import toggleSwitchProps from "./storyProps/toggleSwitchProps";
 import togglePowerProps from "./storyProps/togglePowerProps";
 import {
   changeDocumentTitle,
-  getComponentsRelated
+  getComponentsRelated,
 } from "../../../utils/utils";
+import { PreferencesContext } from "../../../store";
 
 const Preview = lazy(() => import("../../Preview"));
 const Toggle = lazy(() => import("./Toggle"));
@@ -12,7 +13,7 @@ const Spinner = lazy(() => import("../../lib/Spinner"));
 
 const toggleComponents = getComponentsRelated("toggle");
 
-const ToggleToShow = toggleType => {
+const ToggleToShow = (toggleType) => {
   switch (toggleType) {
     case "power":
       return togglePowerProps;
@@ -22,14 +23,17 @@ const ToggleToShow = toggleType => {
 };
 
 const ToggleHistory = ({ location: { state = "switch" } }) => {
-  useEffect(
-    () => {
-      document.title = changeDocumentTitle({ component: "Toggle", state });
-      window.scrollTo(0, 0);
-    },
-    [state]
-  );
-  const toggleProps = ToggleToShow(state);
+  const { version } = useContext(PreferencesContext);
+
+  useEffect(() => {
+    document.title = changeDocumentTitle({ component: "Toggle", state });
+    window.scrollTo(0, 0);
+  }, [state]);
+
+  const toggleProps = {
+    ...ToggleToShow(state),
+    importType: `import Toggle from "${version}/dist/Toggle";`,
+  };
   return (
     <div>
       <Preview

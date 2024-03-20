@@ -1,5 +1,4 @@
 const subTitle = "Card Percentage";
-const importType = `import Card from "kromac-ui/dist/Card";`;
 
 const cardProps = {
   cardType: "percentage",
@@ -82,7 +81,6 @@ const propsDescription = [
 const cardClassicProps = {
   cardProps,
   componentText,
-  importType,
   propsDescription,
   subTitle,
 };

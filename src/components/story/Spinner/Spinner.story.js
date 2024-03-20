@@ -1,12 +1,13 @@
-import React, { lazy, Suspense, useEffect } from "react";
+import React, { lazy, Suspense, useEffect, useContext } from "react";
 import spinnerLighterProps from "./storyProps/spinnerLighterProps";
 import spinnerWavesProps from "./storyProps/spinnerWavesProps";
 import spinnerSvgProps from "./storyProps/spinnerSvgProps";
 import spinnerRainbowProps from "./storyProps/spinnerRainbowProps";
 import {
   changeDocumentTitle,
-  getComponentsRelated
+  getComponentsRelated,
 } from "../../../utils/utils";
+import { PreferencesContext } from "../../../store";
 
 const Preview = lazy(() => import("../../Preview"));
 const Spinner = lazy(() => import("./Spinner"));
@@ -14,7 +15,7 @@ const SpinnerLoader = lazy(() => import("../../lib/Spinner"));
 
 const spinnerComponents = getComponentsRelated("spinner");
 
-const spinnerToShow = spinnerType => {
+const spinnerToShow = (spinnerType) => {
   switch (spinnerType) {
     case "waves":
       return spinnerWavesProps;
@@ -28,14 +29,17 @@ const spinnerToShow = spinnerType => {
 };
 
 const SpinnerHistory = ({ location: { state = "lighter" } }) => {
-  useEffect(
-    () => {
-      document.title = changeDocumentTitle({ component: "Spinner", state });
-      window.scrollTo(0, 0);
-    },
-    [state]
-  );
-  const spinnerProps = spinnerToShow(state);
+  const { version } = useContext(PreferencesContext);
+
+  useEffect(() => {
+    document.title = changeDocumentTitle({ component: "Spinner", state });
+    window.scrollTo(0, 0);
+  }, [state]);
+
+  const spinnerProps = {
+    ...spinnerToShow(state),
+    importType: `import Spinner from "${version}/dist/Spinner";`,
+  };
   return (
     <div>
       <Preview

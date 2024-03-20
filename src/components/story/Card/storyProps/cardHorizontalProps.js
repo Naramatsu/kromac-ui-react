@@ -1,5 +1,4 @@
 const subTitle = "Card Horizontal";
-const importType = `import Card from "kromac-ui/dist/Card";`;
 const notes = `
 <p>
 This card occupies 100% of the width wrapper.
@@ -19,7 +18,7 @@ const cardProps = {
         popularised in the 1960s with the release of Letraset sheets
         containing Lorem Ipsum passages, and more recently with desktop
         publishing software like Aldus PageMaker including versions of
-        Lorem Ipsum.`
+        Lorem Ipsum.`,
 };
 
 const componentText = (
@@ -27,17 +26,14 @@ const componentText = (
     <p>
       <span className="react">&lt;Card</span>
       <br />
-      <span className="component tab">
-        cardType
-      </span>=<span className="string">"horizontal"</span>
+      <span className="component tab">cardType</span>=
+      <span className="string">"horizontal"</span>
       <br />
-      <span className="component tab">
-        image
-      </span>=<span className="string">"image.png"</span>
+      <span className="component tab">image</span>=
+      <span className="string">"image.png"</span>
       <br />
-      <span className="component tab">
-        title
-      </span>=<span className="string">"Card title"</span>
+      <span className="component tab">title</span>=
+      <span className="string">"Card title"</span>
       <br />
       <span className="react">&gt;</span>
       <br />
@@ -63,15 +59,15 @@ const propsDescription = [
       "team",
       "polygon",
       "percentage",
-      "classic"
+      "classic",
     ],
-    description: "Card type."
+    description: "Card type.",
   },
   {
     name: "image",
     type: "string",
     values: [],
-    description: "Card image url."
+    description: "Card image url.",
   },
   {
     name: "video",
@@ -81,61 +77,60 @@ const propsDescription = [
       "controls boolean",
       "autoPlay boolean",
       "muted boolean",
-      "loop boolean"
+      "loop boolean",
     ],
-    description: "Card object in order to setup the video."
+    description: "Card object in order to setup the video.",
   },
   {
     name: "title",
     type: "string",
     values: [],
-    description: "Text that will be displayed as the Card's title."
+    description: "Text that will be displayed as the Card's title.",
   },
   {
     name: "color",
     type: "string",
     values: [`default #fff`, "transparent", "#fff"],
-    description: "Sets background color."
+    description: "Sets background color.",
   },
   {
     name: "imageSide",
     type: "string",
     values: [`default left`, "right", "left"],
-    description: "Side where the image will be display in the Card."
+    description: "Side where the image will be display in the Card.",
   },
   {
     name: "reveal",
     type: "bool",
     values: [`default false`],
-    description: 'Adds the "show more" to reveal the card content.'
+    description: 'Adds the "show more" to reveal the card content.',
   },
   {
     name: "imageFitPosition",
     type: "string",
     values: [`default center`, "top", "center", "bottom"],
-    description: "Sets image position to be displayed in the card."
+    description: "Sets image position to be displayed in the card.",
   },
   {
     name: "transition",
     type: "string",
     values: [`default .5s`],
-    description: "Transition time."
+    description: "Transition time.",
   },
   {
     name: "children",
     type: "any",
     values: [],
-    description: "Card content, you can write html code inside."
-  }
+    description: "Card content, you can write html code inside.",
+  },
 ];
 
 const cardClassicProps = {
   cardProps,
   componentText,
-  importType,
   notes,
   propsDescription,
-  subTitle
+  subTitle,
 };
 
 export default cardClassicProps;

@@ -1,5 +1,5 @@
 const subTitle = "Grid with custom items";
-const importType = `import Grid from "kromac-ui/dist/GridItem";`;
+const importType = (version) => `import Grid from "${version}/dist/GridItem";`;
 const description = `
 This component only works within kromac Grid component as shown in the implementation.
 `;
@@ -40,9 +40,7 @@ const componentText = (
       <br />
       <span className="tab react">&gt;</span>
       <br />
-      <span className="tab2 comment">
-        {"// you content here...! "}
-      </span>
+      <span className="tab2 comment">{"// you content here...! "}</span>
       <br />
       <span className="tab react">&lt;/GridItem&gt;</span>
       <br />
@@ -60,39 +58,39 @@ const propsDescription = [
     name: "clg",
     type: "number",
     values: ["default 1"],
-    description: "Column numbers when the screen is 1024px or higher."
+    description: "Column numbers when the screen is 1024px or higher.",
   },
   {
     name: "cmd",
     type: "number",
     values: ["default 1"],
-    description: "Column numbers when the screen is betwenn 1023px and 768px."
+    description: "Column numbers when the screen is betwenn 1023px and 768px.",
   },
   {
     name: "csm",
     type: "number",
     values: ["default 1"],
-    description: "Column numbers when the screen is betwenn 767px and 550px."
+    description: "Column numbers when the screen is betwenn 767px and 550px.",
   },
   {
     name: "cxs",
     type: "number",
     values: ["default 1"],
-    description: "Column numbers when the screen is 549px or lower."
+    description: "Column numbers when the screen is 549px or lower.",
   },
   {
     name: "gridRow",
     type: "number",
     values: ["default 1"],
-    description: "Row numbers."
+    description: "Row numbers.",
   },
 
   {
     name: "children",
     type: "any",
     values: [],
-    description: "html content."
-  }
+    description: "html content.",
+  },
 ];
 
 const gridsProps = {
@@ -101,7 +99,7 @@ const gridsProps = {
   componentText,
   importType,
   propsDescription,
-  subTitle
+  subTitle,
 };
 
 export default gridsProps;

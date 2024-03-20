@@ -1,10 +1,9 @@
 const subTitle = "Card Image";
-const importType = `import Card from "kromac-ui/dist/Card";`;
 
 const cardProps = {
   cardType: "image",
   image: "https://cdn.pixabay.com/photo/2018/09/23/18/30/drop-3698073_1280.jpg",
-  title: "Card Title"
+  title: "Card Title",
 };
 
 const componentText = (
@@ -12,17 +11,14 @@ const componentText = (
     <p>
       <span className="react">&lt;Card</span>
       <br />
-      <span className="component tab">
-        cardType
-      </span>=<span className="string">"image"</span>
+      <span className="component tab">cardType</span>=
+      <span className="string">"image"</span>
       <br />
-      <span className="component tab">
-        image
-      </span>=<span className="string">"image.png"</span>
+      <span className="component tab">image</span>=
+      <span className="string">"image.png"</span>
       <br />
-      <span className="component tab">
-        title
-      </span>=<span className="string">"Card title"</span>
+      <span className="component tab">title</span>=
+      <span className="string">"Card title"</span>
       <br />
       <span className="react">/&gt;</span>
       <br />
@@ -43,15 +39,15 @@ const propsDescription = [
       "team",
       "polygon",
       "percentage",
-      "classic"
+      "classic",
     ],
-    description: "Card type."
+    description: "Card type.",
   },
   {
     name: "image",
     type: "string",
     values: [],
-    description: "Card image url."
+    description: "Card image url.",
   },
   {
     name: "video",
@@ -61,30 +57,29 @@ const propsDescription = [
       "controls boolean",
       "autoPlay boolean",
       "muted boolean",
-      "loop boolean"
+      "loop boolean",
     ],
-    description: "Card object in order to setup the video."
+    description: "Card object in order to setup the video.",
   },
   {
     name: "title",
     type: "string",
     values: [],
-    description: "Text that will be displayed as the Card's title."
+    description: "Text that will be displayed as the Card's title.",
   },
   {
     name: "imageFitPosition",
     type: "string",
     values: [`default center`, "top", "center", "bottom"],
-    description: "Sets image position to be displayed in the card."
-  }
+    description: "Sets image position to be displayed in the card.",
+  },
 ];
 
 const cardClassicProps = {
   cardProps,
   componentText,
-  importType,
   propsDescription,
-  subTitle
+  subTitle,
 };
 
 export default cardClassicProps;

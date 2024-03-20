@@ -1,5 +1,4 @@
 const subTitle = "Gallery polygon";
-const importType = `import Gallery from "kromac-ui/dist/Gallery";`;
 
 const description = `This component requires bootstrap.`;
 const notes = `
@@ -17,9 +16,9 @@ const galleryProps = {
     "https://cdn.pixabay.com/photo/2018/09/23/18/30/drop-3698073_1280.jpg",
     "https://cdn.pixabay.com/photo/2016/08/17/01/39/mystery-1599527_1280.jpg",
     "https://cdn.pixabay.com/photo/2016/07/15/16/49/man-1519665_1280.jpg",
-    "https://cdn.pixabay.com/photo/2019/04/06/06/44/astronaut-4106766_1280.jpg"
+    "https://cdn.pixabay.com/photo/2019/04/06/06/44/astronaut-4106766_1280.jpg",
   ],
-  galleryType: "polygon"
+  galleryType: "polygon",
 };
 
 const componentText = (
@@ -46,9 +45,8 @@ const componentText = (
       <br />
       <span className="react">&lt;Gallery</span>
       <br />
-      <span className="component tab">
-        galleryType
-      </span>=<span className="string">"polygon"</span>
+      <span className="component tab">galleryType</span>=
+      <span className="string">"polygon"</span>
       <br />
       <span className="component tab">images</span>=<span>{`{[`}</span>
       <br />
@@ -72,36 +70,35 @@ const propsDescription = [
     name: "gallery",
     type: "string",
     values: ["polygon", "default responsive", "responsive"],
-    description: "Gallery type."
+    description: "Gallery type.",
   },
   {
     name: "images",
     type: "Array Required",
     values: [`imgUrl`],
-    description: "String array of images url."
+    description: "String array of images url.",
   },
   {
     name: "imageFitPosition",
     type: "string",
     values: ["default center"],
-    description: "Sets image position to be displayed in each polygon."
+    description: "Sets image position to be displayed in each polygon.",
   },
   {
     name: "polygonType",
     type: "string",
     values: ["default rhombus", "hexagon", "rabbet"],
-    description: "Sets polygon shape."
-  }
+    description: "Sets polygon shape.",
+  },
 ];
 
 const gallerysProps = {
   componentText,
   description,
   galleryProps,
-  importType,
   notes,
   propsDescription,
-  subTitle
+  subTitle,
 };
 
 export default gallerysProps;

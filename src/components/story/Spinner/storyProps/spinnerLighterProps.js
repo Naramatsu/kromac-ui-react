@@ -1,5 +1,4 @@
 const subTitle = "Spinner lighter";
-const importType = `import Spinner from "kromac-ui/dist/Spinner";`;
 const notes = `
 When the <div class="chip">isCentered</div> prop is turned on, the
 <div class="chip">size</div> prop will not work.
@@ -26,42 +25,41 @@ const propsDescription = [
     name: "spinnerType",
     type: "string",
     values: ["default lighter", "waves", "svg", "rainbow", "lighter"],
-    description: "Spinner type."
+    description: "Spinner type.",
   },
   {
     name: "size",
     type: "string",
     values: [`default sm`, "sm", "md", "lg"],
-    description: "Sets Spinner size."
+    description: "Sets Spinner size.",
   },
   {
     name: "isCentered",
     type: "bool",
     values: [`default false`],
     description:
-      "When this prop is turned on, it fixed the spinner in the middle of the screen."
+      "When this prop is turned on, it fixed the spinner in the middle of the screen.",
   },
   {
     name: "bgColorInside",
     type: "string",
     values: ["default #fff", "#000", "#fff"],
-    description: "Sets background color inside the Spinner."
+    description: "Sets background color inside the Spinner.",
   },
   {
     name: "shadows",
     type: "bool",
     values: ["default true"],
-    description: "Adds a shadows around the Spinner."
-  }
+    description: "Adds a shadows around the Spinner.",
+  },
 ];
 
 const spinnersProps = {
   componentText,
-  importType,
   notes,
   propsDescription,
   spinnerProps,
-  subTitle
+  subTitle,
 };
 
 export default spinnersProps;

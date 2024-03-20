@@ -1,5 +1,4 @@
 const subTitle = "Card Info";
-const importType = `import Card from "kromac-ui/dist/Card";`;
 
 const cardProps = {
   cardType: "info",
@@ -11,7 +10,7 @@ const cardProps = {
         of type and scrambled it to make a type specimen book. It has
         survived not only five centuries, but also the leap into
         electronic typesetting, remaining essentially unchanged.`,
-  color: "red"
+  color: "red",
 };
 
 const componentText = (
@@ -19,17 +18,14 @@ const componentText = (
     <p>
       <span className="react">&lt;Card</span>
       <br />
-      <span className="component tab">
-        cardType
-      </span>=<span className="string">"info"</span>
+      <span className="component tab">cardType</span>=
+      <span className="string">"info"</span>
       <br />
-      <span className="component tab">
-        title
-      </span>=<span className="string">"Card title"</span>
+      <span className="component tab">title</span>=
+      <span className="string">"Card title"</span>
       <br />
-      <span className="component tab">
-        color
-      </span>=<span className="string">"red"</span>
+      <span className="component tab">color</span>=
+      <span className="string">"red"</span>
       <br />
       <span className="react">&gt;</span>
       <br />
@@ -56,48 +52,47 @@ const propsDescription = [
       "team",
       "polygon",
       "percentage",
-      "classic"
+      "classic",
     ],
-    description: "Card type."
+    description: "Card type.",
   },
   {
     name: "title",
     type: "string Required",
     values: [],
-    description: "Text that will be displayed as the Card's title."
+    description: "Text that will be displayed as the Card's title.",
   },
   {
     name: "size",
     type: "string",
     values: [`default md`, "sm", "md", "lg"],
-    description: "Card content size."
+    description: "Card content size.",
   },
   {
     name: "shape",
     type: "string",
     values: [`default color`, "transparent", "color"],
-    description: "Sets shape of the card."
+    description: "Sets shape of the card.",
   },
   {
     name: "color",
     type: "string",
     values: [`default transparent`],
-    description: "Sets background color."
+    description: "Sets background color.",
   },
   {
     name: "children",
     type: "any",
     values: [],
-    description: "Card content, you can write html code inside."
-  }
+    description: "Card content, you can write html code inside.",
+  },
 ];
 
 const cardClassicProps = {
   cardProps,
   componentText,
-  importType,
   propsDescription,
-  subTitle
+  subTitle,
 };
 
 export default cardClassicProps;

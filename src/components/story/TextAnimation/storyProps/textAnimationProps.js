@@ -1,5 +1,6 @@
 const subTitle = "";
-const importType = `import TextAnimation from "kromac-ui/ldist/TextAnimation";`;
+const importType = (version) =>
+  `import TextAnimation from "${version}/ldist/TextAnimation";`;
 const notes = `
 For a better experience just send a word (no white space) in the props
 <div class="chip">word1</div>,
@@ -8,7 +9,7 @@ For a better experience just send a word (no white space) in the props
 
 const textAnimationProp = {
   word1: "Someword",
-  word2: "Heree"
+  word2: "Heree",
 };
 
 const componentText = (
@@ -16,13 +17,11 @@ const componentText = (
     <p>
       <span className="react">&lt;TextAnimation</span>
       <br />
-      <span className="var tab">
-        word1
-      </span>=<span className="string">"Someword"</span>
+      <span className="var tab">word1</span>=
+      <span className="string">"Someword"</span>
       <br />
-      <span className="var tab">
-        word2
-      </span>=<span className="string">"Heree"</span>
+      <span className="var tab">word2</span>=
+      <span className="string">"Heree"</span>
       <br />
       <span className="react">/&gt;</span>
     </p>
@@ -34,38 +33,38 @@ const propsDescription = [
     name: "word1",
     type: "string Required",
     values: [],
-    description: "Just a word."
+    description: "Just a word.",
   },
   {
     name: "word2",
     type: "string",
     values: [],
-    description: "Just another word."
+    description: "Just another word.",
   },
   {
     name: "timer",
     type: "string",
     values: [`default 6s`],
-    description: "Animation transition time in seconds."
+    description: "Animation transition time in seconds.",
   },
   {
     name: "background",
     type: "string",
     values: [`default linerar-gradient`],
-    description: "Sets the background color."
+    description: "Sets the background color.",
   },
   {
     name: "fontColor",
     type: "string",
     values: [`default #fff`],
-    description: "Sets the font color."
+    description: "Sets the font color.",
   },
   {
     name: "fontSize",
     type: "string",
     values: ["default 2 em"],
-    description: "Font size."
-  }
+    description: "Font size.",
+  },
 ];
 
 const textAnimationProps = {
@@ -74,7 +73,7 @@ const textAnimationProps = {
   notes,
   propsDescription,
   subTitle,
-  textAnimationProp
+  textAnimationProp,
 };
 
 export default textAnimationProps;

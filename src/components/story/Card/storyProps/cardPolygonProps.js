@@ -1,5 +1,4 @@
 const subTitle = "Card Polygon";
-const importType = `import Card from "kromac-ui/dist/Card";`;
 
 const cardProps = {
   cardType: "polygon",
@@ -9,7 +8,7 @@ const cardProps = {
   shape: "hexagon",
   text: `Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy
-        text ever since the 1500s.`
+        text ever since the 1500s.`,
 };
 
 const componentText = (
@@ -17,23 +16,20 @@ const componentText = (
     <p>
       <span className="react">&lt;Card</span>
       <br />
-      <span className="component tab">
-        cardType
-      </span>=<span className="string">"polygon"</span>
+      <span className="component tab">cardType</span>=
+      <span className="string">"polygon"</span>
       <br />
-      <span className="component tab">
-        image
-      </span>=<span className="string">"image.png"</span>
+      <span className="component tab">image</span>=
+      <span className="string">"image.png"</span>
       <br />
-      <span className="component tab">name</span>=<span className="string">"Card title"</span>
+      <span className="component tab">name</span>=
+      <span className="string">"Card title"</span>
       <br />
-      <span className="component tab">
-        color
-      </span>=<span className="string">"red"</span>
+      <span className="component tab">color</span>=
+      <span className="string">"red"</span>
       <br />
-      <span className="component tab">
-        shape
-      </span>=<span className="string">"hexagon"</span>
+      <span className="component tab">shape</span>=
+      <span className="string">"hexagon"</span>
       <br />
       <span className="react">&gt;</span>
       <br />
@@ -60,15 +56,15 @@ const propsDescription = [
       "info",
       "team",
       "percentage",
-      "classic"
+      "classic",
     ],
-    description: "Card type."
+    description: "Card type.",
   },
   {
     name: "image",
     type: "string",
     values: [],
-    description: "Card image url."
+    description: "Card image url.",
   },
   {
     name: "video",
@@ -78,15 +74,15 @@ const propsDescription = [
       "controls boolean",
       "autoPlay boolean",
       "muted boolean",
-      "loop boolean"
+      "loop boolean",
     ],
-    description: "Card object in order to setup the video."
+    description: "Card object in order to setup the video.",
   },
   {
     name: "name",
     type: "string Required",
     values: [],
-    description: "Text that will be displayed as the person name."
+    description: "Text that will be displayed as the person name.",
   },
   {
     name: "shape",
@@ -99,36 +95,35 @@ const propsDescription = [
       "heptagon",
       "octagon",
       "bevel",
-      "circle"
+      "circle",
     ],
-    description: "Sets Sard's polygon shape."
+    description: "Sets Sard's polygon shape.",
   },
   {
     name: "color",
     type: "string",
     values: [`default #fff`],
-    description: "Sets background color."
+    description: "Sets background color.",
   },
   {
     name: "imageFitPosition",
     type: "string",
     values: [`default center`, "top", "center", "bottom"],
-    description: "Sets image position to be displayed in the card."
+    description: "Sets image position to be displayed in the card.",
   },
   {
     name: "children",
     type: "any",
     values: [],
-    description: "Card content, you can write html code inside."
-  }
+    description: "Card content, you can write html code inside.",
+  },
 ];
 
 const cardClassicProps = {
   cardProps,
   componentText,
-  importType,
   propsDescription,
-  subTitle
+  subTitle,
 };
 
 export default cardClassicProps;

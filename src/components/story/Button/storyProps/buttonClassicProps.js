@@ -1,5 +1,4 @@
 const subTitle = "Button classic";
-const importType = `import Button from "kromac-ui/dist/Button";`;
 
 const buttonProps = {
   color: `primary`,
@@ -72,7 +71,6 @@ const propsDescription = [
 const buttonsProps = {
   buttonProps,
   componentText,
-  importType,
   propsDescription,
   subTitle,
 };
