@@ -68,7 +68,7 @@ const CardTeam = (props) => {
     shape = "info",
     color = "#fff",
     imageFitPosition = "top",
-    redes = [],
+    media = [],
     transition = ".5s",
     video,
     children,
@@ -131,7 +131,7 @@ const CardTeam = (props) => {
             <h4>{name}</h4>
             <label>{profession}</label>
             <ul>
-              {redes.map((red, index) => (
+              {media.map((red, index) => (
                 <li key={index}>
                   <a href={red.url}>{determinateIcon(red.name)}</a>
                 </li>

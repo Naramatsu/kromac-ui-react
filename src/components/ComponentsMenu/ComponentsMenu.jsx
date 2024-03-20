@@ -1,8 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import menuComponents from "../../utils/components.json";
 import { Route, Link } from "react-router-dom";
+import { PreferencesContext } from "../../store";
+import {
+  KROMAC_V17,
+  KROMAC_V18,
+  versionReleaseLabel,
+} from "../../utils/constants";
 
 const ComponentsMenu = () => {
+  const { setVersion, version } = useContext(PreferencesContext);
   const [kromacComponents, setComponents] = useState(
     menuComponents.map((menuComponent) => menuComponent.component).sort()
   );
@@ -59,8 +66,16 @@ const ComponentsMenu = () => {
               alt="logo"
             />
             <h1>Kromac UI</h1>
-            <p>v1.2.4</p>
+            <p>{versionReleaseLabel}</p>
           </Link>
+          <select
+            value={version}
+            className="kromac-version-select"
+            onChange={(event) => setVersion(event.target.value)}
+          >
+            <option value={KROMAC_V17}>{KROMAC_V17}</option>
+            <option value={KROMAC_V18}>{KROMAC_V18}</option>
+          </select>
         </Route>
         <div className="kromac-input-search">
           <label className="text-bg-light">Find Component</label>

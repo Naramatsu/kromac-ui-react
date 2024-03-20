@@ -1,4 +1,4 @@
-import React, { lazy, useEffect, useState } from "react";
+import React, { lazy, useEffect, useState, useContext } from "react";
 import { changeDocumentTitle } from "../../utils/utils";
 import { Link } from "react-router-dom";
 import {
@@ -26,6 +26,12 @@ import {
   teamTitle,
   technogloiesTitle,
 } from "../../utils/constants.en";
+import {
+  KROMAC_V17,
+  KROMAC_V18,
+  versionReleaseLabel,
+} from "../../utils/constants";
+import { PreferencesContext } from "../../store";
 
 const TextAnimation = lazy(() => import("../lib/TextAnimation"));
 const BoxImplementation = lazy(() => import("../BoxImplementation"));
@@ -38,6 +44,7 @@ const adder = (count) => count++;
 const lesser = (count) => count--;
 
 const LandingPage = () => {
+  const { version, setVersion } = useContext(PreferencesContext);
   const [counter, setCounter] = useState(0);
   const [indicator, setIndicator] = useState("up");
   const techCount = technogloies.length;
@@ -90,7 +97,19 @@ const LandingPage = () => {
           alt="logo"
         />
         <h1 className="text-bg-light">{kromac}</h1>
-        <label className="text-bg-light">v1.2.4</label>
+        <select
+          value={version}
+          className="kromac-version-select"
+          onChange={(event) => {
+            setVersion(event.target.value);
+            event.stopPropagation();
+            event.preventDefault();
+          }}
+        >
+          <option value={KROMAC_V17}>{KROMAC_V17}</option>
+          <option value={KROMAC_V18}>{KROMAC_V18}</option>
+        </select>
+        <label className="text-bg-light">{versionReleaseLabel}</label>
       </div>
       <div className="kromac-landingpage-container">
         <div className="kromac-section">
@@ -112,24 +131,14 @@ const LandingPage = () => {
           <p>
             visit us in
             <a
-              href="https://www.npmjs.com/package/kromac-ui-17"
+              href={`https://www.npmjs.com/package/${version}`}
               target="_blank"
               rel="noreferrer"
             >
-              <b> NPM (kromac for react v17)</b>
+              <b> NPM ({version})</b>
             </a>
           </p>
-          <p>
-            visit us in
-            <a
-              href="https://www.npmjs.com/package/kromac-ui-18"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <b> NPM (kromac for react v18)</b>
-            </a>
-          </p>
-          <label className="label-import">npm install kromac-ui</label>
+          <label className="label-import">npm install {version}</label>
         </div>
         <div className="kromac-section">
           <TextAnimation
@@ -139,7 +148,7 @@ const LandingPage = () => {
           />
           <div className="kromac-subsection">
             {requirementsText}
-            {requirements.map((r, index) => (
+            {requirements(version).map((r, index) => (
               <div key={index}>
                 <label className="label-import">{r.product} </label> &nbsp;
                 <div className="chip">{r.version}</div>
@@ -173,7 +182,7 @@ const LandingPage = () => {
             </a>
             &nbsp; we will teach you how to use and modify the components.
           </p>
-          <BoxImplementation componentText={componentText} />
+          <BoxImplementation componentText={componentText(version)} />
         </div>
         <div className="kromac-section">
           <TextAnimation
@@ -271,7 +280,7 @@ const LandingPage = () => {
             <Toast visible color="night" positionX="right" timeOut={500000}>
               <div className="text-bg-light">
                 <h4>Hey!!!</h4>
-                <h5>Know about the new release 1.2.4</h5>
+                <h5>Know about the new release {versionReleaseLabel}</h5>
                 <Link to="/releases">Read more</Link>
               </div>
             </Toast>

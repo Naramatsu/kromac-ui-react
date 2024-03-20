@@ -1,17 +1,17 @@
-import React, { lazy, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { changeDocumentTitle } from '../../utils/utils';
+import React, { lazy, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { changeDocumentTitle } from "../../utils/utils";
 
-const TextAnimation = lazy(() => import('../lib/TextAnimation'));
+const TextAnimation = lazy(() => import("../lib/TextAnimation"));
 
 const ReleaseInfo = () => {
   useEffect(() => {
-    document.title = changeDocumentTitle({ component: 'Releases', state: '' });
+    document.title = changeDocumentTitle({ component: "Releases", state: "" });
   });
   return (
     <div className="kromac-scroll landingpage release">
       <div className="kromac-landingpage-container">
-        <Link to="/">Go back to home</Link>
+        <Link to="/"> {"<"} Go back to home</Link>
         <br />
         <div className="kromac-section">
           <TextAnimation
@@ -20,46 +20,54 @@ const ReleaseInfo = () => {
             fontColor="#fff"
           />
           <p>
-            In this version <b>1.2.5</b> we released news components
+            In this version <b>1.3.0</b> we released a new component
             <b>
-              <i> 'Grid' </i>
+              <i> 'Chip' </i>
             </b>
-            and
+            .
+          </p>
+          <br />
+          <p>
+            We adjust the
             <b>
-              <i> 'GridItem'. </i>
+              <i> "box-shadow" </i>
             </b>
+            value to another softer in all components.
           </p>
           <p>
-            Now you can use
+            And also we renamed the &nbsp;
             <b>
-              <i> 'Grid' </i>
+              CardTeam
+              <i> "redes" </i>
             </b>
-            component to custom your own display columns from 1 to 24 and
+            property by
             <b>
-              <i> 'GridItem' </i>
+              <i> "media" </i>
             </b>
-            component to define how many columns you want and even how may rows
-            per item.
+            .
           </p>
           <br />
           <p>
             Visit &nbsp;
             <Link
               to={{
-                pathname: 'grid',
+                pathname: "chip",
               }}
-              name="grid"
+              name="chip"
             >
-              Grid
+              Chip
             </Link>
-            &nbsp; and &nbsp;
+            &nbsp; to know how to implement.
+          </p>
+          <p>
+            Visit &nbsp;
             <Link
               to={{
-                pathname: 'gridItem',
+                pathname: "card",
               }}
-              name="gridItem"
+              name="card"
             >
-              GridItem
+              Card
             </Link>
             &nbsp; to know how to implement.
           </p>

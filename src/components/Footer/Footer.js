@@ -1,6 +1,8 @@
 import React from "react";
 
-const Footer = () =>
+const year = new Date().getFullYear();
+
+const Footer = () => (
   <div className="kromac-footer-container">
     <div className="kromac-footer">
       <a
@@ -8,9 +10,10 @@ const Footer = () =>
         target="_blank"
         rel="noreferrer"
       >
-        <span className="text-bg-light">Kromac UI Copyright © 2021</span>
+        <span className="text-bg-light">Kromac UI Copyright © {year}</span>
       </a>
     </div>
-  </div>;
+  </div>
+);
 
 export default Footer;
