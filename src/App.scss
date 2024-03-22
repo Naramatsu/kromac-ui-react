@@ -17,6 +17,25 @@ body {
   margin: 0;
 }
 
+.kromac-container-main .kromac-row-main {
+  margin-bottom: 0;
+  min-height: 100vh;
+}
+
+.dark {
+  background-color: #212f3d;
+  color: #fff;
+
+  & > .kromac-footer {
+    background-color: #212f3d;
+  }
+
+  tr,
+  th {
+    color: #fff;
+  }
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
