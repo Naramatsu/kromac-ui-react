@@ -3,8 +3,7 @@ const importType = (version) => `import Toast from "${version}/dist/Toast";`;
 
 const toastProp = {
   message: "Some text here...!",
-  visible: true,
-  timeOut: 500000,
+  alwaysVisible: true,
 };
 
 const componentText = (
@@ -15,11 +14,7 @@ const componentText = (
       <span className="var tab">message</span>=
       <span className="string">"Some text here...!"</span>
       <br />
-      <span className="var tab">visible</span>
-      <br />
-      <span className="var tab">timeOut</span>=<span>{`{`}</span>
-      <span className="text">500000</span>
-      <span>{`}`}</span>
+      <span className="var tab">alwaysVisible</span>
       <br />
       <span className="react">/&gt;</span>
     </p>
@@ -50,6 +45,12 @@ const propsDescription = [
     description: "Sets background color.",
   },
   {
+    name: "alwaysVisible",
+    type: "bool",
+    values: [`default false`],
+    description: "When this prop turned on, it displays the Toast.",
+  },
+  {
     name: "visible",
     type: "bool",
     values: [`default false`],
@@ -59,7 +60,7 @@ const propsDescription = [
     name: "timeOut",
     type: "number",
     values: [`default 5000`],
-    description: "Duration in ms.",
+    description: `This prop set the duration in ms only when "visible" prop is setting on.`,
   },
   {
     name: "positionY",
