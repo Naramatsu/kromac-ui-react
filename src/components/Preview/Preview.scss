@@ -26,8 +26,18 @@ $marginBottom: 15px;
     padding-top: 15px;
   }
 
+  .component-props:nth-last-child(1) {
+    margin-bottom: 50px;
+  }
+
   .components-related {
     display: none;
+  }
+
+  .component-props-table {
+    table tbody tr:nth-last-child(1) {
+      border-bottom: none;
+    }
   }
 
   @media (max-width: 767px) {

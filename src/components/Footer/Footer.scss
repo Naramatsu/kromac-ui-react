@@ -1,9 +1,9 @@
 .kromac-footer-container {
   border-top: solid 1px #566573;
+  bottom: 0;
   height: 50px;
-  position: relative;
-  transform: translateY(1.5em);
-  width: 100%;
+  position: absolute;
+  width: -webkit-fill-available;
 
   .kromac-footer {
     align-items: center;

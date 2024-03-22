@@ -277,7 +277,7 @@ const LandingPage = () => {
             />
           </div>
           <div className="kromac-section">
-            <Toast visible color="night" positionX="right" timeOut={500000}>
+            <Toast alwaysVisible color="night" positionX="right">
               <div className="text-bg-light">
                 <h4>Hey!!!</h4>
                 <h5>Know about the new release {versionReleaseLabel}</h5>
