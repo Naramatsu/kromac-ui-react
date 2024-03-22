@@ -1,1 +1,1 @@
-export { default } from "./BannerText";
+export { default } from "./BannerText.jsx";

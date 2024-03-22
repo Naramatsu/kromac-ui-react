@@ -1,8 +1,8 @@
 .kromac-skeleton {
-  position: relative;
-  overflow: hidden;
-  text-align: center;
   display: inline-block;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
 
   &.dark {
     background: #212f3d;
@@ -13,12 +13,12 @@
   }
 
   .kromac-skeletonLoader {
-    height: 100%;
-    content: '';
-    width: 40%;
-    position: absolute;
-    filter: blur(10px);
     animation: skeleton 3s infinite ease;
+    content: "";
+    filter: blur(10px);
+    height: 100%;
+    position: absolute;
+    width: 40%;
 
     &.dark {
       background: linear-gradient(90deg, #212f3d 0%, #aab7b8 50%, #212f3d 100%);

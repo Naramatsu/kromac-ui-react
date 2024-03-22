@@ -2,32 +2,42 @@ $marginTop: 15px;
 $marginBottom: 15px;
 
 .preview {
-  position: relative;
-  width: 100%;
   height: auto;
   padding: 15px;
+  position: relative;
+  width: 100%;
 
   .component-title {
     label {
-      font-size: .5em;
+      font-size: 0.5em;
       margin-left: 1em;
     }
   }
 
   .label-import,
   .component-implementation {
-    margin-top: $marginTop;
     margin-bottom: $marginBottom;
+    margin-top: $marginTop;
   }
 
   .component-preview,
   .component-props {
-    padding-top: 15px;
     margin-bottom: $marginBottom;
+    padding-top: 15px;
+  }
+
+  .component-props:nth-last-child(1) {
+    margin-bottom: 50px;
   }
 
   .components-related {
     display: none;
+  }
+
+  .component-props-table {
+    table tbody tr:nth-last-child(1) {
+      border-bottom: none;
+    }
   }
 
   @media (max-width: 767px) {

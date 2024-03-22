@@ -1,9 +1,10 @@
-import React, { lazy, Suspense, useEffect } from "react";
+import React, { lazy, Suspense, useEffect, useContext } from "react";
 import gridProps from "./storyProps/gridClassicProps";
 import {
   changeDocumentTitle,
-  getComponentsRelated
+  getComponentsRelated,
 } from "../../../utils/utils";
+import { PreferencesContext } from "../../../store";
 
 const Preview = lazy(() => import("../../Preview"));
 const Grid = lazy(() => import("./Grid"));
@@ -12,13 +13,12 @@ const Spinner = lazy(() => import("../../lib/Spinner"));
 const gridComponents = getComponentsRelated("grid");
 
 const GridHistory = ({ location: { state = "classic" } }) => {
-  useEffect(
-    () => {
-      document.title = changeDocumentTitle({ component: "Grid", state });
-      window.scrollTo(0, 0);
-    },
-    [state]
-  );
+  const { version } = useContext(PreferencesContext);
+
+  useEffect(() => {
+    document.title = changeDocumentTitle({ component: "Grid", state });
+    window.scrollTo(0, 0);
+  }, [state]);
 
   return (
     <div>
@@ -26,7 +26,7 @@ const GridHistory = ({ location: { state = "classic" } }) => {
         title="Grid"
         subTitle={gridProps.subTitle}
         description={gridProps.description}
-        importType={gridProps.importType}
+        importType={gridProps.importType(version)}
         propsDescription={gridProps.propsDescription}
         notes={gridProps.notes}
         componentsRealated={gridComponents}

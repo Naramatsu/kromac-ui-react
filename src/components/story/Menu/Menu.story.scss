@@ -13,23 +13,23 @@
   z-index: 1000;
 
   label {
-    width: 100px;
+    backdrop-filter: blur(20px);
+    border: solid 1px #212f3d;
+    border-radius: 0.25em;
+    padding: 0.25em;
     position: absolute;
     right: 90px;
     top: -160px;
-    border: solid 1px #212f3d;
-    backdrop-filter: blur(20px);
-    padding: .25em;
-    border-radius: .25em;
+    width: 100px;
   }
 
   img {
-    position: absolute;
-    transform: rotate(172deg);
-    width: 100px;
     height: 70px;
+    position: absolute;
     right: 55px;
     top: -120px;
+    transform: rotate(172deg);
+    width: 100px;
   }
 }
 

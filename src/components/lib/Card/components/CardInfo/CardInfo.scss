@@ -2,44 +2,44 @@ $textShadow-bg-white: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 
 .kromac-container.card-info {
   .kromac-card {
-    position: relative;
-    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, .5);
-    border-radius: .25em;
+    border-radius: 0.25em;
     margin: 10px 0;
+    position: relative;
 
     span {
-      position: absolute;
-      top: 6px;
-      left: 6px;
-      right: 6px;
+      background: rgba(0, 0, 0, 0.3);
       bottom: 6px;
-      background: rgba(0, 0, 0, .3);
+      left: 6px;
+      position: absolute;
+      right: 6px;
+      top: 6px;
 
       &::before {
-        content: '';
-        width: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        content: "";
         height: 100%;
-        background: rgba(255, 255, 255, .1);
-        position: absolute;
         left: 0;
+        position: absolute;
         top: 0;
+        width: 50%;
       }
     }
 
     .kromac-card-caption {
-      position: relative;
-      padding: 1em 2em;
       height: auto;
       overflow: hidden;
+      padding: 1em 2em;
+      position: relative;
 
       .card-title {
         margin-top: 3em;
       }
 
       .card-text {
-        max-height: 250px;
-        transition: max-height 2s ease-out;
         margin-bottom: 3em;
+        max-height: 250px;
+        transition: max-height 0.5s ease-out;
+        color: #fff;
 
         p {
           margin-bottom: 1em;
@@ -60,17 +60,12 @@ $textShadow-bg-white: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
     }
 
     &.transparent {
-      backdrop-filter: blur(20px);
-      background: transparent;
-      text-shadow: $textShadow-bg-white;
-      color: #fff;
-
       span,
       .kromac-card-caption {
         border-radius: 1em;
 
         &::before {
-          border-radius: .75em 0 0 0.75em;
+          border-radius: 0.75em 0 0 0.75em;
         }
       }
     }

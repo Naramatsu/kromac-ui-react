@@ -1,5 +1,4 @@
 const subTitle = "Panel classic";
-const importType = `import Panel from "kromac-ui/dist/Panel";`;
 
 const panelProp = {};
 
@@ -21,34 +20,34 @@ const propsDescription = [
     type: "bool",
     values: ["default false"],
     description:
-      "Turns Panel background color dark and shows a neon border around."
+      "Turns Panel background color dark and shows a neon border around.",
   },
   {
     name: "transparent",
     type: "bool",
     values: [`default false`],
-    description: "Turns Panel background transparent and adds a blurred effect."
+    description:
+      "Turns Panel background transparent and adds a blurred effect.",
   },
   {
     name: "shadows",
     type: "bool",
     values: [`default true`],
-    description: "This prop adds a box-shadows around the Panel."
+    description: "This prop adds a box-shadows around the Panel.",
   },
   {
     name: "children",
     type: "any",
     values: [],
-    description: "Panel content, you can write html code inside."
-  }
+    description: "Panel content, you can write html code inside.",
+  },
 ];
 
 const panelProps = {
   componentText,
-  importType,
   panelProp,
   propsDescription,
-  subTitle
+  subTitle,
 };
 
 export default panelProps;

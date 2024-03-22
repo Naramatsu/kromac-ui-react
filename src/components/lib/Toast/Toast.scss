@@ -1,41 +1,42 @@
 .kromac-toast {
-  width: 350px;
   position: fixed;
-  transition: all 2s ease;
+  transition: all 0.5s ease;
+  width: 350px;
   z-index: 1000000 !important;
 
   .kromac-toast-content {
+    align-items: center;
+    border-radius: 5px;
+    bottom: -15px;
+    box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.5);
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    transition: 2s opacity ease;
     overflow: hidden;
-    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, .5);
     padding: 1em;
+    transition: 0.5s opacity ease;
     width: 100%;
-    bottom: -15px;
 
     p {
       margin: 0;
-      width: 100%;
       padding-left: 5px;
+      width: 100%;
     }
 
     span {
-      cursor: pointer;
-      color: #fff;
-      display: flex;
-      justify-content: center;
       align-items: center;
+      color: #fff;
+      cursor: pointer;
+      display: flex;
       font-size: 1.5em;
-      min-width: 25px;
-      min-height: 25px;
-      max-width: 25px;
+      justify-content: center;
       max-height: 25px;
+      max-width: 25px;
+      min-height: 25px;
+      min-width: 25px;
 
       img {
-        width: 100%;
         height: 100%;
+        width: 100%;
       }
     }
 
@@ -43,7 +44,7 @@
       backdrop-filter: blur(20px);
 
       span {
-        background: rgba(0, 0, 0, .5);
+        background: rgba(0, 0, 0, 0.5);
         border-radius: 50%;
         color: #fff;
       }
@@ -53,8 +54,8 @@
 
 @media (max-width: 540px) {
   .kromac-toast {
-    width: 90% !important;
     left: 5%;
     right: 5%;
+    width: 90% !important;
   }
 }

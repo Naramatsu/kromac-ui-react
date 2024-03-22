@@ -1,10 +1,9 @@
 const subTitle = "";
-const importType = `import Toast from "kromac-ui/dist/Toast";`;
+const importType = (version) => `import Toast from "${version}/dist/Toast";`;
 
 const toastProp = {
   message: "Some text here...!",
-  visible: true,
-  timeOut: 500000
+  alwaysVisible: true,
 };
 
 const componentText = (
@@ -12,15 +11,10 @@ const componentText = (
     <p>
       <span className="react">&lt;Toast</span>
       <br />
-      <span className="var tab">message</span>=<span className="string">
-        "Some text here...!"
-      </span>
+      <span className="var tab">message</span>=
+      <span className="string">"Some text here...!"</span>
       <br />
-      <span className="var tab">visible</span>
-      <br />
-      <span className="var tab">timeOut</span>=<span>{`{`}</span>
-      <span className="text">500000</span>
-      <span>{`}`}</span>
+      <span className="var tab">alwaysVisible</span>
       <br />
       <span className="react">/&gt;</span>
     </p>
@@ -32,7 +26,7 @@ const propsDescription = [
     name: "message",
     type: "string Required",
     values: [],
-    description: "Toast message."
+    description: "Toast message.",
   },
   {
     name: "color",
@@ -46,34 +40,40 @@ const propsDescription = [
       "warning",
       "info",
       "night",
-      "transparent"
+      "transparent",
     ],
-    description: "Sets background color."
+    description: "Sets background color.",
+  },
+  {
+    name: "alwaysVisible",
+    type: "bool",
+    values: [`default false`],
+    description: "When this prop turned on, it displays the Toast.",
   },
   {
     name: "visible",
     type: "bool",
     values: [`default false`],
-    description: "When this prop turned on, it displays the Toast."
+    description: "When this prop turned on, it displays the Toast.",
   },
   {
     name: "timeOut",
     type: "number",
     values: [`default 5000`],
-    description: "Duration in ms."
+    description: `This prop set the duration in ms only when "visible" prop is setting on.`,
   },
   {
     name: "positionY",
     type: "string",
     values: [`default bottom`, "top", "bottom"],
-    description: "Toast position in Y-axis of the screen."
+    description: "Toast position in Y-axis of the screen.",
   },
   {
     name: "positionX",
     type: "string",
     values: [`default left`, "right", "left"],
-    description: "Toast position in X-axis of the screen."
-  }
+    description: "Toast position in X-axis of the screen.",
+  },
 ];
 
 const sliderProps = {
@@ -81,7 +81,7 @@ const sliderProps = {
   importType,
   propsDescription,
   subTitle,
-  toastProp
+  toastProp,
 };
 
 export default sliderProps;

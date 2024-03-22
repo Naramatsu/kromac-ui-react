@@ -1,9 +1,10 @@
-import React, { lazy, Suspense, useEffect } from "react";
+import React, { lazy, Suspense, useEffect, useContext } from "react";
 import sliderProps from "./storyProps/sliderProps";
 import {
   changeDocumentTitle,
-  getComponentsRelated
+  getComponentsRelated,
 } from "../../../utils/utils";
+import { PreferencesContext } from "../../../store";
 
 const Preview = lazy(() => import("../../Preview"));
 const Slider = lazy(() => import("./Slider"));
@@ -12,13 +13,12 @@ const Spinner = lazy(() => import("../../lib/Spinner"));
 const sliderComponents = getComponentsRelated("slider");
 
 const SliderHistory = ({ location }) => {
-  useEffect(
-    () => {
-      document.title = changeDocumentTitle({ component: "Slider", state: "" });
-      window.scrollTo(0, 0);
-    },
-    [location]
-  );
+  const { version } = useContext(PreferencesContext);
+
+  useEffect(() => {
+    document.title = changeDocumentTitle({ component: "Slider", state: "" });
+    window.scrollTo(0, 0);
+  }, [location]);
 
   return (
     <div>
@@ -26,7 +26,7 @@ const SliderHistory = ({ location }) => {
         title="Slider"
         subTitle={sliderProps.subTitle}
         description={sliderProps.description}
-        importType={sliderProps.importType}
+        importType={sliderProps.importType(version)}
         propsDescription={sliderProps.propsDescription}
         notes={sliderProps.notes}
         componentsRealated={sliderComponents}

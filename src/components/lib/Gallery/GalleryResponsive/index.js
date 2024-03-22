@@ -1,1 +1,1 @@
-export { default } from "./GalleryResponsive";
+export { default } from "./GalleryResponsive.jsx";

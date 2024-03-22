@@ -1,134 +1,134 @@
 .kromac-menu-hamburger {
-  display: block !important;
-  z-index: 10000;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   background: var(--bgColor);
-  width: 0px;
+  bottom: 0;
   box-sizing: initial;
-  transition: width var(--transition);
+  display: block !important;
+  left: 0;
   overflow-x: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: width var(--transition);
+  width: 0px;
+  z-index: 10000;
 
   .kromac-title {
-    text-align: center;
-    white-space: nowrap;
+    background: var(--bgColor);
     color: #fff;
+    height: auto;
     padding: 1em;
     position: sticky;
+    text-align: center;
     top: 0;
-    height: auto;
-    background: var(--bgColor);
+    white-space: nowrap;
     z-index: 10000;
 
     a {
-      text-decoration: none;
       color: #fff;
+      text-decoration: none;
     }
 
     img {
-      width: auto;
       height: 100px;
+      width: auto;
     }
   }
 
   .kromac-input-search {
-    z-index: 10000;
     background: var(--bgColor);
-    top: auto;
     margin: 0;
     margin-top: 10px;
+    top: auto;
+    z-index: 10000;
 
     input,
     input:focus,
     input:active {
-      z-index: 10000;
       background: var(--bgColor);
-      border: none;
-      outline: none;
       background: #fff;
-      width: 80%;
-      box-shadow: 0px 0px 15px -5px;
+      border: none;
       border-radius: 0.25em;
-      padding: 5px 10px;
+      box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.5);
       height: 24px;
+      outline: none;
+      padding: 5px 10px;
+      width: 80%;
+      z-index: 10000;
     }
   }
 
   &.active {
-    width: 300px;
     border-left: solid 5px var(--bgColor);
+    width: 300px;
   }
 
   ul {
-    top: 0;
+    border: none;
     left: 0;
     padding-left: 5px;
+    top: 0;
     width: 100%;
-    border: none;
 
     .kromac-menu-list {
-      position: relative;
-      list-style: none;
-      width: 100%;
-      border-top-left-radius: 20px;
       border-bottom-left-radius: 20px;
+      border-top-left-radius: 20px;
+      list-style: none;
+      position: relative;
+      width: 100%;
 
       b:nth-child(1) {
-        position: absolute;
-        top: -20px;
-        height: 20px;
-        width: 100%;
         background: #fff;
         display: none;
+        height: 20px;
+        position: absolute;
+        top: -20px;
+        width: 100%;
 
         &::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 100%;
-          width: 100%;
           background: var(--bgColor);
           border-bottom-right-radius: 20px;
+          content: "";
+          height: 100%;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 100%;
         }
       }
 
       b:nth-child(2) {
-        position: absolute;
-        bottom: -20px;
-        height: 20px;
-        width: 100%;
         background: #fff;
+        bottom: -20px;
         display: none;
+        height: 20px;
+        position: absolute;
+        width: 100%;
 
         &::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 100%;
-          width: 100%;
           background: var(--bgColor);
           border-top-right-radius: 20px;
+          content: "";
+          height: 100%;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 100%;
         }
       }
 
       a {
-        position: relative;
         display: block;
-        width: 100%;
         display: flex;
+        position: relative;
         text-decoration: none;
+        width: 100%;
 
         .icon {
-          position: relative;
           display: block;
-          min-width: 60px;
           height: 60px;
           line-height: 600;
+          min-width: 60px;
+          position: relative;
           text-align: center;
 
           ion-icon {
@@ -137,12 +137,12 @@
         }
 
         .kromac-menu-title {
-          position: relative;
           display: block;
-          padding-left: 10px;
           line-height: 60px;
-          white-space: normal;
+          padding-left: 10px;
+          position: relative;
           text-transform: capitalize;
+          white-space: normal;
         }
       }
 
@@ -160,24 +160,24 @@
   }
 
   .kromac-hamburger-menu {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
+    align-items: center;
     background: var(--hamburgerColor);
     border-radius: 10px;
     cursor: pointer;
     display: flex;
+    height: 50px;
     justify-content: center;
-    align-items: center;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 50px;
     z-index: 100;
 
     img {
+      display: none;
+      height: 34px;
       position: absolute;
       width: 34px;
-      height: 34px;
-      display: none;
 
       &.open {
         display: block;

@@ -1,7 +1,7 @@
-import { Chip } from "react-materialize";
+import Chip from "../components/lib/Chip";
 import data from "./components.json";
 
-export const determinateColor = color => {
+export const determinateColor = (color) => {
   switch (color) {
     case "transparent":
       return color;
@@ -18,9 +18,7 @@ export const addChip = (type, index) => {
     return (
       <div key={index}>
         <b>default </b>
-        <Chip>
-          {defaultChip}
-        </Chip>
+        <Chip>{defaultChip}</Chip>
       </div>
     );
   }
@@ -28,20 +26,14 @@ export const addChip = (type, index) => {
     const requiredChip = type.replace("Required", "");
     return (
       <div key={index}>
-        <Chip>
-          {requiredChip}
-        </Chip>
+        <Chip>{requiredChip}</Chip>
         <Chip>
           <b>Required </b>
         </Chip>
       </div>
     );
   }
-  return (
-    <Chip key={index}>
-      {type}
-    </Chip>
-  );
+  return <Chip key={index}>{type}</Chip>;
 };
 
 export const borderStyle = (cardColor, border = false) =>
@@ -49,27 +41,27 @@ export const borderStyle = (cardColor, border = false) =>
     ? { border: "solid 2px #fff", borderRadius: "1em" }
     : {};
 
-export const bgStyleByProps = cardColor => ({
+export const bgStyleByProps = (cardColor) => ({
   background: `linear-gradient(45deg, #000, ${cardColor})`,
-  color: "#fff"
+  color: "#fff",
 });
 
-export const styleCentered = isCentered => {
+export const styleCentered = (isCentered) => {
   return isCentered
     ? {
         position: "fixed",
         top: "50%",
         left: "50%",
-        transform: "translate(-50%, -50%)"
+        transform: "translate(-50%, -50%)",
       }
     : {};
 };
 
-export const getComponentsRelated = component => {
-  return data.find(c => c.component === component).subComponents;
+export const getComponentsRelated = (component) => {
+  return data.find((c) => c.component === component).subComponents;
 };
 
-export const sortByLength = words => {
+export const sortByLength = (words) => {
   return words.sort((a, b) => b.length - a.length);
 };
 
@@ -90,7 +82,7 @@ export const templateGenerator = (images, template) => {
     0
   );
   const noRowCol = images.filter(
-    noRC => noRC.row === undefined && noRC.col === undefined
+    (noRC) => noRC.row === undefined && noRC.col === undefined
   ).length;
 
   const long = rowLong + colLong + noRowCol;
@@ -123,7 +115,7 @@ export const templateGenerator = (images, template) => {
   return style;
 };
 
-export const widthCalculator = width => {
+export const widthCalculator = (width) => {
   let tag = "";
   if (width > 768) tag = "lg";
   if (width <= 768) tag = "md";
@@ -131,7 +123,7 @@ export const widthCalculator = width => {
   return tag;
 };
 
-export const rowColGenerator = item => {
+export const rowColGenerator = (item) => {
   const { col, row } = item;
   const style = {};
   if (row) style.gridRow = `span ${row}`;
@@ -158,14 +150,14 @@ export const markAsLastImageImgPar = (index, key) => {
   return "";
 };
 
-export const markAsOnlyImageRowImpar = count => {
+export const markAsOnlyImageRowImpar = (count) => {
   if (count === 1) {
     return "special";
   }
   return "";
 };
 
-export const rowColMaker = images => {
+export const rowColMaker = (images) => {
   const numberRows = Math.ceil(images.length / 3);
   const numberRows2 = Math.ceil(images.length / 2);
   const rowAvg = (numberRows + numberRows2) / 2;
@@ -212,53 +204,3 @@ export const inactivateIonIcon = (number, indicator, long) => {
 export const changeDocumentTitle = ({ component, state }) => {
   return `Kromac UI: ${component} ${state}`;
 };
-
-// export const videoBuilder = (video, setIsMediaLoading) => {
-//   const {
-//     url,
-//     controls = false,
-//     autoPlay = true,
-//     muted = true,
-//     loop = true
-//   } = video;
-//   if (url.includes("youtube", "youtu.be")) {
-//     let ytUrlBuilder = "";
-//     if (url.includes("youtube")) {
-//       ytUrlBuilder = url.replace(
-//         "https://www.youtube.com/watch?v=",
-//         "https://www.youtube.com/embed/"
-//       );
-//     } else {
-//       ytUrlBuilder = url.replace(
-//         "https://youtu.be/",
-//         "https://www.youtube.com/embed/"
-//       );
-//     }
-//     return (
-//       <iframe
-//         title="YouTube video player"
-//         width="100%"
-//         height="100%"
-//         src={ytUrlBuilder}
-//         frameBorder="0"
-//         allow="autoplay"
-//         allowFullScreen={false}
-//         onLoad={() => setIsMediaLoading(false)}
-//       />
-//     );
-//   }
-//   setTimeout(() => {
-//     setIsMediaLoading(false);
-//   }, 0);
-//   return (
-//     <video
-//       src={url}
-//       controls={controls}
-//       muted={muted}
-//       loop={loop}
-//       autoPlay={autoPlay}
-//       width="100%"
-//       height="100%x"
-//     />
-//   );
-// };

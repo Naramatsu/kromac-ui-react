@@ -9,6 +9,10 @@
     ]
   },
   {
+    "component": "chip",
+    "subComponents": []
+  },
+  {
     "component": "grid",
     "subComponents": []
   },

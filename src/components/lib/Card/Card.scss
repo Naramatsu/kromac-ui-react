@@ -1,22 +1,85 @@
+$textShadow-bg-white: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+
 .kromac-container {
-  display: flex;
   align-content: center;
-  justify-content: center;
   align-items: center;
+  display: flex;
+  justify-content: center;
 
   .kromac-card {
-    width: 100%;
+    box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.5);
     max-width: 350px;
     min-width: 300px;
+    position: relative;
+    width: 100%;
 
     .kromac-card-image {
       overflow: hidden;
+      position: relative;
+
+      img,
+      video,
+      iframe {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .card-title {
+        align-items: center;
+        backdrop-filter: blur(1px);
+        background: rgba(0, 0, 0, 0.5);
+        bottom: 0;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        padding: 7px 1em;
+        position: absolute;
+        width: 100%;
+
+        h4 {
+          margin: 0;
+          max-width: 65%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        label {
+          color: #fff;
+          cursor: pointer;
+          margin: 0;
+        }
+      }
     }
 
     .kromac-card-caption {
-      label {
-        font-size: 10px;
+      position: relative;
+
+      .card-text {
+        color: #000;
+        overflow: hidden;
+        padding: 1em;
+        transition: max-height var(--transition) ease-out;
       }
+
+      &.transparent {
+        backdrop-filter: blur(20px);
+        background: transparent;
+        color: #fff;
+      }
+
+      label {
+        font-size: 0.8rem;
+      }
+    }
+
+    &.transparent {
+      backdrop-filter: blur(20px);
+      background: transparent;
+      color: #fff;
+      text-shadow: $textShadow-bg-white;
     }
   }
 }

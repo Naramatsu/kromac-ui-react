@@ -1,16 +1,16 @@
 .kromac-banner-text {
-  position: relative;
   background-size: cover;
   margin-bottom: 3em;
+  position: relative;
 
   .kromac-banner-caption,
   .kromac-banner-image {
-    display: flex;
-    width: 100%;
-    height: 100%;
     align-content: center;
-    justify-content: center;
     align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
   }
 
   .kromac-banner-container {
@@ -25,28 +25,28 @@
 
   .kromac-banner-image {
     img {
-      width: 100%;
       height: 100%;
       object-fit: cover;
+      width: 100%;
     }
   }
 
   .kromac-banner-caption {
-    z-index: 1000;
-    padding: 1em;
-    width: auto;
-    position: relative;
     mix-blend-mode: screen;
     overflow: hidden;
+    padding: 1em;
+    position: relative;
+    width: auto;
+    z-index: 1000;
 
     div {
       h1 {
-        font-size: 5em;
-        text-transform: uppercase;
-        font-weight: 800;
-        mix-blend-mode: screen;
         color: #000;
         display: contents;
+        font-size: 5em;
+        font-weight: 800;
+        mix-blend-mode: screen;
+        text-transform: uppercase;
       }
 
       p {

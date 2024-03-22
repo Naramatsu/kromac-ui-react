@@ -1,5 +1,4 @@
 const subTitle = "Gallery responsive";
-const importType = `import Gallery from "kromac-ui/dist/Gallery";`;
 
 const notes = `
 The <div class="chip">content</div> prop value format must be equals as that shown in the implementation.
@@ -17,49 +16,42 @@ const galleryProps = {
     {
       video:
         "https://res.cloudinary.com/dxg9gszax/video/upload/v1643900779/kromac-ui/Avenged_Sevenfold_-_Wish_You_Were_Here_g2vaqu.mp4",
-      row: 2
+      row: 2,
     },
     {
-      img:
-        "https://images.pexels.com/photos/3075993/pexels-photo-3075993.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-      col: 2
+      img: "https://images.pexels.com/photos/3075993/pexels-photo-3075993.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      col: 2,
     },
     {
-      img:
-        "https://cdn.pixabay.com/photo/2016/11/19/11/37/automobile-1838782_1280.jpg"
+      img: "https://cdn.pixabay.com/photo/2016/11/19/11/37/automobile-1838782_1280.jpg",
     },
     {
-      img: "https://cdn.pixabay.com/photo/2015/06/24/13/32/dog-820014_1280.jpg"
+      img: "https://cdn.pixabay.com/photo/2015/06/24/13/32/dog-820014_1280.jpg",
     },
     {
       video:
         "https://res.cloudinary.com/dxg9gszax/video/upload/v1643900779/kromac-ui/Avenged_Sevenfold_-_Wish_You_Were_Here_g2vaqu.mp4",
-      col: 2
+      col: 2,
     },
     {
-      img:
-        "https://cdn.pixabay.com/photo/2020/08/14/17/13/light-bulbs-5488573_1280.jpg",
-      col: 2
+      img: "https://cdn.pixabay.com/photo/2020/08/14/17/13/light-bulbs-5488573_1280.jpg",
+      col: 2,
     },
     {
-      img:
-        "https://cdn.pixabay.com/photo/2018/05/10/22/56/bird-3389053_1280.jpg"
+      img: "https://cdn.pixabay.com/photo/2018/05/10/22/56/bird-3389053_1280.jpg",
     },
     {
-      img:
-        "https://cdn.pixabay.com/photo/2016/08/17/01/39/mystery-1599527_1280.jpg",
-      row: 2
+      img: "https://cdn.pixabay.com/photo/2016/08/17/01/39/mystery-1599527_1280.jpg",
+      row: 2,
     },
     {
-      img:
-        "https://images.pexels.com/photos/5821029/pexels-photo-5821029.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      img: "https://images.pexels.com/photos/5821029/pexels-photo-5821029.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     },
     {
-      img:
-        "https://cdn.pixabay.com/photo/2020/05/17/20/34/concept-5183469_1280.jpg",
-      col: 2
-    }
-  ]
+      img: "https://cdn.pixabay.com/photo/2020/05/17/20/34/concept-5183469_1280.jpg",
+      col: 2,
+    },
+  ],
 };
 
 const componentText = (
@@ -146,29 +138,28 @@ const propsDescription = [
     name: "gallery",
     type: "string Required",
     values: ["default responsive", "responsive", "polygon"],
-    description: "Gallery type."
+    description: "Gallery type.",
   },
   {
     name: "content",
     type: "array Required",
     values: [],
-    description: `Objects array of images or videos url, rows, cols.`
+    description: `Objects array of images or videos url, rows, cols.`,
   },
   {
     name: "gridGap",
     type: "string",
     values: ["default 0px"],
-    description: "Sets space between rows and cols."
-  }
+    description: "Sets space between rows and cols.",
+  },
 ];
 
 const gallerysProps = {
   componentText,
   galleryProps,
-  importType,
   notes,
   propsDescription,
-  subTitle
+  subTitle,
 };
 
 export default gallerysProps;

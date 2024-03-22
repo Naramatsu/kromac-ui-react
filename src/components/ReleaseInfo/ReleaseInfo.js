@@ -1,17 +1,18 @@
-import React, { lazy, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { changeDocumentTitle } from '../../utils/utils';
+import React, { lazy, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { changeDocumentTitle } from "../../utils/utils";
 
-const TextAnimation = lazy(() => import('../lib/TextAnimation'));
+const TextAnimation = lazy(() => import("../lib/TextAnimation"));
 
 const ReleaseInfo = () => {
   useEffect(() => {
-    document.title = changeDocumentTitle({ component: 'Releases', state: '' });
+    document.title = changeDocumentTitle({ component: "Releases", state: "" });
   });
+
   return (
-    <div className="kromac-scroll landingpage release">
+    <div className="kromac-scroll landingpage release-notes">
       <div className="kromac-landingpage-container">
-        <Link to="/">Go back to home</Link>
+        <Link to="/"> {"<"} Go back to home</Link>
         <br />
         <div className="kromac-section">
           <TextAnimation
@@ -20,46 +21,82 @@ const ReleaseInfo = () => {
             fontColor="#fff"
           />
           <p>
-            In this version <b>1.2.5</b> we released news components
+            In this version <b>1.3.0</b> we released a new component called
             <b>
-              <i> 'Grid' </i>
+              <i> 'Chip' </i>
             </b>
-            and
-            <b>
-              <i> 'GridItem'. </i>
-            </b>
+            and made other necessary adjustments:
           </p>
-          <p>
-            Now you can use
-            <b>
-              <i> 'Grid' </i>
-            </b>
-            component to custom your own display columns from 1 to 24 and
-            <b>
-              <i> 'GridItem' </i>
-            </b>
-            component to define how many columns you want and even how may rows
-            per item.
-          </p>
+          <br />
+          <ul>
+            <li>
+              <p>
+                We adjust the
+                <b>
+                  <i> "box-shadow" </i>
+                </b>
+                value to another softer in all components.
+              </p>
+            </li>
+            <li>
+              <p>
+                A new Toast prop
+                <b>
+                  <i> "alwaysVisible" </i>
+                </b>
+                was added.
+              </p>
+            </li>
+            <li>
+              <p>
+                And also we renamed the &nbsp;
+                <b>
+                  CardTeam
+                  <i> "redes" </i>
+                </b>
+                property by
+                <b>
+                  <i> "media" </i>
+                </b>
+                .
+              </p>
+            </li>
+          </ul>
+
           <br />
           <p>
             Visit &nbsp;
             <Link
               to={{
-                pathname: 'grid',
+                pathname: "chip",
               }}
-              name="grid"
+              name="chip"
             >
-              Grid
+              Chip
             </Link>
-            &nbsp; and &nbsp;
+            &nbsp; to know how to implement.
+          </p>
+          <p>
+            Visit &nbsp;
             <Link
               to={{
-                pathname: 'gridItem',
+                pathname: "toast",
               }}
-              name="gridItem"
+              name="toast"
             >
-              GridItem
+              Toast
+            </Link>
+            &nbsp; to know how to implement.
+          </p>
+          <p>
+            Visit &nbsp;
+            <Link
+              to={{
+                pathname: "card",
+              }}
+              name="card"
+            >
+              Card
             </Link>
             &nbsp; to know how to implement.
           </p>

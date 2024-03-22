@@ -1,5 +1,5 @@
 const subTitle = "Grid classic";
-const importType = `import Grid from "kromac-ui/dist/Grid";`;
+const importType = (version) => `import Grid from "${version}/dist/Grid";`;
 
 const gridProps = {};
 
@@ -20,14 +20,14 @@ const propsDescription = [
     name: "columns",
     type: "number",
     values: ["default 4"],
-    description: "Columns number of grid, min 1 max 24."
+    description: "Columns number of grid, min 1 max 24.",
   },
   {
     name: "children",
     type: "any",
     values: [],
-    description: "html content."
-  }
+    description: "html content.",
+  },
 ];
 
 const gridsProps = {
@@ -35,7 +35,7 @@ const gridsProps = {
   componentText,
   importType,
   propsDescription,
-  subTitle
+  subTitle,
 };
 
 export default gridsProps;

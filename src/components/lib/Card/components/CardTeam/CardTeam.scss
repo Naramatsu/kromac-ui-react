@@ -2,28 +2,22 @@ $textShadow-bg-white: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 
 .kromac-container.card-user {
   .kromac-card.card-user-info {
-    position: relative;
-    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.5);
     border-radius: 0.5em;
+    height: 400px;
     margin: 10px 0;
     max-width: 300px;
-    height: 400px;
     overflow: hidden;
 
     .kromac-card-image {
-      position: relative;
-      width: 100%;
       height: 400px;
-      transition: var(--transition);
       transform-origin: top;
+      transition: var(--transition);
+      width: 100%;
       z-index: 1;
 
       img,
       video,
       iframe {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
         border-radius: 0.5em;
       }
     }
@@ -37,12 +31,12 @@ $textShadow-bg-white: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
     }
 
     .kromac-card-caption {
-      transition: var(--transition);
-      position: absolute;
       bottom: 40px;
-      width: 100%;
+      position: absolute;
       text-align: center;
       transform: translateY(100%);
+      transition: var(--transition);
+      width: 100%;
 
       .card-title {
         text-shadow: $textShadow-bg-white;
@@ -53,7 +47,7 @@ $textShadow-bg-white: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 
         label {
           color: #3498db;
-          font-size: 0.75em;
+          font-size: 0.85em;
         }
       }
 
@@ -62,31 +56,31 @@ $textShadow-bg-white: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
       }
 
       ul {
+        align-content: center;
+        align-items: center;
         display: flex;
         flex-wrap: wrap;
-        align-content: center;
         justify-content: center;
-        align-items: center;
         list-style: none;
-        padding: 0;
         margin: 0;
+        padding: 0;
 
         li {
           margin: 0.5em;
 
           a,
           a:hover {
-            width: 25px;
-            padding: 0.5em;
-            height: 25px;
-            text-decoration: none;
+            align-content: center;
+            align-items: center;
             color: #fff;
             display: flex;
             flex-wrap: wrap;
-            align-content: center;
+            height: 25px;
             justify-content: center;
-            align-items: center;
+            padding: 0.5em;
+            text-decoration: none;
             transition: all var(--transition) ease;
+            width: 25px;
 
             &:hover {
               transform: rotate(360deg);
@@ -94,53 +88,41 @@ $textShadow-bg-white: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 
             i {
               img {
-                width: 35px;
                 height: 35px;
+                width: 35px;
               }
             }
           }
         }
       }
     }
-
-    &.transparent {
-      backdrop-filter: blur(20px);
-      background: transparent;
-      text-shadow: $textShadow-bg-white;
-      color: #fff;
-    }
   }
 
   .kromac-card.card-user-summary {
-    position: relative;
-    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.5);
     border-radius: 0.5em;
+    color: #fff;
+    height: 400px;
     margin: 10px 0;
     max-width: 300px;
-    height: 400px;
     overflow: hidden;
-    color: #fff;
     text-shadow: $textShadow-bg-white;
     transition: all var(--transition) linear;
 
     .kromac-card-image {
-      border-radius: 50%;
-      display: flex;
       align-content: center;
-      justify-content: center;
       align-items: center;
-      width: 100%;
-      position: absolute;
+      border-radius: 50%;
       bottom: 115px;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      width: 100%;
 
       img,
       video,
       iframe {
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        border-radius: 50%;
         border: solid 3px #fff;
+        border-radius: 50%;
       }
     }
 
@@ -148,27 +130,27 @@ $textShadow-bg-white: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
       width: 100%;
 
       .card-title {
-        position: absolute;
         bottom: 50px;
+        position: absolute;
         text-align: center;
         width: 100%;
 
         label {
           color: #3498db;
-          font-size: 0.75em;
+          font-size: 0.85em;
         }
       }
 
       .card-text {
-        padding: 1em;
-        width: 100%;
-        text-align: center;
-        height: 170px;
-        overflow: auto;
-        display: flex;
-        flex-wrap: wrap;
         align-content: stretch;
         align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        height: 170px;
+        overflow: auto;
+        padding: 1em;
+        text-align: center;
+        width: 100%;
 
         @media (max-width: 1154px) {
           & {
@@ -176,13 +158,6 @@ $textShadow-bg-white: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
           }
         }
       }
-    }
-
-    &.transparent {
-      backdrop-filter: blur(20px);
-      background: transparent;
-      text-shadow: $textShadow-bg-white;
-      color: #fff;
     }
 
     &:hover {

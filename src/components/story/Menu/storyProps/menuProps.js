@@ -1,5 +1,5 @@
 const subTitle = "Menu";
-const importType = `import Menu from "kromac-ui/dist/Menu";`;
+const importType = (version) => `import Menu from "${version}/dist/Menu";`;
 const description = `Make sure the component to be imported is wrapped by reac-router-dom`;
 const notes = `This component needs extrictly be wrapped by <div class="chip">react-router-dom</div> components.
 <br />
@@ -10,7 +10,7 @@ const notes = `This component needs extrictly be wrapped by <div class="chip">re
 
 const menuProps = {
   appName: "Some title",
-  tabs: ["home", "menu"]
+  tabs: ["home", "menu"],
 };
 
 const componentText = (
@@ -62,8 +62,7 @@ const componentText = (
       <span className="react tab">&lt;/Router&gt;</span>
       ,
       <br />
-      <span className="var tab">document</span>
-      .
+      <span className="var tab">document</span>.
       <span className="function">getElementById</span>
       <span>{"("}</span>
       <span className="string">{'"root"'}</span>
@@ -79,14 +78,12 @@ const componentText = (
       <br />
       <span className="react">&lt;Menu</span>
       <br />
-      <span className="component tab">
-        appName
-      </span>=<span className="string">"Some title"</span>
+      <span className="component tab">appName</span>=
+      <span className="string">"Some title"</span>
       <br />
       <span className="component tab">tabs</span>=<span>{`{[`}</span>
-      <span className="string">
-        "home"
-      </span>,<span className="string">"menu"</span>
+      <span className="string">"home"</span>,
+      <span className="string">"menu"</span>
       <span>{`]}`}</span>
       <br />
       <span className="react">/&gt;</span>
@@ -99,57 +96,57 @@ const propsDescription = [
     name: "appName",
     type: "string",
     values: [],
-    description: "Sets the text that will be display as the app name."
+    description: "Sets the text that will be display as the app name.",
   },
   {
     name: "imgLogo",
     type: "string",
     values: [],
-    description: "Image url."
+    description: "Image url.",
   },
   {
     name: "tabs",
     type: "array",
     values: [],
-    description: "String array of tabs name."
+    description: "String array of tabs name.",
   },
   {
     name: "searchComponents",
     type: "bool",
     values: ["default false"],
-    description: "Adds an input to search by tab name."
+    description: "Adds an input to search by tab name.",
   },
   {
     name: "bgColor",
     type: "string",
     values: ["default #283747"],
-    description: "Sets background color."
+    description: "Sets background color.",
   },
   {
     name: "hamburgerColor",
     type: "string",
     values: ["default #283747"],
-    description: "Sets background color of the hamburgermenu button."
+    description: "Sets background color of the hamburgermenu button.",
   },
   {
     name: "hamburgerActiveColor",
     type: "string",
     values: ["default #C0392B"],
     description:
-      "Sets background color of the hamburgermenu button when this is active."
+      "Sets background color of the hamburgermenu button when this is active.",
   },
   {
     name: "homeUrl",
     type: "string",
     values: ["default /"],
-    description: "Sets url link to redirect to home page."
+    description: "Sets url link to redirect to home page.",
   },
   {
     name: "transition",
     type: "string",
     values: ["default .5s"],
-    description: "Transition time."
-  }
+    description: "Transition time.",
+  },
 ];
 
 const buttonsProps = {
@@ -159,7 +156,7 @@ const buttonsProps = {
   menuProps,
   notes,
   propsDescription,
-  subTitle
+  subTitle,
 };
 
 export default buttonsProps;

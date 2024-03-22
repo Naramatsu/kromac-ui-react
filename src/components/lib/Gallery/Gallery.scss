@@ -1,13 +1,13 @@
 .brillo {
+  background: linear-gradient(90deg, transparent, #ffffff80, transparent);
+  cursor: pointer;
+  height: 100%;
+  left: -100%;
+  pointer-events: none;
   position: absolute;
   top: 0;
-  left: -100%;
-  height: 100%;
   width: 50%;
-  background: linear-gradient(90deg, transparent, #ffffff80, transparent);
   z-index: -1;
-  cursor: pointer;
-  pointer-events: none;
 }
 
 @keyframes brillo {

@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useEffect } from "react";
+import React, { lazy, Suspense, useEffect, useContext } from "react";
 import cardClassicProps from "./storyProps/cardClassicProps";
 import cardImageProps from "./storyProps/cardImageProps";
 import cardRevealProps from "./storyProps/cardRevealProps";
@@ -9,8 +9,9 @@ import cardTeamProps from "./storyProps/cardTeamProps";
 import cardPercentageProps from "./storyProps/cardPercentageProps";
 import {
   changeDocumentTitle,
-  getComponentsRelated
+  getComponentsRelated,
 } from "../../../utils/utils";
+import { PreferencesContext } from "../../../store";
 
 const Preview = lazy(() => import("../../Preview"));
 const Card = lazy(() => import("./Card"));
@@ -18,7 +19,7 @@ const Spinner = lazy(() => import("../../lib/Spinner"));
 
 const cardComponents = getComponentsRelated("card");
 
-const cardToShow = cardType => {
+const cardToShow = (cardType) => {
   switch (cardType) {
     case "image":
       return cardImageProps;
@@ -40,14 +41,17 @@ const cardToShow = cardType => {
 };
 
 const CardStory = ({ location: { state = "classic" } }) => {
-  useEffect(
-    () => {
-      document.title = changeDocumentTitle({ component: "Card", state });
-      window.scrollTo(0, 0);
-    },
-    [state]
-  );
-  const cardProps = cardToShow(state);
+  const { version } = useContext(PreferencesContext);
+
+  useEffect(() => {
+    document.title = changeDocumentTitle({ component: "Card", state });
+    window.scrollTo(0, 0);
+  }, [state]);
+
+  const cardProps = {
+    ...cardToShow(state),
+    importType: `import Card from "${version}/dist/Card";`,
+  };
   return (
     <div>
       <Preview

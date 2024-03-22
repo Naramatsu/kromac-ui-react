@@ -1,8 +1,8 @@
 .kromac-grid {
   display: grid;
   grid-auto-flow: dense;
-  width: 100%;
   position: relative;
+  width: 100%;
 
   & * {
     position: relative;

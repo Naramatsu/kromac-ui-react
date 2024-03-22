@@ -1,5 +1,4 @@
 const subTitle = "Toggle switch";
-const importType = `import Toggle from "kromac-ui/dist/Panel";`;
 
 const toggleProp = {};
 
@@ -16,40 +15,39 @@ const propsDescription = [
     name: "toggleType",
     type: "string",
     values: ["default switch", "power", "switch"],
-    description: "Toggle type."
+    description: "Toggle type.",
   },
   {
     name: "checked",
     type: "bool",
     values: ["default false"],
-    description: "This prop indicates whether it is checked or not."
+    description: "This prop indicates whether it is checked or not.",
   },
   {
     name: "onColor",
     type: "string",
     values: [`default #28B463`],
-    description: "Sets color when it is checked."
+    description: "Sets color when it is checked.",
   },
   {
     name: "offColor",
     type: "string",
     values: [`default #CB4335`],
-    description: "Sets color when it is not checked."
+    description: "Sets color when it is not checked.",
   },
   {
     name: "onChange",
     type: "function",
     values: [],
-    description: ""
-  }
+    description: "",
+  },
 ];
 
 const toggleProps = {
   componentText,
-  importType,
   propsDescription,
   subTitle,
-  toggleProp
+  toggleProp,
 };
 
 export default toggleProps;

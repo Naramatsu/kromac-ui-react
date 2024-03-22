@@ -1,1 +1,1 @@
-export { default } from "./GridItem";
+export { default } from "./GridItem.jsx";

@@ -10,8 +10,6 @@ $textShadow-bg-black: 1px 1px 2px black, 0 0 0.25em white, 0 0 0.2em black;
 
 .kromac-container.horizontal {
   .kromac-card {
-    position: relative;
-    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.5);
     margin: 10px 0;
     max-width: 100%;
 
@@ -20,41 +18,16 @@ $textShadow-bg-black: 1px 1px 2px black, 0 0 0.25em white, 0 0 0.2em black;
     }
 
     .kromac-card-image {
-      position: relative;
       height: 300px;
+      position: relative;
       width: 50%;
       z-index: 10;
 
-      img, video, iframe {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
       .card-title {
-        position: absolute;
-        background: rgba(0, 0, 0, 0.5);
-        color: #fff;
-        width: 100%;
-        padding: 7px 1em;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        bottom: 0;
-        margin: 0;
         z-index: 100;
 
         h4 {
           text-shadow: $textShadow-bg-black;
-          margin: 0;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          max-width: 65%;
-        }
-
-        label {
-          margin: 0;
         }
       }
 
@@ -65,16 +38,13 @@ $textShadow-bg-black: 1px 1px 2px black, 0 0 0.25em white, 0 0 0.2em black;
     }
 
     .kromac-card-caption {
-      width: 50%;
-      position: relative;
       background: #fff;
       transition: all var(--transition) ease-out;
+      width: 50%;
 
       .card-text {
-        padding: 1em;
-        overflow: auto;
         height: 300px;
-        transition: max-height var(--transition) ease-out;
+        overflow: auto;
 
         p {
           margin-bottom: 0;
@@ -82,19 +52,16 @@ $textShadow-bg-black: 1px 1px 2px black, 0 0 0.25em white, 0 0 0.2em black;
       }
 
       &.transparent {
-        backdrop-filter: blur(20px);
-        background: transparent;
         text-shadow: 1px 1px 2px black, 0 0 0.25em white, 0 0 0.2em black;
-        color: #fff;
       }
 
       &.left {
-        transform: translateX(-100%);
         display: contents;
+        transform: translateX(-100%);
 
         &.expanded {
-          transform: translateX(-100%);
           display: block;
+          transform: translateX(-100%);
         }
       }
 
@@ -124,8 +91,8 @@ $textShadow-bg-black: 1px 1px 2px black, 0 0 0.25em white, 0 0 0.2em black;
   }
 
   &.expanded {
-    transition: all var(--transition) ease-out;
     margin: 10px 0;
     position: inherit;
+    transition: all var(--transition) ease-out;
   }
 }
