@@ -12,3 +12,9 @@ export const SPANISH = "spanish";
 
 export const DARK = "dark";
 export const LIGHT = "light";
+
+export const CLOSE = "close";
+export const OPEN = "open";
+
+export const SHORT_ENGLISH = "En";
+export const SHORT_SPANISH = "Es";
