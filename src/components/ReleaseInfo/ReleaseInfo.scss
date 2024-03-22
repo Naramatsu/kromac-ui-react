@@ -45,10 +45,17 @@
     }
   }
 }
+
 .release-notes {
-  ul li {
-    list-style: initial;
+  font-weight: 400;
+
+  ul {
     margin-left: 1em;
+
+    li {
+      list-style: initial;
+      margin-left: 1em;
+    }
   }
 }
 
