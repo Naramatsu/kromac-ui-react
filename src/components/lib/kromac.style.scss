@@ -14,6 +14,7 @@
 @import "./Card/components/CardTeam/CardTeam.scss";
 @import "./Card/components/Percentage/Percentage.scss";
 @import "./Card/Card.scss";
+@import "./Chip/Chip.style.scss";
 @import "./Gallery/GalleryPolygon/GalleryPolygon.scss";
 @import "./Gallery/GalleryResponsive/GalleryResponsive.scss";
 @import "./Gallery/Gallery.scss";
@@ -29,6 +30,6 @@
 @import "./Spinner/Spinner.scss";
 @import "./TextAnimation/TextAnimation.scss";
 @import "./Toast/Toast.scss";
-@import "./Toggle/Toggle.scss";
 @import "./Toggle/components/TogglePower/TogglePower.scss";
 @import "./Toggle/components/ToggleSwitch/ToggleSwitch.scss";
+@import "./Toggle/Toggle.scss";
