@@ -1,6 +1,7 @@
 import React, { lazy, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { changeDocumentTitle } from "../../utils/utils";
+import { versionReleaseLabel } from "../../utils/constants";
 
 const TextAnimation = lazy(() => import("../lib/TextAnimation"));
 
@@ -21,7 +22,8 @@ const ReleaseInfo = () => {
             fontColor="#fff"
           />
           <p>
-            In this version <b>1.3.0</b> we released a new component called
+            In this version <b>{versionReleaseLabel}</b> we released a new
+            component called
             <b>
               <i> 'Chip' </i>
             </b>
@@ -45,6 +47,13 @@ const ReleaseInfo = () => {
                   <i> "alwaysVisible" </i>
                 </b>
                 was added.
+              </p>
+            </li>
+            <li>
+              <p>
+                All
+                <i> unnecessary </i>
+                files was removed from the package.
               </p>
             </li>
             <li>
