@@ -1,4 +1,7 @@
-$textShadow-bg-black: 1px 1px 2px black, 0 0 0.25em white, 0 0 0.2em black;
+$textShadow-bg-black:
+  1px 1px 2px black,
+  0 0 0.25em white,
+  0 0 0.2em black;
 
 .right {
   float: none !important;
@@ -9,9 +12,13 @@ $textShadow-bg-black: 1px 1px 2px black, 0 0 0.25em white, 0 0 0.2em black;
 }
 
 .kromac-container.horizontal {
+  width: 100%;
+  max-width: 600px;
+
   .kromac-card {
     margin: 10px 0;
-    max-width: 100%;
+    width: 100%;
+    max-width: 600px;
 
     &.transparent.left {
       backdrop-filter: blur(20px);
@@ -52,7 +59,10 @@ $textShadow-bg-black: 1px 1px 2px black, 0 0 0.25em white, 0 0 0.2em black;
       }
 
       &.transparent {
-        text-shadow: 1px 1px 2px black, 0 0 0.25em white, 0 0 0.2em black;
+        text-shadow:
+          1px 1px 2px black,
+          0 0 0.25em white,
+          0 0 0.2em black;
       }
 
       &.left {

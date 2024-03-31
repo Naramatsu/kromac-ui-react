@@ -40,7 +40,7 @@ const propsDescription = [
       "muted boolean",
       "loop boolean",
     ],
-    description: "Card object in order to setup the video.",
+    description: "Avatar object in order to setup the video.",
   },
   {
     name: "name",

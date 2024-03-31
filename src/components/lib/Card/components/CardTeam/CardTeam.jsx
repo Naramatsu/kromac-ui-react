@@ -112,7 +112,7 @@ const CardTeam = (props) => {
           style={{ "--transition": transition }}
         >
           {isMediaLoading && <Skeleton width="100%" height="100%" />}
-          {video ? (
+          {!!video?.url ? (
             videoBuilder(video, setIsMediaLoading)
           ) : (
             <img

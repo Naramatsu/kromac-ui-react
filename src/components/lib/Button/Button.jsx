@@ -3,10 +3,10 @@ import classNames from "classnames";
 import Spinner from "../Spinner/Spinner.jsx";
 
 const Button = ({
-  color = "primary",
-  buttonType = "classic",
-  loading = false,
-  disabled = false,
+  color,
+  buttonType,
+  loading,
+  disabled,
   onClick,
   children,
   ...rest
@@ -47,6 +47,13 @@ const Button = ({
       </button>
     </div>
   );
+};
+
+Button.defaultProps = {
+  color: "primary",
+  buttonType: "classic",
+  loading: false,
+  disabled: false,
 };
 
 export default Button;

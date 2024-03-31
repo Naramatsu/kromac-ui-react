@@ -66,7 +66,7 @@ const CardClassic = (props) => {
       <div className="kromac-card">
         <div className="kromac-card-image">
           {isMediaLoading && <Skeleton width="100%" height="100%" />}
-          {video ? (
+          {!!video?.url ? (
             videoBuilder(video, setIsMediaLoading)
           ) : (
             <img

@@ -110,7 +110,7 @@ const CardHorizontal = (props) => {
       <div className={kromacCard}>
         <div className={kromacCardImage}>
           {isMediaLoading && <Skeleton width="100%" height="100%" />}
-          {video ? (
+          {!!video?.url ? (
             videoBuilder(video, setIsMediaLoading)
           ) : (
             <img

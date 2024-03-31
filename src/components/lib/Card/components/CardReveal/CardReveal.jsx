@@ -38,7 +38,7 @@ const CardReveal = (props) => {
       <div className="kromac-card">
         <div className="kromac-card-image">
           {isMediaLoading && <Skeleton width="80%" height="100%" />}
-          {video ? (
+          {!!video?.url ? (
             videoBuilder(video, setIsMediaLoading)
           ) : (
             <img

@@ -67,14 +67,14 @@ const Avatar = (props) => {
   const {
     image,
     name,
-    borderColor = "#000",
-    bgColor = bgDefault,
-    isStatic = false,
-    size = "150px",
+    borderColor,
+    bgColor,
+    isStatic,
+    size,
     imageFit,
-    imagePosition = "top",
+    imagePosition,
     tooltip,
-    transition = ".5s",
+    transition,
     video,
     ...rest
   } = props;
@@ -137,7 +137,7 @@ const Avatar = (props) => {
           style={{ ...style, ...sectionStyles }}
         >
           {isMediaLoading && <Skeleton width="100%" height="100%" />}
-          {video ? (
+          {!!video?.url ? (
             videoBuilder(video, setIsMediaLoading)
           ) : (
             <img
@@ -166,6 +166,15 @@ const Avatar = (props) => {
       </div>
     </div>
   );
+};
+
+Avatar.defaultProps = {
+  borderColor: "#000",
+  bgColor: bgDefault,
+  isStatic: false,
+  size: "150px",
+  imagePosition: "top",
+  transition: ".5s",
 };
 
 export default Avatar;
