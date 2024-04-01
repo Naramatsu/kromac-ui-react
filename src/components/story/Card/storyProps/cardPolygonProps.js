@@ -97,7 +97,7 @@ const propsDescription = [
       "bevel",
       "circle",
     ],
-    description: "Sets Sard's polygon shape.",
+    description: "Sets Card's polygon shape.",
   },
   {
     name: "color",

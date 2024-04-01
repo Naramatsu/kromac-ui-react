@@ -67,7 +67,7 @@ const componentText = (
 
 const propsDescription = [
   {
-    name: "gallery",
+    name: "galleryType",
     type: "string",
     values: ["polygon", "default responsive", "responsive"],
     description: "Gallery type.",

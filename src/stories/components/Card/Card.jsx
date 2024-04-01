@@ -21,6 +21,20 @@ export const CardInfo = ({ children, ...props }) => (
   <CardKromac {...props}>{children}</CardKromac>
 );
 
+export const CardPolygon = ({ children, ...props }) => (
+  <CardKromac {...props}>{children}</CardKromac>
+);
+
+export const CardReveal = ({ children, ...props }) => (
+  <CardKromac {...props}>{children}</CardKromac>
+);
+
+export const CardTeam = ({ children, ...props }) => (
+  <CardKromac {...props}>{children}</CardKromac>
+);
+
+export const CardPercentage = ({ ...props }) => <CardKromac {...props} />;
+
 CardClassic.propTypes = {
   /**
    * Card type.
@@ -74,7 +88,7 @@ CardClassic.propTypes = {
    */
   transition: PropTypes.string,
   /**
-   * 		Card content, you can write html code inside.
+   *  Card content, you can write html code inside.
    */
   children: PropTypes.any,
 };
@@ -132,7 +146,7 @@ CardHorizontal.propTypes = {
    */
   transition: PropTypes.string,
   /**
-   * 		Card content, you can write html code inside.
+   *  Card content, you can write html code inside.
    */
   children: PropTypes.any,
 };
@@ -206,7 +220,210 @@ CardInfo.propTypes = {
    */
   shape: PropTypes.oneOf(["color", "transparent"]),
   /**
-   * 		Card content, you can write html code inside.
+   *  Card content, you can write html code inside.
    */
   children: PropTypes.any,
+};
+
+CardPolygon.propTypes = {
+  /**
+   * Card type.
+   */
+  cardType: PropTypes.oneOf([
+    "classic",
+    "image",
+    "horizontal",
+    "reveal",
+    "info",
+    "team",
+    "polygon",
+    "percentage",
+  ]),
+  /**
+   * Card image url.
+   */
+  image: PropTypes.string,
+  /**
+   * 	Card object in order to setup the video.
+   */
+  video: PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    controls: PropTypes.bool,
+    autoPlay: PropTypes.bool,
+    muted: PropTypes.bool,
+    loop: PropTypes.bool,
+  }),
+  /**
+   * Text that will be displayed as the person name.
+   */
+  name: PropTypes.string,
+  /**
+   * Sets Card's polygon shape.
+   */
+  shape: oneOf([
+    "hexagon",
+    "rhombus",
+    "pentagon",
+    "heptagon",
+    "octagon",
+    "bevel",
+    "circle",
+  ]),
+  /**
+   * Sets background color.
+   */
+  color: PropTypes.string,
+  /**
+   * Sets image position to be displayed in the card.
+   */
+  imageFitPosition: PropTypes.oneOf(["top", "center", "bottom"]),
+  /**
+   *  Card content, you can write html code inside.
+   */
+  children: PropTypes.any,
+};
+
+CardReveal.propTypes = {
+  /**
+   * Card type.
+   */
+  cardType: PropTypes.oneOf([
+    "classic",
+    "image",
+    "horizontal",
+    "reveal",
+    "info",
+    "team",
+    "polygon",
+    "percentage",
+  ]),
+  /**
+   * Card image url.
+   */
+  image: PropTypes.string,
+  /**
+   * 	Card object in order to setup the video.
+   */
+  video: PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    controls: PropTypes.bool,
+    autoPlay: PropTypes.bool,
+    muted: PropTypes.bool,
+    loop: PropTypes.bool,
+  }),
+  /**
+   * Text that will be displayed as the Card's title.
+   */
+  title: PropTypes.string,
+  /**
+   * Sets background color.
+   */
+  color: PropTypes.oneOf("#fff", "transparent"),
+  /**
+   * Sets image position to be displayed in the card.
+   */
+  imageFitPosition: PropTypes.oneOf(["top", "center", "bottom"]),
+  /**
+   * 	Transition time in ms.
+   */
+  transition: PropTypes.string,
+  /**
+   *  Card content, you can write html code inside.
+   */
+  children: PropTypes.any,
+};
+
+CardTeam.propTypes = {
+  /**
+   * Card type.
+   */
+  cardType: PropTypes.oneOf([
+    "classic",
+    "image",
+    "horizontal",
+    "reveal",
+    "info",
+    "team",
+    "polygon",
+    "percentage",
+  ]),
+  /**
+   * Card image url.
+   */
+  image: PropTypes.string,
+  /**
+   * 	Card object in order to setup the video.
+   */
+  video: PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    controls: PropTypes.bool,
+    autoPlay: PropTypes.bool,
+    muted: PropTypes.bool,
+    loop: PropTypes.bool,
+  }),
+  /**
+   * Text that will be displayed as the person's name.
+   */
+  name: PropTypes.string,
+  /**
+   * Text that will be displayed as the person's profession.
+   */
+  profession: PropTypes.string,
+  /**
+   * Sets background color.
+   */
+  color: PropTypes.string,
+  /**
+   * Object array of social networks names and urls.
+   */
+  media: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      url: PropTypes.string,
+    })
+  ),
+  /**
+   * Sets image position to be displayed in the card.
+   */
+  imageFitPosition: PropTypes.oneOf(["top", "center", "bottom"]),
+  /**
+   * 	Transition time in ms.
+   */
+  transition: PropTypes.string,
+  /**
+   *  Card content, you can write html code inside.
+   */
+  children: PropTypes.any,
+};
+
+CardPercentage.propTypes = {
+  /**
+   * Card type.
+   */
+  cardType: PropTypes.oneOf([
+    "classic",
+    "image",
+    "horizontal",
+    "reveal",
+    "info",
+    "team",
+    "polygon",
+    "percentage",
+  ]),
+  /**
+   * Text that will be displayed as the Card's title.
+   */
+  title: PropTypes.string,
+  /**
+   * Displays progress as a percentage.
+   */
+  progress: PropTypes.number.isRequired,
+  /**
+   * Sets background color.
+   */
+  color: PropTypes.string,
+  /**
+   * 	Sets progress color.
+   */
+  progressColor: PropTypes.string,
 };

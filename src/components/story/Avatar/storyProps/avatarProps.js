@@ -53,7 +53,7 @@ const propsDescription = [
     name: "size",
     type: "string",
     values: ["default 150px"],
-    description: "Size [width, height] of the image circle in px.",
+    description: "Size (width and height) of the image circle in px.",
   },
   {
     name: "borderColor",

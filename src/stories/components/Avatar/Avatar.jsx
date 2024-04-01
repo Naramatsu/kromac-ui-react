@@ -30,7 +30,7 @@ Avatar.propTypes = {
    */
   isStatic: PropTypes.bool,
   /**
-   * Size [width, height] of the image circle in px.
+   * Size (width and height) of the image circle in px.
    */
   size: PropTypes.string,
   /**

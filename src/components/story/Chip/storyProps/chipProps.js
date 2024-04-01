@@ -25,6 +25,12 @@ const propsDescription = [
     description: "Sets background color.",
   },
   {
+    name: "fontColor",
+    type: "string",
+    values: ["default #000"],
+    description: "Sets font color.",
+  },
+  {
     name: "children",
     type: "any",
     values: [],
