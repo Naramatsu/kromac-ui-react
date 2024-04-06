@@ -46,11 +46,11 @@ Avatar.propTypes = {
    */
   tooltip: PropTypes.string,
   /**
-   * 	Transition time in ms.
+   *  Transition time in ms.
    */
   transition: PropTypes.string,
   /**
-   * 	Avatar object in order to setup the video.
+   *  Avatar object in order to setup the video.
    */
   video: PropTypes.shape({
     url: PropTypes.string.isRequired,

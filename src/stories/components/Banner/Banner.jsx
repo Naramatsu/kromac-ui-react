@@ -25,7 +25,7 @@ BannerClassic.propTypes = {
    */
   background: PropTypes.string,
   /**
-   * 	Sets font color.
+   *  Sets font color.
    */
   color: PropTypes.string,
   /**
@@ -68,7 +68,7 @@ BannerText.propTypes = {
    */
   title: PropTypes.string.isRequired,
   /**
-   * 	Text background color (please do not set #000 or "black").
+   *  Text background color (please do not set #000 or "black").
    */
   bgTextColor: PropTypes.string,
   /**
@@ -103,7 +103,7 @@ BannerImage.propTypes = {
    */
   image: PropTypes.string.isRequired,
   /**
-   * 	Sets font color.
+   *  Sets font color.
    */
   color: PropTypes.string,
   /**

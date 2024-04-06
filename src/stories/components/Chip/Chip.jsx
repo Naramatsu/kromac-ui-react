@@ -18,7 +18,7 @@ Chip.propTypes = {
    */
   fontColor: PropTypes.string,
   /**
-   * 	html content.
+   *  html content.
    */
   children: PropTypes.any,
 };

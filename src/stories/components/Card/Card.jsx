@@ -54,7 +54,7 @@ CardClassic.propTypes = {
    */
   image: PropTypes.string,
   /**
-   * 	Card object in order to setup the video.
+   *  Card object in order to setup the video.
    */
   video: PropTypes.shape({
     url: PropTypes.string.isRequired,
@@ -84,7 +84,7 @@ CardClassic.propTypes = {
    */
   imageFitPosition: PropTypes.oneOf(["top", "center", "bottom"]),
   /**
-   * 	Transition time in ms.
+   *  Transition time in ms.
    */
   transition: PropTypes.string,
   /**
@@ -112,7 +112,7 @@ CardHorizontal.propTypes = {
    */
   image: PropTypes.string,
   /**
-   * 	Card object in order to setup the video.
+   *  Card object in order to setup the video.
    */
   video: PropTypes.shape({
     url: PropTypes.string.isRequired,
@@ -142,7 +142,7 @@ CardHorizontal.propTypes = {
    */
   reveal: PropTypes.bool,
   /**
-   * 	Transition time in ms.
+   *  Transition time in ms.
    */
   transition: PropTypes.string,
   /**
@@ -170,7 +170,7 @@ CardImage.propTypes = {
    */
   image: PropTypes.string,
   /**
-   * 	Card object in order to setup the video.
+   *  Card object in order to setup the video.
    */
   video: PropTypes.shape({
     url: PropTypes.string.isRequired,
@@ -244,7 +244,7 @@ CardPolygon.propTypes = {
    */
   image: PropTypes.string,
   /**
-   * 	Card object in order to setup the video.
+   *  Card object in order to setup the video.
    */
   video: PropTypes.shape({
     url: PropTypes.string.isRequired,
@@ -302,7 +302,7 @@ CardReveal.propTypes = {
    */
   image: PropTypes.string,
   /**
-   * 	Card object in order to setup the video.
+   *  Card object in order to setup the video.
    */
   video: PropTypes.shape({
     url: PropTypes.string.isRequired,
@@ -324,7 +324,7 @@ CardReveal.propTypes = {
    */
   imageFitPosition: PropTypes.oneOf(["top", "center", "bottom"]),
   /**
-   * 	Transition time in ms.
+   *  Transition time in ms.
    */
   transition: PropTypes.string,
   /**
@@ -352,7 +352,7 @@ CardTeam.propTypes = {
    */
   image: PropTypes.string,
   /**
-   * 	Card object in order to setup the video.
+   *  Card object in order to setup the video.
    */
   video: PropTypes.shape({
     url: PropTypes.string.isRequired,
@@ -387,7 +387,7 @@ CardTeam.propTypes = {
    */
   imageFitPosition: PropTypes.oneOf(["top", "center", "bottom"]),
   /**
-   * 	Transition time in ms.
+   *  Transition time in ms.
    */
   transition: PropTypes.string,
   /**
@@ -423,7 +423,7 @@ CardPercentage.propTypes = {
    */
   color: PropTypes.string,
   /**
-   * 	Sets progress color.
+   *  Sets progress color.
    */
   progressColor: PropTypes.string,
 };

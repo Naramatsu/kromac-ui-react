@@ -28,7 +28,7 @@ GalleryResponsive.propTypes = {
     })
   ),
   /**
-   * 	Sets space between rows and cols.
+   *  Sets space between rows and cols.
    */
   gridGap: PropTypes.string,
 };
@@ -39,15 +39,15 @@ GalleryPolygon.propTypes = {
    */
   galleryType: PropTypes.string,
   /**
-   * 	String array of images url.
+   *  String array of images url.
    */
   images: PropTypes.arrayOf(PropTypes.string),
   /**
-   * 	Sets image position to be displayed in each polygon.
+   *  Sets image position to be displayed in each polygon.
    */
   imageFitPosition: PropTypes.string,
   /**
-   * 	Sets polygon shape.
+   *  Sets polygon shape.
    */
   polygonType: PropTypes.oneOf(["rhombus", "hexagon", "rabbet"]),
 };
