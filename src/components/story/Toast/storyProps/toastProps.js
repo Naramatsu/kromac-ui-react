@@ -48,7 +48,8 @@ const propsDescription = [
     name: "alwaysVisible",
     type: "bool",
     values: [`default false`],
-    description: "When this prop turned on, it displays the Toast.",
+    description:
+      "When this prop turned on, it displays the Toast and the timer is disabled.",
   },
   {
     name: "visible",
