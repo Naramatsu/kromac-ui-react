@@ -26,7 +26,9 @@
     "audit": "npm audit fix --force",
     "deploy": "gh-pages -d build",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build-storybook-docs": "storybook build --docs",
+    "serve-storybook": "serve storybook-static"
   },
   "keywords": [
     "React",
