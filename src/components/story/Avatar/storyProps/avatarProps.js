@@ -1,4 +1,5 @@
 const subTitle = "";
+const storyLink = "/?path=/docs/kromac-ui-avatar--docs";
 const importType = (version) => `import Avatar from "${version}/dist/Avatar";`;
 
 const avatarProp = {
@@ -108,6 +109,7 @@ const sliderProps = {
   importType,
   propsDescription,
   subTitle,
+  storyLink,
 };
 
 export default sliderProps;

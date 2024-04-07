@@ -1,4 +1,5 @@
 const subTitle = "Toggle switch";
+const storyLink = "/?path=/story/kromac-ui-toggle--switch";
 
 const toggleProp = {};
 
@@ -48,6 +49,7 @@ const toggleProps = {
   propsDescription,
   subTitle,
   toggleProp,
+  storyLink,
 };
 
 export default toggleProps;

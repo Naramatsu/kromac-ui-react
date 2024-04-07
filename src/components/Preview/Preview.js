@@ -1,11 +1,12 @@
 import React, { lazy } from "react";
 import parseToHtml from "html-react-parser";
+import StoryBookIcon from "../../stories/assets/storybook-icon.png";
 import { Link } from "react-router-dom";
 import { addChip } from "../../utils/utils";
 
 const Table = lazy(() => import("react-bootstrap/Table"));
 
-const Preview = props => {
+const Preview = (props) => {
   const {
     title,
     subTitle = "",
@@ -13,10 +14,14 @@ const Preview = props => {
     importType,
     propsDescription,
     notes = "",
-    componentsRealated
+    componentsRealated,
+    storyLink,
   } = props;
   const isNotes = notes && notes.trim();
-  const isComponentsRelated = componentsRealated && componentsRealated.length > 0;
+  const isComponentsRelated =
+    componentsRealated && componentsRealated.length > 0;
+
+  const storybookLink = `${process.env.REACT_APP_STORYBOOK_SERVER}${storyLink}`;
 
   return (
     <div className="preview">
@@ -24,12 +29,18 @@ const Preview = props => {
         {title}
         {subTitle.trim() && <label>{` > ${subTitle}`}</label>}
       </h1>
-      <p className="component-description">
-        {description}
-      </p>
-      <label className="label-import">
-        {importType}
-      </label>
+      <p className="component-description">{description}</p>
+      <label className="label-import">{importType}</label>
+      <a
+        className="storybook-link-section"
+        href={storybookLink}
+        target="_blank"
+        rel="noreferrer"
+      >
+        <p>Try it now in</p>
+        <img src={StoryBookIcon} alt="storybook" />
+        <h3>Storybook</h3>
+      </a>
       <h3 className="component-implementation">Preview</h3>
       <div className="component-preview">
         {props.children}
@@ -46,50 +57,46 @@ const Preview = props => {
                 </tr>
               </thead>
               <tbody>
-                {propsDescription.map((desc, index) =>
+                {propsDescription.map((desc, index) => (
                   <tr key={index}>
-                    <td>
-                      {desc.name}
-                    </td>
-                    <td>
-                      {addChip(desc.type)}
-                    </td>
+                    <td>{desc.name}</td>
+                    <td>{addChip(desc.type)}</td>
                     <td>
                       {desc.values.map((val, index) => addChip(val, index))}
                     </td>
-                    <td>
-                      {desc.description}
-                    </td>
+                    <td>{desc.description}</td>
                   </tr>
-                )}
+                ))}
               </tbody>
               <tbody />
             </Table>
           </div>
         </div>
-        {isNotes &&
+        {isNotes && (
           <div className="component-props">
             <h3>Notes</h3>
             {parseToHtml(notes)}
-          </div>}
-        {isComponentsRelated &&
+          </div>
+        )}
+        {isComponentsRelated && (
           <div className="component-props components-related">
             <h3>Components Related</h3>
             <ul>
-              {componentsRealated.map((link, index) =>
+              {componentsRealated.map((link, index) => (
                 <li key={index}>
                   <Link
                     to={{
                       pathname: `/${title.toLowerCase()}`,
-                      state: link.type
+                      state: link.type,
                     }}
                   >
                     {link.component}
                   </Link>
                 </li>
-              )}
+              ))}
             </ul>
-          </div>}
+          </div>
+        )}
       </div>
     </div>
   );

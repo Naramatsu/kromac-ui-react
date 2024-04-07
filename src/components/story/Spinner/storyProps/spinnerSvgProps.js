@@ -1,4 +1,5 @@
 const subTitle = "Spinner svg";
+const storyLink = "/?path=/docs/kromac-ui-spinner-svg--docs";
 const notes = `
 <p> Soon you could be allowed to send a svg you want in a property. </p>
 `;
@@ -70,6 +71,7 @@ const spinnersProps = {
   propsDescription,
   spinnerProps,
   subTitle,
+  storyLink,
 };
 
 export default spinnersProps;

@@ -1,4 +1,5 @@
 const subTitle = "Gallery responsive";
+const storyLink = "/?path=/docs/kromac-ui-gallery-responsive--docs";
 
 const notes = `
 The <div class="chip">content</div> prop value format must be equals as that shown in the implementation.
@@ -160,6 +161,7 @@ const gallerysProps = {
   notes,
   propsDescription,
   subTitle,
+  storyLink,
 };
 
 export default gallerysProps;

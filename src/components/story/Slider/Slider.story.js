@@ -30,6 +30,7 @@ const SliderHistory = ({ location }) => {
         propsDescription={sliderProps.propsDescription}
         notes={sliderProps.notes}
         componentsRealated={sliderComponents}
+        storyLink={sliderProps.storyLink}
       >
         <Suspense
           fallback={

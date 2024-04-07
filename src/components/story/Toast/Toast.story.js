@@ -30,6 +30,7 @@ const ToastHistory = ({ location }) => {
         propsDescription={toastProps.propsDescription}
         notes={toastProps.notes}
         componentsRealated={toastComponents}
+        storyLink={toastProps.storyLink}
       >
         <Suspense
           fallback={

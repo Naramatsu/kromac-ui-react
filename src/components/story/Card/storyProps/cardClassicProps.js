@@ -1,4 +1,5 @@
 const subTitle = "Card Classic";
+const storyLink = "/?path=/docs/kromac-ui-card-classic--docs";
 
 const cardProps = {
   cardType: "classic",
@@ -128,6 +129,7 @@ const cardClassicProps = {
   componentText,
   propsDescription,
   subTitle,
+  storyLink,
 };
 
 export default cardClassicProps;

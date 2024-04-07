@@ -1,4 +1,5 @@
 const subTitle = "Card Percentage";
+const storyLink = "/?path=/docs/kromac-ui-card-percentage--docs";
 
 const cardProps = {
   cardType: "percentage",
@@ -83,6 +84,7 @@ const cardClassicProps = {
   componentText,
   propsDescription,
   subTitle,
+  storyLink,
 };
 
 export default cardClassicProps;

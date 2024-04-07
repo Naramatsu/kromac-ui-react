@@ -1,4 +1,5 @@
 const subTitle = "Grid with custom items";
+const storyLink = "/?path=/docs/kromac-ui-griditem--docs";
 const importType = (version) => `import Grid from "${version}/dist/GridItem";`;
 const description = `
 This component only works within kromac Grid component as shown in the implementation.
@@ -100,6 +101,7 @@ const gridsProps = {
   importType,
   propsDescription,
   subTitle,
+  storyLink,
 };
 
 export default gridsProps;

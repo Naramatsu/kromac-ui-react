@@ -1,4 +1,5 @@
 const subTitle = "";
+const storyLink = "/?path=/docs/kromac-ui-slider--docs";
 const importType = (version) => `import Slider from "${version}/dist/Slider";`;
 const notes = `The prop <div class="chip">timer</div> only works if the
 <div class="chip">autoPlay</div> prop is turned on.
@@ -141,6 +142,7 @@ const sliderProps = {
   propsDescription,
   sliderProp,
   subTitle,
+  storyLink,
 };
 
 export default sliderProps;

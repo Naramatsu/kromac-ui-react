@@ -30,6 +30,7 @@ const AvatarHistory = ({ location }) => {
         propsDescription={avatarProps.propsDescription}
         notes={avatarProps.notes}
         componentsRealated={avatarComponents}
+        storyLink={avatarProps.storyLink}
       >
         <Suspense
           fallback={

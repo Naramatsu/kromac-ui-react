@@ -44,6 +44,7 @@ const GalleryHistory = ({ location: { state = "responsive" } }) => {
         propsDescription={galleryProps.propsDescription}
         notes={galleryProps.notes}
         componentsRealated={galleryComponents}
+        storyLink={galleryProps.storyLink}
       >
         <Suspense
           fallback={

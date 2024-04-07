@@ -1,4 +1,5 @@
 const subTitle = "";
+const storyLink = "/?path=/story/kromac-ui-textanimation--default";
 const importType = (version) =>
   `import TextAnimation from "${version}/ldist/TextAnimation";`;
 const notes = `
@@ -74,6 +75,7 @@ const textAnimationProps = {
   propsDescription,
   subTitle,
   textAnimationProp,
+  storyLink,
 };
 
 export default textAnimationProps;

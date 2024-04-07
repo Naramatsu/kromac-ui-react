@@ -1,4 +1,5 @@
 const subTitle = "Card Team";
+const storyLink = "/?path=/docs/kromac-ui-card-team--docs";
 
 const notes = `
   The <div class="chip">media</div> prop value format must be equals as that shown in the implementation.
@@ -172,6 +173,7 @@ const cardClassicProps = {
   notes,
   propsDescription,
   subTitle,
+  storyLink,
 };
 
 export default cardClassicProps;

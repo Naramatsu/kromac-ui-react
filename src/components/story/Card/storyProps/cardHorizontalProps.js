@@ -1,4 +1,5 @@
 const subTitle = "Card Horizontal";
+const storyLink = "/?path=/docs/kromac-ui-card-horizontal--docs";
 const notes = `
 <p>
 This card occupies 100% of the width wrapper.
@@ -131,6 +132,7 @@ const cardClassicProps = {
   notes,
   propsDescription,
   subTitle,
+  storyLink,
 };
 
 export default cardClassicProps;

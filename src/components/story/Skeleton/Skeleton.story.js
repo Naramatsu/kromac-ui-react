@@ -44,6 +44,7 @@ const SkeletonHistory = ({ location: { state = "light" } }) => {
         propsDescription={skeletonProps.propsDescription}
         notes={skeletonProps.notes}
         componentsRealated={skeletonComponents}
+        storyLink={skeletonProps.storyLink}
       >
         <Suspense
           fallback={

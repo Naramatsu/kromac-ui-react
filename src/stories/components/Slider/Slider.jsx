@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import SliderKromac from "../../../components/lib/Slider";
+import "../../../css/style.css";
 import "../../../css/Slider.css";
 
 /**

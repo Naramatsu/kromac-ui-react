@@ -1,4 +1,5 @@
 const subTitle = "Button neon";
+const storyLink = "/?path=/story/kromac-ui-button--neon";
 
 const buttonProps = {
   buttonType: `neon`,
@@ -57,6 +58,7 @@ const buttonsProps = {
   componentText,
   propsDescription,
   subTitle,
+  storyLink,
 };
 
 export default buttonsProps;

@@ -30,6 +30,7 @@ const ChipHistory = ({ location }) => {
         propsDescription={chipProps.propsDescription}
         notes={chipProps.notes}
         componentsRealated={chipComponents}
+        storyLink={chipProps.storyLink}
       >
         <Suspense
           fallback={

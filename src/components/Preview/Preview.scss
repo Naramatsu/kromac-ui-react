@@ -20,6 +20,26 @@ $marginBottom: 15px;
     margin-top: $marginTop;
   }
 
+  .storybook-link-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    gap: 10px;
+    font-size: 1em;
+    color: inherit;
+
+    p,
+    h3 {
+      margin: 0;
+    }
+
+    img {
+      height: 2em;
+      width: fit-content;
+    }
+  }
+
   .component-preview,
   .component-props {
     margin-bottom: $marginBottom;

@@ -1,4 +1,5 @@
 const subTitle = "Skeleton light";
+const storyLink = "/?path=/docs/kromac-ui-skeleton--docs";
 
 const skeletonProp = { width: "250px" };
 
@@ -45,6 +46,7 @@ const skeletonProps = {
   skeletonProp,
   propsDescription,
   componentText,
+  storyLink,
 };
 
 export default skeletonProps;

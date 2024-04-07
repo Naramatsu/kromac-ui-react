@@ -1,4 +1,5 @@
 const subTitle = "Banner text";
+const storyLink = "/?path=/docs/kromac-ui-banner-text--docs";
 
 const notes = `
   <p>
@@ -103,6 +104,7 @@ const bannersProps = {
   notes,
   propsDescription,
   subTitle,
+  storyLink,
 };
 
 export default bannersProps;

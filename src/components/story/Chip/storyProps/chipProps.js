@@ -1,4 +1,5 @@
 const subTitle = "Chip";
+const storyLink = "/?path=/docs/kromac-ui-chip--docs";
 const importType = (version) => `import Chip from "${version}/dist/Chip";`;
 
 const chipProps = {};
@@ -44,6 +45,7 @@ const chipsProps = {
   importType,
   propsDescription,
   subTitle,
+  storyLink,
 };
 
 export default chipsProps;

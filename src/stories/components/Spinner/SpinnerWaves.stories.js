@@ -12,7 +12,7 @@ export default {
   args: {},
 };
 
-export const Lighter = {
+export const Waves = {
   args: {
     spinnerType: "waves",
   },

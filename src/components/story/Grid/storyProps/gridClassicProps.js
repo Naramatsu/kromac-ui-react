@@ -1,4 +1,5 @@
 const subTitle = "Grid classic";
+const storyLink = "/?path=/docs/kromac-ui-grid--docs";
 const importType = (version) => `import Grid from "${version}/dist/Grid";`;
 
 const gridProps = {};
@@ -36,6 +37,7 @@ const gridsProps = {
   importType,
   propsDescription,
   subTitle,
+  storyLink,
 };
 
 export default gridsProps;

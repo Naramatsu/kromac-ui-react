@@ -1,4 +1,5 @@
 const subTitle = "Gallery polygon";
+const storyLink = "/?path=/docs/kromac-ui-gallery-polygon--docs";
 
 const description = `This component requires bootstrap.`;
 const notes = `
@@ -99,6 +100,7 @@ const gallerysProps = {
   notes,
   propsDescription,
   subTitle,
+  storyLink,
 };
 
 export default gallerysProps;

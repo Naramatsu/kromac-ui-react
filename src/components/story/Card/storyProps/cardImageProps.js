@@ -1,4 +1,5 @@
 const subTitle = "Card Image";
+const storyLink = "/?path=/docs/kromac-ui-card-image--docs";
 
 const cardProps = {
   cardType: "image",
@@ -80,6 +81,7 @@ const cardClassicProps = {
   componentText,
   propsDescription,
   subTitle,
+  storyLink,
 };
 
 export default cardClassicProps;

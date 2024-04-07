@@ -1,4 +1,5 @@
 const subTitle = "Spinner waves";
+const storyLink = "/?path=/docs/kromac-ui-spinner-waves--docs";
 
 const spinnerProps = {
   spinnerType: "waves",
@@ -48,6 +49,7 @@ const spinnersProps = {
   propsDescription,
   spinnerProps,
   subTitle,
+  storyLink,
 };
 
 export default spinnersProps;

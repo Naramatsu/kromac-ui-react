@@ -62,6 +62,7 @@ const CardStory = ({ location: { state = "classic" } }) => {
         propsDescription={cardProps.propsDescription}
         notes={cardProps.notes}
         componentsRealated={cardComponents}
+        storyLink={cardProps.storyLink}
       >
         <Suspense
           fallback={

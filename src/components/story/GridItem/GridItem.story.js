@@ -31,6 +31,7 @@ const GridHistory = ({ location: { state = "classic" } }) => {
         propsDescription={gridProps.propsDescription}
         notes={gridProps.notes}
         componentsRealated={gridComponents}
+        storyLink={gridProps.storyLink}
       >
         <Suspense
           fallback={

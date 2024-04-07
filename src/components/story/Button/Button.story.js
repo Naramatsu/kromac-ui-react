@@ -44,6 +44,7 @@ const ButtonHistory = ({ location: { state = "classic" } }) => {
         propsDescription={buttonProps.propsDescription}
         notes={buttonProps.notes}
         componentsRealated={buttonComponents}
+        storyLink={buttonProps.storyLink}
       >
         <Suspense
           fallback={

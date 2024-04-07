@@ -1,4 +1,5 @@
 const subTitle = "Panel classic";
+const storyLink = "/?path=/docs/kromac-ui-panel--docs";
 
 const panelProp = {};
 
@@ -48,6 +49,7 @@ const panelProps = {
   panelProp,
   propsDescription,
   subTitle,
+  storyLink,
 };
 
 export default panelProps;

@@ -33,6 +33,7 @@ const TextAnimationHistory = ({ location }) => {
         propsDescription={textAnimationProps.propsDescription}
         notes={textAnimationProps.notes}
         componentsRealated={textAnimationComponents}
+        storyLink={textAnimationProps.storyLink}
       >
         <Suspense
           fallback={

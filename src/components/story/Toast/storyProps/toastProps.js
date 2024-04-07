@@ -1,5 +1,6 @@
 const subTitle = "";
 const importType = (version) => `import Toast from "${version}/dist/Toast";`;
+const storyLink = "/?path=/docs/kromac-ui-toast--docs";
 
 const toastProp = {
   message: "Some text here...!",
@@ -83,6 +84,7 @@ const sliderProps = {
   propsDescription,
   subTitle,
   toastProp,
+  storyLink,
 };
 
 export default sliderProps;

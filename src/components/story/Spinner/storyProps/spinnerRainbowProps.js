@@ -1,4 +1,5 @@
 const subTitle = "Spinner rainbow";
+const storyLink = "/?path=/docs/kromac-ui-spinner-rainbow--docs";
 const notes = `
 When the <div class="chip">isCentered</div> prop is turned on, the
 <div class="chip">size</div> prop will not work.
@@ -52,6 +53,7 @@ const spinnersProps = {
   propsDescription,
   spinnerProps,
   subTitle,
+  storyLink,
 };
 
 export default spinnersProps;

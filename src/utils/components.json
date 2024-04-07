@@ -1,148 +1,183 @@
 [
   {
     "component": "button",
+    "storyLink": "/?path=/docs/kromac-ui-button--docs",
     "subComponents": [
       {
         "component": "button neon",
-        "type": "neon"
+        "type": "neon",
+        "storyLink": "/?path=/story/kromac-ui-button--neon"
       }
     ]
   },
   {
     "component": "chip",
+    "storyLink": "/?path=/docs/kromac-ui-chip--docs",
     "subComponents": []
   },
   {
     "component": "grid",
+    "storyLink": "/?path=/docs/kromac-ui-grid--docs",
     "subComponents": []
   },
   {
     "component": "gridItem",
+    "storyLink": "/?path=/docs/kromac-ui-griditem--docs",
     "subComponents": []
   },
   {
     "component": "skeleton",
+    "storyLink": "/?path=/docs/kromac-ui-skeleton--docs",
     "subComponents": [
       {
         "component": "skeleton dark",
+        "storyLink": "/?path=/story/kromac-ui-skeleton--dark",
         "type": "dark"
       }
     ]
   },
   {
     "component": "gallery",
+    "storyLink": "/?path=/docs/kromac-ui-gallery-responsive--docs",
     "subComponents": [
       {
         "component": "gallery polygon",
+        "storyLink": "/?path=/docs/kromac-ui-gallery-polygon--docs",
         "type": "polygon"
       }
     ]
   },
   {
     "component": "toggle",
+    "storyLink": "/?path=/docs/kromac-ui-toggle--docs",
     "subComponents": [
       {
         "component": "toggle power",
+        "storyLink": "/?path=/story/kromac-ui-toggle--power",
         "type": "power"
       }
     ]
   },
   {
     "component": "spinner",
+    "storyLink": "/?path=/docs/kromac-ui-spinner-lighter--docs",
     "subComponents": [
       {
         "component": "spinner waves",
+        "storyLink": "/?path=/docs/kromac-ui-spinner-waves--docs",
         "type": "waves"
       },
       {
         "component": "spinner svg",
+        "storyLink": "/?path=/docs/kromac-ui-spinner-svg--docs",
         "type": "svg"
       },
       {
         "component": "spinner rainbow",
+        "storyLink": "/?path=/docs/kromac-ui-spinner-rainbow--docs",
         "type": "rainbow"
       }
     ]
   },
   {
     "component": "panel",
+    "storyLink": "/?path=/docs/kromac-ui-panel--docs",
     "subComponents": [
       {
         "component": "panel neon",
+        "storyLink": "/?path=/story/kromac-ui-panel--neon",
         "type": "neon"
       },
       {
         "component": "panel transparent",
+        "storyLink": "/?path=/story/kromac-ui-panel--transparent",
         "type": "transparent"
       }
     ]
   },
   {
     "component": "banner",
+    "storyLink": "/?path=/docs/kromac-ui-banner-classic--docs",
     "subComponents": [
       {
         "component": "banner image",
+        "storyLink": "/?path=/docs/kromac-ui-banner-image--docs",
         "type": "image"
       },
       {
         "component": "banner text",
+        "storyLink": "/?path=/docs/kromac-ui-banner-text--docs",
         "type": "text"
       }
     ]
   },
   {
     "component": "menu",
+    "storyLink": "/?path=/docs/kromac-ui-menu--docs",
     "subComponents": []
   },
   {
     "component": "class",
+    "storyLink": "",
     "subComponents": []
   },
   {
     "component": "avatar",
+    "storyLink": "/?path=/docs/kromac-ui-avatar--docs",
     "subComponents": []
   },
   {
     "component": "toast",
+    "storyLink": "/?path=/docs/kromac-ui-toast--docs",
     "subComponents": []
   },
   {
     "component": "slider",
+    "storyLink": "/?path=/docs/kromac-ui-slider--docs",
     "subComponents": []
   },
   {
     "component": "textAnimation",
+    "storyLink": "/?path=/docs/kromac-ui-textanimation--docs",
     "subComponents": []
   },
   {
     "component": "card",
+    "storyLink": "/?path=/docs/kromac-ui-card-classic--docs",
     "subComponents": [
       {
         "component": "card horizontal",
+        "storyLink": "/?path=/docs/kromac-ui-card-horizontal--docs",
         "type": "horizontal"
       },
       {
         "component": "card image",
+        "storyLink": "/?path=/docs/kromac-ui-card-image--docs",
         "type": "image"
       },
       {
         "component": "card info",
+        "storyLink": "/?path=/docs/kromac-ui-card-info--docs",
         "type": "info"
       },
       {
         "component": "card polygon",
+        "storyLink": "/?path=/docs/kromac-ui-card-cardpolygon--docs",
         "type": "polygon"
       },
       {
         "component": "card reveal",
+        "storyLink": "/?path=/docs/kromac-ui-card-reveal--docs",
         "type": "reveal"
       },
       {
         "component": "card team",
+        "storyLink": "/?path=/docs/kromac-ui-card-team--docs",
         "type": "team"
       },
       {
         "component": "card percentage",
+        "storyLink": "/?path=/docs/kromac-ui-card-percentage--docs",
         "type": "percentage"
       }
     ]

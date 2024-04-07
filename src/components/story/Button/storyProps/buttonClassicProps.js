@@ -1,4 +1,5 @@
 const subTitle = "Button classic";
+const storyLink = "/?path=/docs/kromac-ui-button--docs";
 
 const buttonProps = {
   color: `primary`,
@@ -73,6 +74,7 @@ const buttonsProps = {
   componentText,
   propsDescription,
   subTitle,
+  storyLink,
 };
 
 export default buttonsProps;

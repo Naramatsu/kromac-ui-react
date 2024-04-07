@@ -1,4 +1,5 @@
 const subTitle = "Panel transparent";
+const storyLink = "/?path=/story/kromac-ui-panel--transparent";
 
 const panelProp = {
   transparent: true,
@@ -52,6 +53,7 @@ const panelProps = {
   panelProp,
   propsDescription,
   subTitle,
+  storyLink,
 };
 
 export default panelProps;

@@ -1,4 +1,5 @@
 const subTitle = "Menu";
+const storyLink = "/?path=/docs/kromac-ui-menu--docs";
 const importType = (version) => `import Menu from "${version}/dist/Menu";`;
 const description = `Make sure the component to be imported is wrapped by reac-router-dom`;
 const notes = `This component needs extrictly be wrapped by <div class="chip">react-router-dom</div> components.
@@ -157,6 +158,7 @@ const buttonsProps = {
   notes,
   propsDescription,
   subTitle,
+  storyLink,
 };
 
 export default buttonsProps;

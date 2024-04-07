@@ -1,4 +1,5 @@
 const subTitle = "Panel border neon";
+const storyLink = "/?path=/story/kromac-ui-panel--neon";
 
 const panelProp = {
   borderNeon: true,
@@ -52,6 +53,7 @@ const panelProps = {
   panelProp,
   propsDescription,
   subTitle,
+  storyLink,
 };
 
 export default panelProps;

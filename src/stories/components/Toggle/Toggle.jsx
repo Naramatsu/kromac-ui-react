@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ToggleKromac from "../../../components/lib/Toggle";
-import "../../../css/Panel.css";
 
 /**
  * Primary UI component for user interaction

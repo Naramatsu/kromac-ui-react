@@ -14,6 +14,7 @@ const MenuHistory = ({ location }) => {
     document.title = changeDocumentTitle({ component: "Menu", state: "" });
     window.scrollTo(0, 0);
   }, [location]);
+
   return (
     <div>
       <Preview
@@ -23,6 +24,7 @@ const MenuHistory = ({ location }) => {
         importType={menuProps.importType(version)}
         propsDescription={menuProps.propsDescription}
         notes={menuProps.notes}
+        storyLink={menuProps.storyLink}
       >
         <Suspense
           fallback={

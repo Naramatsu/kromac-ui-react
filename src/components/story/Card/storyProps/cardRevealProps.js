@@ -1,4 +1,5 @@
 const subTitle = "Card Reveal";
+const storyLink = "/?path=/docs/kromac-ui-card-reveal--docs";
 
 const cardProps = {
   cardType: "reveal",
@@ -107,6 +108,7 @@ const cardClassicProps = {
   componentText,
   propsDescription,
   subTitle,
+  storyLink,
 };
 
 export default cardClassicProps;

@@ -47,6 +47,7 @@ const PanelHistory = ({ location: { state = "classic" } }) => {
         propsDescription={panelProps.propsDescription}
         notes={panelProps.notes}
         componentsRealated={panelComponents}
+        storyLink={panelProps.storyLink}
       >
         <Suspense
           fallback={

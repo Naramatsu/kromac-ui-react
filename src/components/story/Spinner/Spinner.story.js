@@ -50,6 +50,7 @@ const SpinnerHistory = ({ location: { state = "lighter" } }) => {
         propsDescription={spinnerProps.propsDescription}
         notes={spinnerProps.notes}
         componentsRealated={spinnerComponents}
+        storyLink={spinnerProps.storyLink}
       >
         <Suspense
           fallback={

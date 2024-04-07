@@ -1,4 +1,5 @@
 const subTitle = "Card Polygon";
+const storyLink = "/?path=/docs/kromac-ui-card-cardpolygon--docs";
 
 const cardProps = {
   cardType: "polygon",
@@ -124,6 +125,7 @@ const cardClassicProps = {
   componentText,
   propsDescription,
   subTitle,
+  storyLink,
 };
 
 export default cardClassicProps;

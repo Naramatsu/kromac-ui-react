@@ -47,6 +47,7 @@ const BannerHistory = ({ location: { state = "classic" } }) => {
         propsDescription={bannerProps.propsDescription}
         notes={bannerProps.notes}
         componentsRealated={bannerComponents}
+        storyLink={bannerProps.storyLink}
       >
         <Suspense
           fallback={

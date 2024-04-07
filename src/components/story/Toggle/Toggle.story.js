@@ -34,6 +34,7 @@ const ToggleHistory = ({ location: { state = "switch" } }) => {
     ...ToggleToShow(state),
     importType: `import Toggle from "${version}/dist/Toggle";`,
   };
+
   return (
     <div>
       <Preview
@@ -44,6 +45,7 @@ const ToggleHistory = ({ location: { state = "switch" } }) => {
         propsDescription={toggleProps.propsDescription}
         notes={toggleProps.notes}
         componentsRealated={toggleComponents}
+        storyLink={toggleProps.storyLink}
       >
         <Suspense
           fallback={

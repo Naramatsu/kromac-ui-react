@@ -1,4 +1,5 @@
 const subTitle = "Skeleton dark";
+const storyLink = "/?path=/story/kromac-ui-skeleton--dark";
 
 const skeletonProp = { className: "dark", width: "250px" };
 
@@ -50,6 +51,7 @@ const skeletonProps = {
   propsDescription,
   skeletonProp,
   subTitle,
+  storyLink,
 };
 
 export default skeletonProps;
