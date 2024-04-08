@@ -1,5 +1,5 @@
 {
-  "name": "kromac-ui-18",
+  "name": "kromac-ui-storybook",
   "version": "1.3.2",
   "main": "dist/index.js",
   "files": [
