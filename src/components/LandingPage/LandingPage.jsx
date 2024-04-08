@@ -32,6 +32,7 @@ import {
   versionReleaseLabel,
 } from "../../utils/constants";
 import { PreferencesContext } from "../../store";
+import StoryBookImg from "../../stories/assets/storybook-icon.png";
 
 const TextAnimation = lazy(() => import("../lib/TextAnimation"));
 const BoxImplementation = lazy(() => import("../BoxImplementation"));
@@ -47,6 +48,7 @@ const LandingPage = () => {
   const { version, setVersion } = useContext(PreferencesContext);
   const [counter, setCounter] = useState(0);
   const [indicator, setIndicator] = useState("up");
+  const homeDocStorybookLink = `/?path=/docs/kromac-ui--docs`;
   const techCount = technogloies.length;
   const techstyles = {
     "--left": counter,
@@ -139,6 +141,19 @@ const LandingPage = () => {
             </a>
           </p>
           <label className="label-import">npm install {version}</label>
+          <p>
+            <br />
+            Modify and check how our components will be displayed before
+            implementing them in your project.
+            <a
+              href={`${process.env.REACT_APP_STORYBOOK_SERVER}${homeDocStorybookLink}`}
+              target="_blank"
+              rel="noreferrer"
+              className="storybook-link-section"
+            >
+              <img src={StoryBookImg} alt="storybook icon" /> <b>Storybook</b>
+            </a>
+          </p>
         </div>
         <div className="kromac-section">
           <TextAnimation
